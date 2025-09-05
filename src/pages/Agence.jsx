@@ -1,11 +1,11 @@
 import React from 'react'
 
 const Agence = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+    return (
+        <div>
+            Agence
+        </div>
+    )
 }
 
 export default Agence
