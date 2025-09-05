@@ -1,9 +1,15 @@
 import React from 'react'
+import Video from '../components/home/Video'
+import HomeHeroText from '../components/home/HomeHeroText'
+import HomeBottomText from '../components/home/HomeBottomText'
 
 const Home = () => {
     return (
         <div>
-            Home
+            <div className="h-screen w-screen fixed">
+                <Video />
+            </div>
+
         </div>
     )
 }
