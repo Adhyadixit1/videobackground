@@ -5,12 +5,11 @@ import HomeBottomText from '../components/home/HomeBottomText'
 
 const Home = () => {
     return (
-        <div>
-            <div className="h-screen w-screen fixed">
+        <div className='text-white'>
+            <div className='h-screen w-screen fixed'>
                 <Video />
             </div>
-
-            <div className='h-screen w-screen relative flex flex-col'>
+            <div className='h-screen w-screen relative pb-5 overflow-hidden flex flex-col justify-between'>
                 <HomeHeroText />
                 <HomeBottomText />
             </div>
