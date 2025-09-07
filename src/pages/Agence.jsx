@@ -47,9 +47,16 @@ const Agence = () => {
         gsap.to(imageDivRef.current, {
             scrollTrigger: {
                 trigger: imageDivRef.current,
+                // markers: true,
                 start: 'top 28%',
                 end: 'top -70%',
                 pin: true,
+                pinSpacing: true,
+                pinReparent: true,
+                pinType: 'transform',
+                scrub: 1, // smooth scrubbing with 1s easing
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
                 onUpdate: (elem) => {
                     let imageIndex;
                     if (elem.progress < 1) {
@@ -62,7 +69,6 @@ const Agence = () => {
             }
         })
     })
-
 
     return (
         <div className='parent'>
