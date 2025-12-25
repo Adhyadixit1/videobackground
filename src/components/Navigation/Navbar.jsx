@@ -23,7 +23,7 @@ const Navbar = () => {
                     src='/luxio-vector-logo.png'
                     alt='Luxio Media'
                     className='block lg:hidden cursor-pointer w-32 h-auto'
-                    style={{ marginTop: '-30px', marginLeft: '16px' }}
+                    style={{ marginTop: '-20px', marginLeft: '16px' }}
                     onClick={() => navigate('/')}
                 />
             </>

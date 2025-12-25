@@ -1,59 +1,105 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { useRef } from 'react'
+import { useRef, useLayoutEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 const Stairs = (props) => {
-
     const currentPath = useLocation().pathname
-
     const stairParentRef = useRef(null)
     const pageRef = useRef(null)
+    const stairsRef = useRef([])
 
-    useGSAP(function () {
-        const tl = gsap.timeline()
-        tl.to(stairParentRef.current, {
-            display: 'block',
-        })
-        tl.from('.stair', {
-            height: 0,
-            stagger: {
-                amount: -0.2
+    // Set initial state immediately to prevent flash
+    useLayoutEffect(() => {
+        if (stairParentRef.current) {
+            stairParentRef.current.style.display = 'block'
+        }
+        stairsRef.current.forEach(stair => {
+            if (stair) {
+                gsap.set(stair, { scaleY: 0, transformOrigin: 'top' })
             }
         })
-        tl.to('.stair', {
-            y: '100%',
-            stagger: {
-                amount: -0.25
+    }, [])
+
+    useGSAP(() => {
+        // Kill any existing animations for smooth transitions
+        gsap.killTweensOf(stairsRef.current)
+        gsap.killTweensOf(pageRef.current)
+
+        const tl = gsap.timeline({
+            defaults: {
+                ease: 'power2.inOut',
+                force3D: true, // Force GPU acceleration
             }
         })
-        tl.to(stairParentRef.current, {
-            display: 'none'
-        })
-        tl.to('.stair', {
-            y: '0%',
+
+        // Show parent container
+        tl.set(stairParentRef.current, { display: 'block' })
+
+        // Animate stairs in using scaleY (GPU-accelerated) instead of height
+        tl.to(stairsRef.current, {
+            scaleY: 1,
+            duration: 0.4,
+            stagger: {
+                amount: 0.15,
+                from: 'end'
+            }
         })
 
-        gsap.from(pageRef.current, {
-            opacity: 0,
-            delay: 1.3,
-            scale: 1.2
+        // Animate stairs out using translateY (GPU-accelerated)
+        tl.to(stairsRef.current, {
+            yPercent: 100,
+            duration: 0.35,
+            stagger: {
+                amount: 0.15,
+                from: 'end'
+            }
         })
+
+        // Hide parent and reset stairs
+        tl.set(stairParentRef.current, { display: 'none' })
+        tl.set(stairsRef.current, { yPercent: 0, scaleY: 0 })
+
+        // Fade in page content (no scale - much more performant)
+        gsap.fromTo(pageRef.current,
+            { opacity: 0 },
+            {
+                opacity: 1,
+                duration: 0.4,
+                delay: 0.6,
+                ease: 'power2.out',
+                force3D: true
+            }
+        )
+
+        return () => {
+            tl.kill()
+        }
     }, [currentPath])
-
 
     return (
         <div>
-            <div ref={stairParentRef} className='h-screen w-full fixed z-20 top-0'>
+            <div
+                ref={stairParentRef}
+                className='h-screen w-full fixed z-20 top-0 pointer-events-none'
+                style={{ willChange: 'contents' }}
+            >
                 <div className='h-full w-full flex'>
-                    <div className='stair h-full w-1/5 bg-black'></div>
-                    <div className='stair h-full w-1/5 bg-black'></div>
-                    <div className='stair h-full w-1/5 bg-black'></div>
-                    <div className='stair h-full w-1/5 bg-black'></div>
-                    <div className='stair h-full w-1/5 bg-black'></div>
+                    {[0, 1, 2, 3, 4].map((i) => (
+                        <div
+                            key={i}
+                            ref={(el) => (stairsRef.current[i] = el)}
+                            className='h-full w-1/5 bg-black'
+                            style={{
+                                willChange: 'transform',
+                                transformOrigin: 'top',
+                                transform: 'scaleY(0)'
+                            }}
+                        />
+                    ))}
                 </div>
             </div>
-            <div ref={pageRef}>
+            <div ref={pageRef} style={{ willChange: 'opacity' }}>
                 {props.children}
             </div>
         </div>

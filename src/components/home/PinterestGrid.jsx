@@ -3,19 +3,19 @@ import React from 'react'
 const projects = [
     {
         id: 1,
-        title: 'Retail Display',
+        title: 'Station Service Display',
         category: 'LCD Screens',
         size: 'tall',
         color: 'from-purple-900/80 to-pink-900/80',
-        image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80'
+        image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg'
     },
     {
         id: 2,
-        title: 'Shopping Mall',
+        title: 'Pompe Digital',
         category: 'Digital Totems',
         size: 'normal',
         color: 'from-blue-900/80 to-cyan-900/80',
-        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80'
+        image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (2).jpeg'
     },
     {
         id: 3,
@@ -23,47 +23,47 @@ const projects = [
         category: 'Outdoor Screens',
         size: 'wide',
         color: 'from-[#D3FD50]/40 to-green-900/80',
-        image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80'
+        image: '/WhatsApp Image 2025-12-25 at 10.13.15 AM.jpeg'
     },
     {
         id: 4,
-        title: 'Airport Terminal',
+        title: 'Affichage Extérieur',
         category: 'LED Walls',
         size: 'tall',
         color: 'from-orange-900/80 to-red-900/80',
-        image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80'
+        image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg'
     },
     {
         id: 5,
-        title: 'Corporate Lobby',
+        title: 'Écran Promotionnel',
         category: 'Video Walls',
         size: 'normal',
         color: 'from-indigo-900/80 to-purple-900/80',
-        image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80'
+        image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM (1).jpeg'
     },
     {
         id: 6,
-        title: 'Restaurant Chain',
+        title: 'Réseau Station',
         category: 'Menu Boards',
         size: 'normal',
         color: 'from-teal-900/80 to-emerald-900/80',
-        image: 'https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=800&q=80'
+        image: '/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg'
     },
     {
         id: 7,
-        title: 'Train Station',
+        title: 'Publicité Carburant',
         category: 'Info Displays',
         size: 'wide',
         color: 'from-pink-900/80 to-rose-900/80',
-        image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80'
+        image: '/WhatsApp Image 2025-12-25 at 10.13.18 AM (1).jpeg'
     },
     {
         id: 8,
-        title: 'Event Venue',
+        title: 'Écran Digital',
         category: 'Interactive Kiosk',
         size: 'normal',
         color: 'from-amber-900/80 to-yellow-900/80',
-        image: 'https://images.unsplash.com/photo-1633493702341-4d04841df53b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        image: '/WhatsApp Image 2025-12-25 at 10.13.20 AM.jpeg'
     },
 ]
 
