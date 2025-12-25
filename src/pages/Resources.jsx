@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import FooterSection from '../components/home/FooterSection'
+import PageHero from '../components/common/PageHero'
+import { useLanguage } from '../context/LanguageContext'
 
 const Resources = () => {
+    const { t } = useLanguage()
+
     const resources = [
         {
             type: 'Guide',
@@ -61,7 +65,7 @@ const Resources = () => {
             description: 'Retours d\'expérience détaillés de nos clients dans l\'automobile, l\'immobilier et le retail.',
             icon: (
                 <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z' />
+                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z' />
                 </svg>
             )
         }
@@ -89,30 +93,16 @@ const Resources = () => {
     return (
         <div className='bg-black text-white min-h-screen'>
             {/* Hero Section */}
-            <section className='relative min-h-[50vh] flex items-center overflow-hidden'>
-                {/* Background */}
-                <div className='absolute inset-0'>
-                    <div className='absolute top-1/4 -left-32 w-96 h-96 bg-[#D3FD50]/10 rounded-full blur-3xl' />
-                    <div className='absolute bottom-1/4 -right-32 w-96 h-96 bg-[#D3FD50]/5 rounded-full blur-3xl' />
-                    <div className='absolute inset-0' style={{
-                        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)`,
-                        backgroundSize: '40px 40px'
-                    }} />
-                </div>
-
-                <div className='relative z-10 text-center w-full px-4 lg:px-12 pt-32'>
-                    <span className='inline-block px-4 py-2 rounded-full border border-[#D3FD50]/30 text-[#D3FD50] text-xs font-[font1] uppercase tracking-[0.3em] mb-8'>
-                        Ressources
-                    </span>
-                    <h1 className='font-[font2] text-[10vw] lg:text-[5vw] leading-[0.9] uppercase'>
-                        Apprenez &<br />
-                        <span className='text-[#D3FD50]'>inspirez-vous</span>
-                    </h1>
-                </div>
-            </section>
+            <PageHero
+                title={t('resources.heroTitle')}
+                highlight={t('resources.heroTitleHighlight')}
+                description={t('resources.heroDesc')}
+                ctaText={t('resources.cta')}
+                ctaLink="#resources"
+            />
 
             {/* Resources Grid */}
-            <section className='py-20 lg:py-32 px-4 lg:px-12'>
+            <section id="resources" className='py-20 lg:py-32 px-4 lg:px-12'>
                 <div className='max-w-7xl mx-auto'>
                     <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'>
                         {resources.map((resource, index) => (

@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import FooterSection from '../components/home/FooterSection'
+import PageHero from '../components/common/PageHero'
 import { useLanguage } from '../context/LanguageContext'
 
 const CaseStudies = () => {
@@ -68,33 +69,16 @@ const CaseStudies = () => {
     return (
         <div className='bg-black text-white min-h-screen'>
             {/* Hero Section */}
-            <section className='relative min-h-[70vh] flex items-center justify-center overflow-hidden'>
-                {/* Background */}
-                <div className='absolute inset-0'>
-                    <div className='absolute top-1/4 -left-32 w-96 h-96 bg-[#D3FD50]/10 rounded-full blur-3xl' />
-                    <div className='absolute bottom-1/4 -right-32 w-96 h-96 bg-[#D3FD50]/5 rounded-full blur-3xl' />
-                    <div className='absolute inset-0' style={{
-                        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)`,
-                        backgroundSize: '40px 40px'
-                    }} />
-                </div>
-
-                <div className='relative z-10 text-center px-4 lg:px-12 max-w-6xl mx-auto pt-32'>
-                    <span className='inline-block px-4 py-2 rounded-full border border-[#D3FD50]/30 text-[#D3FD50] text-xs font-[font1] uppercase tracking-[0.3em] mb-8'>
-                        {t('nav.caseStudies')}
-                    </span>
-                    <h1 className='font-[font2] text-[10vw] lg:text-[5vw] leading-[0.9] uppercase mb-6'>
-                        {t('caseStudies.heroTitle')}<br />
-                        <span className='text-[#D3FD50]'>{t('caseStudies.heroTitleHighlight')}</span>
-                    </h1>
-                    <p className='font-[font1] text-white/60 text-lg lg:text-xl max-w-2xl mx-auto mt-8'>
-                        {t('caseStudies.heroDesc')}
-                    </p>
-                </div>
-            </section>
+            <PageHero
+                title={t('caseStudies.heroTitle')}
+                highlight={t('caseStudies.heroTitleHighlight')}
+                description={t('caseStudies.heroDesc')}
+                ctaText={t('nav.contact')}
+                ctaLink="#stats"
+            />
 
             {/* Stats Bar */}
-            <section className='relative py-12 border-y border-white/10 bg-gradient-to-r from-transparent via-[#D3FD50]/5 to-transparent'>
+            <section id="stats" className='relative py-12 border-y border-white/10 bg-gradient-to-r from-transparent via-[#D3FD50]/5 to-transparent'>
                 <div className='max-w-7xl mx-auto px-4 lg:px-12'>
                     <div className='flex flex-wrap justify-center gap-8 lg:gap-16'>
                         <div className='text-center'>

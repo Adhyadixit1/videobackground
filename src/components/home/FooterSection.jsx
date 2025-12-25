@@ -5,14 +5,20 @@ import { useLanguage } from '../../context/LanguageContext'
 const FooterSection = () => {
     const { t } = useLanguage()
 
-    // Get services list from translations or fallback to empty array
-    const servicesList = t('footer.servicesList', { returnObjects: true }) || []
+    const tagline = 'Your partner in digital signage across Europe. Premium screens for maximum visibility and impact.'
 
     const navItems = [
-        { name: t('nav.home'), path: '/' },
-        { name: t('nav.projects'), path: '/projects' },
-        { name: t('nav.agency'), path: '/agency' },
-        { name: t('nav.contact'), path: '/contact' }
+        { name: 'Home', path: '/' },
+        { name: 'Projects', path: '/projects' },
+        { name: 'Agency', path: '/agence' },
+        { name: 'Contact', path: '/contact' }
+    ]
+
+    const servicesList = [
+        { name: 'Screen Diffusion', path: '/solutions#screen-diffusion' },
+        { name: 'Digital Ads', path: '/solutions#digital-ads' },
+        { name: 'Video Production', path: '/solutions#video-production' },
+        { name: 'Screen Installation', path: '/solutions#screen-installation' }
     ]
 
     return (
@@ -24,7 +30,7 @@ const FooterSection = () => {
                     <div className='lg:col-span-4'>
                         <img src='/luxio-vector-logo.png' alt='Luxio Media' className='w-64 lg:w-96 h-auto mb-6 lg:-mt-20' />
                         <p className='font-[font1] text-gray-400 text-sm lg:text-base leading-relaxed max-w-sm'>
-                            {t('footer.tagline')}
+                            {tagline}
                         </p>
 
                         {/* Social links */}
@@ -50,7 +56,7 @@ const FooterSection = () => {
                     {/* Navigation links */}
                     <div className='lg:col-span-2'>
                         <h4 className='font-[font2] text-white text-sm uppercase tracking-wider mb-6'>
-                            {t('footer.navTitle')}
+                            Navigation
                         </h4>
                         <ul className='space-y-3'>
                             {navItems.map((item, index) => (
@@ -75,13 +81,13 @@ const FooterSection = () => {
                         <ul className='space-y-3'>
                             {servicesList.map((item, index) => (
                                 <li key={index}>
-                                    <a
-                                        href='#'
+                                    <Link
+                                        to={item.path}
                                         className='font-[font1] text-gray-400 text-sm hover:text-[#D3FD50] 
                                                   transition-colors duration-300'
                                     >
-                                        {item}
-                                    </a>
+                                        {item.name}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

@@ -2,7 +2,7 @@ export const translations = {
     fr: {
         nav: {
             solutions: 'Nos solutions',
-            whyFillup: 'Pourquoi Fill Up ?',
+            whyFillup: 'Pourquoi Luxia media ?',
             caseStudies: 'Nos cas clients',
             resources: 'Nos ressources',
             careers: 'Nous rejoindre',
@@ -11,7 +11,7 @@ export const translations = {
             startProject: 'Démarrer un projet',
             subtitles: {
                 solutions: 'Nos solutions',
-                whyFillup: 'Pourquoi choisir Fill Up ?',
+                whyFillup: 'Pourquoi choisir Luxia media ?',
                 caseStudies: 'Nos réussites clients',
                 resources: 'Nos ressources',
                 careers: 'Rejoignez-nous',
@@ -96,7 +96,8 @@ export const translations = {
         },
         solutions: {
             title: 'Nos Solutions',
-            heroTitle: 'La puissance de l\'affichage, la précision du digital',
+            heroTitle: 'La puissance de l\'affichage, la précision du',
+            heroTitleHighlight: 'digital',
             heroDesc: 'Développez votre notoriété en combinant une audience 100% disponible en stations-service avec des campagnes réseaux sociaux ciblées.',
             heroScroll: 'Découvrir',
             statsLabel1: 'Écrans Actifs',
@@ -128,7 +129,8 @@ export const translations = {
             ctaBtn2: 'Voir nos cas clients'
         },
         why: {
-            heroTitle: 'Le media qui accompagne vos clients',
+            heroTitle: 'Le media qui accompagne',
+            heroTitleHighlight: 'vos clients',
             heroDesc: 'Profitez d\'un moment unique dans le parcours consommateur : le temps de ravitaillement. Une audience 100% captive, réceptive à votre message.',
             advantagesTitle: 'Nos Avantages',
             adv1Title: 'Audience Captive',
@@ -156,11 +158,43 @@ export const translations = {
             cta: {
                 title: 'Prêt à booster',
                 titleHighlight: 'votre visibilité ?',
-                desc: 'Rejoignez les 3,400+ annonceurs qui font confiance à Fill Up Media pour développer leur notoriété locale.',
+                desc: 'Rejoignez les 3,400+ annonceurs qui font confiance à Luxia media pour développer leur notoriété locale.',
                 btn: 'Démarrer maintenant'
             }
         },
+        agency: {
+            heroTitle: 'SEVEN7Y',
+            heroTitleHighlight: 'TWO',
+            heroDesc: 'Nous croyons en une créativité guidée par la curiosité qui privilégie la connexion authentique à l\'ego. Une marque n\'est pas un simple logo — c\'est une entité vivante avec des valeurs, une personnalité et un récit.',
+            cta: 'Nous rencontrer'
+        },
+        projects: {
+            heroTitle: 'Nos',
+            heroTitleHighlight: 'Réalisations',
+            heroDesc: 'Découvrez comment nous transformons les espaces avec nos écrans digitaux.',
+            cta: 'Voir les projets'
+        },
+        resources: {
+            heroTitle: 'Apprenez &',
+            heroTitleHighlight: 'Inspirez-vous',
+            heroDesc: 'Guides, études et outils pour maximiser l\'impact de vos campagnes DOOH.',
+            cta: 'Parcourir'
+        },
+        careers: {
+            heroTitle: 'Rejoignez',
+            heroTitleHighlight: 'l\'aventure',
+            heroDesc: 'Participez à la révolution de la publicité digitale en stations-service. Nous recherchons des talents passionnés.',
+            cta: 'Voir les offres'
+        },
+        investors: {
+            heroTitle: 'Investir dans',
+            heroTitleHighlight: 'l\'avenir du DOOH',
+            heroDesc: 'Fill Up Media est le leader français de l\'affichage digital en stations-service, un marché en pleine croissance avec un potentiel considérable.',
+            cta: 'En savoir plus'
+        },
         contact: {
+            heroTitle: 'Parlons de',
+            heroTitleHighlight: 'votre projet',
             title: 'Parlons de votre projet',
             subtitle: 'Contact',
             desc: 'Développez votre visibilité locale',
@@ -276,7 +310,7 @@ export const translations = {
     en: {
         nav: {
             solutions: 'Our Solutions',
-            whyFillup: 'Why Fill Up?',
+            whyFillup: 'Why Luxia media?',
             caseStudies: 'Case Studies',
             resources: 'Resources',
             careers: 'Careers',
@@ -285,7 +319,7 @@ export const translations = {
             startProject: 'Start a Project',
             subtitles: {
                 solutions: 'Our solutions',
-                whyFillup: 'Why Fill Up?',
+                whyFillup: 'Why Luxia media?',
                 caseStudies: 'Customer success stories',
                 resources: 'Our resources',
                 careers: 'Join us / Careers',
@@ -370,7 +404,8 @@ export const translations = {
         },
         solutions: {
             title: 'Our Solutions',
-            heroTitle: 'The power of display, the precision of digital',
+            heroTitle: 'The power of display, the precision of',
+            heroTitleHighlight: 'digital',
             heroDesc: 'Grow your brand awareness by combining a 100% available audience at gas stations with targeted social media campaigns.',
             heroScroll: 'Discover',
             statsLabel1: 'Active Screens',
@@ -402,7 +437,8 @@ export const translations = {
             ctaBtn2: 'See our case studies'
         },
         why: {
-            heroTitle: 'The media that accompanies your customers',
+            heroTitle: 'The media that accompanies',
+            heroTitleHighlight: 'your customers',
             heroDesc: 'Take advantage of a unique moment in the consumer journey: refueling time. A 100% captive audience, receptive to your message.',
             advantagesTitle: 'Our Advantages',
             adv1Title: 'Captive Audience',
@@ -434,7 +470,39 @@ export const translations = {
                 btn: 'Start Now'
             }
         },
+        agency: {
+            heroTitle: 'SEVEN7Y',
+            heroTitleHighlight: 'TWO',
+            heroDesc: 'We believe in curiosity-driven creativity that prioritizes genuine connection over ego. A brand isn\'t just a logo—it\'s a living entity with values, personality, and narrative.',
+            cta: 'Meet us'
+        },
+        projects: {
+            heroTitle: 'Our',
+            heroTitleHighlight: 'Projects',
+            heroDesc: 'Discover how we transform spaces with our digital screens.',
+            cta: 'View projects'
+        },
+        resources: {
+            heroTitle: 'Learn &',
+            heroTitleHighlight: 'Get Inspired',
+            heroDesc: 'Guides, studies, and tools to maximize the impact of your DOOH campaigns.',
+            cta: 'Browse'
+        },
+        careers: {
+            heroTitle: 'Join',
+            heroTitleHighlight: 'the Adventure',
+            heroDesc: 'Join the digital advertising revolution at service stations. We are looking for passionate talents.',
+            cta: 'View openings'
+        },
+        investors: {
+            heroTitle: 'Invest in',
+            heroTitleHighlight: 'the future of DOOH',
+            heroDesc: 'Fill Up Media is the French leader in digital signage in gas stations, a growing market with considerable potential.',
+            cta: 'Learn more'
+        },
         contact: {
+            heroTitle: 'Let\'s talk about',
+            heroTitleHighlight: 'your project',
             title: 'Let\'s talk about your project',
             subtitle: 'Contact',
             desc: 'Grow your local visibility',
@@ -644,7 +712,8 @@ export const translations = {
         },
         solutions: {
             title: 'Unsere Lösungen',
-            heroTitle: 'Die Kraft der Anzeige, die Präzision des Digitalen',
+            heroTitle: 'Die Kraft der Anzeige, die Präzision des',
+            heroTitleHighlight: 'Digitalen',
             heroDesc: 'Steigern Sie Ihre Markenbekanntheit durch die Kombination einer 100% verfügbaren Zielgruppe an Tankstellen mit gezielten Social-Media-Kampagnen.',
             heroScroll: 'Entdecken',
             statsLabel1: 'Aktive Bildschirme',
@@ -676,7 +745,8 @@ export const translations = {
             ctaBtn2: 'Unsere Fallstudien ansehen'
         },
         why: {
-            heroTitle: 'Das Medium, das Ihre Kunden begleitet',
+            heroTitle: 'Das Medium, das Ihre Kunden',
+            heroTitleHighlight: 'begleitet',
             heroDesc: 'Nutzen Sie einen einzigartigen Moment in der Customer Journey: die Tankzeit. Ein 100% gefangenes Publikum, empfänglich für Ihre Botschaft.',
             advantagesTitle: 'Unsere Vorteile',
             adv1Title: 'Gefangenes Publikum',
@@ -708,7 +778,39 @@ export const translations = {
                 btn: 'Jetzt starten'
             }
         },
+        agency: {
+            heroTitle: 'SEVEN7Y',
+            heroTitleHighlight: 'TWO',
+            heroDesc: 'Wir glauben an neugiergetriebene Kreativität, die echte Verbindung über das Ego stellt. Eine Marke ist nicht nur ein Logo – sie ist eine lebendige Einheit mit Werten, Persönlichkeit und Narrativ.',
+            cta: 'Uns treffen'
+        },
+        projects: {
+            heroTitle: 'Unsere',
+            heroTitleHighlight: 'Projekte',
+            heroDesc: 'Entdecken Sie, wie wir mit unseren digitalen Bildschirmen Räume verwandeln.',
+            cta: 'Projekte ansehen'
+        },
+        resources: {
+            heroTitle: 'Lernen &',
+            heroTitleHighlight: 'Inspirieren lassen',
+            heroDesc: 'Leitfäden, Studien und Tools zur Maximierung Ihrer DOOH-Kampagnen.',
+            cta: 'Durchsuchen'
+        },
+        careers: {
+            heroTitle: 'Werde Teil',
+            heroTitleHighlight: 'des Abenteuers',
+            heroDesc: 'Nehmen Sie an der Revolution der digitalen Werbung an Tankstellen teil. Wir suchen leidenschaftliche Talente.',
+            cta: 'Angebote ansehen'
+        },
+        investors: {
+            heroTitle: 'Investieren in',
+            heroTitleHighlight: 'die Zukunft von DOOH',
+            heroDesc: 'Fill Up Media ist der französische Marktführer für Digital Signage an Tankstellen, ein Wachstumsmarkt mit erheblichem Potenzial.',
+            cta: 'Mehr erfahren'
+        },
         contact: {
+            heroTitle: 'Lassen Sie uns über',
+            heroTitleHighlight: 'Ihr Projekt sprechen',
             title: 'Lassen Sie uns über Ihr Projekt sprechen',
             subtitle: 'Kontakt',
             desc: 'Steigern Sie Ihre lokale Sichtbarkeit',

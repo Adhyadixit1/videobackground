@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import FooterSection from '../components/home/FooterSection'
+import PageHero from '../components/common/PageHero'
 import { useLanguage } from '../context/LanguageContext'
 
 const Solutions = () => {
@@ -14,7 +15,7 @@ const Solutions = () => {
                 </svg>
             ),
             title: t('solutions.screenDiff'),
-            subtitle: '', // Removed or could be a secondary key if needed
+            subtitle: '',
             description: t('solutions.screenDiffDesc'),
             features: t('solutions.f1', { returnObjects: true }) || []
         },
@@ -49,41 +50,33 @@ const Solutions = () => {
         { value: '100%', label: t('solutions.statsLabel4'), sublabel: 'Captive Audience' }
     ]
 
+    const heroVisual = (
+        <img
+            decoding='async'
+            width='500'
+            height='429'
+            src='https://fillupmedia.fr/wp-content/uploads/2023/01/ILLUSTRATION_HEADER_ANIMATION_5.gif'
+            alt='ILLUSTRATION HEADER ANIMATION 5'
+            title='ILLUSTRATION_HEADER_ANIMATION_5'
+            className='wp-image-1612 w-[min(90vw,500px)] h-auto block'
+        />
+    )
+
     return (
         <div className='bg-black text-white min-h-screen'>
             {/* Hero Section */}
-            <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
-                {/* Background decorations */}
-                <div className='absolute inset-0'>
-                    <div className='absolute top-1/4 -left-32 w-96 h-96 bg-[#D3FD50]/10 rounded-full blur-3xl' />
-                    <div className='absolute bottom-1/4 -right-32 w-96 h-96 bg-[#D3FD50]/5 rounded-full blur-3xl' />
-                    <div className='absolute inset-0' style={{
-                        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)`,
-                        backgroundSize: '40px 40px'
-                    }} />
-                </div>
-
-                <div className='relative z-10 text-center px-4 lg:px-12 max-w-6xl mx-auto pt-32'>
-                    <span className='inline-block px-4 py-2 rounded-full border border-[#D3FD50]/30 text-[#D3FD50] text-xs font-[font1] uppercase tracking-[0.3em] mb-8'>
-                        {t('solutions.title')}
-                    </span>
-                    <h1 className='font-[font2] text-[10vw] lg:text-[6vw] leading-[0.9] uppercase mb-6'>
-                        {t('solutions.heroTitle')}
-                    </h1>
-                    <p className='font-[font1] text-white/60 text-lg lg:text-xl max-w-2xl mx-auto mt-8'>
-                        {t('solutions.heroDesc')}
-                    </p>
-                </div>
-
-                {/* Scroll indicator */}
-                <div className='absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2'>
-                    <span className='text-white/40 text-xs uppercase tracking-widest'>{t('solutions.heroScroll')}</span>
-                    <div className='w-px h-12 bg-gradient-to-b from-[#D3FD50] to-transparent' />
-                </div>
-            </section>
+            <PageHero
+                title={t('solutions.heroTitle')}
+                highlight={t('solutions.heroTitleHighlight')}
+                description={t('solutions.heroDesc')}
+                ctaText={t('solutions.heroScroll')}
+                ctaLink="#stats"
+                titleClassName='text-[8vw] lg:text-[3.6vw]'
+                visual={heroVisual}
+            />
 
             {/* Stats Section */}
-            <section className='relative py-20 lg:py-32 border-y border-white/10'>
+            <section id="stats" className='relative py-20 lg:py-32 border-y border-white/10'>
                 <div className='max-w-7xl mx-auto px-4 lg:px-12'>
                     <div className='grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12'>
                         {stats.map((stat, index) => (

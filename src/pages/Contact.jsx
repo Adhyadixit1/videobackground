@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react'
 import FooterSection from '../components/home/FooterSection'
 import { useLanguage } from '../context/LanguageContext'
+import PageHero from '../components/common/PageHero'
 
 const Contact = () => {
     const { t } = useLanguage()
@@ -63,34 +64,16 @@ const Contact = () => {
     return (
         <div className='bg-black text-white min-h-screen'>
             {/* Hero Section */}
-            <section className='relative min-h-[50vh] flex items-center overflow-hidden'>
-                {/* Background */}
-                <div className='absolute inset-0'>
-                    <div className='absolute top-1/4 -left-32 w-96 h-96 bg-[#D3FD50]/10 rounded-full blur-3xl' />
-                    <div className='absolute bottom-1/4 -right-32 w-96 h-96 bg-[#D3FD50]/5 rounded-full blur-3xl' />
-                    <div className='absolute inset-0' style={{
-                        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)`,
-                        backgroundSize: '40px 40px'
-                    }} />
-                </div>
-
-                <div className='relative z-10 text-center w-full px-4 lg:px-12 pt-32'>
-                    <span className='inline-block px-4 py-2 rounded-full border border-[#D3FD50]/30 text-[#D3FD50] text-xs font-[font1] uppercase tracking-[0.3em] mb-8'>
-                        {t('contact.subtitle')}
-                    </span>
-                    <h1 className='font-[font2] text-[10vw] lg:text-[5vw] leading-[0.9] uppercase'>
-                        {t('contact.title', { returnObjects: true }).toString().includes(' ') ? (
-                            <>
-                                {t('contact.title').split(' ').slice(0, -1).join(' ')}<br />
-                                <span className='text-[#D3FD50]'>{t('contact.title').split(' ').slice(-1)}</span>
-                            </>
-                        ) : t('contact.title')}
-                    </h1>
-                </div>
-            </section>
+            <PageHero
+                title={t('contact.heroTitle')}
+                highlight={t('contact.heroTitleHighlight')}
+                description={t('contact.intro')}
+                ctaText={t('contact.formTitle')}
+                ctaLink="#contact-form"
+            />
 
             {/* Contact Content */}
-            <section className='py-20 lg:py-32 px-4 lg:px-12'>
+            <section id="contact-form" className='py-20 lg:py-32 px-4 lg:px-12'>
                 <div className='max-w-7xl mx-auto'>
                     <div className='grid lg:grid-cols-2 gap-12 lg:gap-20'>
                         {/* Left Side - Info */}

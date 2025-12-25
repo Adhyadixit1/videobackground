@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import FooterSection from '../components/home/FooterSection'
+import PageHero from '../components/common/PageHero'
+import { useLanguage } from '../context/LanguageContext'
 
 const Careers = () => {
+    const { t } = useLanguage()
+
     const values = [
         {
             icon: (
@@ -87,30 +91,13 @@ const Careers = () => {
     return (
         <div className='bg-black text-white min-h-screen'>
             {/* Hero Section */}
-            <section className='relative min-h-[70vh] flex items-center overflow-hidden'>
-                {/* Background */}
-                <div className='absolute inset-0'>
-                    <div className='absolute top-1/4 -left-32 w-96 h-96 bg-[#D3FD50]/10 rounded-full blur-3xl' />
-                    <div className='absolute bottom-1/4 -right-32 w-96 h-96 bg-[#D3FD50]/5 rounded-full blur-3xl' />
-                    <div className='absolute inset-0' style={{
-                        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)`,
-                        backgroundSize: '40px 40px'
-                    }} />
-                </div>
-
-                <div className='relative z-10 max-w-6xl mx-auto px-4 lg:px-12 pt-32 text-center'>
-                    <span className='inline-block px-4 py-2 rounded-full border border-[#D3FD50]/30 text-[#D3FD50] text-xs font-[font1] uppercase tracking-[0.3em] mb-8'>
-                        Carrières
-                    </span>
-                    <h1 className='font-[font2] text-[10vw] lg:text-[5vw] leading-[0.9] uppercase mb-6'>
-                        Rejoignez<br />
-                        <span className='text-[#D3FD50]'>l'aventure</span>
-                    </h1>
-                    <p className='font-[font1] text-white/60 text-lg lg:text-xl max-w-2xl mx-auto'>
-                        Participez à la révolution de la publicité digitale en stations-service. Nous recherchons des talents passionnés et ambitieux.
-                    </p>
-                </div>
-            </section>
+            <PageHero
+                title={t('careers.heroTitle')}
+                highlight={t('careers.heroTitleHighlight')}
+                description={t('careers.heroDesc')}
+                ctaText={t('careers.cta')}
+                ctaLink="#openings"
+            />
 
             {/* Values Section */}
             <section className='py-20 lg:py-32 px-4 lg:px-12 bg-gradient-to-b from-zinc-950 to-black'>
@@ -146,7 +133,7 @@ const Careers = () => {
             </section>
 
             {/* Open Positions */}
-            <section className='py-20 lg:py-32 px-4 lg:px-12'>
+            <section id="openings" className='py-20 lg:py-32 px-4 lg:px-12'>
                 <div className='max-w-5xl mx-auto'>
                     <div className='text-center mb-16'>
                         <span className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block'>

@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import FooterSection from '../components/home/FooterSection'
+import PageHero from '../components/common/PageHero'
+import { useLanguage } from '../context/LanguageContext'
 
 const Investors = () => {
+    const { t } = useLanguage()
+
     const keyMetrics = [
         { value: '2000+', label: 'Écrans déployés', growth: '+25% vs 2023' },
         { value: '15M', label: 'Contacts mensuels', growth: '+40% vs 2023' },
@@ -11,7 +15,7 @@ const Investors = () => {
     ]
 
     const milestones = [
-        { year: '2018', title: 'Création', description: 'Fondation de Fill Up Media avec une vision claire : révolutionner la publicité en stations-service.' },
+        { year: '2018', title: 'Création', description: 'Fondation de Luxia media avec une vision claire : révolutionner la publicité en stations-service.' },
         { year: '2019', title: 'Premiers écrans', description: 'Déploiement des 100 premiers écrans dans les stations Esso et Total.' },
         { year: '2020', title: 'Expansion nationale', description: 'Extension du réseau à 500 écrans couvrant 10 régions françaises.' },
         { year: '2021', title: 'Partenariats majeurs', description: 'Signature avec les grandes enseignes : Carrefour, Intermarché, Leclerc.' },
@@ -62,33 +66,16 @@ const Investors = () => {
     return (
         <div className='bg-black text-white min-h-screen'>
             {/* Hero Section */}
-            <section className='relative min-h-[70vh] flex items-center overflow-hidden'>
-                {/* Background */}
-                <div className='absolute inset-0'>
-                    <div className='absolute top-1/4 -left-32 w-96 h-96 bg-[#D3FD50]/10 rounded-full blur-3xl' />
-                    <div className='absolute bottom-1/4 -right-32 w-96 h-96 bg-[#D3FD50]/5 rounded-full blur-3xl' />
-                    <div className='absolute inset-0' style={{
-                        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)`,
-                        backgroundSize: '40px 40px'
-                    }} />
-                </div>
-
-                <div className='relative z-10 max-w-6xl mx-auto px-4 lg:px-12 pt-32 text-center'>
-                    <span className='inline-block px-4 py-2 rounded-full border border-[#D3FD50]/30 text-[#D3FD50] text-xs font-[font1] uppercase tracking-[0.3em] mb-8'>
-                        Investisseurs
-                    </span>
-                    <h1 className='font-[font2] text-[10vw] lg:text-[5vw] leading-[0.9] uppercase mb-6'>
-                        Investir dans<br />
-                        <span className='text-[#D3FD50]'>l'avenir</span> du DOOH
-                    </h1>
-                    <p className='font-[font1] text-white/60 text-lg lg:text-xl max-w-2xl mx-auto'>
-                        Fill Up Media est le leader français de l'affichage digital en stations-service, un marché en pleine croissance avec un potentiel considérable.
-                    </p>
-                </div>
-            </section>
+            <PageHero
+                title={t('investors.heroTitle')}
+                highlight={t('investors.heroTitleHighlight')}
+                description={t('investors.heroDesc')}
+                ctaText={t('investors.cta')}
+                ctaLink="#metrics"
+            />
 
             {/* Key Metrics */}
-            <section className='py-16 border-y border-white/10'>
+            <section id="metrics" className='py-16 border-y border-white/10'>
                 <div className='max-w-7xl mx-auto px-4 lg:px-12'>
                     <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
                         {keyMetrics.map((metric, index) => (

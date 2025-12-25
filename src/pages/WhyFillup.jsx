@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import FooterSection from '../components/home/FooterSection'
+import PageHero from '../components/common/PageHero'
 import { useLanguage } from '../context/LanguageContext'
 
 const WhyFillup = () => {
@@ -56,71 +57,36 @@ const WhyFillup = () => {
     return (
         <div className='bg-black text-white min-h-screen'>
             {/* Hero Section */}
-            <section className='relative min-h-screen flex items-center overflow-hidden'>
-                {/* Background */}
-                <div className='absolute inset-0'>
-                    <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#D3FD50]/5 via-transparent to-transparent' />
-                    <div className='absolute top-1/3 -right-32 w-[600px] h-[600px] bg-[#D3FD50]/10 rounded-full blur-3xl' />
-                    <div className='absolute inset-0' style={{
-                        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)`,
-                        backgroundSize: '40px 40px'
-                    }} />
-                </div>
-
-                <div className='relative z-10 max-w-7xl mx-auto px-4 lg:px-12 pt-32 lg:pt-40'>
-                    <div className='grid lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
-                        {/* Left Content */}
-                        <div>
-                            <span className='inline-block px-4 py-2 rounded-full border border-[#D3FD50]/30 text-[#D3FD50] text-xs font-[font1] uppercase tracking-[0.3em] mb-8'>
-                                {t('nav.whyFillup')}
-                            </span>
-                            <h1 className='font-[font2] text-[12vw] lg:text-[4vw] leading-[0.9] uppercase mb-6'>
-                                {t('why.heroTitle')}
-                            </h1>
-                            <p className='font-[font1] text-white/60 text-lg lg:text-xl leading-relaxed mb-8'>
-                                {t('why.heroDesc')}
-                            </p>
-                            <div className='flex flex-wrap gap-4'>
-                                <Link
-                                    to='/solutions'
-                                    className='px-6 py-3 bg-[#D3FD50] text-black font-[font2] text-sm uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300'
-                                >
-                                    {t('nav.solutions')}
-                                </Link>
-                                <Link
-                                    to='/case-studies'
-                                    className='px-6 py-3 border border-white/30 text-white font-[font2] text-sm uppercase tracking-wider rounded-full hover:border-[#D3FD50] hover:text-[#D3FD50] transition-all duration-300'
-                                >
-                                    {t('nav.caseStudies')}
-                                </Link>
-                            </div>
+            <PageHero
+                title={t('why.heroTitle')}
+                highlight={t('why.heroTitleHighlight')}
+                description={t('why.heroDesc')}
+                ctaText={t('nav.solutions')}
+                ctaLink="#advantages"
+                visual={
+                    <div className='grid grid-cols-2 gap-4 w-full max-w-lg mx-auto'>
+                        <div className='p-6 lg:p-8 rounded-3xl bg-white/5 border border-white/10 animate-[pulse_4s_ease-in-out_infinite]'>
+                            <div className='font-[font2] text-[#D3FD50] text-3xl lg:text-4xl mb-2'>2000+</div>
+                            <div className='font-[font1] text-white/60 text-xs uppercase tracking-wider'>{t('why.stats.screens')}</div>
                         </div>
-
-                        {/* Right Stats */}
-                        <div className='grid grid-cols-2 gap-4'>
-                            <div className='p-6 lg:p-8 rounded-3xl bg-white/5 border border-white/10'>
-                                <div className='font-[font2] text-[#D3FD50] text-4xl lg:text-5xl mb-2'>2000+</div>
-                                <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>{t('why.stats.screens')}</div>
-                            </div>
-                            <div className='p-6 lg:p-8 rounded-3xl bg-white/5 border border-white/10'>
-                                <div className='font-[font2] text-[#D3FD50] text-4xl lg:text-5xl mb-2'>15M</div>
-                                <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>{t('why.stats.contacts')}</div>
-                            </div>
-                            <div className='p-6 lg:p-8 rounded-3xl bg-white/5 border border-white/10'>
-                                <div className='font-[font2] text-[#D3FD50] text-4xl lg:text-5xl mb-2'>3400+</div>
-                                <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>{t('why.stats.advertisers')}</div>
-                            </div>
-                            <div className='p-6 lg:p-8 rounded-3xl bg-[#D3FD50]/10 border border-[#D3FD50]/30'>
-                                <div className='font-[font2] text-[#D3FD50] text-4xl lg:text-5xl mb-2'>100%</div>
-                                <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>{t('why.stats.captive')}</div>
-                            </div>
+                        <div className='p-6 lg:p-8 rounded-3xl bg-white/5 border border-white/10 animate-[pulse_4s_ease-in-out_infinite] delay-700' style={{ animationDelay: '0.7s' }}>
+                            <div className='font-[font2] text-[#D3FD50] text-3xl lg:text-4xl mb-2'>15M</div>
+                            <div className='font-[font1] text-white/60 text-xs uppercase tracking-wider'>{t('why.stats.contacts')}</div>
+                        </div>
+                        <div className='p-6 lg:p-8 rounded-3xl bg-white/5 border border-white/10 animate-[pulse_4s_ease-in-out_infinite] delay-1000' style={{ animationDelay: '1.4s' }}>
+                            <div className='font-[font2] text-[#D3FD50] text-3xl lg:text-4xl mb-2'>3400+</div>
+                            <div className='font-[font1] text-white/60 text-xs uppercase tracking-wider'>{t('why.stats.advertisers')}</div>
+                        </div>
+                        <div className='p-6 lg:p-8 rounded-3xl bg-[#D3FD50]/10 border border-[#D3FD50]/30 animate-[pulse_4s_ease-in-out_infinite] delay-1500' style={{ animationDelay: '2.1s' }}>
+                            <div className='font-[font2] text-[#D3FD50] text-3xl lg:text-4xl mb-2'>100%</div>
+                            <div className='font-[font1] text-white/60 text-xs uppercase tracking-wider'>{t('why.stats.captive')}</div>
                         </div>
                     </div>
-                </div>
-            </section>
+                }
+            />
 
             {/* Advantages Section */}
-            <section className='py-20 lg:py-32 px-4 lg:px-12 bg-gradient-to-b from-black via-zinc-950 to-black'>
+            <section id="advantages" className='py-20 lg:py-32 px-4 lg:px-12 bg-gradient-to-b from-black via-zinc-950 to-black'>
                 <div className='max-w-7xl mx-auto'>
                     {/* Section Header */}
                     <div className='text-center mb-16 lg:mb-24'>
