@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import FooterSection from '../components/home/FooterSection'
 import PageHero from '../components/common/PageHero'
+import LottieVisual from '../components/common/LottieVisual'
 import { useLanguage } from '../context/LanguageContext'
 
 const Careers = () => {
@@ -97,6 +98,7 @@ const Careers = () => {
                 description={t('careers.heroDesc')}
                 ctaText={t('careers.cta')}
                 ctaLink="#openings"
+                visual={<LottieVisual url="https://assets5.lottiefiles.com/packages/lf20_5tl1xxnz.json" />}
             />
 
             {/* Values Section */}

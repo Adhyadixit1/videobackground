@@ -163,9 +163,17 @@ export const translations = {
             }
         },
         agency: {
-            heroTitle: 'SEVEN7Y',
-            heroTitleHighlight: 'TWO',
-            heroDesc: 'Nous croyons en une créativité guidée par la curiosité qui privilégie la connexion authentique à l\'ego. Une marque n\'est pas un simple logo — c\'est une entité vivante avec des valeurs, une personnalité et un récit.',
+            heroTitle: 'QUI SOMMES-NOUS ?',
+            heroTitleHighlight: '',
+            heroDesc: `Bienvenue chez Luxio Media, votre partenaire stratégique en affichage dynamique et communication digitale, basé au cœur du Luxembourg, carrefour européen de l'innovation et des affaires.
+
+Fondée avec l'ambition de moderniser la communication visuelle des entreprises et des institutions, Luxio Media s'est rapidement imposée comme un acteur fiable et innovant dans le domaine des écrans LED professionnels, des solutions d'affichage LCD haute performance et des dispositifs de communication digitale sur mesure.
+
+Nos solutions sont conçues pour répondre aux exigences des environnements urbains, commerciaux et institutionnels, et s'adressent notamment aux mairies et administrations, centres commerciaux, franchises, entreprises, établissements sportifs, hôtels, restaurants, salles de jeux, événementiel, ainsi qu'aux espaces publics et privés à forte visibilité.
+
+Fort d'une expertise solide et d'une vision tournée vers l'avenir, notre équipe accompagne chaque client de la conception à l'installation, jusqu'à la maintenance et l'optimisation des performances. Grâce à un réseau de partenaires et de techniciens qualifiés, Luxio Media garantit un service de proximité, réactif et adapté aux standards luxembourgeois et européens.
+
+Luxio Media, c'est l'alliance de la technologie, de l'impact visuel et d'un accompagnement sur mesure pour donner une nouvelle dimension à votre communication.`,
             cta: 'Nous rencontrer'
         },
         projects: {
@@ -471,9 +479,17 @@ export const translations = {
             }
         },
         agency: {
-            heroTitle: 'SEVEN7Y',
-            heroTitleHighlight: 'TWO',
-            heroDesc: 'We believe in curiosity-driven creativity that prioritizes genuine connection over ego. A brand isn\'t just a logo—it\'s a living entity with values, personality, and narrative.',
+            heroTitle: 'WHO ARE WE?',
+            heroTitleHighlight: '',
+            heroDesc: `Welcome to Luxio Media, your strategic partner in digital signage and communication, based in the heart of Luxembourg—the European crossroads of innovation and business.
+
+Founded with the ambition of modernizing visual communication for companies and institutions, Luxio Media quickly established itself as a reliable and innovative player in professional LED displays, high-performance LCD signage solutions, and tailor-made digital communication systems.
+
+Our solutions are designed to meet the demands of urban, commercial, and institutional environments, serving city halls and public authorities, shopping centers, franchises, corporations, sports venues, hotels, restaurants, gaming halls, events, as well as public and private spaces with high visibility.
+
+Armed with solid expertise and a forward-looking vision, our team supports every client from design to installation, through to maintenance and performance optimization. Thanks to a network of partners and qualified technicians, Luxio Media guarantees a responsive local service aligned with Luxembourg and European standards.
+
+Luxio Media is the alliance of technology, visual impact, and bespoke support to give your communication a new dimension.`,
             cta: 'Meet us'
         },
         projects: {
@@ -774,20 +790,26 @@ export const translations = {
             cta: {
                 title: 'Bereit, Ihre Sichtbarkeit',
                 titleHighlight: 'zu steigern?',
-                desc: 'Schließen Sie sich den 3.400+ Werbetreibenden an, die Fill Up Media vertrauen, um ihre lokale Bekanntheit zu steigern.',
-                btn: 'Jetzt starten'
-            }
+            },
         },
         agency: {
-            heroTitle: 'SEVEN7Y',
-            heroTitleHighlight: 'TWO',
-            heroDesc: 'Wir glauben an neugiergetriebene Kreativität, die echte Verbindung über das Ego stellt. Eine Marke ist nicht nur ein Logo – sie ist eine lebendige Einheit mit Werten, Persönlichkeit und Narrativ.',
+            heroTitle: 'WER SIND WIR?',
+            heroTitleHighlight: '',
+            heroDesc: `Willkommen bei Luxio Media, Ihrem strategischen Partner für Digital Signage und digitale Kommunikation mit Sitz im Herzen Luxemburgs, dem europäischen Drehkreuz für Innovation und Business.
+
+Gegründet mit dem Anspruch, die visuelle Kommunikation von Unternehmen und Institutionen zu modernisieren, hat sich Luxio Media schnell als zuverlässiger und innovativer Akteur für professionelle LED-Bildschirme, leistungsstarke LCD-Lösungen und maßgeschneiderte digitale Kommunikationssysteme etabliert.
+
+Unsere Lösungen sind darauf ausgelegt, den Anforderungen urbaner, kommerzieller und institutioneller Umgebungen gerecht zu werden und richten sich unter anderem an Rathäuser und Verwaltungen, Einkaufszentren, Franchise-Netzwerke, Unternehmen, Sportstätten, Hotels, Restaurants, Spielhallen, Events sowie öffentliche und private Räume mit hoher Sichtbarkeit.
+
+Dank fundierter Expertise und einer zukunftsorientierten Vision begleitet unser Team jeden Kunden von der Konzeption über die Installation bis hin zur Wartung und Leistungsoptimierung. Mit einem Netzwerk aus Partnern und qualifizierten Technikern garantiert Luxio Media einen nahen, reaktionsschnellen Service nach luxemburgischen und europäischen Standards.
+
+Luxio Media vereint Technologie, visuelle Wirkung und maßgeschneiderte Betreuung, um Ihrer Kommunikation eine neue Dimension zu verleihen.`,
             cta: 'Uns treffen'
         },
         projects: {
             heroTitle: 'Unsere',
             heroTitleHighlight: 'Projekte',
-            heroDesc: 'Entdecken Sie, wie wir mit unseren digitalen Bildschirmen Räume verwandeln.',
+            // ... (unchanged)
             cta: 'Projekte ansehen'
         },
         resources: {

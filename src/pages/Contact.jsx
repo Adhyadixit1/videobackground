@@ -1,7 +1,8 @@
 import React, { useState, useMemo } from 'react'
 import FooterSection from '../components/home/FooterSection'
-import { useLanguage } from '../context/LanguageContext'
 import PageHero from '../components/common/PageHero'
+import LottieVisual from '../components/common/LottieVisual'
+import { useLanguage } from '../context/LanguageContext'
 
 const Contact = () => {
     const { t } = useLanguage()
@@ -70,6 +71,7 @@ const Contact = () => {
                 description={t('contact.intro')}
                 ctaText={t('contact.formTitle')}
                 ctaLink="#contact-form"
+                visual={<LottieVisual url="https://assets10.lottiefiles.com/packages/lf20_u25cckyh.json" />}
             />
 
             {/* Contact Content */}
@@ -230,10 +232,10 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             <FooterSection />
-        </div>
+        </div >
     )
 }
 

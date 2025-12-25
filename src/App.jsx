@@ -15,7 +15,11 @@ const Careers = lazy(() => import('./pages/Careers'))
 const Investors = lazy(() => import('./pages/Investors'))
 const Contact = lazy(() => import('./pages/Contact'))
 
+import useLottiePrefetch from './hooks/useLottiePrefetch'
+
 const App = () => {
+  useLottiePrefetch()
+
   return (
     <div className='overflow-x-hidden'>
       <Navbar />

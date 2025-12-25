@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import FooterSection from '../components/home/FooterSection'
 import PageHero from '../components/common/PageHero'
+import LottieVisual from '../components/common/LottieVisual'
 import { useLanguage } from '../context/LanguageContext'
 
 const Investors = () => {
@@ -72,6 +73,7 @@ const Investors = () => {
                 description={t('investors.heroDesc')}
                 ctaText={t('investors.cta')}
                 ctaLink="#metrics"
+                visual={<LottieVisual url="https://assets2.lottiefiles.com/packages/lf20_t9gkkhz4.json" />}
             />
 
             {/* Key Metrics */}

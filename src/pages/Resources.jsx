@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import FooterSection from '../components/home/FooterSection'
 import PageHero from '../components/common/PageHero'
+import LottieVisual from '../components/common/LottieVisual'
 import { useLanguage } from '../context/LanguageContext'
 
 const Resources = () => {
@@ -99,6 +100,7 @@ const Resources = () => {
                 description={t('resources.heroDesc')}
                 ctaText={t('resources.cta')}
                 ctaLink="#resources"
+                visual={<LottieVisual url="https://assets3.lottiefiles.com/packages/lf20_sk5h1kfn.json" />}
             />
 
             {/* Resources Grid */}

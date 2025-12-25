@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import FooterSection from '../components/home/FooterSection'
 import PageHero from '../components/common/PageHero'
+import LottieVisual from '../components/common/LottieVisual'
 import { useLanguage } from '../context/LanguageContext'
 
 const CaseStudies = () => {
@@ -75,6 +76,7 @@ const CaseStudies = () => {
                 description={t('caseStudies.heroDesc')}
                 ctaText={t('nav.contact')}
                 ctaLink="#stats"
+                visual={<LottieVisual url="https://assets9.lottiefiles.com/packages/lf20_jcikwtux.json" />}
             />
 
             {/* Stats Bar */}

@@ -50,6 +50,176 @@ const Solutions = () => {
         { value: '100%', label: t('solutions.statsLabel4'), sublabel: 'Captive Audience' }
     ]
 
+    const productTags = [
+        'Outdoor', 'Waterproof', 'All-in-one Display', '32/43/49/55/65 inches', 'IP65 series', 'Maintenance-free', 'Sunlight Readable'
+    ]
+
+    const productHighlights = [
+        {
+            title: 'OD Series High-Brightness LCD',
+            text: 'LCD backlight brightness ranges from 2000 to 5000 nits to guarantee best-in-class visibility even under direct sunlight.'
+        },
+        {
+            title: 'Industrial Grade Panel',
+            text: 'Wide temperature LCD panel with QWP technology prevents blackening and keeps content visible through polarized sunglasses.'
+        },
+        {
+            title: 'Intelligent Brightness Control',
+            text: 'Automatic brightness adjustment responds to ambient light to optimize legibility while saving energy.'
+        },
+        {
+            title: 'IP65 Waterproof & Fan Design',
+            text: 'Fully sealed chassis with integrated backlight, outdoor powder coating, and protection-grade IP65 keeps components safe year-round.'
+        },
+        {
+            title: 'Ultra-thin Form Factor',
+            text: 'Full lamination on the front glass plus narrow-border design supports both horizontal and vertical orientations.'
+        }
+    ]
+
+    const specRows = [
+        {
+            model: 'OD320-T',
+            size: `32"`,
+            resolution: '1920×1080',
+            brightness: '2500 nits',
+            contrast: '1200:1',
+            viewAngle: '178°/178°',
+            dimensions: '763×457×95.5 mm',
+            weight: '19 kg',
+            power: '160 W'
+        },
+        {
+            model: 'OD430-T',
+            size: `43"`,
+            resolution: '1920×1080',
+            brightness: '2500 nits',
+            contrast: '1200:1',
+            viewAngle: '178°/178°',
+            dimensions: '1014×602×95.5 mm',
+            weight: '28 kg',
+            power: '220 W'
+        },
+        {
+            model: 'OD490-T',
+            size: `49"`,
+            resolution: '1920×1080',
+            brightness: '2500 nits',
+            contrast: '1200:1',
+            viewAngle: '178°/178°',
+            dimensions: '1147×677×95.5 mm',
+            weight: '36 kg',
+            power: '240 W'
+        },
+        {
+            model: 'OD550-T',
+            size: `55"`,
+            resolution: '1920×1080',
+            brightness: '2500 nits',
+            contrast: '1200:1',
+            viewAngle: '178°/178°',
+            dimensions: '1282×753×95.5 mm',
+            weight: '38 kg',
+            power: '280 W'
+        },
+        {
+            model: 'OD650-T',
+            size: `65"`,
+            resolution: '3840×2160',
+            brightness: '2500 nits',
+            contrast: '1200:1',
+            viewAngle: '178°/178°',
+            dimensions: '1500×875×95.5 mm',
+            weight: '65 kg',
+            power: '480 W'
+        }
+    ]
+
+    const environmentalSpecs = [
+        { title: 'Operating Temperature', value: '-20°C to 50°C' },
+        { title: 'Operating Humidity', value: '10% – 85%' },
+        { title: 'Ingress Protection', value: 'IP65 fully sealed with integrated backlight' },
+        { title: 'Protective Glass', value: '5 mm ultra-clear glass, 3% haze' }
+    ]
+
+    const electronicsSpecs = [
+        { title: 'Power Input', value: '180 – 264 V, 50/60 Hz' },
+        { title: 'Mainboard', value: '8-core CPU A55, Android 12.0, 2 GB RAM + 16 GB storage' },
+        { title: 'Interfaces', value: 'HDMI ×1 · USB ×2 · RJ45 ×1 · Wi-Fi ×1' },
+        { title: 'Polarized Sunglasses Ready', value: 'QWP technology maintains perfect readability' }
+    ]
+
+    const smartScreenSections = [
+        {
+            title: 'Screen parameters',
+            items: [
+                { field: 'Size', value: '65"' },
+                { field: 'Zoom', value: '6 – 16' },
+                { field: 'Display area', value: '1428.5 × 803.5 mm' },
+                { field: 'Overall size', value: '1504 × 879 × 100 mm' },
+                { field: 'Resolution', value: '2K (1920 × 1080) or 4K (3840 × 2160)' },
+                { field: 'Brightness', value: '350 cd/m²' },
+                { field: 'Touch type', value: 'Infrared touch (customized)' },
+                { field: 'Brands of displays', value: 'BOE' },
+                { field: 'Contrast', value: '1200:1' },
+                { field: 'Viewing angle', value: '89° (H) / 89° (V)' },
+                { field: 'LCD life', value: '50,000 hours' },
+                { field: 'Response time', value: '5 ms' }
+            ]
+        },
+        {
+            title: 'Hardware configuration',
+            items: [
+                { field: 'Motherboard', value: '3568' },
+                { field: 'Memory', value: '4 GB RAM + 32 GB storage' },
+                { field: 'System', value: 'Android 11.0' },
+                { field: 'Network support', value: 'Wi-Fi and Ethernet' },
+                { field: 'Interface', value: 'USB2, HDMI input, RJ45' },
+                {
+                    field: 'Video formats',
+                    value: 'AVI, RM, RMVB, WMV, MKV, MOV, MP4, MP4V, MPEG, DIVX, XVID, DAT, VOB, MPG, FLV, ASF, TS, TP, 3GP'
+                },
+                {
+                    field: 'Audio formats',
+                    value: 'MP3, WMA, WAV, EAAC+, MP2, Vorbis (Ogg), AC3, FLAC, APE, BSAC'
+                },
+                { field: 'Image formats', value: 'BMP, PNG, GIF, JPEG' },
+                { field: 'Text format', value: 'TXT' },
+                { field: 'Timer switch', value: 'Network remote management' },
+                { field: 'System upgrade', value: 'USB or Wi-Fi' },
+                { field: 'Language', value: 'Chinese, English, multiple languages' }
+            ]
+        },
+        {
+            title: 'Speaker & power',
+            items: [
+                { field: 'Speaker', value: '2 × 5W (8Ω)' },
+                { field: 'Input voltage', value: 'AC 110 V – 230 V' },
+                { field: 'Frequency', value: '50 / 60 Hz' },
+                { field: 'Rated power', value: '≤ 150 W' },
+                { field: 'Operating temperature', value: '-20°C to +60°C' },
+                { field: 'Working humidity', value: '20% – 80%' }
+            ]
+        },
+        {
+            title: 'Physical',
+            items: [
+                { field: 'Glass', value: 'Tempered safety glass' },
+                { field: 'Material', value: 'Galvanized sheet' },
+                { field: 'Packing', value: 'Carton packing' },
+                { field: 'Package size', value: '1835 × 158 × 687 mm' },
+                { field: 'Gross weight', value: '53 kg' },
+                { field: 'Net weight', value: '46 kg' }
+            ]
+        },
+        {
+            title: 'Accessory pack',
+            items: [
+                { field: 'Included', value: 'Power cord, keys, remote control, antenna' }
+            ]
+        }
+    ]
+
     const heroVisual = (
         <img
             decoding='async'
@@ -145,6 +315,141 @@ const Solutions = () => {
                                 <div className='absolute top-0 right-0 w-24 h-24 border-t border-r border-white/10 rounded-tr-3xl group-hover:border-[#D3FD50]/30 transition-colors duration-300' />
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* High Brightness Outdoor LCD Display */}
+            <section className='relative py-20 lg:py-32 px-4 lg:px-12 bg-gradient-to-b from-black via-zinc-950 to-black'>
+                <div className='max-w-7xl mx-auto'>
+                    <div className='flex flex-col lg:flex-row justify-between items-start gap-8 mb-12'>
+                        <div>
+                            <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-3'>High Brightness Outdoor LCD</p>
+                            <h2 className='font-[font2] text-white text-3xl lg:text-5xl leading-tight uppercase'>
+                                Sunlight Readable OD Series
+                            </h2>
+                        </div>
+                        <div className='max-w-2xl text-white/70 font-[font1] text-base leading-relaxed'>
+                            Outdoor, waterproof, maintenance-free displays engineered for 32" to 65" deployments. The OD Series pairs industrial-grade panels with IP65 enclosures to deliver reliable, high-impact messaging in any environment.
+                        </div>
+                    </div>
+
+                    <div className='flex flex-wrap gap-3 mb-12'>
+                        {productTags.map((tag, idx) => (
+                            <span key={idx} className='px-4 py-2 text-xs font-[font1] uppercase tracking-widest border border-white/10 rounded-full text-white/70'>
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+
+                    <div className='grid lg:grid-cols-3 gap-6 mb-16'>
+                        {productHighlights.map((item, idx) => (
+                            <div key={idx} className='p-6 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-[#D3FD50]/40 transition-all duration-300'>
+                                <h3 className='font-[font2] text-white text-lg mb-3 uppercase'>{item.title}</h3>
+                                <p className='font-[font1] text-white/70 text-sm leading-relaxed'>{item.text}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className='grid lg:grid-cols-2 gap-8 mb-16'>
+                        <div className='p-6 rounded-3xl border border-white/10 bg-white/5'>
+                            <h4 className='font-[font2] text-white text-xl uppercase mb-4'>Environment & Mechanics</h4>
+                            <ul className='space-y-3'>
+                                {environmentalSpecs.map((spec, idx) => (
+                                    <li key={idx} className='flex items-start gap-3 text-white/70 font-[font1] text-sm'>
+                                        <span className='w-2 h-2 mt-2 rounded-full bg-[#D3FD50]' />
+                                        <div>
+                                            <p className='text-white font-[font2] text-sm uppercase tracking-wide'>{spec.title}</p>
+                                            <p>{spec.value}</p>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className='p-6 rounded-3xl border border-white/10 bg-white/5'>
+                            <h4 className='font-[font2] text-white text-xl uppercase mb-4'>Electronics & Interfaces</h4>
+                            <ul className='space-y-3'>
+                                {electronicsSpecs.map((spec, idx) => (
+                                    <li key={idx} className='flex items-start gap-3 text-white/70 font-[font1] text-sm'>
+                                        <span className='w-2 h-2 mt-2 rounded-full bg-[#D3FD50]' />
+                                        <div>
+                                            <p className='text-white font-[font2] text-sm uppercase tracking-wide'>{spec.title}</p>
+                                            <p>{spec.value}</p>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div className='overflow-x-auto rounded-3xl border border-white/10'>
+                        <table className='min-w-full text-left text-sm font-[font1] text-white/80'>
+                            <thead className='bg-white/5 text-white uppercase tracking-widest text-xs'>
+                                <tr>
+                                    <th className='px-4 py-3'>Model</th>
+                                    <th className='px-4 py-3'>Size</th>
+                                    <th className='px-4 py-3'>Resolution</th>
+                                    <th className='px-4 py-3'>Brightness</th>
+                                    <th className='px-4 py-3'>Contrast</th>
+                                    <th className='px-4 py-3'>Viewing Angle</th>
+                                    <th className='px-4 py-3'>Dimensions</th>
+                                    <th className='px-4 py-3'>Weight</th>
+                                    <th className='px-4 py-3'>Max Power</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {specRows.map((row, idx) => (
+                                    <tr key={row.model} className={idx % 2 === 0 ? 'bg-white/0' : 'bg-white/5'}>
+                                        <td className='px-4 py-3 font-[font2] text-white'>{row.model}</td>
+                                        <td className='px-4 py-3'>{row.size}</td>
+                                        <td className='px-4 py-3'>{row.resolution}</td>
+                                        <td className='px-4 py-3'>{row.brightness}</td>
+                                        <td className='px-4 py-3'>{row.contrast}</td>
+                                        <td className='px-4 py-3'>{row.viewAngle}</td>
+                                        <td className='px-4 py-3 whitespace-nowrap'>{row.dimensions}</td>
+                                        <td className='px-4 py-3'>{row.weight}</td>
+                                        <td className='px-4 py-3'>{row.power}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div className='mt-20'>
+                        <div className='flex flex-col lg:flex-row items-start justify-between gap-6 mb-10'>
+                            <div>
+                                <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-3'>
+                                    65" Interactive Smart Screen
+                                </p>
+                                <h3 className='font-[font2] text-white text-3xl lg:text-4xl uppercase leading-tight'>
+                                    Deep-dive Specifications
+                                </h3>
+                            </div>
+                            <p className='font-[font1] text-white/70 max-w-2xl text-base leading-relaxed'>
+                                Detailed hardware, power, and physical specifications derived from the manufacturer data sheet ensure
+                                our team can scope deployments, maintenance, and integrations with full confidence.
+                            </p>
+                        </div>
+
+                        <div className='grid md:grid-cols-2 gap-6'>
+                            {smartScreenSections.map(section => (
+                                <div key={section.title} className='p-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent'>
+                                    <h4 className='font-[font2] text-white text-xl uppercase mb-5'>{section.title}</h4>
+                                    <ul className='space-y-4'>
+                                        {section.items.map(item => (
+                                            <li key={item.field} className='flex flex-col gap-1'>
+                                                <span className='text-white/60 text-xs font-[font1] uppercase tracking-[0.2em]'>
+                                                    {item.field}
+                                                </span>
+                                                <span className='text-white font-[font2] text-base leading-snug'>
+                                                    {item.value}
+                                                </span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
