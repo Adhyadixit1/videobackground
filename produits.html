@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Découvrez notre gamme d'écrans LCD, totems digitaux et bornes interactives - Luxio Media.">
+    <title>Produits - Luxio Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+
+<body>
+    <div id="language-modal" class="language-modal hidden">
+        <div class="language-modal-content">
+            <h3 data-i18n="select_language">Choisissez votre langue</h3>
+            <div class="language-options">
+                <button class="lang-btn" data-lang="fr"><span class="flag">🇫🇷</span><span>Français</span></button>
+                <button class="lang-btn" data-lang="en"><span class="flag">🇬🇧</span><span>English</span></button>
+                <button class="lang-btn" data-lang="de"><span class="flag">🇩🇪</span><span>Deutsch</span></button>
+            </div>
+        </div>
+    </div>
+
+    <section class="page-hero">
+        <div class="hero-header-bar">
+            <a href="index.html" class="logo">
+                <img src="assets/logo-luxio.svg" alt="Luxio Media" class="logo-light">
+                <img src="assets/logo-luxio-dark.svg" alt="Luxio Media" class="logo-dark">
+            </a>
+
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                    <li><a href="offres.html" data-i18n="nav_offers">Offres</a></li>
+                    <li><a href="solutions.html" data-i18n="nav_solutions">Solutions</a></li>
+                    <li><a href="produits.html" class="active" data-i18n="nav_products">Produits</a></li>
+                    <li><a href="qui-sommes-nous.html" data-i18n="nav_about">Qui sommes-nous</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                    <!-- Mobile Only Menu Options -->
+                    <li class="mobile-only"><a href="contact.html" data-i18n="cta_quote">Demander un devis</a></li>
+                    <li class="mobile-only"><a href="#network-section" data-i18n="cta_find_screens">Trouver nos
+                            écrans</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Language Switcher -->
+                <div class="language-switcher">
+                    <button class="lang-trigger" id="lang-trigger">
+                        <span class="current-flag">🇫🇷</span>
+                        <span class="current-lang">FR</span>
+                        <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button class="lang-option" data-lang="fr">
+                            <span class="flag">🇫🇷</span>
+                            <span>Français</span>
+                        </button>
+                        <button class="lang-option" data-lang="en">
+                            <span class="flag">🇬🇧</span>
+                            <span>English</span>
+                        </button>
+                        <button class="lang-option" data-lang="de">
+                            <span class="flag">🇩🇪</span>
+                            <span>Deutsch</span>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="btn btn-outline btn-sm btn-yellow-outline" data-i18n="cta_quote">Demander
+                    un devis</a>
+                <a href="#network-section" class="btn btn-primary btn-sm" data-i18n="cta_find_screens">Trouver nos
+                    écrans</a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="section-tag" data-i18n="products_tag">Nos produits</span>
+                <h1 data-i18n="products_hero_title">Équipements <span class="gradient-text">professionnels</span></h1>
+                <p class="page-hero-subtitle" data-i18n="products_hero_subtitle">Des écrans LCD aux bornes interactives,
+                    découvrez nos solutions.</p>
+            </div>
+        </div>
+        <div class="hero-gradient-bg"></div>
+
+        <div class="wave-divider wave-dark">
+            <svg viewBox="0 0 1440 120" fill="none">
+                <path
+                    d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H0Z"
+                    fill="currentColor" />
+            </svg>
+        </div>
+    </section>
+
+
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-card-image"><img src="assets/products/lcd-indoor.jpg" alt="LCD Indoor"></div>
+                    <div class="product-card-content">
+                        <h3 data-i18n="product1_name">Écrans LCD Indoor</h3>
+                        <p>Écrans haute définition pour une utilisation en intérieur.</p>
+                        <span class="product-quote-note" data-i18n="product_quote_only">Disponible sur devis
+                            uniquement</span>
+                        <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="request_quote">Demander un
+                            devis</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <div class="product-badge">IP65</div><img src="assets/products/lcd-outdoor.jpg"
+                            alt="LCD Outdoor">
+                    </div>
+                    <div class="product-card-content">
+                        <h3 data-i18n="product2_name">Écrans LCD Outdoor IP65</h3>
+                        <p>Écrans résistants aux intempéries pour l'extérieur.</p>
+                        <span class="product-quote-note" data-i18n="product_quote_only">Disponible sur devis
+                            uniquement</span>
+                        <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="request_quote">Demander un
+                            devis</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card-image"><img src="assets/products/totem.jpg" alt="Totems"></div>
+                    <div class="product-card-content">
+                        <h3 data-i18n="product3_name">Totems Digitaux</h3>
+                        <p>Totems autoportants pour une communication impactante.</p>
+                        <span class="product-quote-note" data-i18n="product_quote_only">Disponible sur devis
+                            uniquement</span>
+                        <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="request_quote">Demander un
+                            devis</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <div class="product-badge">Tactile</div><img src="assets/products/borne.jpg" alt="Bornes">
+                    </div>
+                    <div class="product-card-content">
+                        <h3 data-i18n="product4_name">Bornes Interactives</h3>
+                        <p>Bornes tactiles pour une interaction directe.</p>
+                        <span class="product-quote-note" data-i18n="product_quote_only">Disponible sur devis
+                            uniquement</span>
+                        <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="request_quote">Demander un
+                            devis</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card-image"><img src="assets/products/double-face.jpg" alt="Double Face"></div>
+                    <div class="product-card-content">
+                        <h3 data-i18n="product5_name">Écrans Double Face</h3>
+                        <p>Écrans visibles des deux côtés pour les vitrines.</p>
+                        <span class="product-quote-note" data-i18n="product_quote_only">Disponible sur devis
+                            uniquement</span>
+                        <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="request_quote">Demander un
+                            devis</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <div class="product-badge">3000 nits</div><img src="assets/products/high-brightness.jpg"
+                            alt="High Brightness">
+                    </div>
+                    <div class="product-card-content">
+                        <h3 data-i18n="product6_name">Écrans Haute Luminosité</h3>
+                        <p>Écrans ultra-lumineux pour une visibilité en plein soleil.</p>
+                        <span class="product-quote-note" data-i18n="product_quote_only">Disponible sur devis
+                            uniquement</span>
+                        <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="request_quote">Demander un
+                            devis</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2 data-i18n="cta_title">Vous aussi, soyez vu et entendu</h2>
+                    <p data-i18n="cta_desc">Rejoignez les entreprises qui font confiance à Luxio Media.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg" data-i18n="cta_contact">Contactez-nous</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo"><img src="assets/logo-luxio-light.svg"
+                            alt="Luxio Media"></a>
+                    <p data-i18n="footer_desc">Votre partenaire premium en affichage dynamique.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_services">Services</h4>
+                    <ul>
+                        <li><a href="solutions.html">Solutions</a></li>
+                        <li><a href="offres.html">Offres</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_company">Entreprise</h4>
+                    <ul>
+                        <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer_contact_us">Nous contacter</h4>
+                    <ul>
+                        <li><a href="mailto:contact@luxiomedia.lu">contact@luxiomedia.lu</a></li>
+                        <li><a href="tel:+352661167725">+352 661 16 77 25</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">© 2024 Luxio Media. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

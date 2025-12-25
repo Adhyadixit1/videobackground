@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contactez Luxio Media pour un devis personnalisé - affichage dynamique Luxembourg, France, Europe.">
+    <title>Contact - Luxio Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+
+<body>
+    <div id="language-modal" class="language-modal hidden">
+        <div class="language-modal-content">
+            <h3 data-i18n="select_language">Choisissez votre langue</h3>
+            <div class="language-options">
+                <button class="lang-btn" data-lang="fr"><span class="flag">🇫🇷</span><span>Français</span></button>
+                <button class="lang-btn" data-lang="en"><span class="flag">🇬🇧</span><span>English</span></button>
+                <button class="lang-btn" data-lang="de"><span class="flag">🇩🇪</span><span>Deutsch</span></button>
+            </div>
+        </div>
+    </div>
+
+    <section class="page-hero">
+        <div class="hero-header-bar">
+            <a href="index.html" class="logo">
+                <img src="assets/logo-luxio.svg" alt="Luxio Media" class="logo-light">
+                <img src="assets/logo-luxio-dark.svg" alt="Luxio Media" class="logo-dark">
+            </a>
+
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                    <li><a href="offres.html" data-i18n="nav_offers">Offres</a></li>
+                    <li><a href="solutions.html" data-i18n="nav_solutions">Solutions</a></li>
+                    <li><a href="produits.html" data-i18n="nav_products">Produits</a></li>
+                    <li><a href="qui-sommes-nous.html" data-i18n="nav_about">Qui sommes-nous</a></li>
+                    <li><a href="contact.html" class="active" data-i18n="nav_contact">Contact</a></li>
+                    <!-- Mobile Only Menu Options -->
+                    <li class="mobile-only"><a href="contact.html" data-i18n="cta_quote">Demander un devis</a></li>
+                    <li class="mobile-only"><a href="#network-section" data-i18n="cta_find_screens">Trouver nos
+                            écrans</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Language Switcher -->
+                <div class="language-switcher">
+                    <button class="lang-trigger" id="lang-trigger">
+                        <span class="current-flag">🇫🇷</span>
+                        <span class="current-lang">FR</span>
+                        <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button class="lang-option" data-lang="fr">
+                            <span class="flag">🇫🇷</span>
+                            <span>Français</span>
+                        </button>
+                        <button class="lang-option" data-lang="en">
+                            <span class="flag">🇬🇧</span>
+                            <span>English</span>
+                        </button>
+                        <button class="lang-option" data-lang="de">
+                            <span class="flag">🇩🇪</span>
+                            <span>Deutsch</span>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="btn btn-outline btn-sm btn-yellow-outline" data-i18n="cta_quote">Demander
+                    un devis</a>
+                <a href="#network-section" class="btn btn-primary btn-sm" data-i18n="cta_find_screens">Trouver nos
+                    écrans</a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="section-tag" data-i18n="nav_contact">Contact</span>
+                <h1 data-i18n="contact_hero_title">Contactez <span class="gradient-text">notre équipe</span></h1>
+                <p class="page-hero-subtitle" data-i18n="contact_hero_subtitle">Une question ? Un projet ? N'hésitez pas
+                    à nous contacter.</p>
+            </div>
+        </div>
+        <div class="hero-gradient-bg"></div>
+
+        <div class="wave-divider wave-dark">
+            <svg viewBox="0 0 1440 120" fill="none">
+                <path
+                    d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H0Z"
+                    fill="currentColor" />
+            </svg>
+        </div>
+    </section>
+
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2 data-i18n="contact_form_title">Demander un devis</h2>
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" data-i18n="form_name">Nom complet</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company" data-i18n="form_company">Société</label>
+                                <input type="text" id="company" name="company" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" data-i18n="form_email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" data-i18n="form_phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="project-type" data-i18n="form_project_type">Type de projet</label>
+                            <select id="project-type" name="project_type" required>
+                                <option value="" data-i18n="form_project_type_placeholder">Sélectionnez un type de
+                                    projet</option>
+                                <option value="diffusion" data-i18n="form_project_diffusion">Diffusion d'écrans</option>
+                                <option value="digital-ads" data-i18n="form_project_digital_ads">Digital Ads</option>
+                                <option value="production" data-i18n="form_project_production">Production audiovisuelle
+                                </option>
+                                <option value="equipment" data-i18n="form_project_equipment">Achat d'équipements
+                                </option>
+                                <option value="other" data-i18n="form_project_other">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" data-i18n="form_message">Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                data-i18n-placeholder="form_message_placeholder" placeholder="Décrivez votre projet..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;"
+                            data-i18n="form_submit">Envoyer ma demande</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2 data-i18n="contact_info_title">Nos coordonnées</h2>
+
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 8L12 13L21 8" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor"
+                                        stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>Email</h4>
+                                <a href="mailto:contact@luxiomedia.lu">contact@luxiomedia.lu</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
+                                        stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>Téléphone</h4>
+                                <a href="tel:+352661167725">+352 661 16 77 25</a>
+                                <span class="contact-info-note" data-i18n="contact_phone_note">(numéro susceptible
+                                    d'être modifié)</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 13a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" stroke-width="2" />
+                                    <path d="M12 21s8-5.5 8-11a8 8 0 10-16 0c0 5.5 8 11 8 11z" stroke="currentColor"
+                                        stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>Zone géographique</h4>
+                                <span>Luxembourg • France • Europe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-map">
+                        <div
+                            style="background: linear-gradient(135deg, #01122e 0%, #0a1628 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: var(--color-gray-400);">
+                            <span>🌍 Luxembourg • France • Europe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo"><img src="assets/logo-luxio-light.svg"
+                            alt="Luxio Media"></a>
+                    <p data-i18n="footer_desc">Votre partenaire premium en affichage dynamique.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_services">Services</h4>
+                    <ul>
+                        <li><a href="solutions.html">Solutions</a></li>
+                        <li><a href="offres.html">Offres</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_company">Entreprise</h4>
+                    <ul>
+                        <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer_contact_us">Nous contacter</h4>
+                    <ul>
+                        <li><a href="mailto:contact@luxiomedia.lu">contact@luxiomedia.lu</a></li>
+                        <li><a href="tel:+352661167725">+352 661 16 77 25</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">© 2024 Luxio Media. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

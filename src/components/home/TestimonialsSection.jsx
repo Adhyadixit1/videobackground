@@ -2,24 +2,24 @@ import React from 'react'
 
 const testimonials = [
     {
-        quote: "K72 transformed our brand vision into something truly spectacular. Their creative approach exceeded all expectations.",
-        author: "Marie Laurent",
-        role: "CEO, Lumière Studios",
-        initial: "M",
-        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80'
-    },
-    {
-        quote: "Working with the K72 team was an incredible experience. They understood our essence and delivered magic.",
-        author: "Jean-Pierre Dubois",
-        role: "Founder, Vertex Tech",
+        quote: "Luxio Media helped us multiply our visibility with their target audience. A responsive and professional team.",
+        author: "Jean Dupont",
+        role: "Marketing Director, Enterprise ABC",
         initial: "J",
         image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80'
     },
     {
-        quote: "The attention to detail and creative excellence is unmatched. They're true artists in their craft.",
-        author: "Sophie Marchand",
-        role: "Creative Director, Pulse",
-        initial: "S",
+        quote: "The quality of the screens and support in creating our content made all the difference for our campaign.",
+        author: "Marie Lambert",
+        role: "Communications Manager, City Hall",
+        initial: "M",
+        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80'
+    },
+    {
+        quote: "A trusted partner for our digital communication. Results are consistent with excellent ROI.",
+        author: "Pierre Bernard",
+        role: "CEO, Innovation Startup",
+        initial: "P",
         image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80'
     }
 ]

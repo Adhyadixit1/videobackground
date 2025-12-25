@@ -1,49 +1,37 @@
 import React from 'react'
 
-const clients = [
-    'GOOGLE', 'SPOTIFY', 'NETFLIX', 'AIRBNB', 'TESLA', 'APPLE', 'META', 'AMAZON'
+const companies = [
+    { name: 'Esso', logo: 'https://fillupmedia.fr/wp-content/uploads/2023/01/esso.png' },
+    { name: 'Intermarché', logo: 'https://fillupmedia.fr/wp-content/uploads/2022/12/intermarche.png' },
+    { name: 'Carrefour', logo: 'https://fillupmedia.fr/wp-content/uploads/2022/12/carrefour.png' },
+    { name: 'Total', logo: 'https://fillupmedia.fr/wp-content/uploads/2022/12/total.png' },
+    { name: 'Leclerc', logo: 'https://fillupmedia.fr/wp-content/uploads/2022/12/leclerc.png' },
+    { name: 'Magasins U', logo: 'https://fillupmedia.fr/wp-content/uploads/2023/01/magasins-u.png' }
 ]
 
 const MarqueeSection = () => {
     return (
         <section className='bg-black relative z-10 py-16 lg:py-24 overflow-hidden border-y border-white/10'>
-            {/* First marquee - left to right */}
-            <div className='relative mb-8'>
-                <div className='flex gap-16 animate-marquee whitespace-nowrap'>
-                    {[...clients, ...clients, ...clients].map((client, index) => (
+            {/* Main marquee container */}
+            <div className='overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-white/5 backdrop-blur max-w-7xl mx-auto'>
+                <div className='flex items-center gap-8 sm:gap-10 min-w-max animate-marquee'>
+                    {/* Duplicate companies array twice for seamless loop */}
+                    {[...companies, ...companies].map((company, index) => (
                         <div
                             key={index}
-                            className='flex items-center gap-8'
+                            className='flex items-center justify-center py-4 sm:py-6 px-3 sm:px-4 opacity-80 hover:opacity-100 transition-opacity duration-300'
                         >
-                            <span className='font-[font2] text-white/20 text-4xl lg:text-6xl uppercase
-                                           hover:text-[#D3FD50] transition-colors duration-300 cursor-default'>
-                                {client}
-                            </span>
-                            <span className='text-[#D3FD50] text-2xl'>✦</span>
+                            <img
+                                alt={company.name}
+                                className='h-6 sm:h-8 w-auto object-contain'
+                                src={company.logo}
+                            />
                         </div>
                     ))}
                 </div>
             </div>
 
-            {/* Second marquee - right to left (reversed) */}
-            <div className='relative'>
-                <div className='flex gap-16 animate-marquee-reverse whitespace-nowrap'>
-                    {[...clients, ...clients, ...clients].reverse().map((client, index) => (
-                        <div
-                            key={index}
-                            className='flex items-center gap-8'
-                        >
-                            <span className='font-[font2] text-[#D3FD50]/30 text-4xl lg:text-6xl uppercase
-                                           hover:text-white transition-colors duration-300 cursor-default'>
-                                {client}
-                            </span>
-                            <span className='text-white/30 text-2xl'>◆</span>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Center overlay gradient */}
+            {/* Edge fade overlays */}
             <div className='absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent pointer-events-none'></div>
             <div className='absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent pointer-events-none'></div>
         </section>

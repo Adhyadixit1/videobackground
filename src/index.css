@@ -54,6 +54,7 @@ html {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-100%);
   }
@@ -64,6 +65,7 @@ html {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-33.333%);
   }
@@ -73,6 +75,7 @@ html {
   0% {
     transform: translateX(-33.333%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -91,9 +94,11 @@ html {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -105,10 +110,13 @@ html {
 
 /* Pulse animation */
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.5;
     transform: scale(1.2);
@@ -121,9 +129,12 @@ html {
 
 /* Floating animation for decorative elements */
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -135,9 +146,12 @@ html {
 
 /* Glow effect */
 @keyframes glow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(211, 253, 80, 0.3);
   }
+
   50% {
     box-shadow: 0 0 40px rgba(211, 253, 80, 0.6);
   }
@@ -153,6 +167,7 @@ html {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -191,10 +206,14 @@ html {
   padding: 1px;
   border-radius: inherit;
   background: linear-gradient(135deg, #D3FD50, transparent, #D3FD50);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -220,4 +239,324 @@ html {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   opacity: 0.02;
   pointer-events: none;
+}
+
+/* Stations-service custom animations */
+@keyframes radarPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.15;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.15;
+  }
+}
+
+@keyframes radarSweep {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes radarLineGlow {
+  0% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes radarBlip {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+}
+
+.radar-ring {
+  transform-origin: 60px 60px;
+  animation: radarPulse 6s ease-in-out infinite;
+}
+
+.pulse-ring {
+  animation-duration: 4.5s;
+}
+
+.pulse-ring-delay {
+  animation-delay: 1.5s;
+}
+
+.radar-sweep {
+  transform-origin: 60px 60px;
+  animation: radarSweep 4s linear infinite;
+}
+
+.radar-line {
+  transform-origin: 60px 60px;
+  animation: radarLineGlow 3s ease-in-out infinite;
+}
+
+.radar-line-offset {
+  animation-delay: 0.6s;
+}
+
+.radar-blip {
+  animation: radarBlip 2s ease-in-out infinite;
+}
+
+.radar-blip-delay {
+  animation-delay: 0.8s;
+}
+
+.center-pulse {
+  animation: radarBlip 1.5s ease-in-out infinite;
+}
+
+@keyframes orbitGlow {
+  0% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.orbit-ring {
+  animation: orbitGlow 8s ease-in-out infinite;
+}
+
+.orbit-ring-delay {
+  animation-delay: 1s;
+}
+
+.orbit-ring-delay2 {
+  animation-delay: 2s;
+}
+
+@keyframes spherePulse {
+  0% {
+    transform: scale(0.95);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+.sphere-pulse {
+  animation: spherePulse 5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes pinBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.pin-bounce {
+  animation: pinBounce 2.4s ease-in-out infinite;
+}
+
+.pin-bounce-delay {
+  animation-delay: 0.4s;
+}
+
+.pin-bounce-delay2 {
+  animation-delay: 0.8s;
+}
+
+@keyframes attentionWave {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(0.95);
+    opacity: 0.2;
+  }
+}
+
+.attention-wave {
+  animation: attentionWave 6s ease-in-out infinite;
+  transform-origin: 90px 90px;
+}
+
+.attention-wave-delay {
+  animation-delay: 0.5s;
+}
+
+.attention-wave-delay2 {
+  animation-delay: 1s;
+}
+
+@keyframes eyeBlink {
+  0%,
+  10%,
+  100% {
+    transform: scaleY(1);
+  }
+
+  5% {
+    transform: scaleY(0.1);
+  }
+}
+
+.eye-blink {
+  transform-origin: 90px 85px;
+  animation: eyeBlink 6s ease infinite;
+}
+
+@keyframes pupilLook {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(3px, -2px);
+  }
+
+  50% {
+    transform: translate(-2px, 1px);
+  }
+
+  75% {
+    transform: translate(2px, 2px);
+  }
+}
+
+.pupil-look {
+  animation: pupilLook 8s ease-in-out infinite;
+}
+
+@keyframes raysGlow {
+  0% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.eye-rays line {
+  animation: raysGlow 4s ease-in-out infinite;
+}
+
+.eye-rays line:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.eye-rays line:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes bracketPulse {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+
+.bracket-pulse {
+  animation: bracketPulse 3s ease-in-out infinite;
+}
+
+.bracket-pulse-delay {
+  animation-delay: 0.3s;
+}
+
+.bracket-pulse-delay2 {
+  animation-delay: 0.6s;
+}
+
+.bracket-pulse-delay3 {
+  animation-delay: 0.9s;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+}
+
+.sparkle {
+  animation: sparkle 2.5s ease-in-out infinite;
+}
+
+.sparkle-delay {
+  animation-delay: 0.5s;
+}
+
+.sparkle-delay2 {
+  animation-delay: 1s;
 }

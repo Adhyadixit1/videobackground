@@ -3,64 +3,64 @@ import React from 'react'
 const projects = [
     {
         id: 1,
-        title: 'Stellar Branding',
-        category: 'Identity',
+        title: 'Retail Display',
+        category: 'LCD Screens',
         size: 'tall',
         color: 'from-purple-900/80 to-pink-900/80',
         image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80'
     },
     {
         id: 2,
-        title: 'Echo Platform',
-        category: 'Digital',
+        title: 'Shopping Mall',
+        category: 'Digital Totems',
         size: 'normal',
         color: 'from-blue-900/80 to-cyan-900/80',
         image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80'
     },
     {
         id: 3,
-        title: 'Neon Dreams',
-        category: 'Campaign',
+        title: 'Gas Station Network',
+        category: 'Outdoor Screens',
         size: 'wide',
         color: 'from-[#D3FD50]/40 to-green-900/80',
         image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80'
     },
     {
         id: 4,
-        title: 'Pulse App',
-        category: 'UX/UI',
+        title: 'Airport Terminal',
+        category: 'LED Walls',
         size: 'tall',
         color: 'from-orange-900/80 to-red-900/80',
         image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80'
     },
     {
         id: 5,
-        title: 'Vertex Studio',
-        category: 'Identity',
+        title: 'Corporate Lobby',
+        category: 'Video Walls',
         size: 'normal',
         color: 'from-indigo-900/80 to-purple-900/80',
         image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80'
     },
     {
         id: 6,
-        title: 'Aurora Brand',
-        category: 'Strategy',
+        title: 'Restaurant Chain',
+        category: 'Menu Boards',
         size: 'normal',
         color: 'from-teal-900/80 to-emerald-900/80',
         image: 'https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=800&q=80'
     },
     {
         id: 7,
-        title: 'Cipher Digital',
-        category: 'Web',
+        title: 'Train Station',
+        category: 'Info Displays',
         size: 'wide',
         color: 'from-pink-900/80 to-rose-900/80',
         image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80'
     },
     {
         id: 8,
-        title: 'Momentum',
-        category: 'Motion',
+        title: 'Event Venue',
+        category: 'Interactive Kiosk',
         size: 'normal',
         color: 'from-amber-900/80 to-yellow-900/80',
         image: 'https://images.unsplash.com/photo-1633493702341-4d04841df53b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
@@ -72,12 +72,12 @@ const PinterestGrid = () => {
         <section className='min-h-screen bg-gradient-to-b from-black via-zinc-950 to-black relative z-10 py-20 lg:py-32 px-4 lg:px-12'>
             {/* Section header */}
             <div className='text-center mb-16 lg:mb-24'>
-                <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4'>Our Work</p>
+                <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4'>Our Installations</p>
                 <h2 className='font-[font2] text-white text-[12vw] lg:text-[7vw] leading-none uppercase'>
                     Featured
                 </h2>
                 <h2 className='font-[font2] text-white/20 text-[12vw] lg:text-[7vw] leading-none uppercase -mt-2 lg:-mt-4'>
-                    Projects
+                    Screens
                 </h2>
             </div>
 
@@ -154,7 +154,7 @@ const PinterestGrid = () => {
                 <button className='group flex items-center gap-4 px-8 py-4 border-2 border-white/30 rounded-full
                                   hover:border-[#D3FD50] hover:bg-[#D3FD50]/10 transition-all duration-300'>
                     <span className='font-[font2] text-white text-lg uppercase group-hover:text-[#D3FD50] transition-colors'>
-                        View All Projects
+                        View All Screens
                     </span>
                     <div className='w-8 h-8 rounded-full bg-[#D3FD50] flex items-center justify-center
                                    group-hover:translate-x-1 transition-transform duration-300'>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Découvrez nos offres d'affichage dynamique - Diffusion, Digital Ads et Production Audiovisuelle par Luxio Media.">
+    <meta name="keywords" content="diffusion, digital ads, production audiovisuelle, affichage dynamique, Luxembourg">
+    <title>Nos Offres - Luxio Media</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+
+<body>
+    <!-- Language Selector Modal -->
+    <div id="language-modal" class="language-modal hidden">
+        <div class="language-modal-content">
+            <h3 data-i18n="select_language">Choisissez votre langue</h3>
+            <div class="language-options">
+                <button class="lang-btn" data-lang="fr">
+                    <span class="flag">🇫🇷</span>
+                    <span>Français</span>
+                </button>
+                <button class="lang-btn" data-lang="en">
+                    <span class="flag">🇬🇧</span>
+                    <span>English</span>
+                </button>
+                <button class="lang-btn" data-lang="de">
+                    <span class="flag">🇩🇪</span>
+                    <span>Deutsch</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section with Integrated Header -->
+    <section class="page-hero">
+        <div class="hero-header-bar">
+            <a href="index.html" class="logo">
+                <img src="assets/logo-luxio.svg" alt="Luxio Media" class="logo-light">
+                <img src="assets/logo-luxio-dark.svg" alt="Luxio Media" class="logo-dark">
+            </a>
+
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+                    <li><a href="offres.html" class="active" data-i18n="nav_offers">Offres</a></li>
+                    <li><a href="solutions.html" data-i18n="nav_solutions">Solutions</a></li>
+                    <li><a href="produits.html" data-i18n="nav_products">Produits</a></li>
+                    <li><a href="qui-sommes-nous.html" data-i18n="nav_about">Qui sommes-nous</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                    <!-- Mobile Only Menu Options -->
+                    <li class="mobile-only"><a href="contact.html" data-i18n="cta_quote">Demander un devis</a></li>
+                    <li class="mobile-only"><a href="#network-section" data-i18n="cta_find_screens">Trouver nos
+                            écrans</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Language Switcher -->
+                <div class="language-switcher">
+                    <button class="lang-trigger" id="lang-trigger">
+                        <span class="current-flag">🇫🇷</span>
+                        <span class="current-lang">FR</span>
+                        <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button class="lang-option" data-lang="fr">
+                            <span class="flag">🇫🇷</span>
+                            <span>Français</span>
+                        </button>
+                        <button class="lang-option" data-lang="en">
+                            <span class="flag">🇬🇧</span>
+                            <span>English</span>
+                        </button>
+                        <button class="lang-option" data-lang="de">
+                            <span class="flag">🇩🇪</span>
+                            <span>Deutsch</span>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="btn btn-outline btn-sm btn-yellow-outline" data-i18n="cta_quote">Demander
+                    un devis</a>
+                <a href="#network-section" class="btn btn-primary btn-sm" data-i18n="cta_find_screens">Trouver nos
+                    écrans</a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="section-tag" data-i18n="offers_tag">Nos offres</span>
+                <h1 data-i18n="offers_hero_title">Des offres adaptées à <span class="gradient-text">tous vos
+                        besoins</span></h1>
+                <p class="page-hero-subtitle" data-i18n="offers_hero_subtitle">Que vous soyez une entreprise locale ou
+                    internationale, nous avons la solution qu'il vous faut.</p>
+            </div>
+        </div>
+        <div class="hero-gradient-bg"></div>
+
+        <div class="wave-divider wave-dark">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+                    fill="currentColor" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- DIFFUSION Section (CRITICAL - Exact copy from fillupmedia.fr) -->
+    <section class="offer-detail-section" id="diffusion">
+        <div class="container">
+            <div class="offer-detail-grid">
+                <div class="offer-detail-content">
+                    <div class="offer-tag">DIFFUSION ÉCRANS</div>
+                    <h2 data-i18n="diffusion_title">Diffusion</h2>
+                    <p class="offer-lead" data-i18n="diffusion_subtitle">Diffusez vos messages sur nos écrans digitaux
+                    </p>
+
+                    <p data-i18n="diffusion_desc">Profitez de notre réseau d'écrans stratégiquement positionnés pour
+                        maximiser la visibilité de votre marque. Notre solution de diffusion vous permet de toucher une
+                        audience captive dans des lieux à fort trafic.</p>
+
+                    <div class="offer-benefits-list">
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="diffusion_benefit1">Ciblage géographique précis</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="diffusion_benefit2">Audience captive garantie</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="diffusion_benefit3">Flexibilité des créneaux horaires</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="diffusion_benefit4">Reporting détaillé des performances</span>
+                        </div>
+                    </div>
+
+                    <div class="offer-cta-buttons">
+                        <a href="contact.html" class="btn btn-primary" data-i18n="learn_more">En savoir plus</a>
+                        <a href="contact.html" class="btn btn-outline" data-i18n="cta_quote">Demander un devis</a>
+                    </div>
+                </div>
+
+                <div class="offer-detail-visual">
+                    <div class="visual-mockup">
+                        <img src="assets/offers/diffusion-visual.jpg" alt="Diffusion écrans">
+                        <div class="visual-accent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Advantages Section -->
+    <section class="advantages-section">
+        <div class="container">
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path
+                                d="M24 4L28.9 18.1L44 18.1L31.5 27.9L36.4 42L24 32.2L11.6 42L16.5 27.9L4 18.1L19.1 18.1L24 4Z"
+                                stroke="url(#adv1)" stroke-width="2" fill="none" />
+                            <defs>
+                                <linearGradient id="adv1" x1="0" y1="0" x2="48" y2="48">
+                                    <stop stop-color="#4dbdc6" />
+                                    <stop offset="1" stop-color="#fcd14c" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Emplacements premium</h3>
+                    <p>Des écrans positionnés dans des lieux à forte affluence et haute visibilité.</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" stroke="url(#adv2)" stroke-width="2" />
+                            <path d="M24 14V24L32 28" stroke="url(#adv2)" stroke-width="2" stroke-linecap="round" />
+                            <defs>
+                                <linearGradient id="adv2" x1="0" y1="0" x2="48" y2="48">
+                                    <stop stop-color="#4dbdc6" />
+                                    <stop offset="1" stop-color="#fcd14c" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Temps de contact optimal</h3>
+                    <p>3 à 5 minutes d'attention garantie pour un message impactant.</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="8" y="8" width="32" height="24" rx="2" stroke="url(#adv3)" stroke-width="2" />
+                            <path d="M16 38H32" stroke="url(#adv3)" stroke-width="2" stroke-linecap="round" />
+                            <path d="M24 32V38" stroke="url(#adv3)" stroke-width="2" />
+                            <defs>
+                                <linearGradient id="adv3" x1="0" y1="0" x2="48" y2="48">
+                                    <stop stop-color="#4dbdc6" />
+                                    <stop offset="1" stop-color="#fcd14c" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Écrans haute définition</h3>
+                    <p>Qualité d'image exceptionnelle pour un impact visuel maximal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIGITAL ADS Section (CRITICAL - Exact copy from fillupmedia.fr) -->
+    <section class="offer-detail-section offer-alt" id="digital-ads">
+        <div class="container">
+            <div class="offer-detail-grid reverse">
+                <div class="offer-detail-content">
+                    <div class="offer-tag">DIGITAL ADS</div>
+                    <h2 data-i18n="digital_ads_title">Digital Ads</h2>
+                    <p class="offer-lead" data-i18n="digital_ads_subtitle">Amplifiez votre impact avec la publicité
+                        digitale</p>
+
+                    <p data-i18n="digital_ads_desc">Combinez la puissance de l'affichage dynamique avec les réseaux
+                        sociaux et le web pour une stratégie multicanale performante. Touchez votre audience où qu'elle
+                        soit.</p>
+
+                    <div class="offer-benefits-list">
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="digital_ads_benefit1">Retargeting sur réseaux sociaux</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="digital_ads_benefit2">Synchronisation cross-canal</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="digital_ads_benefit3">Optimisation en temps réel</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="digital_ads_benefit4">Mesure d'impact unifiée</span>
+                        </div>
+                    </div>
+
+                    <div class="offer-cta-buttons">
+                        <a href="contact.html" class="btn btn-primary" data-i18n="learn_more">En savoir plus</a>
+                        <a href="contact.html" class="btn btn-outline" data-i18n="cta_quote">Demander un devis</a>
+                    </div>
+                </div>
+
+                <div class="offer-detail-visual">
+                    <div class="visual-mockup">
+                        <img src="assets/offers/digital-ads-visual.jpg" alt="Digital Ads">
+                        <div class="visual-accent right"></div>
+                    </div>
+
+                    <!-- Social Media Icons -->
+                    <div class="social-icons-floating">
+                        <div class="social-icon facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                            </svg>
+                        </div>
+                        <div class="social-icon instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" fill="none"
+                                    stroke-width="2" />
+                                <circle cx="12" cy="12" r="4" stroke="currentColor" fill="none" stroke-width="2" />
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
+                            </svg>
+                        </div>
+                        <div class="social-icon google">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path
+                                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path
+                                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path
+                                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTION AUDIOVISUELLE Section (CRITICAL - Exact copy from fillupmedia.fr) -->
+    <section class="offer-detail-section" id="production">
+        <div class="container">
+            <div class="offer-detail-grid">
+                <div class="offer-detail-content">
+                    <div class="offer-tag">PRODUCTION AUDIOVISUELLE</div>
+                    <h2 data-i18n="production_title">Production Audiovisuelle</h2>
+                    <p class="offer-lead" data-i18n="production_subtitle">Créez des contenus qui marquent les esprits
+                    </p>
+
+                    <p data-i18n="production_desc">Notre équipe de créatifs conçoit des contenus vidéo percutants,
+                        parfaitement adaptés à l'affichage dynamique. Du concept à la diffusion, nous vous accompagnons
+                        à chaque étape.</p>
+
+                    <div class="offer-benefits-list">
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="production_benefit1">Chef de projets dédié</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="production_benefit2">Rédaction et scénarisation</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="production_benefit3">Tournage professionnel</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span data-i18n="production_benefit4">Montage et animation</span>
+                        </div>
+                    </div>
+
+                    <div class="offer-cta-buttons">
+                        <a href="contact.html" class="btn btn-primary" data-i18n="learn_more">En savoir plus</a>
+                        <a href="contact.html" class="btn btn-outline" data-i18n="cta_quote">Demander un devis</a>
+                    </div>
+                </div>
+
+                <div class="offer-detail-visual">
+                    <div class="visual-mockup production-visual">
+                        <img src="assets/offers/production-visual.jpg" alt="Production Audiovisuelle">
+                        <div class="visual-accent"></div>
+
+                        <!-- Production Process Steps -->
+                        <div class="production-steps">
+                            <div class="step">
+                                <span class="step-number">01</span>
+                                <span class="step-label">Concept</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">02</span>
+                                <span class="step-label">Tournage</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">03</span>
+                                <span class="step-label">Montage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combined Offer Section -->
+    <section class="combined-offer-section">
+        <div class="container">
+            <div class="combined-offer-content">
+                <span class="section-tag">OFFRE COMPLÈTE</span>
+                <h2>Diffusion écrans + Publicité sur les réseaux sociaux</h2>
+                <p>Maximisez votre impact en combinant la puissance de l'affichage dynamique avec une présence ciblée
+                    sur les réseaux sociaux. Une stratégie multicanale pour des résultats optimaux.</p>
+
+                <div class="combined-features">
+                    <div class="feature">
+                        <div class="feature-icon">📺</div>
+                        <h4>Diffusion sur écrans</h4>
+                        <p>Visibilité maximale sur notre réseau d'écrans premium</p>
+                    </div>
+                    <div class="feature-plus">+</div>
+                    <div class="feature">
+                        <div class="feature-icon">📱</div>
+                        <h4>Campagnes social media</h4>
+                        <p>Facebook, Instagram & Google Ads ciblés</p>
+                    </div>
+                    <div class="feature-equals">=</div>
+                    <div class="feature highlight">
+                        <div class="feature-icon">🚀</div>
+                        <h4>Impact décuplé</h4>
+                        <p>Synergie pour un ROI maximisé</p>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="btn btn-primary btn-lg" data-i18n="cta_quote">Demander un devis
+                    personnalisé</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2 data-i18n="cta_title">Vous aussi, soyez vu et entendu</h2>
+                    <p data-i18n="cta_desc">Rejoignez les entreprises qui font confiance à Luxio Media pour leur
+                        communication visuelle.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg" data-i18n="cta_contact">Contactez-nous</a>
+                    <a href="tel:+352661167725" class="btn btn-outline-light btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M18.308 14.693l-2.704-2.704a1.587 1.587 0 00-2.245 0l-.69.69a25.893 25.893 0 01-5.348-5.348l.69-.69a1.587 1.587 0 000-2.245L5.307 1.692a1.587 1.587 0 00-2.245 0L1.81 2.944c-1.564 1.564-.947 4.26 1.38 6.587l7.28 7.28c2.326 2.326 5.022 2.943 6.586 1.379l1.252-1.252a1.587 1.587 0 000-2.245z"
+                                stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                        +352 661 16 77 25
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo-luxio-light.svg" alt="Luxio Media">
+                    </a>
+                    <p data-i18n="footer_desc">Votre partenaire premium en affichage dynamique et communication
+                        digitale.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 011.25 1.25A1.25 1.25 0 0117.25 8 1.25 1.25 0 0116 6.75a1.25 1.25 0 011.25-1.25M12 7a5 5 0 015 5 5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5m0 2a3 3 0 00-3 3 3 3 0 003 3 3 3 0 003-3 3 3 0 00-3-3z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-i18n="footer_services">Services</h4>
+                    <ul>
+                        <li><a href="solutions.html" data-i18n="nav_solutions">Solutions</a></li>
+                        <li><a href="offres.html" data-i18n="nav_offers">Offres</a></li>
+                        <li><a href="produits.html" data-i18n="nav_products">Produits</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-i18n="footer_company">Entreprise</h4>
+                    <ul>
+                        <li><a href="qui-sommes-nous.html" data-i18n="nav_about">Qui sommes-nous</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                        <li><a href="#" data-i18n="footer_careers">Carrières</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 data-i18n="footer_contact_us">Nous contacter</h4>
+                    <ul>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M2.5 6.667L10 11.667l7.5-5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <rect x="2.5" y="4.167" width="15" height="11.667" rx="2" stroke="currentColor"
+                                    stroke-width="1.5" />
+                            </svg>
+                            <a href="mailto:contact@luxiomedia.lu">contact@luxiomedia.lu</a>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M18.308 14.693l-2.704-2.704a1.587 1.587 0 00-2.245 0l-.69.69a25.893 25.893 0 01-5.348-5.348l.69-.69a1.587 1.587 0 000-2.245L5.307 1.692a1.587 1.587 0 00-2.245 0L1.81 2.944c-1.564 1.564-.947 4.26 1.38 6.587l7.28 7.28c2.326 2.326 5.022 2.943 6.586 1.379l1.252-1.252a1.587 1.587 0 000-2.245z"
+                                    stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                            <a href="tel:+352661167725">+352 661 16 77 25</a>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 10.833a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" stroke="currentColor"
+                                    stroke-width="1.5" />
+                                <path
+                                    d="M10 17.5s6.667-4.583 6.667-9.167a6.667 6.667 0 10-13.334 0c0 4.584 6.667 9.167 6.667 9.167z"
+                                    stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                            <span>Luxembourg • France • Europe</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">© 2024 Luxio Media. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer_privacy">Politique de confidentialité</a>
+                    <a href="#" data-i18n="footer_terms">Mentions légales</a>
+                </div>
+            </div>
+
+            <div class="footer-partners">
+                <div class="partner-logo">
+                    <img src="assets/partners/partner1.png" alt="Partner 1">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/partners/partner2.png" alt="Partner 2">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/partners/partner3.png" alt="Partner 3">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/partners/partner4.png" alt="Partner 4">
+                </div>
+                <div class="partner-logo">
+                    <img src="assets/partners/partner5.png" alt="Partner 5">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

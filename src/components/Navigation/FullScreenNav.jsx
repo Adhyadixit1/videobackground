@@ -1,173 +1,193 @@
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { NavbarContext } from '../../context/NavContext'
 
-const FullScreenNav = () => {
-    const fullNavLinksRef = useRef(null)
-    const fullScreenRef = useRef(null)
+const menuItems = [
+    { title: 'Nos solutions', subtitle: 'Our solutions', path: '/solutions' },
+    { title: 'Pourquoi Fill Up ?', subtitle: 'Why Fill Up?', path: '/why-fillup' },
+    { title: 'Nos cas clients', subtitle: 'Customer success stories', path: '/case-studies' },
+    { title: 'Nos ressources', subtitle: 'Our resources', path: '/resources' },
+    { title: 'Nous rejoindre', subtitle: 'Join us / Careers', path: '/careers' },
+    { title: 'Investisseurs', subtitle: 'Investors', path: '/investors' },
+    { title: 'Contact', subtitle: 'Get in touch', path: '/contact' },
+]
 
+const FullScreenNav = () => {
+    const menuContainerRef = useRef(null)
+    const [needsScroll, setNeedsScroll] = useState(false)
     const [navOpen, setNavOpen] = useContext(NavbarContext)
     const navigate = useNavigate()
 
-    function gsapAnimation() {
-        const tl = gsap.timeline()
-        tl.to('.fullscreennav', {
-            display: 'block'
-        })
-        tl.to('.stairing', {
-            delay: 0.2,
-            height: '100%',
-            stagger: {
-                amount: -0.3
+    // Check if content overflows and needs scrolling
+    useEffect(() => {
+        const checkOverflow = () => {
+            if (menuContainerRef.current) {
+                const { scrollHeight, clientHeight } = menuContainerRef.current
+                setNeedsScroll(scrollHeight > clientHeight)
             }
-        })
-        tl.to('.link', {
-            opacity: 1,
-            rotateX: 0,
-            stagger: {
-                amount: 0.3
-            }
-        })
-        tl.to('.navlink', {
-            opacity: 1
-        })
-    }
-    function gsapAnimationReverse() {
-        const tl = gsap.timeline()
-        tl.to('.link', {
-            opacity: 0,
-            rotateX: 90,
-            stagger: {
-                amount: 0.1
-            }
-        })
-        tl.to('.stairing', {
-            height: 0,
-            stagger: {
-                amount: 0.1
-            }
-        })
-        tl.to('.navlink', {
-            opacity: 0
-        })
-        tl.to('.fullscreennav', {
-            display: 'none',
-        })
-    }
+        }
 
-    useGSAP(function () {
         if (navOpen) {
-            gsapAnimation()
-        } else {
-            gsapAnimationReverse()
+            checkOverflow()
+            window.addEventListener('resize', checkOverflow)
+        }
 
+        return () => window.removeEventListener('resize', checkOverflow)
+    }, [navOpen])
+
+    // Prevent body scroll when menu is open
+    useEffect(() => {
+        if (navOpen) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = ''
+        }
+        return () => {
+            document.body.style.overflow = ''
         }
     }, [navOpen])
 
+    const handleNavigation = (path) => {
+        navigate(path)
+        setNavOpen(false)
+    }
+
+    if (!navOpen) return null
+
     return (
-        <div ref={fullScreenRef} id='fullscreennav' className='fullscreennav hidden text-white overflow-hidden h-screen w-full z-50 absolute'>
-            <div className='h-screen w-full fixed'>
-                <div className='h-full w-full flex'>
-                    <div className='stairing h-full w-1/5 bg-black'></div>
-                    <div className='stairing h-full w-1/5 bg-black'></div>
-                    <div className='stairing h-full w-1/5 bg-black'></div>
-                    <div className='stairing h-full w-1/5 bg-black'></div>
-                    <div className='stairing h-full w-1/5 bg-black'></div>
-                </div>
+        <div className='fixed inset-0 z-50 bg-black'>
+            {/* Decorative background elements */}
+            <div className='absolute inset-0 overflow-hidden pointer-events-none'>
+                <div className='absolute top-1/4 -left-32 w-96 h-96 bg-[#D3FD50]/5 rounded-full blur-3xl'></div>
+                <div className='absolute bottom-1/4 -right-32 w-96 h-96 bg-[#D3FD50]/5 rounded-full blur-3xl'></div>
+                <div className='absolute top-0 left-0 w-full h-full' style={{
+                    backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)`,
+                    backgroundSize: '40px 40px'
+                }}></div>
             </div>
-            <div ref={fullNavLinksRef} className='relative'>
-                <div className="navlink flex w-full justify-between lg:p-5 p-2 items-start">
-                    <div className=''>
-                        <div className='lg:w-36 w-24 cursor-pointer' onClick={() => navigate('/')}>
-                            <svg className=' w-full' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 44">
-                                <path fill='white' fillRule="evenodd" d="M35.1441047,8.4486911 L58.6905011,8.4486911 L58.6905011,-1.3094819e-14 L35.1441047,-1.3094819e-14 L35.1441047,8.4486911 Z M20.0019577,0.000230366492 L8.83414254,25.3433089 L18.4876971,25.3433089 L29.5733875,0.000230366492 L20.0019577,0.000230366492 Z M72.5255345,0.000691099476 L72.5255345,8.44846073 L94.3991559,8.44846073 L94.3991559,16.8932356 L72.5275991,16.8932356 L72.5275991,19.5237906 L72.5255345,19.5237906 L72.5255345,43.9274346 L102.80937,43.9274346 L102.80937,35.4798953 L80.9357483,35.4798953 L80.9357483,25.3437696 L94.3996147,25.3428482 L94.3996147,16.8953089 L102.80937,16.8953089 L102.80937,0.000691099476 L72.5255345,0.000691099476 Z M-1.30398043e-14,43.9278953 L8.78642762,43.9278953 L8.78642762,0.0057591623 L-1.30398043e-14,0.0057591623 L-1.30398043e-14,43.9278953 Z M58.6849955,8.4486911 L43.1186904,43.9274346 L52.3166592,43.9274346 L67.9877996,8.4486911 L58.6849955,8.4486911 Z M18.4688864,25.3437696 L26.7045278,43.9278953 L36.2761871,43.9278953 L28.1676325,25.3375497 L18.4688864,25.3437696 Z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div onClick={() => {
-                        setNavOpen(false)
-                    }} className='lg:h-32 h-20 w-20 lg:w-32 relative cursor-pointer'>
-                        <div className='lg:h-44 h-28 lg:w-1 w-0.5 -rotate-45 origin-top absolute bg-[#D3FD50]'></div>
-                        <div className='lg:h-44 h-28 lg:w-1 w-0.5 right-0 rotate-45 origin-top absolute bg-[#D3FD50]'></div>
 
-                    </div>
+            {/* Header with logo and close button */}
+            <div className='relative z-10 flex justify-between items-start p-4 lg:p-6'>
+                {/* Logo */}
+                <div
+                    className='cursor-pointer'
+                    onClick={() => handleNavigation('/')}
+                >
+                    <img
+                        src='/luxio-vector-logo.png'
+                        alt='Luxio Media'
+                        className='h-12 lg:h-16 w-auto'
+                    />
                 </div>
 
-                <div className=' py-36'>
-                    <div className='link origin-top relative border-t-1 border-white cursor-pointer' onClick={() => { navigate('/projects'); setNavOpen(false); }}>
-                        <h1 className='font-[font2] text-5xl lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase'>Projets</h1>
-                        <div className='moveLink absolute text-black flex top-0 bg-[#D3FD50]'>
-                            <div className='moveX flex items-center'>
-                                <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>See Everything</h2>
-                                <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
-                                <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>See Everything&nbsp;</h2>
-                                <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
-                            </div>
-                            <div className='moveX flex items-center'>
-                                <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>See Everything</h2>
-                                <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
-                                <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>See Everything&nbsp;</h2>
-                                <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
-                            </div>
-                        </div>
-
+                {/* Close Button - Clean X design */}
+                <button
+                    onClick={() => setNavOpen(false)}
+                    className='group relative w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-full border border-white/20 hover:border-[#D3FD50] hover:bg-[#D3FD50]/10 transition-all duration-300'
+                    aria-label='Close menu'
+                >
+                    <div className='relative w-5 h-5 lg:w-6 lg:h-6'>
+                        <span className='absolute top-1/2 left-0 w-full h-0.5 bg-white group-hover:bg-[#D3FD50] transform -translate-y-1/2 rotate-45 transition-colors duration-300'></span>
+                        <span className='absolute top-1/2 left-0 w-full h-0.5 bg-white group-hover:bg-[#D3FD50] transform -translate-y-1/2 -rotate-45 transition-colors duration-300'></span>
                     </div>
-                    <div className='link origin-top relative border-t-1 border-white cursor-pointer' onClick={() => { navigate('/agence'); setNavOpen(false); }}>
-                        <h1 className='font-[font2] text-5xl lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase'>Agence</h1>
-                        <div className='moveLink absolute text-black flex top-0 bg-[#D3FD50]'>
-                            <div className='moveX flex items-center'>
-                                <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>Know us</h2>
-                                <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/teamMembers/PLP_640x280-640x290.jpg" alt="" />
-                                <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>Know us&nbsp;</h2>
-                                <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/teamMembers/MEL_640X290-640x290.jpg" alt="" />
-                            </div>
-                            <div className='moveX flex items-center'>
-                                <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>Know us</h2>
-                                <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/teamMembers/PLP_640x280-640x290.jpg" alt="" />
-                                <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>Know us&nbsp;</h2>
-                                <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/teamMembers/MEL_640X290-640x290.jpg" alt="" />
-                            </div>
-                        </div>
+                </button>
+            </div>
 
-                    </div>
-                </div>
-                <div className='link origin-top relative border-t-1 border-white cursor-pointer' onClick={() => { navigate('/'); setNavOpen(false); }}>
-                    <h1 className='font-[font2] text-5xl lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase'>Contact</h1>
-                    <div className='moveLink absolute text-black flex top-0 bg-[#D3FD50]'>
-                        <div className='moveX flex items-center'>
-                            <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>Send us a fax</h2>
-                            <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
-                            <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>Send us a fax&nbsp;</h2>
-                            <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
-                        </div>
-                        <div className='moveX flex items-center'>
-                            <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>Send us a fax</h2>
-                            <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt="" />
-                            <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>Send us a fax&nbsp;</h2>
-                            <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt="" />
-                        </div>
+            {/* Menu Content */}
+            <div
+                ref={menuContainerRef}
+                className={`relative z-10 h-[calc(100vh-100px)] px-4 lg:px-12 ${needsScroll ? 'overflow-y-auto' : 'overflow-hidden'}`}
+                style={{
+                    scrollbarWidth: needsScroll ? 'thin' : 'none',
+                    scrollbarColor: needsScroll ? '#D3FD50 #1a1a1a' : 'transparent transparent'
+                }}
+            >
+                <div className='max-w-6xl mx-auto py-8 lg:py-12'>
+                    {/* Section Title */}
+                    <div className='mb-8 lg:mb-12'>
+                        <span className='text-[#D3FD50] text-xs lg:text-sm font-medium tracking-widest uppercase'>
+                            Navigation
+                        </span>
+                        <div className='mt-2 w-12 h-0.5 bg-gradient-to-r from-[#D3FD50] to-transparent'></div>
                     </div>
 
-                </div>
-                <div className='link origin-top relative border-y-1 border-white cursor-pointer' onClick={() => { navigate('/'); setNavOpen(false); }}>
-                    <h1 className='font-[font2] text-5xl lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase'>Blogs</h1>
-                    <div className='moveLink absolute text-black flex top-0 bg-[#D3FD50]'>
-                        <div className='moveX flex items-center'>
-                            <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>Read articles</h2>
-                            <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/blog/blogImg/50ff59cc0550df5b36543807a58db98c52e01a22274a317eafbfa5266941579b-640x290.png" alt="" />
-                            <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>Read articles&nbsp;</h2>
-                            <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/blog/blogImg/ier.com-16107673482102220.gif" alt="" />
-                        </div>
-                        <div className='moveX flex items-center'>
-                            <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>Read articles</h2>
-                            <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/blog/blogImg/50ff59cc0550df5b36543807a58db98c52e01a22274a317eafbfa5266941579b-640x290.png" alt="" />
-                            <h2 className='whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase'>Read articles&nbsp;</h2>
-                            <img className='lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover' src="https://k72.ca/uploads/blog/blogImg/ier.com-16107673482102220.gif" alt="" />
+                    {/* Menu Items */}
+                    <nav className='space-y-1'>
+                        {menuItems.map((item, index) => (
+                            <div
+                                key={index}
+                                onClick={() => handleNavigation(item.path)}
+                                className='group cursor-pointer relative py-3 lg:py-4 border-b border-white/5 hover:border-[#D3FD50]/30 transition-all duration-300'
+                            >
+                                <div className='flex items-center justify-between'>
+                                    <div className='flex items-baseline gap-3 lg:gap-6'>
+                                        {/* Number indicator */}
+                                        <span className='text-white/20 text-xs lg:text-sm font-mono'>
+                                            {String(index + 1).padStart(2, '0')}
+                                        </span>
+
+                                        {/* Main title */}
+                                        <h2 className='font-[font2] text-white text-xl sm:text-2xl lg:text-3xl xl:text-4xl group-hover:text-[#D3FD50] transition-colors duration-300'>
+                                            {item.title}
+                                        </h2>
+
+                                        {/* Subtitle - hidden on mobile */}
+                                        <span className='hidden md:inline text-white/30 text-sm lg:text-base'>
+                                            {item.subtitle}
+                                        </span>
+                                    </div>
+
+                                    {/* Arrow indicator */}
+                                    <div className='flex items-center gap-2'>
+                                        <div className='w-0 group-hover:w-8 lg:group-hover:w-12 h-px bg-[#D3FD50] transition-all duration-300'></div>
+                                        <svg
+                                            className='w-4 h-4 lg:w-5 lg:h-5 text-white/30 group-hover:text-[#D3FD50] transform group-hover:translate-x-1 transition-all duration-300'
+                                            fill='none'
+                                            stroke='currentColor'
+                                            viewBox='0 0 24 24'
+                                        >
+                                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                {/* Hover background effect */}
+                                <div className='absolute inset-0 bg-gradient-to-r from-[#D3FD50]/0 via-[#D3FD50]/5 to-[#D3FD50]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10'></div>
+                            </div>
+                        ))}
+                    </nav>
+
+                    {/* Footer info */}
+                    <div className='mt-12 lg:mt-16 pt-8 border-t border-white/10'>
+                        <div className='flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6'>
+                            {/* Contact info */}
+                            <div className='space-y-2'>
+                                <p className='text-white/40 text-xs uppercase tracking-widest'>Contact</p>
+                                <a href='mailto:contact@fillupmedia.fr' className='text-white hover:text-[#D3FD50] transition-colors text-sm lg:text-base'>
+                                    contact@fillupmedia.fr
+                                </a>
+                            </div>
+
+                            {/* Social links */}
+                            <div className='flex items-center gap-4'>
+                                <a href='#' className='w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#D3FD50] hover:bg-[#D3FD50]/10 transition-all duration-300 group'>
+                                    <svg className='w-4 h-4 text-white group-hover:text-[#D3FD50]' fill='currentColor' viewBox='0 0 24 24'>
+                                        <path d='M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z' />
+                                    </svg>
+                                </a>
+                                <a href='#' className='w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#D3FD50] hover:bg-[#D3FD50]/10 transition-all duration-300 group'>
+                                    <svg className='w-4 h-4 text-white group-hover:text-[#D3FD50]' fill='currentColor' viewBox='0 0 24 24'>
+                                        <path d='M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z' />
+                                    </svg>
+                                </a>
+                                <a href='#' className='w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#D3FD50] hover:bg-[#D3FD50]/10 transition-all duration-300 group'>
+                                    <svg className='w-4 h-4 text-white group-hover:text-[#D3FD50]' fill='currentColor' viewBox='0 0 24 24'>
+                                        <path d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z' />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

@@ -27,46 +27,45 @@ const ContactCTA = () => {
             <div className='relative z-10 text-center px-6'>
                 {/* Subtitle */}
                 <p className='font-[font1] text-[#D3FD50] tracking-[0.5em] uppercase text-sm mb-8'>
-                    Let's Create Together
+                    Get Started Today
                 </p>
 
                 {/* Main heading */}
                 <h2 className='font-[font2] text-white text-[12vw] lg:text-[10vw] leading-none uppercase mb-4'>
-                    Got A
+                    Ready To
                 </h2>
                 <h2 className='font-[font2] text-transparent text-[12vw] lg:text-[10vw] leading-none uppercase mb-8
                               bg-clip-text bg-gradient-to-r from-[#D3FD50] via-[#B5FF00] to-[#D3FD50]
                               animate-gradient bg-[length:200%_auto]'>
-                    Project?
+                    Advertise?
                 </h2>
 
                 <p className='font-[font1] text-white/60 text-base lg:text-xl max-w-2xl mx-auto mb-12 leading-relaxed'>
-                    We're always excited to collaborate on ambitious projects.
-                    Let's push boundaries and create something extraordinary.
+                    Give your brand the visibility it deserves with our premium digital signage network across Europe.
                 </p>
 
                 {/* CTA Buttons */}
                 <div className='flex flex-col sm:flex-row items-center justify-center gap-6'>
                     <Link
-                        to='/agence'
+                        to='/contact'
                         className='group relative px-12 py-5 bg-[#D3FD50] rounded-full overflow-hidden'
                     >
                         <span className='relative z-10 font-[font2] text-black text-lg uppercase tracking-wider
                                         group-hover:text-white transition-colors duration-300'>
-                            Start a Project
+                            Request a Quote
                         </span>
                         <div className='absolute inset-0 bg-black transform translate-y-full 
                                        group-hover:translate-y-0 transition-transform duration-300'></div>
                     </Link>
 
                     <a
-                        href='mailto:hello@k72.agency'
+                        href='mailto:contact@luxiomedia.com'
                         className='group flex items-center gap-3 px-8 py-5 border-2 border-white/30 rounded-full
                                   hover:border-[#D3FD50] transition-all duration-300'
                     >
                         <span className='font-[font2] text-white text-lg uppercase tracking-wider
                                         group-hover:text-[#D3FD50] transition-colors duration-300'>
-                            Say Hello
+                            Contact Us
                         </span>
                         <svg className='w-5 h-5 text-white group-hover:text-[#D3FD50] 
                                        group-hover:translate-x-1 transition-all duration-300'
@@ -82,11 +81,11 @@ const ContactCTA = () => {
                         Or reach us at
                     </p>
                     <a
-                        href='mailto:hello@k72.agency'
+                        href='mailto:contact@luxiomedia.com'
                         className='font-[font2] text-white text-2xl lg:text-4xl hover:text-[#D3FD50] 
                                   transition-colors duration-300'
                     >
-                        hello@k72.agency
+                        contact@luxiomedia.com
                     </a>
                 </div>
             </div>

@@ -3,29 +3,29 @@ import React from 'react'
 const services = [
     {
         number: '01',
-        title: 'Brand Strategy',
-        description: 'Crafting unique brand identities that resonate with your audience and stand the test of time.',
+        title: 'Screen Diffusion',
+        description: 'Broadcast your ads on our premium digital screens across strategic locations in Europe.',
         icon: '◇',
         image: 'https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80'
     },
     {
         number: '02',
-        title: 'Digital Design',
-        description: 'Creating immersive digital experiences through cutting-edge UI/UX design principles.',
+        title: 'Digital Ads',
+        description: 'Extend your reach with targeted social media campaigns that complement your outdoor advertising.',
         icon: '○',
         image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80'
     },
     {
         number: '03',
-        title: 'Creative Direction',
-        description: 'Guiding visual narratives that captivate and inspire meaningful connections.',
+        title: 'Video Production',
+        description: 'Create impactful video content optimized for digital signage in our professional studio.',
         icon: '△',
         image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80'
     },
     {
         number: '04',
-        title: 'Motion & Film',
-        description: 'Bringing stories to life through dynamic motion graphics and cinematic production.',
+        title: 'Screen Installation',
+        description: 'End-to-end deployment of LCD screens, digital totems, and interactive kiosks.',
         icon: '□',
         image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80'
     }
@@ -41,9 +41,9 @@ const ServicesSection = () => {
             <div className='relative z-10 px-6 lg:px-20'>
                 {/* Section header */}
                 <div className='mb-20'>
-                    <p className='text-[#D3FD50] font-[font1] text-sm lg:text-base tracking-[0.3em] uppercase mb-4'>What We Do</p>
+                    <p className='text-[#D3FD50] font-[font1] text-sm lg:text-base tracking-[0.3em] uppercase mb-4'>What We Offer</p>
                     <h2 className='font-[font2] text-white text-[10vw] lg:text-[6vw] leading-none uppercase'>
-                        Services
+                        Our Solutions
                     </h2>
                 </div>
 
