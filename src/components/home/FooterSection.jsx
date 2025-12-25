@@ -1,7 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../../context/LanguageContext'
 
 const FooterSection = () => {
+    const { t } = useLanguage()
+
+    // Get services list from translations or fallback to empty array
+    const servicesList = t('footer.servicesList', { returnObjects: true }) || []
+
+    const navItems = [
+        { name: t('nav.home'), path: '/' },
+        { name: t('nav.projects'), path: '/projects' },
+        { name: t('nav.agency'), path: '/agency' },
+        { name: t('nav.contact'), path: '/contact' }
+    ]
+
     return (
         <footer className='relative z-20 bg-[#0a0a0a] border-t border-white/10'>
             {/* Main footer content */}
@@ -11,8 +24,7 @@ const FooterSection = () => {
                     <div className='lg:col-span-4'>
                         <img src='/luxio-vector-logo.png' alt='Luxio Media' className='w-64 lg:w-96 h-auto mb-6 lg:-mt-20' />
                         <p className='font-[font1] text-gray-400 text-sm lg:text-base leading-relaxed max-w-sm'>
-                            Your partner in digital signage across Europe. Premium screens for
-                            maximum visibility and impact.
+                            {t('footer.tagline')}
                         </p>
 
                         {/* Social links */}
@@ -38,17 +50,17 @@ const FooterSection = () => {
                     {/* Navigation links */}
                     <div className='lg:col-span-2'>
                         <h4 className='font-[font2] text-white text-sm uppercase tracking-wider mb-6'>
-                            Navigation
+                            {t('footer.navTitle')}
                         </h4>
                         <ul className='space-y-3'>
-                            {['Home', 'Projects', 'Agence', 'Contact'].map((item, index) => (
+                            {navItems.map((item, index) => (
                                 <li key={index}>
                                     <Link
-                                        to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                                        to={item.path}
                                         className='font-[font1] text-gray-400 text-sm hover:text-[#D3FD50] 
                                                   transition-colors duration-300'
                                     >
-                                        {item}
+                                        {item.name}
                                     </Link>
                                 </li>
                             ))}
@@ -58,10 +70,10 @@ const FooterSection = () => {
                     {/* Services links */}
                     <div className='lg:col-span-2'>
                         <h4 className='font-[font2] text-white text-sm uppercase tracking-wider mb-6'>
-                            Services
+                            {t('footer.servicesTitle')}
                         </h4>
                         <ul className='space-y-3'>
-                            {['Screen Diffusion', 'Digital Ads', 'Video Production', 'Screen Installation'].map((item, index) => (
+                            {servicesList.map((item, index) => (
                                 <li key={index}>
                                     <a
                                         href='#'
@@ -78,7 +90,7 @@ const FooterSection = () => {
                     {/* Contact info */}
                     <div className='lg:col-span-4'>
                         <h4 className='font-[font2] text-white text-sm uppercase tracking-wider mb-6'>
-                            Get In Touch
+                            {t('footer.contactTitle')}
                         </h4>
                         <div className='space-y-4'>
                             <a

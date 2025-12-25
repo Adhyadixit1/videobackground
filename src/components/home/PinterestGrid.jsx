@@ -1,83 +1,80 @@
-import React from 'react'
-
-const projects = [
-    {
-        id: 1,
-        title: 'Station Service Display',
-        category: 'LCD Screens',
-        size: 'tall',
-        color: 'from-purple-900/80 to-pink-900/80',
-        image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg'
-    },
-    {
-        id: 2,
-        title: 'Pompe Digital',
-        category: 'Digital Totems',
-        size: 'normal',
-        color: 'from-blue-900/80 to-cyan-900/80',
-        image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (2).jpeg'
-    },
-    {
-        id: 3,
-        title: 'Gas Station Network',
-        category: 'Outdoor Screens',
-        size: 'wide',
-        color: 'from-[#D3FD50]/40 to-green-900/80',
-        image: '/WhatsApp Image 2025-12-25 at 10.13.15 AM.jpeg'
-    },
-    {
-        id: 4,
-        title: 'Affichage Extérieur',
-        category: 'LED Walls',
-        size: 'tall',
-        color: 'from-orange-900/80 to-red-900/80',
-        image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg'
-    },
-    {
-        id: 5,
-        title: 'Écran Promotionnel',
-        category: 'Video Walls',
-        size: 'normal',
-        color: 'from-indigo-900/80 to-purple-900/80',
-        image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM (1).jpeg'
-    },
-    {
-        id: 6,
-        title: 'Réseau Station',
-        category: 'Menu Boards',
-        size: 'normal',
-        color: 'from-teal-900/80 to-emerald-900/80',
-        image: '/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg'
-    },
-    {
-        id: 7,
-        title: 'Publicité Carburant',
-        category: 'Info Displays',
-        size: 'wide',
-        color: 'from-pink-900/80 to-rose-900/80',
-        image: '/WhatsApp Image 2025-12-25 at 10.13.18 AM (1).jpeg'
-    },
-    {
-        id: 8,
-        title: 'Écran Digital',
-        category: 'Interactive Kiosk',
-        size: 'normal',
-        color: 'from-amber-900/80 to-yellow-900/80',
-        image: '/WhatsApp Image 2025-12-25 at 10.13.20 AM.jpeg'
-    },
-]
+import React, { useMemo } from 'react'
+import { useLanguage } from '../../context/LanguageContext'
 
 const PinterestGrid = () => {
+    const { t } = useLanguage()
+
+    const projects = useMemo(() => {
+        const translatedProjects = t('home.pinterest.projects', { returnObjects: true }) || []
+        const staticData = [
+            {
+                id: 1,
+                size: 'tall',
+                color: 'from-purple-900/80 to-pink-900/80',
+                image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg'
+            },
+            {
+                id: 2,
+                size: 'normal',
+                color: 'from-blue-900/80 to-cyan-900/80',
+                image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (2).jpeg'
+            },
+            {
+                id: 3,
+                size: 'wide',
+                color: 'from-[#D3FD50]/40 to-green-900/80',
+                image: '/WhatsApp Image 2025-12-25 at 10.13.15 AM.jpeg'
+            },
+            {
+                id: 4,
+                size: 'tall',
+                color: 'from-orange-900/80 to-red-900/80',
+                image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg'
+            },
+            {
+                id: 5,
+                size: 'normal',
+                color: 'from-indigo-900/80 to-purple-900/80',
+                image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM (1).jpeg'
+            },
+            {
+                id: 6,
+                size: 'normal',
+                color: 'from-teal-900/80 to-emerald-900/80',
+                image: '/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg'
+            },
+            {
+                id: 7,
+                size: 'wide',
+                color: 'from-pink-900/80 to-rose-900/80',
+                image: '/WhatsApp Image 2025-12-25 at 10.13.18 AM (1).jpeg'
+            },
+            {
+                id: 8,
+                size: 'normal',
+                color: 'from-amber-900/80 to-yellow-900/80',
+                image: '/WhatsApp Image 2025-12-25 at 10.13.20 AM.jpeg'
+            },
+        ]
+
+        return staticData.map((project, index) => ({
+            ...project,
+            ...(translatedProjects[index] || {})
+        }))
+    }, [t])
+
     return (
         <section className='min-h-screen bg-gradient-to-b from-black via-zinc-950 to-black relative z-10 py-20 lg:py-32 px-4 lg:px-12'>
             {/* Section header */}
             <div className='text-center mb-16 lg:mb-24'>
-                <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4'>Our Installations</p>
+                <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4'>
+                    {t('home.pinterest.subtitle')}
+                </p>
                 <h2 className='font-[font2] text-white text-[12vw] lg:text-[7vw] leading-none uppercase'>
-                    Featured
+                    {t('home.pinterest.title1')}
                 </h2>
                 <h2 className='font-[font2] text-white/20 text-[12vw] lg:text-[7vw] leading-none uppercase -mt-2 lg:-mt-4'>
-                    Screens
+                    {t('home.pinterest.title2')}
                 </h2>
             </div>
 
@@ -154,7 +151,7 @@ const PinterestGrid = () => {
                 <button className='group flex items-center gap-4 px-8 py-4 border-2 border-white/30 rounded-full
                                   hover:border-[#D3FD50] hover:bg-[#D3FD50]/10 transition-all duration-300'>
                     <span className='font-[font2] text-white text-lg uppercase group-hover:text-[#D3FD50] transition-colors'>
-                        View All Screens
+                        {t('home.pinterest.viewAll')}
                     </span>
                     <div className='w-8 h-8 rounded-full bg-[#D3FD50] flex items-center justify-center
                                    group-hover:translate-x-1 transition-transform duration-300'>

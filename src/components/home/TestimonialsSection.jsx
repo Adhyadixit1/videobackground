@@ -1,30 +1,32 @@
-import React from 'react'
-
-const testimonials = [
-    {
-        quote: "Luxio Media helped us multiply our visibility with their target audience. A responsive and professional team.",
-        author: "Jean Dupont",
-        role: "Marketing Director, Enterprise ABC",
-        initial: "J",
-        image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80'
-    },
-    {
-        quote: "The quality of the screens and support in creating our content made all the difference for our campaign.",
-        author: "Marie Lambert",
-        role: "Communications Manager, City Hall",
-        initial: "M",
-        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80'
-    },
-    {
-        quote: "A trusted partner for our digital communication. Results are consistent with excellent ROI.",
-        author: "Pierre Bernard",
-        role: "CEO, Innovation Startup",
-        initial: "P",
-        image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80'
-    }
-]
+import React, { useMemo } from 'react'
+import { useLanguage } from '../../context/LanguageContext'
 
 const TestimonialsSection = () => {
+    const { t } = useLanguage()
+
+    const testimonials = useMemo(() => {
+        const translatedList = t('home.testimonials.list', { returnObjects: true }) || []
+        const staticData = [
+            {
+                initial: "J",
+                image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80'
+            },
+            {
+                initial: "M",
+                image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80'
+            },
+            {
+                initial: "P",
+                image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80'
+            }
+        ]
+
+        return staticData.map((item, index) => ({
+            ...item,
+            ...(translatedList[index] || {})
+        }))
+    }, [t])
+
     return (
         <section className='min-h-screen bg-gradient-to-b from-zinc-950 via-black to-zinc-950 
                           relative z-10 overflow-hidden py-20 lg:py-32'>
@@ -47,12 +49,12 @@ const TestimonialsSection = () => {
             <div className='relative z-10 px-6 lg:px-20'>
                 {/* Section header */}
                 <div className='mb-16 lg:mb-24'>
-                    <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4'>Testimonials</p>
+                    <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4'>{t('home.testimonials.subtitle')}</p>
                     <h2 className='font-[font2] text-white text-[10vw] lg:text-[5vw] leading-none uppercase'>
-                        Client
+                        {t('home.testimonials.title1')}
                     </h2>
                     <h2 className='font-[font2] text-white/30 text-[10vw] lg:text-[5vw] leading-none uppercase'>
-                        Stories
+                        {t('home.testimonials.title2')}
                     </h2>
                 </div>
 

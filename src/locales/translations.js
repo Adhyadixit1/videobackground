@@ -45,7 +45,54 @@ export const translations = {
             featuredSubtitle: 'À la une',
             statsTitle: 'Chiffres Clés',
             networkTitle: 'Notre Réseau',
-            testimonialsTitle: 'Témoignages'
+            testimonialsTitle: 'Témoignages',
+            testimonials: {
+                subtitle: 'Témoignages',
+                title1: 'Histoires',
+                title2: 'Clients',
+                list: [
+                    {
+                        quote: "Luxio Media nous a aidés à multiplier notre visibilité auprès de leur public cible. Une équipe réactive et professionnelle.",
+                        author: "Jean Dupont",
+                        role: "Directeur Marketing, Entreprise ABC"
+                    },
+                    {
+                        quote: "La qualité des écrans et l'accompagnement dans la création de nos contenus ont fait toute la différence pour notre campagne.",
+                        author: "Marie Lambert",
+                        role: "Responsable Communication, Mairie"
+                    },
+                    {
+                        quote: "Un partenaire de confiance pour notre communication digitale. Les résultats sont constants avec un excellent ROI.",
+                        author: "Pierre Bernard",
+                        role: "PDG, Startup Innovation"
+                    }
+                ]
+            },
+            cta: {
+                subtitle: 'Commencez dès aujourd\'hui',
+                title1: 'Prêt à',
+                title2: 'Communiquer ?',
+                desc: 'Offrez à votre marque la visibilité qu\'elle mérite grâce à notre réseau d\'affichage digital premium à travers l\'Europe.',
+                btnPrimary: 'Demander un devis',
+                btnSecondary: 'Nous contacter',
+                orReach: 'Ou contactez-nous à'
+            },
+            pinterest: {
+                subtitle: 'Nos Installations',
+                title1: 'Écrans',
+                title2: 'À la Une',
+                viewAll: 'Voir tous les écrans',
+                projects: [
+                    { title: 'Écran Station Service', category: 'Écrans LCD' },
+                    { title: 'Pompe Digitale', category: 'Totems Digitaux' },
+                    { title: 'Réseau Station Service', category: 'Écrans Extérieurs' },
+                    { title: 'Affichage Extérieur', category: 'Murs LED' },
+                    { title: 'Écran Promotionnel', category: 'Murs Vidéo' },
+                    { title: 'Réseau Station', category: 'Menus Digitaux' },
+                    { title: 'Publicité Carburant', category: 'Écrans d\'Info' },
+                    { title: 'Écran Digital', category: 'Borne Interactive' }
+                ]
+            }
         },
         solutions: {
             title: 'Nos Solutions',
@@ -124,7 +171,7 @@ export const translations = {
             formSector: 'Secteur d\'activité',
             formMessage: 'Votre message',
             submit: 'Envoyer le message',
-            success: 'Merci pour votre message !',
+            success: 'Merci pour votre message!',
             intro: 'Notre équipe est à votre disposition pour vous accompagner dans la mise en place de votre campagne d\'affichage digital. Contactez-nous pour une étude personnalisée.',
             followUs: 'Suivez-nous',
             address: 'Adresse',
@@ -212,7 +259,7 @@ export const translations = {
             s4Desc: 'Déploiement de bout en bout d\'écrans LCD, totems digitaux et bornes interactives.'
         },
         stats: {
-            title: 'Impact',
+            title: 'Impact Global',
             subtitle: 'Un réseau européen à votre service au Luxembourg, en France et au-delà',
             screens: 'Écrans Déployés',
             countries: 'Pays',
@@ -272,7 +319,54 @@ export const translations = {
             featuredSubtitle: 'Screens',
             statsTitle: 'Key Figures',
             networkTitle: 'Our Network',
-            testimonialsTitle: 'Testimonials'
+            testimonialsTitle: 'Testimonials',
+            testimonials: {
+                subtitle: 'Testimonials',
+                title1: 'Client',
+                title2: 'Stories',
+                list: [
+                    {
+                        quote: "Luxio Media helped us multiply our visibility with their target audience. A responsive and professional team.",
+                        author: "Jean Dupont",
+                        role: "Marketing Director, Enterprise ABC"
+                    },
+                    {
+                        quote: "The quality of the screens and support in creating our content made all the difference for our campaign.",
+                        author: "Marie Lambert",
+                        role: "Communications Manager, City Hall"
+                    },
+                    {
+                        quote: "A trusted partner for our digital communication. Results are consistent with excellent ROI.",
+                        author: "Pierre Bernard",
+                        role: "CEO, Innovation Startup"
+                    }
+                ]
+            },
+            cta: {
+                subtitle: 'Get Started Today',
+                title1: 'Ready To',
+                title2: 'Advertise?',
+                desc: 'Give your brand the visibility it deserves with our premium digital signage network across Europe.',
+                btnPrimary: 'Request a Quote',
+                btnSecondary: 'Contact Us',
+                orReach: 'Or reach us at'
+            },
+            pinterest: {
+                subtitle: 'Our Installations',
+                title1: 'Featured',
+                title2: 'Screens',
+                viewAll: 'View All Screens',
+                projects: [
+                    { title: 'Station Service Display', category: 'LCD Screens' },
+                    { title: 'Digital Pump', category: 'Digital Totems' },
+                    { title: 'Gas Station Network', category: 'Outdoor Screens' },
+                    { title: 'Outdoor Display', category: 'LED Walls' },
+                    { title: 'Promotional Screen', category: 'Video Walls' },
+                    { title: 'Station Network', category: 'Menu Boards' },
+                    { title: 'Fuel Advertising', category: 'Info Displays' },
+                    { title: 'Digital Screen', category: 'Interactive Kiosk' }
+                ]
+            }
         },
         solutions: {
             title: 'Our Solutions',
@@ -439,7 +533,7 @@ export const translations = {
             s4Desc: 'End-to-end deployment of LCD screens, digital totems, and interactive kiosks.'
         },
         stats: {
-            title: 'Reach',
+            title: 'Global Reach',
             subtitle: 'A European network at your service across Luxembourg, France, and beyond',
             screens: 'Screens Deployed',
             countries: 'Countries',
@@ -499,7 +593,54 @@ export const translations = {
             featuredSubtitle: 'Bildschirme',
             statsTitle: 'Kennzahlen',
             networkTitle: 'Unser Netzwerk',
-            testimonialsTitle: 'Referenzen'
+            testimonialsTitle: 'Referenzen',
+            testimonials: {
+                subtitle: 'Referenzen',
+                title1: 'Kunden',
+                title2: 'Geschichten',
+                list: [
+                    {
+                        quote: "Luxio Media hat uns geholfen, unsere Sichtbarkeit bei der Zielgruppe zu vervielfachen. Ein reaktionsschnelles und professionelles Team.",
+                        author: "Jean Dupont",
+                        role: "Marketingleiter, Unternehmen ABC"
+                    },
+                    {
+                        quote: "Die Qualität der Bildschirme und die Unterstützung bei der Erstellung unserer Inhalte haben den Unterschied für unsere Kampagne gemacht.",
+                        author: "Marie Lambert",
+                        role: "Kommunikationsmanagerin, Stadtverwaltung"
+                    },
+                    {
+                        quote: "Ein vertrauenswürdiger Partner für unsere digitale Kommunikation. Die Ergebnisse sind konstant mit einem hervorragenden ROI.",
+                        author: "Pierre Bernard",
+                        role: "CEO, Innovations-Startup"
+                    }
+                ]
+            },
+            cta: {
+                subtitle: 'Starten Sie noch heute',
+                title1: 'Bereit zu',
+                title2: 'Werben?',
+                desc: 'Verleihen Sie Ihrer Marke die Sichtbarkeit, die sie verdient, mit unserem Premium-Digital-Signage-Netzwerk in ganz Europa.',
+                btnPrimary: 'Angebot anfordern',
+                btnSecondary: 'Kontaktieren Sie uns',
+                orReach: 'Oder erreichen Sie uns unter'
+            },
+            pinterest: {
+                subtitle: 'Unsere Installationen',
+                title1: 'Ausgewählte',
+                title2: 'Bildschirme',
+                viewAll: 'Alle Bildschirme ansehen',
+                projects: [
+                    { title: 'Tankstellen-Display', category: 'LCD-Bildschirme' },
+                    { title: 'Digitale Zapfsäule', category: 'Digitale Totems' },
+                    { title: 'Tankstellennetz', category: 'Außenbildschirme' },
+                    { title: 'Außenanzeige', category: 'LED-Wände' },
+                    { title: 'Werbebildschirm', category: 'Videowände' },
+                    { title: 'Stationsnetzwerk', category: 'Menüboards' },
+                    { title: 'Kraftstoffwerbung', category: 'Info-Displays' },
+                    { title: 'Digitaler Bildschirm', category: 'Interaktiver Kiosk' }
+                ]
+            }
         },
         solutions: {
             title: 'Unsere Lösungen',
@@ -666,7 +807,7 @@ export const translations = {
             s4Desc: 'End-to-End-Bereitstellung von LCD-Bildschirmen, digitalen Totems und interaktiven Kiosken.'
         },
         stats: {
-            title: 'Reichweite',
+            title: 'Globale Reichweite',
             subtitle: 'Ein europäisches Netzwerk zu Ihren Diensten in Luxemburg, Frankreich und darüber hinaus',
             screens: 'Eingesetzte Bildschirme',
             countries: 'Länder',

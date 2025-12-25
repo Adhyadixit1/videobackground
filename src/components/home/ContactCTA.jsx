@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../../context/LanguageContext'
 
 const ContactCTA = () => {
+    const { t } = useLanguage()
+
     return (
         <section className='min-h-screen bg-black relative z-10 overflow-hidden flex items-center justify-center'>
             {/* Animated gradient background */}
@@ -27,21 +30,21 @@ const ContactCTA = () => {
             <div className='relative z-10 text-center px-6'>
                 {/* Subtitle */}
                 <p className='font-[font1] text-[#D3FD50] tracking-[0.5em] uppercase text-sm mb-8'>
-                    Get Started Today
+                    {t('home.cta.subtitle')}
                 </p>
 
                 {/* Main heading */}
                 <h2 className='font-[font2] text-white text-[12vw] lg:text-[10vw] leading-none uppercase mb-4'>
-                    Ready To
+                    {t('home.cta.title1')}
                 </h2>
                 <h2 className='font-[font2] text-transparent text-[12vw] lg:text-[10vw] leading-none uppercase mb-8
                               bg-clip-text bg-gradient-to-r from-[#D3FD50] via-[#B5FF00] to-[#D3FD50]
                               animate-gradient bg-[length:200%_auto]'>
-                    Advertise?
+                    {t('home.cta.title2')}
                 </h2>
 
                 <p className='font-[font1] text-white/60 text-base lg:text-xl max-w-2xl mx-auto mb-12 leading-relaxed'>
-                    Give your brand the visibility it deserves with our premium digital signage network across Europe.
+                    {t('home.cta.desc')}
                 </p>
 
                 {/* CTA Buttons */}
@@ -52,7 +55,7 @@ const ContactCTA = () => {
                     >
                         <span className='relative z-10 font-[font2] text-black text-lg uppercase tracking-wider
                                         group-hover:text-white transition-colors duration-300'>
-                            Request a Quote
+                            {t('home.cta.btnPrimary')}
                         </span>
                         <div className='absolute inset-0 bg-black transform translate-y-full 
                                        group-hover:translate-y-0 transition-transform duration-300'></div>
@@ -65,7 +68,7 @@ const ContactCTA = () => {
                     >
                         <span className='font-[font2] text-white text-lg uppercase tracking-wider
                                         group-hover:text-[#D3FD50] transition-colors duration-300'>
-                            Contact Us
+                            {t('home.cta.btnSecondary')}
                         </span>
                         <svg className='w-5 h-5 text-white group-hover:text-[#D3FD50] 
                                        group-hover:translate-x-1 transition-all duration-300'
@@ -78,7 +81,7 @@ const ContactCTA = () => {
                 {/* Email display */}
                 <div className='mt-16 pt-16 border-t border-white/10'>
                     <p className='font-[font1] text-white/40 text-sm uppercase tracking-wider mb-4'>
-                        Or reach us at
+                        {t('home.cta.orReach')}
                     </p>
                     <a
                         href='mailto:contact@luxiomedia.com'
