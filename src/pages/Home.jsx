@@ -12,9 +12,21 @@ import ContactCTA from '../components/home/ContactCTA'
 import FooterSection from '../components/home/FooterSection'
 import StationsServiceSection from '../components/home/StationsServiceSection'
 
-const Home = () => {
+import Seo from '../components/common/Seo'
+
+const Home = ({ seo }) => {
+    // Default SEO data if not provided
+    const defaultSeo = {
+        title: "Digital Signage Solutions Across Europe",
+        description: "Luxio Media is a digital signage media agency offering premium screens across Europe. We provide maximum visibility and impact for your brand.",
+        keywords: "digital signage, media agency, advertising screens, Luxio Media, screen advertising"
+    };
+
+    const finalSeo = seo || defaultSeo;
+
     return (
         <div className='text-white'>
+            <Seo {...finalSeo} />
 
             {/* Hero Section with Video Background */}
             <div className='h-screen w-screen fixed'>

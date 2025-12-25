@@ -41,14 +41,17 @@ const Root = () => {
   )
 }
 
+import { HelmetProvider } from 'react-helmet-async'
 import { LanguageProvider } from './context/LanguageContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <LanguageProvider>
-        <Root />
-      </LanguageProvider>
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <LanguageProvider>
+          <Root />
+        </LanguageProvider>
+      </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>,
 )
