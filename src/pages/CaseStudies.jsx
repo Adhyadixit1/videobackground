@@ -1,52 +1,54 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import FooterSection from '../components/home/FooterSection'
+import { useLanguage } from '../context/LanguageContext'
 
 const CaseStudies = () => {
+    const { t } = useLanguage()
     const [activeFilter, setActiveFilter] = useState('all')
 
-    const sectors = [
+    const sectors = useMemo(() => [
         {
             id: 'automobile',
-            title: 'Automobile',
+            title: t('caseStudies.sectors.automobile.title'),
             count: '1,743',
-            subtitle: 'annonceurs',
-            description: 'Générer du trafic qualifié en concession, promouvoir les nouveaux modèles et booster les Journées Portes Ouvertes.',
+            subtitle: t('caseStudies.sectors.automobile.subtitle'),
+            description: t('caseStudies.sectors.automobile.desc'),
             image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg',
             color: 'from-blue-900/80 to-cyan-900/80',
             clients: ['Peugeot', 'Citroën', 'BYmyCAR', '123 Pare-Brise']
         },
         {
             id: 'ameublement',
-            title: 'Ameublement',
+            title: t('caseStudies.sectors.ameublement.title'),
             count: '899',
-            subtitle: 'annonceurs',
-            description: 'Développer le trafic en magasin, annoncer les opérations commerciales (Soldes, Black Friday) et se démarquer de la concurrence locale.',
+            subtitle: t('caseStudies.sectors.ameublement.subtitle'),
+            description: t('caseStudies.sectors.ameublement.desc'),
             image: '/WhatsApp Image 2025-12-25 at 10.13.15 AM.jpeg',
             color: 'from-amber-900/80 to-orange-900/80',
             clients: ['Leroy Merlin', 'Decathlon', 'But', 'Conforama']
         },
         {
             id: 'immobilier',
-            title: 'Immobilier',
+            title: t('caseStudies.sectors.immobilier.title'),
             count: '484',
-            subtitle: 'annonceurs',
-            description: 'Promouvoir les nouveaux programmes immobiliers, recruter des agents/franchisés et valoriser l\'expertise auprès des propriétaires locaux.',
+            subtitle: t('caseStudies.sectors.immobilier.subtitle'),
+            description: t('caseStudies.sectors.immobilier.desc'),
             image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg',
             color: 'from-emerald-900/80 to-teal-900/80',
             clients: ['Nexity', 'IAD', 'Century 21', 'Orpi']
         },
         {
             id: 'loisirs',
-            title: 'Loisirs',
+            title: t('caseStudies.sectors.loisirs.title'),
             count: '348',
-            subtitle: 'annonceurs',
-            description: 'Augmenter les visites physiques grâce au ciblage local et promouvoir les événements saisonniers ou offres vacances scolaires.',
+            subtitle: t('caseStudies.sectors.loisirs.subtitle'),
+            description: t('caseStudies.sectors.loisirs.desc'),
             image: '/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg',
             color: 'from-purple-900/80 to-pink-900/80',
             clients: ['Center Parcs', 'Puy du Fou', 'Futuroscope', 'Disneyland']
         }
-    ]
+    ], [t])
 
     const featuredClients = [
         { name: 'Burger King', sector: 'Restauration' },
@@ -79,14 +81,14 @@ const CaseStudies = () => {
 
                 <div className='relative z-10 text-center px-4 lg:px-12 max-w-6xl mx-auto pt-32'>
                     <span className='inline-block px-4 py-2 rounded-full border border-[#D3FD50]/30 text-[#D3FD50] text-xs font-[font1] uppercase tracking-[0.3em] mb-8'>
-                        Cas Clients
+                        {t('nav.caseStudies')}
                     </span>
                     <h1 className='font-[font2] text-[10vw] lg:text-[5vw] leading-[0.9] uppercase mb-6'>
-                        Un support conçu pour<br />
-                        <span className='text-[#D3FD50]'>tous les secteurs</span>
+                        {t('caseStudies.heroTitle')}<br />
+                        <span className='text-[#D3FD50]'>{t('caseStudies.heroTitleHighlight')}</span>
                     </h1>
                     <p className='font-[font1] text-white/60 text-lg lg:text-xl max-w-2xl mx-auto mt-8'>
-                        Découvrez comment nos clients de différents secteurs utilisent notre réseau d'écrans pour développer leur visibilité locale.
+                        {t('caseStudies.heroDesc')}
                     </p>
                 </div>
             </section>
@@ -97,15 +99,15 @@ const CaseStudies = () => {
                     <div className='flex flex-wrap justify-center gap-8 lg:gap-16'>
                         <div className='text-center'>
                             <div className='font-[font2] text-[#D3FD50] text-3xl lg:text-4xl'>3,400+</div>
-                            <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>Annonceurs Actifs</div>
+                            <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>{t('caseStudies.stats.advertisers')}</div>
                         </div>
                         <div className='text-center'>
                             <div className='font-[font2] text-[#D3FD50] text-3xl lg:text-4xl'>15+</div>
-                            <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>Secteurs d'activité</div>
+                            <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>{t('caseStudies.stats.sectors')}</div>
                         </div>
                         <div className='text-center'>
                             <div className='font-[font2] text-[#D3FD50] text-3xl lg:text-4xl'>98%</div>
-                            <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>Taux de Satisfaction</div>
+                            <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>{t('caseStudies.stats.satisfaction')}</div>
                         </div>
                     </div>
                 </div>
@@ -118,19 +120,19 @@ const CaseStudies = () => {
                         <button
                             onClick={() => setActiveFilter('all')}
                             className={`px-6 py-3 rounded-full font-[font1] text-sm uppercase tracking-wider transition-all duration-300 ${activeFilter === 'all'
-                                    ? 'bg-[#D3FD50] text-black'
-                                    : 'border border-white/20 text-white/60 hover:border-[#D3FD50] hover:text-[#D3FD50]'
+                                ? 'bg-[#D3FD50] text-black'
+                                : 'border border-white/20 text-white/60 hover:border-[#D3FD50] hover:text-[#D3FD50]'
                                 }`}
                         >
-                            Tous les secteurs
+                            {t('caseStudies.filterAll')}
                         </button>
                         {sectors.map(sector => (
                             <button
                                 key={sector.id}
                                 onClick={() => setActiveFilter(sector.id)}
                                 className={`px-6 py-3 rounded-full font-[font1] text-sm uppercase tracking-wider transition-all duration-300 ${activeFilter === sector.id
-                                        ? 'bg-[#D3FD50] text-black'
-                                        : 'border border-white/20 text-white/60 hover:border-[#D3FD50] hover:text-[#D3FD50]'
+                                    ? 'bg-[#D3FD50] text-black'
+                                    : 'border border-white/20 text-white/60 hover:border-[#D3FD50] hover:text-[#D3FD50]'
                                     }`}
                             >
                                 {sector.title}
@@ -210,10 +212,10 @@ const CaseStudies = () => {
                 <div className='max-w-7xl mx-auto'>
                     <div className='text-center mb-16'>
                         <span className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block'>
-                            Ils nous font confiance
+                            {t('caseStudies.featuredHeader')}
                         </span>
                         <h2 className='font-[font2] text-white text-[8vw] lg:text-[3vw] uppercase'>
-                            Nos clients
+                            {t('caseStudies.featuredTitle')}
                         </h2>
                     </div>
 
@@ -239,17 +241,17 @@ const CaseStudies = () => {
             <section className='py-20 lg:py-32 px-4 lg:px-12'>
                 <div className='max-w-4xl mx-auto text-center'>
                     <h2 className='font-[font2] text-white text-[8vw] lg:text-[3vw] leading-tight uppercase mb-6'>
-                        Rejoignez nos<br />
-                        <span className='text-[#D3FD50]'>3,400+ annonceurs</span>
+                        {t('caseStudies.ctaTitle')}<br />
+                        <span className='text-[#D3FD50]'>{t('caseStudies.ctaTitleHighlight')}</span>
                     </h2>
                     <p className='font-[font1] text-white/60 text-lg mb-8'>
-                        Développez votre visibilité locale grâce à notre réseau d'écrans en stations-service.
+                        {t('caseStudies.ctaDesc')}
                     </p>
                     <Link
                         to='/contact'
                         className='inline-flex items-center gap-3 px-8 py-4 bg-[#D3FD50] text-black font-[font2] text-sm uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300'
                     >
-                        Lancer ma campagne
+                        {t('caseStudies.ctaBtn')}
                         <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                             <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
                         </svg>

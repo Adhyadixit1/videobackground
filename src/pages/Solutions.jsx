@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import FooterSection from '../components/home/FooterSection'
+import { useLanguage } from '../context/LanguageContext'
 
 const Solutions = () => {
+    const { t } = useLanguage()
+
     const services = [
         {
             icon: (
@@ -10,15 +13,10 @@ const Solutions = () => {
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' />
                 </svg>
             ),
-            title: 'Diffusion Écrans',
-            subtitle: 'Screen Broadcasting',
-            description: 'Diffusion géo-ciblée de vos messages publicitaires sur notre réseau de 2000+ écrans en stations-service.',
-            features: [
-                'Accompagnement personnalisé',
-                'Création de vidéo animée 10 secondes',
-                'Enregistrement voix-off professionnel',
-                'Ciblage géographique précis'
-            ]
+            title: t('solutions.screenDiff'),
+            subtitle: '', // Removed or could be a secondary key if needed
+            description: t('solutions.screenDiffDesc'),
+            features: t('solutions.f1', { returnObjects: true }) || []
         },
         {
             icon: (
@@ -26,15 +24,10 @@ const Solutions = () => {
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z' />
                 </svg>
             ),
-            title: 'Social Media Synergy',
-            subtitle: 'Réseaux Sociaux',
-            description: 'Amplifiez votre impact avec des campagnes cross-canal Facebook & Instagram synchronisées.',
-            features: [
-                'Adaptation vidéo multi-formats',
-                'Ciblage audience précis',
-                'Gestion de campagne optimisée',
-                'Reporting détaillé des performances'
-            ]
+            title: t('solutions.socialSynergy'),
+            subtitle: '',
+            description: t('solutions.socialSynergyDesc'),
+            features: t('solutions.f2', { returnObjects: true }) || []
         },
         {
             icon: (
@@ -42,23 +35,18 @@ const Solutions = () => {
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z' />
                 </svg>
             ),
-            title: 'Analytics & Insights',
-            subtitle: 'Mesure Performance',
-            description: 'Suivez l\'efficacité de vos campagnes avec nos outils de mesure et d\'analyse en temps réel.',
-            features: [
-                'Dashboard temps réel',
-                'Métriques d\'engagement',
-                'Rapports personnalisés',
-                'Optimisation continue'
-            ]
+            title: t('solutions.analytics'),
+            subtitle: '',
+            description: t('solutions.analyticsDesc'),
+            features: t('solutions.f3', { returnObjects: true }) || []
         }
     ]
 
     const stats = [
-        { value: '2000+', label: 'Écrans Actifs', sublabel: 'Active Screens' },
-        { value: '15M', label: 'Contacts Mensuels', sublabel: 'Monthly Reach' },
-        { value: '3400+', label: 'Annonceurs', sublabel: 'Advertisers' },
-        { value: '100%', label: 'Audience Captive', sublabel: 'Captive Audience' }
+        { value: '2000+', label: t('solutions.statsLabel1'), sublabel: 'Active Screens' },
+        { value: '15M', label: t('solutions.statsLabel2'), sublabel: 'Monthly Reach' },
+        { value: '3400+', label: t('solutions.statsLabel3'), sublabel: 'Advertisers' },
+        { value: '100%', label: t('solutions.statsLabel4'), sublabel: 'Captive Audience' }
     ]
 
     return (
@@ -77,22 +65,19 @@ const Solutions = () => {
 
                 <div className='relative z-10 text-center px-4 lg:px-12 max-w-6xl mx-auto pt-32'>
                     <span className='inline-block px-4 py-2 rounded-full border border-[#D3FD50]/30 text-[#D3FD50] text-xs font-[font1] uppercase tracking-[0.3em] mb-8'>
-                        Nos Solutions
+                        {t('solutions.title')}
                     </span>
                     <h1 className='font-[font2] text-[10vw] lg:text-[6vw] leading-[0.9] uppercase mb-6'>
-                        La puissance de<br />
-                        <span className='text-[#D3FD50]'>l'affichage</span>,<br />
-                        la précision du<br />
-                        <span className='text-white/30'>digital</span>
+                        {t('solutions.heroTitle')}
                     </h1>
                     <p className='font-[font1] text-white/60 text-lg lg:text-xl max-w-2xl mx-auto mt-8'>
-                        Développez votre notoriété en combinant une audience 100% disponible en stations-service avec des campagnes réseaux sociaux ciblées.
+                        {t('solutions.heroDesc')}
                     </p>
                 </div>
 
                 {/* Scroll indicator */}
                 <div className='absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2'>
-                    <span className='text-white/40 text-xs uppercase tracking-widest'>Découvrir</span>
+                    <span className='text-white/40 text-xs uppercase tracking-widest'>{t('solutions.heroScroll')}</span>
                     <div className='w-px h-12 bg-gradient-to-b from-[#D3FD50] to-transparent' />
                 </div>
             </section>
@@ -109,9 +94,6 @@ const Solutions = () => {
                                 <div className='font-[font1] text-white text-sm lg:text-base uppercase tracking-wider'>
                                     {stat.label}
                                 </div>
-                                <div className='font-[font1] text-white/40 text-xs mt-1'>
-                                    {stat.sublabel}
-                                </div>
                             </div>
                         ))}
                     </div>
@@ -124,13 +106,13 @@ const Solutions = () => {
                     {/* Section Header */}
                     <div className='mb-16 lg:mb-24'>
                         <span className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block'>
-                            Notre Offre
+                            {t('solutions.offerTitle')}
                         </span>
                         <h2 className='font-[font2] text-white text-[8vw] lg:text-[4vw] leading-none uppercase'>
-                            Une solution
+                            {t('solutions.offerSubtitle1')}
                         </h2>
                         <h2 className='font-[font2] text-white/20 text-[8vw] lg:text-[4vw] leading-none uppercase'>
-                            complète
+                            {t('solutions.offerSubtitle2')}
                         </h2>
                     </div>
 
@@ -150,9 +132,6 @@ const Solutions = () => {
                                 <h3 className='font-[font2] text-white text-xl lg:text-2xl mb-2 group-hover:text-[#D3FD50] transition-colors duration-300'>
                                     {service.title}
                                 </h3>
-                                <span className='text-white/40 text-sm font-[font1] block mb-4'>
-                                    {service.subtitle}
-                                </span>
 
                                 {/* Description */}
                                 <p className='font-[font1] text-white/60 text-sm lg:text-base mb-6 leading-relaxed'>
@@ -161,7 +140,7 @@ const Solutions = () => {
 
                                 {/* Features List */}
                                 <ul className='space-y-3'>
-                                    {service.features.map((feature, fIndex) => (
+                                    {Array.isArray(service.features) && service.features.map((feature, fIndex) => (
                                         <li key={fIndex} className='flex items-center gap-3 text-white/70 text-sm'>
                                             <span className='w-1.5 h-1.5 rounded-full bg-[#D3FD50]' />
                                             {feature}
@@ -184,21 +163,21 @@ const Solutions = () => {
                         {/* Left Content */}
                         <div>
                             <span className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block'>
-                                Synergie Cross-Canal
+                                {t('solutions.synergyTitle')}
                             </span>
                             <h2 className='font-[font2] text-white text-3xl lg:text-5xl leading-tight uppercase mb-6'>
-                                Les réseaux sociaux,<br />
-                                <span className='text-[#D3FD50]'>canal n°1</span> pour<br />
-                                optimiser le DOOH
+                                {t('solutions.synergyHeader')}{' '}
+                                <span className='text-[#D3FD50]'>{t('solutions.synergyHeaderHighlight')}</span>{' '}
+                                {t('solutions.synergyHeaderEnd')}
                             </h2>
                             <p className='font-[font1] text-white/60 text-base lg:text-lg leading-relaxed mb-8'>
-                                Maximisez l'impact de vos campagnes d'affichage digital grâce à une stratégie cross-canal intégrée. Notre approche combine la puissance de l'affichage en station-service avec la précision du ciblage sur Facebook et Instagram.
+                                {t('solutions.synergyDesc')}
                             </p>
                             <Link
                                 to='/contact'
                                 className='inline-flex items-center gap-3 px-6 py-3 bg-[#D3FD50] text-black font-[font2] text-sm uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300'
                             >
-                                Démarrer une campagne
+                                {t('solutions.synergyBtn')}
                                 <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
                                 </svg>
@@ -208,7 +187,7 @@ const Solutions = () => {
                         {/* Right Visual */}
                         <div className='relative'>
                             <div className='aspect-square rounded-3xl bg-gradient-to-br from-[#D3FD50]/20 to-transparent border border-white/10 p-8 lg:p-12'>
-                                {/* Decorative circles */}
+                                {/* Decorative circles - retained purely visual */}
                                 <div className='absolute inset-0 flex items-center justify-center'>
                                     <div className='w-64 h-64 rounded-full border border-[#D3FD50]/20 animate-pulse' />
                                     <div className='absolute w-48 h-48 rounded-full border border-[#D3FD50]/30' />
@@ -228,24 +207,24 @@ const Solutions = () => {
             <section className='relative py-20 lg:py-32 px-4 lg:px-12'>
                 <div className='max-w-4xl mx-auto text-center'>
                     <h2 className='font-[font2] text-white text-[8vw] lg:text-[3vw] leading-tight uppercase mb-6'>
-                        Prêt à transformer<br />
-                        <span className='text-[#D3FD50]'>votre communication ?</span>
+                        {t('solutions.ctaTitle')}<br />
+                        <span className='text-[#D3FD50]'>{t('solutions.ctaTitleHighlight')}</span>
                     </h2>
                     <p className='font-[font1] text-white/60 text-lg mb-8'>
-                        Contactez notre équipe pour découvrir comment nos solutions peuvent amplifier votre visibilité.
+                        {t('solutions.ctaDesc')}
                     </p>
                     <div className='flex flex-wrap justify-center gap-4'>
                         <Link
                             to='/contact'
                             className='px-8 py-4 bg-[#D3FD50] text-black font-[font2] text-sm uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300'
                         >
-                            Nous contacter
+                            {t('solutions.ctaBtn1')}
                         </Link>
                         <Link
                             to='/case-studies'
                             className='px-8 py-4 border border-white/30 text-white font-[font2] text-sm uppercase tracking-wider rounded-full hover:border-[#D3FD50] hover:text-[#D3FD50] transition-all duration-300'
                         >
-                            Voir nos cas clients
+                            {t('solutions.ctaBtn2')}
                         </Link>
                     </div>
                 </div>

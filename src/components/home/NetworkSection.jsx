@@ -1,4 +1,5 @@
 import React from 'react'
+import { useLanguage } from '../../context/LanguageContext'
 
 const partnerLogos = [
     { name: 'Esso', src: 'https://fillupmedia.fr/wp-content/uploads/2023/01/esso.png' },
@@ -10,6 +11,7 @@ const partnerLogos = [
 ]
 
 const NetworkSection = () => {
+    const { t } = useLanguage()
     const logos = [...partnerLogos, ...partnerLogos]
 
     return (
@@ -26,11 +28,11 @@ const NetworkSection = () => {
                     {/* Content */}
                     <div className='lg:w-3/5 w-full space-y-6 sm:space-y-8 text-center lg:text-left'>
                         <div className='space-y-4'>
-                            <p className='text-xs sm:text-sm uppercase tracking-[0.4em] text-white/50'>Notre réseau</p>
+                            <p className='text-xs sm:text-sm uppercase tracking-[0.4em] text-white/50'>{t('network.subtitle')}</p>
                             <h2 className='text-2xl sm:text-3xl lg:text-5xl font-[font2] leading-tight text-white'>
-                                Un réseau national au service de<br />
+                                {t('network.titlePart1')}<br />
                                 <span className='bg-gradient-to-r from-[#f9d976] via-[#d776ff] to-[#f9d976] bg-clip-text text-transparent'>
-                                    l’efficacité locale
+                                    {t('network.titlePart2')}
                                 </span>
                             </h2>
                             <div className='mx-auto lg:mx-0 w-28 sm:w-40 h-1 bg-gradient-to-r from-[#f9d976] to-transparent'></div>
@@ -38,11 +40,10 @@ const NetworkSection = () => {
 
                         <div className='space-y-4 text-white/70 font-[font1] text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0'>
                             <p>
-                                Avec plus de 600 stations-service et près de 4&nbsp;000 écrans en France, vous trouverez forcément
-                                un emplacement proche de votre établissement.
+                                {t('network.desc1')}
                             </p>
                             <p>
-                                Que vous soyez un annonceur local ou national, nous répondons à des objectifs de communication variés.
+                                {t('network.desc2')}
                             </p>
                         </div>
 
@@ -53,7 +54,7 @@ const NetworkSection = () => {
                                 rel='noreferrer'
                                 className='w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-gradient-to-r from-[#f9d976] via-[#d776ff] to-[#f9d976] text-black font-[font2] text-xs sm:text-sm uppercase tracking-[0.4em] hover:opacity-90 transition-opacity duration-300'
                             >
-                                Trouver un écran proche de chez-vous
+                                {t('network.cta')}
                                 <svg className='w-4 h-4' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'>
                                     <path d='M5 12h14' strokeLinecap='round' strokeLinejoin='round' />
                                     <path d='M13 5l7 7-7 7' strokeLinecap='round' strokeLinejoin='round' />

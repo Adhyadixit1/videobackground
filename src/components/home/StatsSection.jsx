@@ -1,13 +1,16 @@
 import React from 'react'
-
-const stats = [
-    { number: '500+', label: 'Screens Deployed', suffix: '' },
-    { number: '3', label: 'Countries', suffix: '' },
-    { number: '150+', label: 'Satisfied Clients', suffix: '' },
-    { number: '24/7', label: 'Support', suffix: '' },
-]
+import { useLanguage } from '../../context/LanguageContext'
 
 const StatsSection = () => {
+    const { t } = useLanguage()
+
+    const stats = [
+        { number: '500+', label: t('stats.screens'), suffix: '' },
+        { number: '3', label: t('stats.countries'), suffix: '' },
+        { number: '150+', label: t('stats.clients'), suffix: '' },
+        { number: '24/7', label: t('stats.support'), suffix: '' },
+    ]
+
     return (
         <section className='relative z-10 overflow-hidden bg-black py-20 lg:py-32'>
             {/* Animated lines background */}
@@ -25,10 +28,10 @@ const StatsSection = () => {
                 {/* Header */}
                 <div className='text-center mb-16 lg:mb-24'>
                     <h2 className='font-[font2] text-white text-[14vw] lg:text-[8vw] leading-none uppercase'>
-                        Reach
+                        {t('stats.title')}
                     </h2>
                     <p className='font-[font1] text-white/60 text-sm lg:text-lg max-w-xl mx-auto mt-6 leading-relaxed'>
-                        A European network at your service across Luxembourg, France, and beyond
+                        {t('stats.subtitle')}
                     </p>
                 </div>
 

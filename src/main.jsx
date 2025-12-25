@@ -41,10 +41,14 @@ const Root = () => {
   )
 }
 
+import { LanguageProvider } from './context/LanguageContext.jsx'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Root />
+      <LanguageProvider>
+        <Root />
+      </LanguageProvider>
     </BrowserRouter>
   </React.StrictMode>,
 )

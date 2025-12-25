@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import FooterSection from '../components/home/FooterSection'
+import { useLanguage } from '../context/LanguageContext'
 
 const WhyFillup = () => {
-    const advantages = [
+    const { t } = useLanguage()
+
+    const advantages = useMemo(() => [
         {
             number: '01',
-            title: 'Audience Captive',
-            subtitle: 'Captive Audience',
-            description: 'Une audience 100% disponible pendant le temps de ravitaillement. Pas de zapping, pas de distraction - votre message est vu et retenu.',
+            title: t('why.adv1Title'),
+            description: t('why.adv1Desc'),
             icon: (
                 <svg className='w-8 h-8' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />
@@ -18,9 +20,8 @@ const WhyFillup = () => {
         },
         {
             number: '02',
-            title: 'Ciblage Géographique',
-            subtitle: 'Geo-Targeting',
-            description: 'Touchez précisément votre zone de chalandise. Sélectionnez les stations-service à proximité de vos points de vente.',
+            title: t('why.adv2Title'),
+            description: t('why.adv2Desc'),
             icon: (
                 <svg className='w-8 h-8' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z' />
@@ -30,9 +31,8 @@ const WhyFillup = () => {
         },
         {
             number: '03',
-            title: 'Synergie Digitale',
-            subtitle: 'Digital Synergy',
-            description: 'Amplifiez l\'impact avec des campagnes social media synchronisées. Le DOOH rencontre le digital pour une efficacité maximale.',
+            title: t('why.adv3Title'),
+            description: t('why.adv3Desc'),
             icon: (
                 <svg className='w-8 h-8' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M13 10V3L4 14h7v7l9-11h-7z' />
@@ -41,44 +41,17 @@ const WhyFillup = () => {
         },
         {
             number: '04',
-            title: 'Accompagnement Expert',
-            subtitle: 'Expert Support',
-            description: 'Une équipe dédiée vous accompagne de A à Z : stratégie, création, diffusion et mesure des performances.',
+            title: t('why.adv4Title'),
+            description: t('why.adv4Desc'),
             icon: (
                 <svg className='w-8 h-8' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' />
                 </svg>
             )
         }
-    ]
+    ], [t])
 
-    const process = [
-        {
-            step: '1',
-            title: 'Définition Stratégie',
-            description: 'Analyse de vos objectifs et définition du message clé'
-        },
-        {
-            step: '2',
-            title: 'Création Contenu',
-            description: 'Production de votre vidéo animée 10 secondes avec voix-off'
-        },
-        {
-            step: '3',
-            title: 'Diffusion Ciblée',
-            description: 'Broadcast géo-ciblé sur les écrans de votre zone'
-        },
-        {
-            step: '4',
-            title: 'Amplification Social',
-            description: 'Campagnes Facebook & Instagram synchronisées'
-        },
-        {
-            step: '5',
-            title: 'Mesure & Optimisation',
-            description: 'Reporting détaillé et optimisation continue'
-        }
-    ]
+    const process = t('why.processSteps', { returnObjects: true }) || []
 
     return (
         <div className='bg-black text-white min-h-screen'>
@@ -99,29 +72,26 @@ const WhyFillup = () => {
                         {/* Left Content */}
                         <div>
                             <span className='inline-block px-4 py-2 rounded-full border border-[#D3FD50]/30 text-[#D3FD50] text-xs font-[font1] uppercase tracking-[0.3em] mb-8'>
-                                Pourquoi Fill Up ?
+                                {t('nav.whyFillup')}
                             </span>
                             <h1 className='font-[font2] text-[12vw] lg:text-[4vw] leading-[0.9] uppercase mb-6'>
-                                Le media qui<br />
-                                <span className='text-[#D3FD50]'>accompagne</span><br />
-                                vos clients
+                                {t('why.heroTitle')}
                             </h1>
                             <p className='font-[font1] text-white/60 text-lg lg:text-xl leading-relaxed mb-8'>
-                                Profitez d'un moment unique dans le parcours consommateur : le temps de ravitaillement.
-                                Une audience 100% captive, réceptive à votre message.
+                                {t('why.heroDesc')}
                             </p>
                             <div className='flex flex-wrap gap-4'>
                                 <Link
                                     to='/solutions'
                                     className='px-6 py-3 bg-[#D3FD50] text-black font-[font2] text-sm uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300'
                                 >
-                                    Découvrir nos solutions
+                                    {t('nav.solutions')}
                                 </Link>
                                 <Link
                                     to='/case-studies'
                                     className='px-6 py-3 border border-white/30 text-white font-[font2] text-sm uppercase tracking-wider rounded-full hover:border-[#D3FD50] hover:text-[#D3FD50] transition-all duration-300'
                                 >
-                                    Nos cas clients
+                                    {t('nav.caseStudies')}
                                 </Link>
                             </div>
                         </div>
@@ -130,19 +100,19 @@ const WhyFillup = () => {
                         <div className='grid grid-cols-2 gap-4'>
                             <div className='p-6 lg:p-8 rounded-3xl bg-white/5 border border-white/10'>
                                 <div className='font-[font2] text-[#D3FD50] text-4xl lg:text-5xl mb-2'>2000+</div>
-                                <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>Écrans</div>
+                                <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>{t('why.stats.screens')}</div>
                             </div>
                             <div className='p-6 lg:p-8 rounded-3xl bg-white/5 border border-white/10'>
                                 <div className='font-[font2] text-[#D3FD50] text-4xl lg:text-5xl mb-2'>15M</div>
-                                <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>Contacts/mois</div>
+                                <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>{t('why.stats.contacts')}</div>
                             </div>
                             <div className='p-6 lg:p-8 rounded-3xl bg-white/5 border border-white/10'>
                                 <div className='font-[font2] text-[#D3FD50] text-4xl lg:text-5xl mb-2'>3400+</div>
-                                <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>Annonceurs</div>
+                                <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>{t('why.stats.advertisers')}</div>
                             </div>
                             <div className='p-6 lg:p-8 rounded-3xl bg-[#D3FD50]/10 border border-[#D3FD50]/30'>
                                 <div className='font-[font2] text-[#D3FD50] text-4xl lg:text-5xl mb-2'>100%</div>
-                                <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>Captive</div>
+                                <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>{t('why.stats.captive')}</div>
                             </div>
                         </div>
                     </div>
@@ -155,13 +125,10 @@ const WhyFillup = () => {
                     {/* Section Header */}
                     <div className='text-center mb-16 lg:mb-24'>
                         <span className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block'>
-                            Nos Avantages
+                            {t('why.advantagesTitle')}
                         </span>
                         <h2 className='font-[font2] text-white text-[8vw] lg:text-[4vw] leading-none uppercase'>
-                            Pourquoi choisir
-                        </h2>
-                        <h2 className='font-[font2] text-[#D3FD50] text-[8vw] lg:text-[4vw] leading-none uppercase'>
-                            Fill Up Media
+                            {t('nav.whyFillup')}
                         </h2>
                     </div>
 
@@ -186,9 +153,6 @@ const WhyFillup = () => {
                                 <h3 className='font-[font2] text-white text-xl lg:text-2xl mb-2 group-hover:text-[#D3FD50] transition-colors duration-300'>
                                     {advantage.title}
                                 </h3>
-                                <span className='text-white/40 text-sm font-[font1] block mb-4'>
-                                    {advantage.subtitle}
-                                </span>
                                 <p className='font-[font1] text-white/60 text-sm lg:text-base leading-relaxed'>
                                     {advantage.description}
                                 </p>
@@ -204,11 +168,11 @@ const WhyFillup = () => {
                     {/* Section Header */}
                     <div className='text-center mb-16 lg:mb-24'>
                         <span className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block'>
-                            Notre Processus
+                            {t('why.processTitle')}
                         </span>
                         <h2 className='font-[font2] text-white text-[8vw] lg:text-[3vw] leading-tight uppercase'>
-                            De l'idée à<br />
-                            <span className='text-white/30'>la diffusion</span>
+                            {t('why.processTitle').split(' ')[0]}<br />
+                            <span className='text-white/30'>{t('why.processTitle').split(' ').slice(1).join(' ')}</span>
                         </h2>
                     </div>
 
@@ -218,7 +182,7 @@ const WhyFillup = () => {
                         <div className='hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D3FD50]/30 to-transparent' />
 
                         <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8'>
-                            {process.map((step, index) => (
+                            {Array.isArray(process) && process.map((step, index) => (
                                 <div key={index} className='relative text-center group'>
                                     {/* Step Number */}
                                     <div className='w-16 h-16 mx-auto mb-6 rounded-full bg-black border-2 border-[#D3FD50]/50 flex items-center justify-center relative z-10 group-hover:bg-[#D3FD50]/10 group-hover:border-[#D3FD50] transition-all duration-300'>
@@ -230,7 +194,7 @@ const WhyFillup = () => {
                                         {step.title}
                                     </h4>
                                     <p className='font-[font1] text-white/50 text-sm'>
-                                        {step.description}
+                                        {step.desc}
                                     </p>
                                 </div>
                             ))}
@@ -244,18 +208,17 @@ const WhyFillup = () => {
                 <div className='max-w-4xl mx-auto text-center'>
                     <div className='p-12 lg:p-16 rounded-3xl border border-[#D3FD50]/30 bg-gradient-to-br from-[#D3FD50]/10 to-transparent'>
                         <h2 className='font-[font2] text-white text-[8vw] lg:text-[2.5vw] leading-tight uppercase mb-6'>
-                            Prêt à booster<br />
-                            <span className='text-[#D3FD50]'>votre visibilité ?</span>
+                            {t('why.cta.title')}<br />
+                            <span className='text-[#D3FD50]'>{t('why.cta.titleHighlight')}</span>
                         </h2>
                         <p className='font-[font1] text-white/60 text-lg mb-8'>
-                            Rejoignez les 3,400+ annonceurs qui font confiance à Fill Up Media<br className='hidden lg:block' />
-                            pour développer leur notoriété locale.
+                            {t('why.cta.desc')}
                         </p>
                         <Link
                             to='/contact'
                             className='inline-flex items-center gap-3 px-8 py-4 bg-[#D3FD50] text-black font-[font2] text-sm uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300'
                         >
-                            Démarrer maintenant
+                            {t('why.cta.btn')}
                             <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                                 <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
                             </svg>

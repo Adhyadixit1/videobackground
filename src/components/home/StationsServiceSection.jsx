@@ -1,25 +1,5 @@
 import React from 'react'
-
-const features = [
-    {
-        label: 'Notoriété',
-        description: 'Diffusez votre message auprès de millions d’automobilistes chaque semaine sur des écrans sonores premium.',
-        accent: 'from-[#4dbdc6] via-[#a4c87d] to-[#fcd434]',
-        icon: 'radar'
-    },
-    {
-        label: 'Couverture',
-        description: 'Activez une campagne locale ou nationale et soyez visibles dans les stations-service les plus stratégiques.',
-        accent: 'from-[#fcd434] via-[#d776ff] to-[#4dbdc6]',
-        icon: 'map'
-    },
-    {
-        label: 'Captivant',
-        description: 'Un format vidéo immersif, vu et entendu pendant la prise de carburant : un moment où l’attention est maximale.',
-        accent: 'from-[#d776ff] via-[#f9d976] to-[#d3fd50]',
-        icon: 'eye'
-    }
-]
+import { useLanguage } from '../../context/LanguageContext'
 
 const Icon = ({ type }) => {
     if (type === 'radar') {
@@ -105,6 +85,29 @@ const Icon = ({ type }) => {
 }
 
 const StationsServiceSection = () => {
+    const { t } = useLanguage()
+
+    const features = [
+        {
+            label: t('stations.notoriety'),
+            description: t('stations.notorietyDesc'),
+            accent: 'from-[#4dbdc6] via-[#a4c87d] to-[#fcd434]',
+            icon: 'radar'
+        },
+        {
+            label: t('stations.coverage'),
+            description: t('stations.coverageDesc'),
+            accent: 'from-[#fcd434] via-[#d776ff] to-[#4dbdc6]',
+            icon: 'map'
+        },
+        {
+            label: t('stations.captivating'),
+            description: t('stations.captivatingDesc'),
+            accent: 'from-[#d776ff] via-[#f9d976] to-[#d3fd50]',
+            icon: 'eye'
+        }
+    ]
+
     return (
         <section className='relative z-10 bg-[#050307] py-16 sm:py-24 lg:py-32 overflow-hidden'>
             {/* background accents */}
@@ -116,11 +119,11 @@ const StationsServiceSection = () => {
 
             <div className='relative z-10 max-w-6xl mx-auto px-5 sm:px-8'>
                 <div className='text-center space-y-6'>
-                    <p className='text-xs sm:text-sm tracking-[0.4em] uppercase text-white/50'>stations-service</p>
+                    <p className='text-xs sm:text-sm tracking-[0.4em] uppercase text-white/50'>{t('stations.subtitle')}</p>
                     <h2 className='text-2xl sm:text-3xl lg:text-5xl font-[font2] text-white leading-tight'>
-                        L’affichage digital sonore en{' '}
+                        {t('stations.titlePart1')}{' '}
                         <span className='bg-gradient-to-r from-[#f9d976] via-[#b978ff] to-[#7ef9c0] bg-clip-text text-transparent'>
-                            stations-service
+                            {t('stations.titlePart2')}
                         </span>
                     </h2>
                     <div className='flex items-center justify-center'>
@@ -155,7 +158,7 @@ const StationsServiceSection = () => {
                 </div>
 
                 <div className='mt-10 sm:mt-12 text-center text-white/60 text-sm sm:text-base font-[font1]'>
-                    Communiquez au plus près des consommateurs dans votre zone de chalandise, ou à l’échelle nationale pour une visibilité renforcée.
+                    {t('stations.bottomText')}
                 </div>
             </div>
         </section>

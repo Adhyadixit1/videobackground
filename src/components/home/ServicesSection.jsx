@@ -1,37 +1,40 @@
 import React from 'react'
-
-const services = [
-    {
-        number: '01',
-        title: 'Screen Diffusion',
-        description: 'Broadcast your ads on our premium digital screens across strategic locations in Europe.',
-        icon: '◇',
-        image: 'https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80'
-    },
-    {
-        number: '02',
-        title: 'Digital Ads',
-        description: 'Extend your reach with targeted social media campaigns that complement your outdoor advertising.',
-        icon: '○',
-        image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80'
-    },
-    {
-        number: '03',
-        title: 'Video Production',
-        description: 'Create impactful video content optimized for digital signage in our professional studio.',
-        icon: '△',
-        image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80'
-    },
-    {
-        number: '04',
-        title: 'Screen Installation',
-        description: 'End-to-end deployment of LCD screens, digital totems, and interactive kiosks.',
-        icon: '□',
-        image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80'
-    }
-]
+import { useLanguage } from '../../context/LanguageContext'
 
 const ServicesSection = () => {
+    const { t } = useLanguage()
+
+    const services = [
+        {
+            number: '01',
+            title: t('services.s1Title'),
+            description: t('services.s1Desc'),
+            icon: '◇',
+            image: 'https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80'
+        },
+        {
+            number: '02',
+            title: t('services.s2Title'),
+            description: t('services.s2Desc'),
+            icon: '○',
+            image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80'
+        },
+        {
+            number: '03',
+            title: t('services.s3Title'),
+            description: t('services.s3Desc'),
+            icon: '△',
+            image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80'
+        },
+        {
+            number: '04',
+            title: t('services.s4Title'),
+            description: t('services.s4Desc'),
+            icon: '□',
+            image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80'
+        }
+    ]
+
     return (
         <section className='min-h-screen bg-black relative z-10 overflow-hidden py-20 lg:py-32'>
             {/* Background gradient orbs */}
@@ -41,9 +44,9 @@ const ServicesSection = () => {
             <div className='relative z-10 px-6 lg:px-20'>
                 {/* Section header */}
                 <div className='mb-20'>
-                    <p className='text-[#D3FD50] font-[font1] text-sm lg:text-base tracking-[0.3em] uppercase mb-4'>What We Offer</p>
+                    <p className='text-[#D3FD50] font-[font1] text-sm lg:text-base tracking-[0.3em] uppercase mb-4'>{t('services.headerTiny')}</p>
                     <h2 className='font-[font2] text-white text-[10vw] lg:text-[6vw] leading-none uppercase'>
-                        Our Solutions
+                        {t('services.headerBig')}
                     </h2>
                 </div>
 
@@ -100,7 +103,7 @@ const ServicesSection = () => {
                                 {/* Arrow indicator */}
                                 <div className='mt-8 flex items-center gap-2 opacity-0 group-hover:opacity-100 
                                                translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300'>
-                                    <span className='text-[#D3FD50] text-sm font-[font1]'>Explore</span>
+                                    <span className='text-[#D3FD50] text-sm font-[font1]'>{t('services.explore')}</span>
                                     <svg className='w-4 h-4 text-[#D3FD50]' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
                                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
                                     </svg>
