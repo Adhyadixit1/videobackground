@@ -15,6 +15,21 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Prevent scroll flickering and paint issues */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* GPU acceleration for fixed elements */
+.fixed {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -385,6 +400,7 @@ html {
 }
 
 @keyframes pinBounce {
+
   0%,
   100% {
     transform: translateY(0);
@@ -438,6 +454,7 @@ html {
 }
 
 @keyframes eyeBlink {
+
   0%,
   10%,
   100% {
@@ -455,6 +472,7 @@ html {
 }
 
 @keyframes pupilLook {
+
   0%,
   100% {
     transform: translate(0, 0);
@@ -504,6 +522,7 @@ html {
 }
 
 @keyframes bracketPulse {
+
   0%,
   100% {
     opacity: 0.2;

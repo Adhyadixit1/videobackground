@@ -55,7 +55,7 @@ const Contact = () => {
                 </svg>
             ),
             label: t('contact.address'),
-            value: 'Paris, France',
+            value: '26 Bd Royal Level 5, 2449 Ville-Haute Luxembourg',
             link: '#'
         }
     ], [t])

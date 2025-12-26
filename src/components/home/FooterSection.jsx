@@ -110,8 +110,8 @@ const FooterSection = () => {
                                 +352 661 16 77 25
                             </p>
                             <p className='font-[font1] text-gray-400 text-sm leading-relaxed'>
-                                72 Avenue des Champs-Élysées<br />
-                                75008 Paris, France
+                                26 Bd Royal Level 5,<br />
+                                2449 Ville-Haute Luxembourg
                             </p>
                         </div>
                     </div>

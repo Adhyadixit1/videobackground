@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 const SplashScreen = ({ finishLoading }) => {
+    const loadingBarRef = useRef(null)
+
     useGSAP(() => {
         // Initial pulse animation for the logo
         const tl = gsap.timeline()
@@ -19,6 +20,12 @@ const SplashScreen = ({ finishLoading }) => {
                 duration: 1.5,
                 ease: "power2.out"
             }
+        )
+
+        // Animate the loading bar
+        gsap.fromTo(loadingBarRef.current,
+            { x: '-100%' },
+            { x: '0%', duration: 2, ease: 'power2.inOut' }
         )
 
         // Continuous breathing/pulsating effect
@@ -38,7 +45,7 @@ const SplashScreen = ({ finishLoading }) => {
                 ease: "power2.inOut",
                 onComplete: () => finishLoading()
             })
-        }, 2200) // Adjust time as needed
+        }, 2200)
 
         return () => clearTimeout(exitTimer)
     }, [])
@@ -61,22 +68,17 @@ const SplashScreen = ({ finishLoading }) => {
                 />
             </div>
 
-            {/* Loading Bar (Optional, adds a nice touch) */}
+            {/* Loading Bar */}
             <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-white/10 rounded-full overflow-hidden">
-                <div className="loading-bar w-full h-full bg-[#D3FD50] transform -translate-x-full"></div>
+                <div
+                    ref={loadingBarRef}
+                    className="w-full h-full bg-[#D3FD50]"
+                    style={{ transform: 'translateX(-100%)' }}
+                ></div>
             </div>
-
-            <style jsx>{`
-                .loading-bar {
-                    animation: loading 2s ease-in-out forwards;
-                }
-                @keyframes loading {
-                    0% { transform: translateX(-100%); }
-                    100% { transform: translateX(0%); }
-                }
-            `}</style>
         </div>
     )
 }
 
 export default SplashScreen
+

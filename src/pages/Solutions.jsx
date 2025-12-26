@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import FooterSection from '../components/home/FooterSection'
 import PageHero from '../components/common/PageHero'
 import { useLanguage } from '../context/LanguageContext'
+import SolutionsPortfolio from '../components/solutions/SolutionsPortfolio'
 
 const Solutions = () => {
     const { t } = useLanguage()
@@ -50,111 +51,19 @@ const Solutions = () => {
         { value: '100%', label: t('solutions.statsLabel4'), sublabel: 'Captive Audience' }
     ]
 
-    const campaignTags = [
-        'Forecourt DOOH', '100% captive dwell time', 'Nationwide coverage', 'Guaranteed share of voice', 'Social amplification', 'Creative studio', 'Full-funnel reporting'
-    ]
-
-    const campaignHighlights = [
-        {
-            title: 'Owned Premium Inventory',
-            text: '2,000+ large-format TFT screens positioned across service stations and mobility hubs, already installed and maintained by our operations team.'
-        },
-        {
-            title: 'Audience Intelligence',
-            text: 'Fueling data, time-of-day clustering, and point-of-interest layering deliver media plans that mirror real consumer journeys.'
-        },
-        {
-            title: 'Creative That Converts',
-            text: 'Motion design, multilingual voice-over, and social cutdowns crafted for 10-second dwell times and omnichannel consistency.'
-        },
-        {
-            title: '360° Amplification',
-            text: 'Meta, TikTok, Waze, and programmatic retargeting keep your message top-of-mind long after drivers leave the pump.'
-        },
-        {
-            title: 'Transparent Performance',
-            text: 'Live dashboards, store uplift correlations, and post-campaign reviews tie each impression to measurable business outcomes.'
-        }
-    ]
-
-    const audienceInsights = [
-        { title: 'Captive dwell time', value: '4m 12s average fueling session with eyesight directed to our TFT towers.' },
-        { title: 'Household decision makers', value: '73% of viewers identify as the primary buyer for food retail, mobility, or leisure expenses.' },
-        { title: 'Geo-context', value: 'Custom perimeters (5 km to nationwide) layered with socio-demo and store catchment logic.' },
-        { title: 'Daypart control', value: 'Breakfast, commute, and weekend bursts aligned with product launches or seasonal peaks.' }
-    ]
-
-    const activationStack = [
-        { title: 'Creative Studio', value: 'Scripts, storyboards, and multilingual adaptation delivered within 7 days.' },
-        { title: 'Media Trading', value: 'Share-of-voice guarantees, frequency capping, and A/B testing managed by Luxio traders.' },
-        { title: 'Social Extension', value: 'Lookalike audiences synced from on-site exposures to Meta, TikTok, and programmatic pipelines.' },
-        { title: 'Measurement Layer', value: 'QR uplift, store footfall, coupon redemptions, and brand-lift surveys in a single dashboard.' }
-    ]
-
-    const campaignPackages = [
-        {
-            plan: 'Local Boost',
-            objective: 'Drive footfall within 15 km of your store network.',
-            channels: 'Forecourt DOOH + Meta Custom Audience',
-            formats: '10s DOOH loop + paid social cinemagraph',
-            reporting: 'Weekly reach & footfall snapshots.'
-        },
-        {
-            plan: 'Regional Takeover',
-            objective: 'Own the conversation during key retail periods.',
-            channels: 'TFT Network + TikTok Spark Ads + Waze Pins',
-            formats: 'Contextual video, motion statics, audio callouts',
-            reporting: 'Mid-flight optimization and territory benchmarking.'
-        },
-        {
-            plan: 'National Launch',
-            objective: 'Scale awareness for product drops or franchise rollouts.',
-            channels: 'Nationwide DOOH + Programmatic DOOH + Influencer seeding',
-            formats: 'Hero film, modular cutdowns, interactive QR overlays',
-            reporting: 'Full-funnel dashboard with brand & sales KPIs.'
-        }
-    ]
-
-    const campaignDeliverables = [
-        {
-            title: 'Strategy & Insights',
-            items: [
-                'Audience definition workshops',
-                'Geo-intelligence & POI mapping',
-                'Budget pacing + flighting'
-            ]
-        },
-        {
-            title: 'Creative Production',
-            items: [
-                'Storyboard + copywriting',
-                'Motion design & sound design',
-                'Versioning per language/channel'
-            ]
-        },
-        {
-            title: 'Activation & Ops',
-            items: [
-                'Network booking & trafficking',
-                'Dynamic daypart rules',
-                'Compliance & brand safety checks'
-            ]
-        },
-        {
-            title: 'Measurement & Learning',
-            items: [
-                'Real-time dashboards',
-                'Footfall / sales attribution',
-                'Post-campaign review & next steps'
-            ]
-        }
-    ]
+    // Get translated campaign data from translations
+    const campaignTags = t('solutions.campaignTags', { returnObjects: true }) || []
+    const campaignHighlights = t('solutions.campaignHighlights', { returnObjects: true }) || []
+    const audienceInsights = t('solutions.audienceInsights', { returnObjects: true }) || []
+    const activationStack = t('solutions.activationStack', { returnObjects: true }) || []
+    const campaignPackages = t('solutions.campaignPackages', { returnObjects: true }) || []
+    const campaignDeliverables = t('solutions.campaignDeliverables', { returnObjects: true }) || []
 
     const heroVisual = (
         <div className='relative rounded-[32px] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.35)] border border-white/10 w-[min(90vw,520px)]'>
             <video
                 className='w-full h-full object-cover'
-                src='/IMG_1288.MP4'
+                src='https://video.gumlet.io/694cef8ab122cbf176482b8c/694e75f3f1ad267a0667aeeb/download.mp4'
                 autoPlay
                 muted
                 loop
@@ -264,18 +173,20 @@ const Solutions = () => {
                 <div className='max-w-7xl mx-auto'>
                     <div className='flex flex-col lg:flex-row justify-between items-start gap-8 mb-12'>
                         <div>
-                            <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-3'>Luxembourg Network</p>
+                            <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-3'>
+                                {t('solutions.campaignNetworkLabel')}
+                            </p>
                             <h2 className='font-[font2] text-white text-3xl lg:text-5xl leading-tight uppercase'>
-                                Campaign Architecture & Media Stack
+                                {t('solutions.campaignTitle')}
                             </h2>
                         </div>
                         <div className='max-w-2xl text-white/70 font-[font1] text-base leading-relaxed'>
-                            We operate an owned DOOH footprint across Luxembourg mobility hubs. Every screen, data signal, and creative asset feeds back into Luxio’s trading desk to deliver measurable advertising plans—not hardware sales.
+                            {t('solutions.campaignIntro')}
                         </div>
                     </div>
 
                     <div className='flex flex-wrap gap-3 mb-12'>
-                        {campaignTags.map((tag, idx) => (
+                        {Array.isArray(campaignTags) && campaignTags.map((tag, idx) => (
                             <span key={idx} className='px-4 py-2 text-xs font-[font1] uppercase tracking-widest border border-white/10 rounded-full text-white/70'>
                                 {tag}
                             </span>
@@ -283,7 +194,7 @@ const Solutions = () => {
                     </div>
 
                     <div className='grid lg:grid-cols-3 gap-6 mb-16'>
-                        {campaignHighlights.map((item, idx) => (
+                        {Array.isArray(campaignHighlights) && campaignHighlights.map((item, idx) => (
                             <div key={idx} className='p-6 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-[#D3FD50]/40 transition-all duration-300'>
                                 <h3 className='font-[font2] text-white text-lg mb-3 uppercase'>{item.title}</h3>
                                 <p className='font-[font1] text-white/70 text-sm leading-relaxed'>{item.text}</p>
@@ -293,9 +204,11 @@ const Solutions = () => {
 
                     <div className='grid lg:grid-cols-2 gap-8 mb-16'>
                         <div className='p-6 rounded-3xl border border-white/10 bg-white/5'>
-                            <h4 className='font-[font2] text-white text-xl uppercase mb-4'>Audience Insights</h4>
+                            <h4 className='font-[font2] text-white text-xl uppercase mb-4'>
+                                {t('solutions.audienceInsightsTitle')}
+                            </h4>
                             <ul className='space-y-3'>
-                                {audienceInsights.map((insight, idx) => (
+                                {Array.isArray(audienceInsights) && audienceInsights.map((insight, idx) => (
                                     <li key={idx} className='flex items-start gap-3 text-white/70 font-[font1] text-sm'>
                                         <span className='w-2 h-2 mt-2 rounded-full bg-[#D3FD50]' />
                                         <div>
@@ -307,9 +220,11 @@ const Solutions = () => {
                             </ul>
                         </div>
                         <div className='p-6 rounded-3xl border border-white/10 bg-white/5'>
-                            <h4 className='font-[font2] text-white text-xl uppercase mb-4'>Activation Stack</h4>
+                            <h4 className='font-[font2] text-white text-xl uppercase mb-4'>
+                                {t('solutions.activationStackTitle')}
+                            </h4>
                             <ul className='space-y-3'>
-                                {activationStack.map((layer, idx) => (
+                                {Array.isArray(activationStack) && activationStack.map((layer, idx) => (
                                     <li key={idx} className='flex items-start gap-3 text-white/70 font-[font1] text-sm'>
                                         <span className='w-2 h-2 mt-2 rounded-full bg-[#D3FD50]' />
                                         <div>
@@ -326,20 +241,20 @@ const Solutions = () => {
                         <div className='flex flex-col lg:flex-row items-start justify-between gap-6 mb-10'>
                             <div>
                                 <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-3'>
-                                    Media Playbooks
+                                    {t('solutions.mediaPlaybooksLabel')}
                                 </p>
                                 <h3 className='font-[font2] text-white text-3xl lg:text-4xl uppercase leading-tight'>
-                                    Packaged Advertising Programs
+                                    {t('solutions.mediaPlaybooksTitle')}
                                 </h3>
                             </div>
                             <p className='font-[font1] text-white/70 max-w-2xl text-base leading-relaxed'>
-                                Pick a managed playbook or let us build a custom trade plan from Luxembourg, orchestrating every DOOH impression and its social echo.
+                                {t('solutions.mediaPlaybooksDesc')}
                             </p>
                         </div>
 
                         <div className='grid md:grid-cols-3 gap-6 mb-16'>
-                            {campaignPackages.map(pkg => (
-                                <div key={pkg.plan} className='p-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent hover:border-[#D3FD50]/30 transition-colors duration-300'>
+                            {Array.isArray(campaignPackages) && campaignPackages.map((pkg, idx) => (
+                                <div key={idx} className='p-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent hover:border-[#D3FD50]/30 transition-colors duration-300'>
                                     <div className='text-[#D3FD50] font-[font1] text-xs tracking-[0.3em] uppercase mb-4'>{pkg.plan}</div>
                                     <p className='text-white font-[font2] text-xl uppercase mb-3'>{pkg.objective}</p>
                                     <ul className='text-white/60 font-[font1] text-sm space-y-2'>
@@ -352,12 +267,12 @@ const Solutions = () => {
                         </div>
 
                         <div className='grid md:grid-cols-2 gap-6'>
-                            {campaignDeliverables.map(block => (
-                                <div key={block.title} className='p-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent'>
+                            {Array.isArray(campaignDeliverables) && campaignDeliverables.map((block, idx) => (
+                                <div key={idx} className='p-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent'>
                                     <h4 className='font-[font2] text-white text-xl uppercase mb-5'>{block.title}</h4>
                                     <ul className='space-y-3 text-white/70 font-[font1] text-sm'>
-                                        {block.items.map(item => (
-                                            <li key={item} className='flex items-center gap-3'>
+                                        {Array.isArray(block.items) && block.items.map((item, itemIdx) => (
+                                            <li key={itemIdx} className='flex items-center gap-3'>
                                                 <span className='w-1.5 h-1.5 rounded-full bg-[#D3FD50]' />
                                                 {item}
                                             </li>
@@ -430,6 +345,9 @@ const Solutions = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Our Portfolio Section */}
+            <SolutionsPortfolio />
 
             {/* CTA Section */}
             <section className='relative py-20 lg:py-32 px-4 lg:px-12'>

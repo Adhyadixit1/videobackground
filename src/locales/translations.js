@@ -154,7 +154,49 @@ export const translations = {
             ctaTitleHighlight: 'votre communication ?',
             ctaDesc: 'Contactez notre équipe pour découvrir comment nos solutions peuvent amplifier votre visibilité.',
             ctaBtn1: 'Nous contacter',
-            ctaBtn2: 'Voir nos cas clients'
+            ctaBtn2: 'Voir nos cas clients',
+            // Campaign Architecture Section
+            campaignNetworkLabel: 'Réseau Luxembourg',
+            campaignTitle: 'Architecture de Campagne & Stack Media',
+            campaignIntro: 'Nous opérons un réseau DOOH propriétaire à travers les hubs de mobilité luxembourgeois. Chaque écran, signal de données et création alimente le trading desk de Luxio pour des plans publicitaires mesurables — pas de vente de matériel.',
+            campaignTags: ['DOOH Forecourt', 'Temps d\'attention 100% captif', 'Couverture nationale', 'Part de voix garantie', 'Amplification sociale', 'Studio créatif', 'Reporting full-funnel'],
+            campaignHighlights: [
+                { title: 'Inventaire Premium Propriétaire', text: 'Plus de 2 000 écrans TFT grand format positionnés dans les stations-service et hubs de mobilité, déjà installés et maintenus par notre équipe d\'exploitation.' },
+                { title: 'Intelligence Audience', text: 'Données de ravitaillement, clustering horaire et superposition de points d\'intérêt pour des plans média qui reflètent les trajets réels des consommateurs.' },
+                { title: 'Créations qui Convertissent', text: 'Motion design, voix-off multilingue et adaptations sociales conçus pour des temps d\'attention de 10 secondes et une cohérence omnicanale.' },
+                { title: 'Amplification 360°', text: 'Meta, TikTok, Waze et retargeting programmatique maintiennent votre message en tête bien après que les conducteurs aient quitté la pompe.' },
+                { title: 'Performance Transparente', text: 'Dashboards en direct, corrélations d\'uplift en magasin et bilans post-campagne lient chaque impression à des résultats business mesurables.' }
+            ],
+            audienceInsightsTitle: 'Insights Audience',
+            audienceInsights: [
+                { title: 'Temps d\'attention captif', value: '4m 12s en moyenne de session de ravitaillement avec le regard dirigé vers nos totems TFT.' },
+                { title: 'Décideurs du foyer', value: '73% des spectateurs s\'identifient comme l\'acheteur principal pour l\'alimentation, la mobilité ou les loisirs.' },
+                { title: 'Contexte géographique', value: 'Périmètres personnalisés (5 km à national) superposés avec logique socio-démo et zone de chalandise.' },
+                { title: 'Contrôle horaire', value: 'Bursts matinaux, trajets et week-ends alignés sur les lancements produits ou pics saisonniers.' }
+            ],
+            activationStackTitle: 'Stack d\'Activation',
+            activationStack: [
+                { title: 'Studio Créatif', value: 'Scripts, storyboards et adaptation multilingue livrés sous 7 jours.' },
+                { title: 'Trading Media', value: 'Garanties de part de voix, capping fréquence et A/B testing gérés par les traders Luxio.' },
+                { title: 'Extension Sociale', value: 'Audiences lookalike synchronisées depuis les expositions sur site vers Meta, TikTok et pipelines programmatiques.' },
+                { title: 'Couche de Mesure', value: 'QR uplift, trafic magasin, remboursements coupons et études brand-lift dans un seul dashboard.' }
+            ],
+            mediaPlaybooksLabel: 'Playbooks Media',
+            mediaPlaybooksTitle: 'Programmes Publicitaires Packagés',
+            mediaPlaybooksDesc: 'Choisissez un playbook managé ou laissez-nous construire un plan de trading personnalisé depuis le Luxembourg, orchestrant chaque impression DOOH et son écho social.',
+            campaignPackages: [
+                { plan: 'Boost Local', objective: 'Générer du trafic dans un rayon de 15 km autour de votre réseau de magasins.', channels: 'DOOH Forecourt + Audience Personnalisée Meta', formats: 'Boucle DOOH 10s + cinemagraph social payant', reporting: 'Snapshots hebdomadaires reach & trafic.' },
+                { plan: 'Takeover Régional', objective: 'Dominer la conversation pendant les périodes retail clés.', channels: 'Réseau TFT + TikTok Spark Ads + Waze Pins', formats: 'Vidéo contextuelle, statics animés, callouts audio', reporting: 'Optimisation mi-vol et benchmarking territorial.' },
+                { plan: 'Lancement National', objective: 'Scaler la notoriété pour les lancements produits ou déploiements franchise.', channels: 'DOOH National + DOOH Programmatique + Seeding Influenceur', formats: 'Film hero, déclinaisons modulaires, overlays QR interactifs', reporting: 'Dashboard full-funnel avec KPIs brand & ventes.' }
+            ],
+            campaignDeliverables: [
+                { title: 'Stratégie & Insights', items: ['Ateliers définition audience', 'Géo-intelligence & POI mapping', 'Pacing budget + flighting'] },
+                { title: 'Production Créative', items: ['Storyboard + copywriting', 'Motion design & sound design', 'Versioning par langue/canal'] },
+                { title: 'Activation & Ops', items: ['Booking réseau & trafficking', 'Règles daypart dynamiques', 'Conformité & brand safety'] },
+                { title: 'Mesure & Apprentissage', items: ['Dashboards temps réel', 'Attribution trafic / ventes', 'Bilan post-campagne & next steps'] }
+            ],
+            portfolioLabel: 'Notre Travail',
+            portfolioTitle: 'Notre Portfolio'
         },
         why: {
             heroTitle: 'Le media qui accompagne',
@@ -563,7 +605,49 @@ Experts en création de sites web, Community management, affichage dynamique et 
             ctaTitleHighlight: 'your communication?',
             ctaDesc: 'Contact our team to discover how our solutions can amplify your visibility.',
             ctaBtn1: 'Contact us',
-            ctaBtn2: 'See our case studies'
+            ctaBtn2: 'See our case studies',
+            // Campaign Architecture Section
+            campaignNetworkLabel: 'Luxembourg Network',
+            campaignTitle: 'Campaign Architecture & Media Stack',
+            campaignIntro: 'We operate an owned DOOH footprint across Luxembourg mobility hubs. Every screen, data signal, and creative asset feeds back into Luxio\'s trading desk to deliver measurable advertising plans—not hardware sales.',
+            campaignTags: ['Forecourt DOOH', '100% captive dwell time', 'Nationwide coverage', 'Guaranteed share of voice', 'Social amplification', 'Creative studio', 'Full-funnel reporting'],
+            campaignHighlights: [
+                { title: 'Owned Premium Inventory', text: '2,000+ large-format TFT screens positioned across service stations and mobility hubs, already installed and maintained by our operations team.' },
+                { title: 'Audience Intelligence', text: 'Fueling data, time-of-day clustering, and point-of-interest layering deliver media plans that mirror real consumer journeys.' },
+                { title: 'Creative That Converts', text: 'Motion design, multilingual voice-over, and social cutdowns crafted for 10-second dwell times and omnichannel consistency.' },
+                { title: '360° Amplification', text: 'Meta, TikTok, Waze, and programmatic retargeting keep your message top-of-mind long after drivers leave the pump.' },
+                { title: 'Transparent Performance', text: 'Live dashboards, store uplift correlations, and post-campaign reviews tie each impression to measurable business outcomes.' }
+            ],
+            audienceInsightsTitle: 'Audience Insights',
+            audienceInsights: [
+                { title: 'Captive dwell time', value: '4m 12s average fueling session with eyesight directed to our TFT towers.' },
+                { title: 'Household decision makers', value: '73% of viewers identify as the primary buyer for food retail, mobility, or leisure expenses.' },
+                { title: 'Geo-context', value: 'Custom perimeters (5 km to nationwide) layered with socio-demo and store catchment logic.' },
+                { title: 'Daypart control', value: 'Breakfast, commute, and weekend bursts aligned with product launches or seasonal peaks.' }
+            ],
+            activationStackTitle: 'Activation Stack',
+            activationStack: [
+                { title: 'Creative Studio', value: 'Scripts, storyboards, and multilingual adaptation delivered within 7 days.' },
+                { title: 'Media Trading', value: 'Share-of-voice guarantees, frequency capping, and A/B testing managed by Luxio traders.' },
+                { title: 'Social Extension', value: 'Lookalike audiences synced from on-site exposures to Meta, TikTok, and programmatic pipelines.' },
+                { title: 'Measurement Layer', value: 'QR uplift, store footfall, coupon redemptions, and brand-lift surveys in a single dashboard.' }
+            ],
+            mediaPlaybooksLabel: 'Media Playbooks',
+            mediaPlaybooksTitle: 'Packaged Advertising Programs',
+            mediaPlaybooksDesc: 'Pick a managed playbook or let us build a custom trade plan from Luxembourg, orchestrating every DOOH impression and its social echo.',
+            campaignPackages: [
+                { plan: 'Local Boost', objective: 'Drive footfall within 15 km of your store network.', channels: 'Forecourt DOOH + Meta Custom Audience', formats: '10s DOOH loop + paid social cinemagraph', reporting: 'Weekly reach & footfall snapshots.' },
+                { plan: 'Regional Takeover', objective: 'Own the conversation during key retail periods.', channels: 'TFT Network + TikTok Spark Ads + Waze Pins', formats: 'Contextual video, motion statics, audio callouts', reporting: 'Mid-flight optimization and territory benchmarking.' },
+                { plan: 'National Launch', objective: 'Scale awareness for product drops or franchise rollouts.', channels: 'Nationwide DOOH + Programmatic DOOH + Influencer seeding', formats: 'Hero film, modular cutdowns, interactive QR overlays', reporting: 'Full-funnel dashboard with brand & sales KPIs.' }
+            ],
+            campaignDeliverables: [
+                { title: 'Strategy & Insights', items: ['Audience definition workshops', 'Geo-intelligence & POI mapping', 'Budget pacing + flighting'] },
+                { title: 'Creative Production', items: ['Storyboard + copywriting', 'Motion design & sound design', 'Versioning per language/channel'] },
+                { title: 'Activation & Ops', items: ['Network booking & trafficking', 'Dynamic daypart rules', 'Compliance & brand safety checks'] },
+                { title: 'Measurement & Learning', items: ['Real-time dashboards', 'Footfall / sales attribution', 'Post-campaign review & next steps'] }
+            ],
+            portfolioLabel: 'Our Work',
+            portfolioTitle: 'Our Portfolio'
         },
         why: {
             heroTitle: 'The media that accompanies',
@@ -972,7 +1056,49 @@ Experts in website creation, Community management, digital signage, and video cr
             ctaTitleHighlight: 'zu transformieren?',
             ctaDesc: 'Kontaktieren Sie unser Team, um zu erfahren, wie unsere Lösungen Ihre Sichtbarkeit verstärken können.',
             ctaBtn1: 'Kontaktieren Sie uns',
-            ctaBtn2: 'Unsere Fallstudien ansehen'
+            ctaBtn2: 'Unsere Fallstudien ansehen',
+            // Campaign Architecture Section
+            campaignNetworkLabel: 'Luxemburg Netzwerk',
+            campaignTitle: 'Kampagnenarchitektur & Media Stack',
+            campaignIntro: 'Wir betreiben ein eigenes DOOH-Netzwerk in luxemburgischen Mobilitätszentren. Jeder Bildschirm, jedes Datensignal und jedes kreative Asset fließt in Luxios Trading Desk ein, um messbare Werbepläne zu liefern — kein Hardwareverkauf.',
+            campaignTags: ['Forecourt DOOH', '100% gefangene Verweildauer', 'Landesweite Abdeckung', 'Garantierter Share of Voice', 'Soziale Verstärkung', 'Kreativstudio', 'Full-Funnel Reporting'],
+            campaignHighlights: [
+                { title: 'Eigenes Premium-Inventar', text: 'Über 2.000 großformatige TFT-Bildschirme an Tankstellen und Mobilitätszentren, bereits installiert und von unserem Betriebsteam gewartet.' },
+                { title: 'Publikumsintelligenz', text: 'Tankdaten, Tageszeitclustering und POI-Layering liefern Mediapläne, die reale Verbraucherreisen widerspiegeln.' },
+                { title: 'Kreationen, die Konvertieren', text: 'Motion Design, mehrsprachige Voice-Over und Social Cutdowns für 10-Sekunden-Verweildauer und Omnichannel-Konsistenz.' },
+                { title: '360° Verstärkung', text: 'Meta, TikTok, Waze und programmatisches Retargeting halten Ihre Botschaft im Gedächtnis, lange nachdem Fahrer die Zapfsäule verlassen haben.' },
+                { title: 'Transparente Leistung', text: 'Live-Dashboards, Store-Uplift-Korrelationen und Post-Kampagnen-Reviews verbinden jede Impression mit messbaren Geschäftsergebnissen.' }
+            ],
+            audienceInsightsTitle: 'Publikumseinblicke',
+            audienceInsights: [
+                { title: 'Gefangene Verweildauer', value: 'Durchschnittlich 4m 12s Tanksession mit Blick auf unsere TFT-Türme.' },
+                { title: 'Haushaltsentscheider', value: '73% der Zuschauer identifizieren sich als Haupteinkäufer für Lebensmittel, Mobilität oder Freizeitausgaben.' },
+                { title: 'Geo-Kontext', value: 'Benutzerdefinierte Perimeter (5 km bis landesweit) mit Sozio-Demo und Einzugsgebietslogik überlagert.' },
+                { title: 'Tageszeit-Kontrolle', value: 'Frühstücks-, Pendel- und Wochenend-Bursts abgestimmt auf Produkteinführungen oder saisonale Spitzen.' }
+            ],
+            activationStackTitle: 'Aktivierungs-Stack',
+            activationStack: [
+                { title: 'Kreativstudio', value: 'Skripte, Storyboards und mehrsprachige Anpassung innerhalb von 7 Tagen geliefert.' },
+                { title: 'Media Trading', value: 'Share-of-Voice-Garantien, Frequency Capping und A/B-Tests von Luxio-Tradern verwaltet.' },
+                { title: 'Soziale Erweiterung', value: 'Lookalike-Audiences synchronisiert von Vor-Ort-Expositionen zu Meta, TikTok und programmatischen Pipelines.' },
+                { title: 'Messungsebene', value: 'QR-Uplift, Ladenbesuche, Coupon-Einlösungen und Brand-Lift-Umfragen in einem Dashboard.' }
+            ],
+            mediaPlaybooksLabel: 'Media Playbooks',
+            mediaPlaybooksTitle: 'Fertige Werbeprogramme',
+            mediaPlaybooksDesc: 'Wählen Sie ein verwaltetes Playbook oder lassen Sie uns einen maßgeschneiderten Handelsplan von Luxemburg aus erstellen, der jede DOOH-Impression und ihr soziales Echo orchestriert.',
+            campaignPackages: [
+                { plan: 'Lokaler Boost', objective: 'Frequenz im Umkreis von 15 km um Ihr Filialnetz steigern.', channels: 'Forecourt DOOH + Meta Custom Audience', formats: '10s DOOH-Loop + bezahlter Social Cinemagraph', reporting: 'Wöchentliche Reichweiten- & Frequenz-Snapshots.' },
+                { plan: 'Regionale Übernahme', objective: 'Die Konversation in wichtigen Retail-Perioden dominieren.', channels: 'TFT-Netzwerk + TikTok Spark Ads + Waze Pins', formats: 'Kontextuelles Video, Motion Statics, Audio-Callouts', reporting: 'Mid-Flight-Optimierung und Territori-Benchmarking.' },
+                { plan: 'Nationaler Launch', objective: 'Bekanntheit für Produktlaunches oder Franchise-Rollouts skalieren.', channels: 'Landesweites DOOH + Programmatisches DOOH + Influencer Seeding', formats: 'Hero-Film, modulare Cutdowns, interaktive QR-Overlays', reporting: 'Full-Funnel-Dashboard mit Brand- & Sales-KPIs.' }
+            ],
+            campaignDeliverables: [
+                { title: 'Strategie & Insights', items: ['Zielgruppen-Definitionsworkshops', 'Geo-Intelligence & POI-Mapping', 'Budget-Pacing + Flighting'] },
+                { title: 'Kreativproduktion', items: ['Storyboard + Copywriting', 'Motion Design & Sound Design', 'Versionierung pro Sprache/Kanal'] },
+                { title: 'Aktivierung & Ops', items: ['Netzwerkbuchung & Trafficking', 'Dynamische Tageszeit-Regeln', 'Compliance- & Brand-Safety-Checks'] },
+                { title: 'Messung & Lernen', items: ['Echtzeit-Dashboards', 'Frequenz-/Umsatzattribution', 'Post-Kampagnen-Review & nächste Schritte'] }
+            ],
+            portfolioLabel: 'Unsere Arbeit',
+            portfolioTitle: 'Unser Portfolio'
         },
         why: {
             heroTitle: 'Das Medium, das Ihre Kunden',
