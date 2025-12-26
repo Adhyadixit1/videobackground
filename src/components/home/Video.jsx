@@ -35,7 +35,7 @@ const Video = () => {
                 preload='auto'
                 poster='https://dummyimage.com/1920x1080/000/fff'
             >
-                <source src='/IMG_1288.MP4' type='video/mp4' />
+                <source src='https://video.gumlet.io/694cef8ab122cbf176482b8c/694e5f2ee086c47a824127b3/download.mp4' type='video/mp4' />
             </video>
         </div>
     )
