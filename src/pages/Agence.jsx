@@ -13,6 +13,16 @@ const Agence = () => {
                 title={t('agency.heroTitle')}
                 highlight={t('agency.heroTitleHighlight')}
                 description={t('agency.heroHeaderDesc') || "Excellence in digital signage based in the heart of Luxembourg."}
+                visual={
+                    <div className='relative w-full h-full min-h-[400px] lg:h-[500px] rounded-3xl overflow-hidden border border-white/10 group'>
+                        <img
+                            src="/WhatsApp Image 2025-12-25 at 1.38.14 PM.jpeg"
+                            alt="Luxio Media Agency"
+                            className='w-full h-full object-cover transition-transform duration-700 group-hover:scale-105'
+                        />
+                        <div className='absolute inset-0 bg-gradient-to-t from-black/60 to-transparent' />
+                    </div>
+                }
             />
 
             <section className="py-24 px-4 lg:px-12 bg-black relative">
