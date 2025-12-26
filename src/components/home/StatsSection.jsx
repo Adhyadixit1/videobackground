@@ -5,10 +5,10 @@ const StatsSection = () => {
     const { t } = useLanguage()
 
     const stats = [
-        { number: '500+', label: t('stats.screens'), suffix: '' },
-        { number: '3', label: t('stats.countries'), suffix: '' },
-        { number: '150+', label: t('stats.clients'), suffix: '' },
-        { number: '24/7', label: t('stats.support'), suffix: '' },
+        { number: '1000+', label: t('stats.screens'), suffix: '' },
+        { number: '6+', label: t('stats.countries'), suffix: '' },
+        { number: '12', label: t('stats.clients'), suffix: '' },
+        { number: '+30%', label: t('stats.support'), suffix: '' },
     ]
 
     return (

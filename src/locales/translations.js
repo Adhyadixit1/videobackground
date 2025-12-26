@@ -54,35 +54,35 @@ export const translations = {
             }
         },
         home: {
-            hero: 'La puissance de l\'affichage, la précision du digital',
-            heroBtn: 'Démarrer maintenant',
-            heroBtnSecondary: 'Trouver un écran',
-            servicesTitle: 'Notre Offre',
-            servicesSubtitle: 'Une solution complète',
-            featured: 'Écrans',
-            featuredSubtitle: 'À la une',
+            hero: 'Votre agence digitale à Paris',
+            heroBtn: 'Contactez-moi',
+            heroBtnSecondary: 'Nos réalisations',
+            servicesTitle: 'Nos Expertises',
+            servicesSubtitle: '4 expertises digitales pour booster votre visibilité',
+            featured: 'Nos',
+            featuredSubtitle: 'Projets',
             statsTitle: 'Chiffres Clés',
             networkTitle: 'Notre Réseau',
-            testimonialsTitle: 'Témoignages',
+            testimonialsTitle: 'Ils parlent de nous',
             testimonials: {
-                subtitle: 'Témoignages',
-                title1: 'Histoires',
+                subtitle: 'On parle de nous',
+                title1: 'Avis',
                 title2: 'Clients',
                 list: [
                     {
-                        quote: "Luxio Media nous a aidés à multiplier notre visibilité auprès de leur public cible. Une équipe réactive et professionnelle.",
-                        author: "Jean Dupont",
-                        role: "Directeur Marketing, Entreprise ABC"
+                        quote: "Une expérience exceptionnelle avec Luxio Media ! Je tiens à remercier Jacques pour son professionnalisme remarquable. Il a été à l'écoute et extrêmement gentil. Ses conseils avisés ont été d'une grande aide.",
+                        author: "Centre Soon",
+                        role: "Client"
                     },
                     {
-                        quote: "La qualité des écrans et l'accompagnement dans la création de nos contenus ont fait toute la différence pour notre campagne.",
-                        author: "Marie Lambert",
-                        role: "Responsable Communication, Mairie"
+                        quote: "Une équipe à l'écoute, professionnelle et très réactive ! Ils comprennent rapidement vos besoins et prennent vos demandes en considération afin que vous soyez pleinement satisfait ! Que demander de mieux ! Merci encore.",
+                        author: "Renov Luxeparis",
+                        role: "Client"
                     },
                     {
-                        quote: "Un partenaire de confiance pour notre communication digitale. Les résultats sont constants avec un excellent ROI.",
-                        author: "Pierre Bernard",
-                        role: "PDG, Startup Innovation"
+                        quote: "Excellente rencontre avec des professionnels de l'écran dynamique. Les messages représentatifs de notre salon de coiffure élaborés par l'équipe correspondent tout à fait à l'image de notre entreprise. Je recommande vivement.",
+                        author: "Afro 3",
+                        role: "Client"
                     }
                 ]
             },
@@ -191,18 +191,14 @@ export const translations = {
             }
         },
         agency: {
-            heroTitle: 'QUI SOMMES-NOUS ?',
-            heroTitleHighlight: '',
-            heroDesc: `Bienvenue chez Luxio Media, votre partenaire stratégique en affichage dynamique et communication digitale, basé au cœur du Luxembourg, carrefour européen de l'innovation et des affaires.
+            heroTitle: 'POURQUOI CHOISIR',
+            heroTitleHighlight: 'LUXIO MEDIA ?',
+            heroDesc: `Renforcez votre présence en ligne et en magasin avec une stratégie sur-mesure.
+            
+Experts en création de sites web, Community management, affichage dynamique et création de vidéos, nous vous aidons à capter l'attention de votre audience et à booster votre activité.
 
-Fondée avec l'ambition de moderniser la communication visuelle des entreprises et des institutions, Luxio Media s'est rapidement imposée comme un acteur fiable et innovant dans le domaine des écrans LED professionnels, des solutions d'affichage LCD haute performance et des dispositifs de communication digitale sur mesure.
-
-Nos solutions sont conçues pour répondre aux exigences des environnements urbains, commerciaux et institutionnels, et s'adressent notamment aux mairies et administrations, centres commerciaux, franchises, entreprises, établissements sportifs, hôtels, restaurants, salles de jeux, événementiel, ainsi qu'aux espaces publics et privés à forte visibilité.
-
-Fort d'une expertise solide et d'une vision tournée vers l'avenir, notre équipe accompagne chaque client de la conception à l'installation, jusqu'à la maintenance et l'optimisation des performances. Grâce à un réseau de partenaires et de techniciens qualifiés, Luxio Media garantit un service de proximité, réactif et adapté aux standards luxembourgeois et européens.
-
-Luxio Media, c'est l'alliance de la technologie, de l'impact visuel et d'un accompagnement sur mesure pour donner une nouvelle dimension à votre communication.`,
-            cta: 'Nous rencontrer'
+12 Experts dédiés à votre réussite.`,
+            cta: 'Contactez-moi'
         },
         projects: {
             heroTitle: 'Nos',
@@ -402,25 +398,25 @@ Luxio Media, c'est l'alliance de la technologie, de l'impact visuel et d'un acco
             bottomText: 'Communiquez au plus près des consommateurs dans votre zone de chalandise pour une visibilité renforcée.'
         },
         services: {
-            headerTiny: 'Notre Offre',
-            headerBig: 'Nos Solutions',
-            explore: 'Explorer',
-            s1Title: 'Activation Réseau DOOH',
-            s1Desc: 'Diffusez vos campagnes sur notre réseau propriétaire en stations-service avec ciblage hyperlocal et part de voix garantie.',
-            s2Title: 'Amplification Digitale',
-            s2Desc: 'Prolongez la répétition via des audiences jumelles sur Meta, TikTok, Waze et programmatique pour toucher vos prospects au-delà de la pompe.',
-            s3Title: 'Studio Créatif DOOH',
-            s3Desc: 'Scripts, motion design et adaptations multi-langues pensés pour capter l’attention pendant les 4 minutes de temps d’attente en station.',
-            s4Title: 'Pilotage & Reporting',
-            s4Desc: 'Planification média, optimisation en temps réel et bilans détaillés livrés par nos traders et strategists.'
+            headerTiny: 'Nos Expertises',
+            headerBig: '4 Piliers Digitaux',
+            explore: 'Découvrir',
+            s1Title: 'Site Web',
+            s1Desc: 'Création de sites web : un site performant pour votre entreprise. Qu\'il s\'agisse d\'un site vitrine ou e-commerce, nos solutions web maximisent votre visibilité en ligne et transforment vos visiteurs en clients.',
+            s2Title: 'Community Management',
+            s2Desc: 'Engagez votre audience. Boostez votre image sur les réseaux sociaux avec nos contenus originaux et engageants. Nos Community Managers créent des stratégies qui transforment vos abonnés en clients fidèles.',
+            s3Title: 'Affichage Dynamique',
+            s3Desc: 'Attirez avec des écrans innovants. Nos solutions d\'affichage dynamique (vitrines interactives, écrans tactiles, murs LED) transforment votre espace en un outil de communication puissant.',
+            s4Title: 'Création de Vidéos',
+            s4Desc: 'Sublimez votre marque. Du storytelling à la vidéo promotionnelle, nous créons des contenus captivants qui mettent votre marque en avant sur tous les canaux (vidéos virales, conversion accrue).'
         },
         stats: {
-            title: 'Impact Global',
-            subtitle: 'Un réseau européen à votre service au Luxembourg, en France et au-delà',
-            screens: 'Écrans Déployés',
-            countries: 'Pays',
-            clients: 'Clients Satisfaits',
-            support: 'Support'
+            title: 'Impact',
+            subtitle: 'Pourquoi choisir Luxio Media, votre agence digitale ?',
+            screens: 'Clients Satisfaits',
+            countries: 'Années d\'Activité',
+            clients: 'Experts',
+            support: 'Visibilité'
         },
         common: {
             viewAll: 'Tout voir',
@@ -467,8 +463,8 @@ Luxio Media, c'est l'alliance de la technologie, de l'impact visuel et d'un acco
             }
         },
         home: {
-            hero: 'The power of display, the precision of digital',
-            heroBtn: 'Start Today',
+            hero: 'Your digital agency in Paris',
+            heroBtn: 'Contact me',
             heroBtnSecondary: 'Find a Screen',
             servicesTitle: 'Our Offer',
             servicesSubtitle: 'A Complete Solution',
@@ -483,19 +479,19 @@ Luxio Media, c'est l'alliance de la technologie, de l'impact visuel et d'un acco
                 title2: 'Stories',
                 list: [
                     {
-                        quote: "Luxio Media helped us multiply our visibility with their target audience. A responsive and professional team.",
-                        author: "Jean Dupont",
-                        role: "Marketing Director, Enterprise ABC"
+                        quote: "An exceptional experience with Luxio Media! I want to thank Jacques for his remarkable professionalism. He was attentive and extremely kind. His sage advice was of great help.",
+                        author: "Centre Soon",
+                        role: "Client"
                     },
                     {
-                        quote: "The quality of the screens and support in creating our content made all the difference for our campaign.",
-                        author: "Marie Lambert",
-                        role: "Communications Manager, City Hall"
+                        quote: "A listening, professional, and very reactive team! They quickly understand your needs and take your requests into consideration so that you are fully satisfied! What more could you ask for! Thanks again.",
+                        author: "Renov Luxeparis",
+                        role: "Client"
                     },
                     {
-                        quote: "A trusted partner for our digital communication. Results are consistent with excellent ROI.",
-                        author: "Pierre Bernard",
-                        role: "CEO, Innovation Startup"
+                        quote: "Excellent meeting with digital screen professionals. The messages representative of our hair salon developed by the team correspond perfectly to our company image. I highly recommend.",
+                        author: "Afro 3",
+                        role: "Client"
                     }
                 ]
             },
@@ -604,18 +600,14 @@ Luxio Media, c'est l'alliance de la technologie, de l'impact visuel et d'un acco
             }
         },
         agency: {
-            heroTitle: 'WHO ARE WE?',
-            heroTitleHighlight: '',
-            heroDesc: `Welcome to Luxio Media, your strategic partner in digital signage and communication, based in the heart of Luxembourg—the European crossroads of innovation and business.
+            heroTitle: 'WHY CHOOSE',
+            heroTitleHighlight: 'LUXIO MEDIA?',
+            heroDesc: `Strengthen your online and in-store presence with a custom strategy.
 
-Founded with the ambition of modernizing visual communication for companies and institutions, Luxio Media quickly established itself as a reliable and innovative player in professional LED displays, high-performance LCD signage solutions, and tailor-made digital communication systems.
+Experts in website creation, Community management, digital signage, and video creation, we help you capture your audience's attention and boost your business.
 
-Our solutions are designed to meet the demands of urban, commercial, and institutional environments, serving city halls and public authorities, shopping centers, franchises, corporations, sports venues, hotels, restaurants, gaming halls, events, as well as public and private spaces with high visibility.
-
-Armed with solid expertise and a forward-looking vision, our team supports every client from design to installation, through to maintenance and performance optimization. Thanks to a network of partners and qualified technicians, Luxio Media guarantees a responsive local service aligned with Luxembourg and European standards.
-
-Luxio Media is the alliance of technology, visual impact, and bespoke support to give your communication a new dimension.`,
-            cta: 'Meet us'
+12 Experts dedicated to your success.`,
+            cta: 'Contact me'
         },
         projects: {
             heroTitle: 'Our',
@@ -815,25 +807,25 @@ Luxio Media is the alliance of technology, visual impact, and bespoke support to
             bottomText: 'Communicate as close as possible to consumers in your catchment area for reinforced visibility.'
         },
         services: {
-            headerTiny: 'What We Offer',
-            headerBig: 'Our Solutions',
-            explore: 'Explore',
-            s1Title: 'DOOH Network Activation',
-            s1Desc: 'Deliver your spots across our owned petrol-station network with guaranteed share of voice and hyperlocal targeting.',
-            s2Title: 'Audience Amplification',
-            s2Desc: 'Mirror the captive audience online via Meta, TikTok, Waze, and programmatic buys to keep your brand top-of-mind beyond the forecourt.',
-            s3Title: 'Creative Studio',
-            s3Desc: 'Scriptwriting, motion design, and multilingual adaptation engineered for 10-second DOOH stories that convert attention into action.',
-            s4Title: 'Campaign Intelligence',
-            s4Desc: 'End-to-end media planning, live optimization, and transparent reporting from our trading desk and strategists.'
+            headerTiny: 'Our Expertise',
+            headerBig: '4 Digital Pillars',
+            explore: 'Discover',
+            s1Title: 'Website',
+            s1Desc: 'Website Creation: A high-performance site for your business. Whether showcase or e-commerce, our web solutions maximize your online visibility and turn visitors into clients.',
+            s2Title: 'Community Management',
+            s2Desc: 'Engage your audience. Boost your image on social networks with our original and engaging content. Our Community Managers create strategies that turn subscribers into loyal customers.',
+            s3Title: 'Digital Signage',
+            s3Desc: 'Attract with innovative screens. Our digital signage solutions (interactive showcases, touch screens, LED walls) transform your space into a powerful communication tool.',
+            s4Title: 'Video Creation',
+            s4Desc: 'Sublimate your brand. From storytelling to promotional video, we create captivating content that highlights your brand across all channels (viral videos, increased conversion).'
         },
         stats: {
-            title: 'Global Reach',
-            subtitle: 'A European network at your service across Luxembourg, France, and beyond',
-            screens: 'Screens Deployed',
-            countries: 'Countries',
-            clients: 'Satisfied Clients',
-            support: 'Support'
+            title: 'Impact',
+            subtitle: 'Why choose Luxio Media, your digital agency?',
+            screens: 'Satisfied Clients',
+            countries: 'Years Activity',
+            clients: 'Experts',
+            support: 'Visibility'
         },
         common: {
             viewAll: 'View All',
@@ -880,8 +872,8 @@ Luxio Media is the alliance of technology, visual impact, and bespoke support to
             }
         },
         home: {
-            hero: 'Die Kraft der Anzeige, die Präzision des Digitalen',
-            heroBtn: 'Heute starten',
+            hero: 'Ihre Digitalagentur in Paris',
+            heroBtn: 'Kontaktieren Sie mich',
             heroBtnSecondary: 'Bildschirm finden',
             servicesTitle: 'Unser Angebot',
             servicesSubtitle: 'Eine Komplettlösung',
@@ -1015,18 +1007,14 @@ Luxio Media is the alliance of technology, visual impact, and bespoke support to
             },
         },
         agency: {
-            heroTitle: 'WER SIND WIR?',
-            heroTitleHighlight: '',
-            heroDesc: `Willkommen bei Luxio Media, Ihrem strategischen Partner für Digital Signage und digitale Kommunikation mit Sitz im Herzen Luxemburgs, dem europäischen Drehkreuz für Innovation und Business.
+            heroTitle: 'WARUM',
+            heroTitleHighlight: 'LUXIO MEDIA WÄHLEN?',
+            heroDesc: `Stärken Sie Ihre Online- und Ladenpräsenz mit einer maßgeschneiderten Strategie.
 
-Gegründet mit dem Anspruch, die visuelle Kommunikation von Unternehmen und Institutionen zu modernisieren, hat sich Luxio Media schnell als zuverlässiger und innovativer Akteur für professionelle LED-Bildschirme, leistungsstarke LCD-Lösungen und maßgeschneiderte digitale Kommunikationssysteme etabliert.
+Als Experten für Website-Erstellung, Community Management, Digital Signage und Videoerstellung helfen wir Ihnen, die Aufmerksamkeit Ihres Publikums zu gewinnen und Ihr Geschäft anzukurbeln.
 
-Unsere Lösungen sind darauf ausgelegt, den Anforderungen urbaner, kommerzieller und institutioneller Umgebungen gerecht zu werden und richten sich unter anderem an Rathäuser und Verwaltungen, Einkaufszentren, Franchise-Netzwerke, Unternehmen, Sportstätten, Hotels, Restaurants, Spielhallen, Events sowie öffentliche und private Räume mit hoher Sichtbarkeit.
-
-Dank fundierter Expertise und einer zukunftsorientierten Vision begleitet unser Team jeden Kunden von der Konzeption über die Installation bis hin zur Wartung und Leistungsoptimierung. Mit einem Netzwerk aus Partnern und qualifizierten Technikern garantiert Luxio Media einen nahen, reaktionsschnellen Service nach luxemburgischen und europäischen Standards.
-
-Luxio Media vereint Technologie, visuelle Wirkung und maßgeschneiderte Betreuung, um Ihrer Kommunikation eine neue Dimension zu verleihen.`,
-            cta: 'Uns treffen'
+12 Experten, die sich Ihrem Erfolg widmen.`,
+            cta: 'Kontaktieren Sie mich'
         },
         projects: {
             heroTitle: 'Unsere',
@@ -1226,25 +1214,25 @@ Luxio Media vereint Technologie, visuelle Wirkung und maßgeschneiderte Betreuun
             bottomText: 'Kommunizieren Sie so nah wie möglich an den Verbrauchern in Ihrem Einzugsgebiet für verstärkte Sichtbarkeit.'
         },
         services: {
-            headerTiny: 'Unser Angebot',
-            headerBig: 'Unsere Lösungen',
+            headerTiny: 'Unsere Expertise',
+            headerBig: '4 Digitale Säulen',
             explore: 'Entdecken',
-            s1Title: 'DOOH-Netzwerkaktivierung',
-            s1Desc: 'Schalten Sie Ihre Spots auf unserem eigenen Tankstellennetz mit garantierter Sichtbarkeit und hyperlokalem Targeting.',
-            s2Title: 'Audience Amplification',
-            s2Desc: 'Spiegeln Sie Ihr Publikum online über Meta, TikTok, Waze und Programmatic, um Ihre Botschaft über den Tankstopp hinaus zu verlängern.',
-            s3Title: 'Kreativstudio',
-            s3Desc: 'Storytelling, Motion Design und mehrsprachige Adaptionen, optimiert für 10‑Sekunden-DOOH-Sequenzen, die Aufmerksamkeit in Aktionen verwandeln.',
-            s4Title: 'Kampagnensteuerung',
-            s4Desc: 'Ganzheitliche Mediaplanung, Live-Optimierung und transparentes Reporting durch unser Trading-Desk und Strategenteam.'
+            s1Title: 'Webseite',
+            s1Desc: 'Website-Erstellung: Eine leistungsstarke Seite für Ihr Unternehmen. Ob Showcase oder E-Commerce, unsere Web-Lösungen maximieren Ihre Online-Sichtbarkeit und verwandeln Besucher in Kunden.',
+            s2Title: 'Community Management',
+            s2Desc: 'Engagieren Sie Ihr Publikum. Steigern Sie Ihr Image in sozialen Netzwerken mit unseren originellen und ansprechenden Inhalten. Unsere Community Manager entwickeln Strategien, die Abonnenten in treue Kunden verwandeln.',
+            s3Title: 'Digital Signage',
+            s3Desc: 'Ziehen Sie mit innovativen Bildschirmen an. Unsere Digital-Signage-Lösungen (interaktive Schaufenster, Touchscreens, LED-Wände) verwandeln Ihren Raum in ein leistungsstarkes Kommunikationstool.',
+            s4Title: 'Videoerstellung',
+            s4Desc: 'Veredeln Sie Ihre Marke. Von Storytelling bis hin zu Werbevideos erstellen wir fesselnde Inhalte, die Ihre Marke auf allen Kanälen hervorheben (virale Videos, erhöhte Konversion).'
         },
         stats: {
-            title: 'Globale Reichweite',
-            subtitle: 'Ein europäisches Netzwerk zu Ihren Diensten in Luxemburg, Frankreich und darüber hinaus',
-            screens: 'Eingesetzte Bildschirme',
-            countries: 'Länder',
-            clients: 'Zufriedene Kunden',
-            support: 'Support'
+            title: 'Wirkung',
+            subtitle: 'Warum Luxio Media, Ihre Digitalagentur, wählen?',
+            screens: 'Zufriedene Kunden',
+            countries: 'Jahre Aktivität',
+            clients: 'Experten',
+            support: 'Sichtbarkeit'
         },
         common: {
             viewAll: 'Alle ansehen',
