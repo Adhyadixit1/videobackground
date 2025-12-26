@@ -13,7 +13,7 @@ const LCDScreens = () => (
 export const StationServiceDisplay = () => (
     <SolutionTemplate
         solutionKey="stationServiceDisplay"
-        image="/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg"
+        video="https://video.gumlet.io/694cef8ab122cbf176482b8c/694ea776e086c47a82458c49/download.mp4"
     />
 )
 
@@ -59,7 +59,7 @@ export const OutdoorDisplay = () => (
 export const LEDWalls = () => (
     <SolutionTemplate
         solutionKey="ledWalls"
-        image="/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg"
+        video="https://video.gumlet.io/694cef8ab122cbf176482b8c/694ea7cde086c47a82459169/download.mp4"
     />
 )
 
@@ -88,7 +88,7 @@ export const StationNetwork = () => (
 export const MenuBoards = () => (
     <SolutionTemplate
         solutionKey="menuBoards"
-        image="/WhatsApp Image 2025-12-25 at 10.13.20 AM.jpeg"
+        image="/Digital Menu Boards, LCD Display Boards, Digital Menu Displays.jpg"
     />
 )
 
@@ -117,7 +117,7 @@ export const DigitalScreen = () => (
 export const InteractiveKiosk = () => (
     <SolutionTemplate
         solutionKey="interactiveKiosk"
-        image="/WhatsApp Image 2025-12-25 at 10.13.18 AM (1).jpeg"
+        video="https://video.gumlet.io/694cef8ab122cbf176482b8c/694ea776e086c47a82458c4c/download.mp4"
     />
 )
 

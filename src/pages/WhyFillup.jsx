@@ -5,7 +5,7 @@ import PageHero from '../components/common/PageHero'
 import { useLanguage } from '../context/LanguageContext'
 
 const WhyFillup = () => {
-    const { t } = useLanguage()
+    const { t, language } = useLanguage()
 
     const advantages = useMemo(() => [
         {
@@ -54,6 +54,45 @@ const WhyFillup = () => {
 
     const process = t('why.processSteps', { returnObjects: true }) || []
 
+    const portfolioProjects = useMemo(() => [
+        {
+            id: 1,
+            title: t('solutionPages.lcdScreens.title'),
+            category: t('home.pinterest.categories.digitalDisplays'),
+            size: 'tall',
+            color: 'from-purple-900/40 to-pink-900/40',
+            video: 'https://video.gumlet.io/694cef8ab122cbf176482b8c/694e4270e086c47a823f4aa7/download.mp4',
+            link: '/solutions/lcd-screens'
+        },
+        {
+            id: 4,
+            title: t('solutionPages.stationServiceDisplay.title'),
+            category: t('home.pinterest.categories.stationScreens'),
+            size: 'normal',
+            color: 'from-orange-900/40 to-red-900/40',
+            image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg',
+            link: '/solutions/station-service-display'
+        },
+        {
+            id: 6,
+            title: t('solutionPages.ledWalls.title'),
+            category: t('home.pinterest.categories.videoWalls'),
+            size: 'wide',
+            color: 'from-teal-900/40 to-emerald-900/40',
+            image: '/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg',
+            link: '/solutions/led-walls'
+        },
+        {
+            id: 2,
+            title: t('solutionPages.digitalPump.title'),
+            category: t('home.pinterest.categories.pumpDisplays'),
+            size: 'tall',
+            color: 'from-blue-900/40 to-cyan-900/40',
+            image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (2).jpeg',
+            link: '/solutions/digital-pump'
+        }
+    ], [t])
+
     return (
         <div className='bg-black text-white min-h-screen'>
             {/* Hero Section */}
@@ -70,7 +109,7 @@ const WhyFillup = () => {
                             <div className='font-[font1] text-white/60 text-xs uppercase tracking-wider'>{t('why.stats.screens')}</div>
                         </div>
                         <div className='p-6 lg:p-8 rounded-3xl bg-white/5 border border-white/10 animate-[pulse_4s_ease-in-out_infinite] delay-700' style={{ animationDelay: '0.7s' }}>
-                            <div className='font-[font2] text-[#D3FD50] text-3xl lg:text-4xl mb-2'>15M</div>
+                            <div className='font-[font2] text-[#D3FD50] text-3xl lg:text-4xl mb-2'>15M+</div>
                             <div className='font-[font1] text-white/60 text-xs uppercase tracking-wider'>{t('why.stats.contacts')}</div>
                         </div>
                         <div className='p-6 lg:p-8 rounded-3xl bg-white/5 border border-white/10 animate-[pulse_4s_ease-in-out_infinite] delay-1000' style={{ animationDelay: '1.4s' }}>
@@ -169,6 +208,46 @@ const WhyFillup = () => {
                 </div>
             </section>
 
+            {/* Values Section */}
+            <section className='py-20 lg:py-32 px-4 lg:px-12 bg-zinc-950/50 relative overflow-hidden'>
+                <div className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D3FD50]/20 to-transparent'></div>
+                <div className='max-w-7xl mx-auto'>
+                    <div className='grid lg:grid-cols-2 gap-16 items-center'>
+                        <div>
+                            <span className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block'>
+                                {t('why.values.subtitle')}
+                            </span>
+                            <h2 className='font-[font2] text-white text-[8vw] lg:text-[4vw] leading-none uppercase mb-8'>
+                                {t('why.values.title')}
+                            </h2>
+                            <p className='font-[font1] text-white/60 text-lg mb-12 max-w-xl italic'>
+                                {language === 'fr'
+                                    ? '"Notre mission est d\'unir la technologie et l\'audience pour créer des moments de communication inoubliables."'
+                                    : language === 'de'
+                                        ? '"Unsere Mission ist es, Technologie und Publikum zu vereinen, um unvergessliche Kommunikationsmomente zu schaffen."'
+                                        : '"Our mission is to unite technology and audience to create unforgettable communication moments."'}
+                            </p>
+                            <div className='space-y-4'>
+                                {t('why.values.list', { returnObjects: true })?.map((value, idx) => (
+                                    <div key={idx} className='flex items-center gap-4 group cursor-default'>
+                                        <div className='w-2 h-2 rounded-full bg-[#D3FD50] group-hover:scale-150 transition-transform duration-300'></div>
+                                        <span className='font-[font2] text-white text-xl lg:text-2xl uppercase group-hover:text-[#D3FD50] transition-colors'>{value.title}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+                            {t('why.values.list', { returnObjects: true })?.map((value, idx) => (
+                                <div key={idx} className='p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-[#D3FD50]/50 transition-all duration-500 group'>
+                                    <h3 className='font-[font2] text-[#D3FD50] text-xl mb-4 uppercase'>{value.title}</h3>
+                                    <p className='font-[font1] text-white/50 text-sm leading-relaxed'>{value.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Comparison Section */}
             <section className='py-20 lg:py-32 px-4 lg:px-12 bg-zinc-950'>
                 <div className='max-w-7xl mx-auto'>
@@ -211,8 +290,54 @@ const WhyFillup = () => {
                 </div>
             </section>
 
+            {/* Portfolio Section */}
+            <section className='py-20 lg:py-32 px-4 lg:px-12 bg-black'>
+                <div className='max-w-[1400px] mx-auto'>
+                    <div className='flex flex-col md:flex-row justify-between items-end gap-8 mb-16 lg:mb-24'>
+                        <div className='max-w-2xl'>
+                            <span className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block'>
+                                {t('why.portfolio.subtitle')}
+                            </span>
+                            <h2 className='font-[font2] text-white text-[8vw] lg:text-[4vw] leading-none uppercase'>
+                                {t('why.portfolio.title')}
+                            </h2>
+                        </div>
+                        <Link to='/projects' className='group flex items-center gap-4 px-8 py-4 border border-white/20 rounded-full hover:border-[#D3FD50] transition-colors'>
+                            <span className='font-[font2] text-white uppercase text-sm tracking-widest'>{t('projects.cta')}</span>
+                            <div className='w-8 h-8 rounded-full bg-[#D3FD50] flex items-center justify-center group-hover:translate-x-1 transition-transform'>
+                                <svg className='w-4 h-4 text-black' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' /></svg>
+                            </div>
+                        </Link>
+                    </div>
+
+                    <div className='columns-1 md:columns-2 lg:columns-4 gap-4 lg:gap-6'>
+                        {portfolioProjects.map((project) => (
+                            <Link
+                                to={project.link}
+                                key={project.id}
+                                className={`break-inside-avoid mb-4 lg:mb-6 group relative rounded-3xl overflow-hidden block ${project.size === 'tall' ? 'h-[450px]' : project.size === 'wide' ? 'h-[280px]' : 'h-[350px]'}`}
+                            >
+                                <div className='absolute inset-0 z-0'>
+                                    {project.video ? (
+                                        <video src={project.video} autoPlay muted loop playsInline className='w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70' />
+                                    ) : (
+                                        <img src={project.image} alt={project.title} className='w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70' />
+                                    )}
+                                </div>
+                                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} mix-blend-multiply opacity-80 group-hover:opacity-60 transition-opacity`}></div>
+                                <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent'></div>
+                                <div className='absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300'>
+                                    <span className='text-[#D3FD50] text-xs font-[font1] uppercase tracking-widest mb-2 block font-bold'>{project.category}</span>
+                                    <h3 className='text-white font-[font2] text-xl lg:text-2xl uppercase group-hover:text-[#D3FD50] transition-colors'>{project.title}</h3>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* Features Deep Dive */}
-            <section className='py-20 lg:py-32 px-4 lg:px-12'>
+            <section className='py-20 lg:py-32 px-4 lg:px-12 bg-gradient-to-b from-black to-zinc-950'>
                 <div className='max-w-7xl mx-auto'>
                     <div className='text-center mb-16 lg:mb-24'>
                         <h2 className='font-[font2] text-white text-[6vw] lg:text-[3vw] leading-none uppercase'>
@@ -241,19 +366,22 @@ const WhyFillup = () => {
             </section>
 
             {/* CTA Section */}
-            <section className='py-20 lg:py-32 px-4 lg:px-12 bg-gradient-to-t from-zinc-950 to-black'>
+            <section className='py-20 lg:py-32 px-4 lg:px-12 bg-gradient-to-t from-zinc-950 to-black relative z-10'>
                 <div className='max-w-4xl mx-auto text-center'>
-                    <div className='p-12 lg:p-16 rounded-3xl border border-[#D3FD50]/30 bg-gradient-to-br from-[#D3FD50]/10 to-transparent'>
-                        <h2 className='font-[font2] text-white text-[8vw] lg:text-[2.5vw] leading-tight uppercase mb-6'>
+                    <div className='p-12 lg:p-16 rounded-3xl border border-[#D3FD50]/30 bg-gradient-to-br from-[#D3FD50]/10 to-transparent relative overflow-hidden'>
+                        <div className='absolute -top-24 -right-24 w-64 h-64 bg-[#D3FD50]/10 rounded-full blur-3xl'></div>
+                        <div className='absolute -bottom-24 -left-24 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl'></div>
+
+                        <h2 className='font-[font2] text-white text-[8vw] lg:text-[2.5vw] leading-tight uppercase mb-6 relative z-10'>
                             {t('why.cta.title')}<br />
                             <span className='text-[#D3FD50]'>{t('why.cta.titleHighlight')}</span>
                         </h2>
-                        <p className='font-[font1] text-white/60 text-lg mb-8'>
+                        <p className='font-[font1] text-white/60 text-lg mb-8 relative z-10'>
                             {t('why.cta.desc')}
                         </p>
                         <Link
                             to='/contact'
-                            className='inline-flex items-center gap-3 px-8 py-4 bg-[#D3FD50] text-black font-[font2] text-sm uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300'
+                            className='relative z-10 inline-flex items-center gap-3 px-10 py-5 bg-[#D3FD50] text-black font-[font2] text-sm uppercase tracking-widest rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(211,253,80,0.3)]'
                         >
                             {t('why.cta.btn')}
                             <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
