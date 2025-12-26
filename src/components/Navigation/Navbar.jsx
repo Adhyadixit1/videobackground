@@ -16,14 +16,14 @@ const Navbar = () => {
                 <img
                     src='/luxio-vector-logo.png'
                     alt='Luxio Media'
-                    className='hidden lg:block cursor-pointer lg:w-82 h-auto'
+                    className='hidden lg:block cursor-pointer lg:w-82 h-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]'
                     style={{ marginTop: '-98px', marginLeft: '20px' }}
                     onClick={() => navigate('/')}
                 />
                 <img
                     src='/luxio-vector-logo.png'
                     alt='Luxio Media'
-                    className='block lg:hidden cursor-pointer w-32 h-auto'
+                    className='block lg:hidden cursor-pointer w-32 h-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]'
                     style={{ marginTop: '-26px', marginLeft: '16px' }}
                     onClick={() => navigate('/')}
                 />

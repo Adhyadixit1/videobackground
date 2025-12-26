@@ -390,16 +390,16 @@ Luxio Media, c'est l'alliance de la technologie, de l'impact visuel et d'un acco
             cta: 'Trouver un écran proche de chez-vous'
         },
         stations: {
-            subtitle: 'stations-service',
-            titlePart1: 'L\'affichage digital sonore en',
-            titlePart2: 'stations-service',
+            subtitle: 'Nos Atouts',
+            titlePart1: 'L\'affichage digital',
+            titlePart2: 'haute performance',
             notoriety: 'Notoriété',
-            notorietyDesc: 'Diffusez votre message auprès de millions d\'automobilistes chaque semaine sur des écrans sonores premium.',
+            notorietyDesc: 'Diffusez votre message sur des écrans premium pour toucher votre audience cible efficacement.',
             coverage: 'Couverture',
-            coverageDesc: 'Activez une campagne locale ou nationale et soyez visibles dans les stations-service les plus stratégiques.',
+            coverageDesc: 'Activez une campagne stratégique et soyez visibles là où se trouvent vos clients.',
             captivating: 'Captivant',
-            captivatingDesc: 'Un format vidéo immersif, vu et entendu pendant la prise de carburant : un moment où l\'attention est maximale.',
-            bottomText: 'Communiquez au plus près des consommateurs dans votre zone de chalandise, ou à l\'échelle nationale pour une visibilité renforcée.'
+            captivatingDesc: 'Un format vidéo immersif, vu et entendu : un moment où l\'attention est maximale.',
+            bottomText: 'Communiquez au plus près des consommateurs dans votre zone de chalandise pour une visibilité renforcée.'
         },
         services: {
             headerTiny: 'Notre Offre',
@@ -803,16 +803,16 @@ Luxio Media is the alliance of technology, visual impact, and bespoke support to
             cta: 'Find a screen near you'
         },
         stations: {
-            subtitle: 'gas stations',
-            titlePart1: 'Digital audio signage in',
-            titlePart2: 'gas stations',
+            subtitle: 'Our Assets',
+            titlePart1: 'High performance',
+            titlePart2: 'digital signage',
             notoriety: 'Brand Awareness',
-            notorietyDesc: 'Broadcast your message to millions of drivers every week on premium audio screens.',
+            notorietyDesc: 'Broadcast your message on premium screens to effectively reach your target audience.',
             coverage: 'Coverage',
-            coverageDesc: 'Activate a local or national campaign and be visible in the most strategic gas stations.',
+            coverageDesc: 'Activate a strategic campaign and be visible where your customers are.',
             captivating: 'Captivating',
-            captivatingDesc: 'An immersive video format, seen and heard during refueling: a moment when attention is maximal.',
-            bottomText: 'Communicate as close as possible to consumers in your catchment area, or on a national scale for reinforced visibility.'
+            captivatingDesc: 'An immersive video format, seen and heard: a moment when attention is maximal.',
+            bottomText: 'Communicate as close as possible to consumers in your catchment area for reinforced visibility.'
         },
         services: {
             headerTiny: 'What We Offer',
@@ -1214,16 +1214,16 @@ Luxio Media vereint Technologie, visuelle Wirkung und maßgeschneiderte Betreuun
             cta: 'Einen Bildschirm in Ihrer Nähe finden'
         },
         stations: {
-            subtitle: 'Tankstellen',
-            titlePart1: 'Digitale Audio-Beschilderung in',
-            titlePart2: 'Tankstellen',
+            subtitle: 'Unsere Vorteile',
+            titlePart1: 'Leistungsstarke',
+            titlePart2: 'digitale Beschilderung',
             notoriety: 'Markenbekanntheit',
-            notorietyDesc: 'Verbreiten Sie Ihre Botschaft jede Woche an Millionen von Autofahrern auf hochwertigen Audiobildschirmen.',
+            notorietyDesc: 'Senden Sie Ihre Botschaft auf Premium-Bildschirmen, um Ihre Zielgruppe effektiv zu erreichen.',
             coverage: 'Reichweite',
-            coverageDesc: 'Aktivieren Sie eine lokale oder nationale Kampagne und seien Sie an den strategisch wichtigsten Tankstellen sichtbar.',
+            coverageDesc: 'Aktivieren Sie eine strategische Kampagne und seien Sie dort sichtbar, wo Ihre Kunden sind.',
             captivating: 'Fesselnd',
-            captivatingDesc: 'Ein immersives Videoformat, gesehen und gehört beim Tanken: ein Moment maximaler Aufmerksamkeit.',
-            bottomText: 'Kommunizieren Sie so nah wie möglich an den Verbrauchern in Ihrem Einzugsgebiet oder auf nationaler Ebene für verstärkte Sichtbarkeit.'
+            captivatingDesc: 'Ein immersives Videoformat, das gesehen und gehört wird: ein Moment maximaler Aufmerksamkeit.',
+            bottomText: 'Kommunizieren Sie so nah wie möglich an den Verbrauchern in Ihrem Einzugsgebiet für verstärkte Sichtbarkeit.'
         },
         services: {
             headerTiny: 'Unser Angebot',
