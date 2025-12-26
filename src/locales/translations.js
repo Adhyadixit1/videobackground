@@ -19,7 +19,8 @@ export const translations = {
     fr: {
         nav: {
             solutions: 'Nos solutions',
-            whyFillup: 'Pourquoi Luxia media ?',
+            whyFillup: 'Pourquoi Luxio Media ?',
+            aboutUs: 'Qui sommes-nous ?',
             caseStudies: 'Nos cas clients',
             resources: 'Nos ressources',
             careers: 'Nous rejoindre',
@@ -28,7 +29,7 @@ export const translations = {
             startProject: 'Démarrer un projet',
             subtitles: {
                 solutions: 'Nos solutions',
-                whyFillup: 'Pourquoi choisir Luxia media ?',
+                whyFillup: 'Pourquoi choisir Luxio Media ?',
                 caseStudies: 'Nos réussites clients',
                 resources: 'Nos ressources',
                 careers: 'Rejoignez-nous',
@@ -233,14 +234,20 @@ export const translations = {
             }
         },
         agency: {
-            heroTitle: 'POURQUOI CHOISIR',
-            heroTitleHighlight: 'LUXIO MEDIA ?',
-            heroDesc: `Renforcez votre présence en ligne et en magasin avec une stratégie sur-mesure.
-            
-Experts en création de sites web, Community management, affichage dynamique et création de vidéos, nous vous aidons à capter l'attention de votre audience et à booster votre activité.
+            heroTitle: 'QUI SOMMES-NOUS ?',
+            heroTitleHighlight: 'LUXIO MEDIA',
+            heroHeaderDesc: 'Votre partenaire stratégique en affichage dynamique et communication digitale basé au Luxembourg.',
+            aboutUs: `Bienvenue chez Luxio Media, votre partenaire stratégique en affichage dynamique et communication digitale, basé au cœur du Luxembourg, carrefour européen de l’innovation et des affaires.
 
-12 Experts dédiés à votre réussite.`,
-            cta: 'Contactez-moi'
+Fondée avec l’ambition de moderniser la communication visuelle des entreprises et des institutions, Luxio Media s’est rapidement imposée comme un acteur fiable et innovant dans le domaine des écrans LED professionnels, des solutions d’affichage LCD haute performance et des dispositifs de communication digitale sur mesure.
+
+Nos solutions sont conçues pour répondre aux exigences des environnements urbains, commerciaux et institutionnels, et s’adressent notamment aux mairies et administrations, centres commerciaux, franchises, entreprises, établissements sportifs, hôtels, restaurants, salles de jeux, événementiel, ainsi qu’aux espaces publics et privés à forte visibilité.
+
+Fort d’une expertise solide et d’une vision tournée vers l’avenir, notre équipe accompagne chaque client de la conception à l’installation, jusqu’à la maintenance et l’optimisation des performances. Grâce à un réseau de partenaires et de techniciens qualifiés, Luxio Media garantit un service de proximité, réactif et adapté aux standards luxembourgeois et européens.
+
+Luxio Media, c’est l’alliance de la technologie, de l’impact visuel et de l’accompagnement sur mesure pour donner une nouvelle dimension à votre communication.`,
+            tagline: 'L’alliance de la technologie, de l’impact visuel et de l’accompagnement sur mesure.',
+            cta: 'Contactez-nous'
         },
         projects: {
             heroTitle: 'Nos',
@@ -288,7 +295,7 @@ Experts en création de sites web, Community management, affichage dynamique et 
                 name: 'Votre nom',
                 email: 'email@exemple.com',
                 company: 'Nom de votre entreprise',
-                phone: '+33 X XX XX XX XX',
+                phone: '+352 X XX XX XX XX',
                 sector: 'Sélectionnez votre secteur',
                 message: 'Décrivez votre projet...'
             },
@@ -471,6 +478,7 @@ Experts en création de sites web, Community management, affichage dynamique et 
         nav: {
             solutions: 'Our Solutions',
             whyFillup: 'Why Luxia media?',
+            aboutUs: 'About Us',
             caseStudies: 'Case Studies',
             resources: 'Resources',
             careers: 'Careers',
@@ -479,7 +487,7 @@ Experts en création de sites web, Community management, affichage dynamique et 
             startProject: 'Start a Project',
             subtitles: {
                 solutions: 'Our solutions',
-                whyFillup: 'Why Luxia media?',
+                whyFillup: 'Why choose Luxio Media?',
                 caseStudies: 'Customer success stories',
                 resources: 'Our resources',
                 careers: 'Join us / Careers',
@@ -684,14 +692,20 @@ Experts en création de sites web, Community management, affichage dynamique et 
             }
         },
         agency: {
-            heroTitle: 'WHY CHOOSE',
-            heroTitleHighlight: 'LUXIO MEDIA?',
-            heroDesc: `Strengthen your online and in-store presence with a custom strategy.
+            heroTitle: 'WHO ARE WE?',
+            heroTitleHighlight: 'LUXIO MEDIA',
+            heroHeaderDesc: 'Your strategic partner in digital signage and digital communication based in Luxembourg.',
+            aboutUs: `Welcome to Luxio Media, your strategic partner in digital signage and digital communication, based in the heart of Luxembourg, the European hub for innovation and business.
 
-Experts in website creation, Community management, digital signage, and video creation, we help you capture your audience's attention and boost your business.
+Founded with the ambition to modernize the visual communication of companies and institutions, Luxio Media has quickly established itself as a reliable and innovative player in the field of professional LED screens, high-performance LCD display solutions, and custom digital communication devices.
 
-12 Experts dedicated to your success.`,
-            cta: 'Contact me'
+Our solutions are designed to meet the requirements of urban, commercial, and institutional environments, and particularly cater to town halls and administrations, shopping centers, franchises, companies, sports facilities, hotels, restaurants, gaming rooms, events, as well as high-visibility public and private spaces.
+
+With solid expertise and a forward-looking vision, our team supports each client from design to installation, through to maintenance and performance optimization. Thanks to a network of qualified partners and technicians, Luxio Media guarantees a local, reactive service adapted to Luxembourgish and European standards.
+
+Luxio Media is the alliance of technology, visual impact, and tailor-made support to give a new dimension to your communication.`,
+            tagline: 'The alliance of technology, visual impact, and bespoke support.',
+            cta: 'Contact Us'
         },
         projects: {
             heroTitle: 'Our',
@@ -739,7 +753,7 @@ Experts in website creation, Community management, digital signage, and video cr
                 name: 'Your name',
                 email: 'email@example.com',
                 company: 'Company name',
-                phone: '+33 X XX XX XX XX',
+                phone: '+352 X XX XX XX XX',
                 sector: 'Select your industry',
                 message: 'Describe your project...'
             },
@@ -846,7 +860,7 @@ Experts in website creation, Community management, digital signage, and video cr
                     title: "Disneyland Paris - Halloween Season",
                     summary: "How Disneyland enchanted the public and boosted visits for its Halloween season with an immersive campaign.",
                     challenge: "Increase ticket sales for the Halloween season and promote special night events to families and young adults.",
-                    solution: "Use of giant LED walls and outdoor screens to broadcast spectacular and colorful video teasers. Targeting school exit times and weekends to reach families.",
+                    solution: "Use of giant LED walls and outdoor screens to broadcast spectacular and colorful video teasers. Targeting school exit times and weekends to touch families.",
                     results: [
                         "Significant increase in ticket sales over the period",
                         "Record social media engagement linked to the campaign",
@@ -901,7 +915,7 @@ Experts in website creation, Community management, digital signage, and video cr
             s3Title: 'Digital Signage',
             s3Desc: 'Attract with innovative screens. Our digital signage solutions (interactive showcases, touch screens, LED walls) transform your space into a powerful communication tool.',
             s4Title: 'Video Creation',
-            s4Desc: 'Sublimate your brand. From storytelling to promotional video, we create captivating content that highlights your brand across all channels (viral videos, increased conversion).'
+            s4Desc: 'Sublimate your brand. From storytelling to promotional video, we create captivating content that highlights your brand across all channels (viral videos, conversion accrued).'
         },
         stats: {
             title: 'Impact',
@@ -921,7 +935,8 @@ Experts in website creation, Community management, digital signage, and video cr
     de: {
         nav: {
             solutions: 'Unsere Lösungen',
-            whyFillup: 'Warum Fill Up?',
+            whyFillup: 'Warum Luxio Media?',
+            aboutUs: 'Über uns',
             caseStudies: 'Fallstudien',
             resources: 'Ressourcen',
             careers: 'Karriere',
@@ -930,7 +945,7 @@ Experts in website creation, Community management, digital signage, and video cr
             startProject: 'Projekt starten',
             subtitles: {
                 solutions: 'Unsere Lösungen',
-                whyFillup: 'Warum Fill Up?',
+                whyFillup: 'Warum Luxio Media wählen?',
                 caseStudies: 'Kundenerfolgsgeschichten',
                 resources: 'Unsere Ressourcen',
                 careers: 'Karriere / Melden Sie sich',
@@ -1133,14 +1148,20 @@ Experts in website creation, Community management, digital signage, and video cr
             },
         },
         agency: {
-            heroTitle: 'WARUM',
-            heroTitleHighlight: 'LUXIO MEDIA WÄHLEN?',
-            heroDesc: `Stärken Sie Ihre Online- und Ladenpräsenz mit einer maßgeschneiderten Strategie.
+            heroTitle: 'WER SIND WIR?',
+            heroTitleHighlight: 'LUXIO MEDIA',
+            heroHeaderDesc: 'Ihr strategischer Partner für Digital Signage und digitale Kommunikation mit Sitz in Luxemburg.',
+            aboutUs: `Willkommen bei Luxio Media, Ihrem strategischen Partner für digitale Beschilderung und digitale Kommunikation, mit Sitz im Herzen von Luxemburg, dem europäischen Drehkreuz für Innovation und Wirtschaft.
 
-Als Experten für Website-Erstellung, Community Management, Digital Signage und Videoerstellung helfen wir Ihnen, die Aufmerksamkeit Ihres Publikums zu gewinnen und Ihr Geschäft anzukurbeln.
+Gegründet mit dem Ehrgeiz, die visuelle Kommunikation von Unternehmen und Institutionen zu modernisieren, hat sich Luxio Media schnell als zuverlässiger und innovativer Akteur im Bereich professioneller LED-Bildschirme, leistungsstarker LCD-Display-Lösungen und maßgeschneiderter digitaler Kommunikationsgeräte etabliert.
 
-12 Experten, die sich Ihrem Erfolg widmen.`,
-            cta: 'Kontaktieren Sie mich'
+Unsere Lösungen sind darauf ausgelegt, den Anforderungen städtischer, kommerzieller und institutioneller Umgebungen gerecht zu werden und richten sich insbesondere an Rathäuser und Verwaltungen, Einkaufszentren, Franchise-Unternehmen, Unternehmen, Sportstätten, Hotels, Restaurants, Spielzimmer, Veranstaltungen sowie an hochfrequentierte öffentliche und private Räume.
+
+Mit solider Expertise und einer zukunftsorientierten Vision begleitet unser Team jeden Kunden vom Entwurf über die Installation bis hin zur Wartung und Leistungsoptimierung. Dank eines Netzwerks aus qualifizierten Partnern und Technikern garantiert Luxio Media einen lokalen, reaktionsschnellen Service, der an luxemburgische und europäische Standards angepasst ist.
+
+Luxio Media ist die Allianz aus Technologie, visueller Wirkung und maßgeschneiderter Unterstützung, um Ihrer Kommunikation eine neue Dimension zu verleihen.`,
+            tagline: 'Die Allianz aus Technologie, visueller Wirkung und maßgeschneiderter Unterstützung.',
+            cta: 'Kontaktiere uns'
         },
         projects: {
             heroTitle: 'Unsere',
@@ -1188,7 +1209,7 @@ Als Experten für Website-Erstellung, Community Management, Digital Signage und 
                 name: 'Ihr Name',
                 email: 'email@beispiel.com',
                 company: 'Firmenname',
-                phone: '+33 X XX XX XX XX',
+                phone: '+352 X XX XX XX XX',
                 sector: 'Wählen Sie Ihre Branche',
                 message: 'Beschreiben Sie Ihr Projekt...'
             },

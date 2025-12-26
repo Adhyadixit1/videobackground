@@ -9,8 +9,8 @@ const FooterSection = () => {
 
     const navItems = [
         { name: 'Home', path: '/' },
-        { name: 'Projects', path: '/projects' },
-        { name: 'Agency', path: '/agence' },
+        { name: 'Why Luxio Media', path: '/why-fillup' },
+        { name: 'Solutions', path: '/solutions' },
         { name: 'Contact', path: '/contact' }
     ]
 
@@ -110,8 +110,8 @@ const FooterSection = () => {
                                 +352 661 16 77 25
                             </p>
                             <p className='font-[font1] text-gray-400 text-sm leading-relaxed'>
-                                26 Bd Royal Level 5,<br />
-                                2449 Ville-Haute Luxembourg
+                                9 Rue du Laboratoire,<br />
+                                L-1911 Luxembourg
                             </p>
                         </div>
                     </div>
@@ -125,16 +125,27 @@ const FooterSection = () => {
                         © 2024 Luxio Media. All rights reserved.
                     </p>
                     <div className='flex gap-6'>
-                        {['Privacy Policy', 'Terms of Service', 'Cookies'].map((item, index) => (
-                            <a
-                                key={index}
-                                href='#'
-                                className='font-[font1] text-gray-500 text-xs hover:text-[#D3FD50] 
-                                          transition-colors duration-300'
-                            >
-                                {item}
-                            </a>
-                        ))}
+                        <Link
+                            to='/privacy'
+                            className='font-[font1] text-gray-500 text-xs hover:text-[#D3FD50] 
+                                      transition-colors duration-300'
+                        >
+                            Privacy Policy
+                        </Link>
+                        <Link
+                            to='/terms'
+                            className='font-[font1] text-gray-500 text-xs hover:text-[#D3FD50] 
+                                      transition-colors duration-300'
+                        >
+                            Terms of Service
+                        </Link>
+                        <a
+                            href='#'
+                            className='font-[font1] text-gray-500 text-xs hover:text-[#D3FD50] 
+                                      transition-colors duration-300'
+                        >
+                            Cookies
+                        </a>
                     </div>
                 </div>
             </div>

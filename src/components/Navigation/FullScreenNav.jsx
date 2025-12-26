@@ -13,6 +13,7 @@ const FullScreenNav = () => {
     const menuItems = [
         { title: t('nav.solutions'), subtitle: t('nav.subtitles.solutions'), path: '/solutions' },
         { title: t('nav.whyFillup'), subtitle: t('nav.subtitles.whyFillup'), path: '/why-fillup' },
+        { title: t('nav.aboutUs'), subtitle: t('nav.subtitles.aboutUs'), path: '/agence' },
         { title: t('nav.caseStudies'), subtitle: t('nav.subtitles.caseStudies'), path: '/case-studies' },
         { title: t('nav.resources'), subtitle: t('nav.subtitles.resources'), path: '/resources' },
         { title: t('nav.careers'), subtitle: t('nav.subtitles.careers'), path: '/careers' },

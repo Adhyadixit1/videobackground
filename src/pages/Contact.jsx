@@ -55,7 +55,7 @@ const Contact = () => {
                 </svg>
             ),
             label: t('contact.address'),
-            value: '26 Bd Royal Level 5, 2449 Ville-Haute Luxembourg',
+            value: '9 Rue du Laboratoire, L-1911 Luxembourg',
             link: '#'
         }
     ], [t])

@@ -51,31 +51,31 @@ const Careers = () => {
         {
             title: 'Account Manager',
             department: 'Commercial',
-            location: 'Paris',
+            location: 'Luxembourg',
             type: 'CDI'
         },
         {
             title: 'Motion Designer',
             department: 'Création',
-            location: 'Paris / Remote',
+            location: 'Luxembourg',
             type: 'CDI'
         },
         {
             title: 'Data Analyst',
             department: 'Tech',
-            location: 'Paris',
+            location: 'Luxembourg',
             type: 'CDI'
         },
         {
             title: 'Campaign Manager',
             department: 'Opérations',
-            location: 'Paris',
+            location: 'Luxembourg',
             type: 'CDI'
         },
         {
             title: 'Business Developer',
             department: 'Commercial',
-            location: 'Lyon',
+            location: 'Luxembourg',
             type: 'CDI'
         }
     ]

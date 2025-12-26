@@ -16,6 +16,8 @@ const Resources = lazy(() => import('./pages/Resources'))
 const Careers = lazy(() => import('./pages/Careers'))
 const Investors = lazy(() => import('./pages/Investors'))
 const Contact = lazy(() => import('./pages/Contact'))
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
+const TermsOfUse = lazy(() => import('./pages/TermsOfUse'))
 
 // Solution Sub-pages
 const SolutionPages = lazy(() => import('./pages/SolutionPages'))
@@ -100,6 +102,8 @@ const App = () => {
           <Route path='/careers' element={<Careers />} />
           <Route path='/investors' element={<Investors />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/privacy' element={<PrivacyPolicy />} />
+          <Route path='/terms' element={<TermsOfUse />} />
         </Routes>
       </Suspense>
     </div>

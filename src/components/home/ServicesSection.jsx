@@ -11,7 +11,7 @@ const ServicesSection = () => {
             title: t('services.s1Title'),
             description: t('services.s1Desc'),
             icon: '◇',
-            image: 'https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80',
+            image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg',
             link: '/solutions/lcd-screens'
         },
         {
@@ -19,7 +19,7 @@ const ServicesSection = () => {
             title: t('services.s2Title'),
             description: t('services.s2Desc'),
             icon: '○',
-            image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80',
+            image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg',
             link: '/solutions/digital-pump'
         },
         {
@@ -27,7 +27,7 @@ const ServicesSection = () => {
             title: t('services.s3Title'),
             description: t('services.s3Desc'),
             icon: '△',
-            image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80',
+            image: '/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg',
             link: '/solutions/outdoor-display'
         },
         {
@@ -35,7 +35,7 @@ const ServicesSection = () => {
             title: t('services.s4Title'),
             description: t('services.s4Desc'),
             icon: '□',
-            image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80',
+            image: '/WhatsApp Image 2025-12-25 at 10.13.20 AM.jpeg',
             link: '/solutions/station-network'
         }
     ]
