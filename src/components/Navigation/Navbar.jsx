@@ -11,7 +11,7 @@ const Navbar = () => {
     const navigate = useNavigate()
 
     return (
-        <div className='z-4 flex fixed top-0 w-full items-start justify-between'>
+        <div className='z-[100] flex absolute top-0 w-full items-start justify-between'>
             <>
                 <img
                     src='/luxio-vector-logo.png'

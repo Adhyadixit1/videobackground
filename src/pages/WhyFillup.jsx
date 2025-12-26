@@ -169,6 +169,77 @@ const WhyFillup = () => {
                 </div>
             </section>
 
+            {/* Comparison Section */}
+            <section className='py-20 lg:py-32 px-4 lg:px-12 bg-zinc-950'>
+                <div className='max-w-7xl mx-auto'>
+                    <div className='text-center mb-16 lg:mb-24'>
+                        <span className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block'>
+                            {t('why.comparison.title')}
+                        </span>
+                        <h2 className='font-[font2] text-white text-[6vw] lg:text-[3vw] leading-none uppercase'>
+                            {t('why.comparison.us')} vs {t('why.comparison.them')}
+                        </h2>
+                    </div>
+
+                    <div className='overflow-x-auto'>
+                        <table className='w-full text-left border-collapse'>
+                            <thead>
+                                <tr>
+                                    <th className='p-6 font-[font2] text-white/50 text-sm uppercase tracking-wider border-b border-white/10'>Feature</th>
+                                    <th className='p-6 font-[font2] text-[#D3FD50] text-xl uppercase tracking-wider border-b border-[#D3FD50]/30 bg-[#D3FD50]/5'>{t('why.comparison.us')}</th>
+                                    <th className='p-6 font-[font2] text-white/50 text-sm uppercase tracking-wider border-b border-white/10'>{t('why.comparison.them')}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {t('why.comparison.rows', { returnObjects: true })?.map((row, index) => (
+                                    <tr key={index} className='border-b border-white/5 hover:bg-white/5 transition-colors'>
+                                        <td className='p-6 font-[font1] text-white font-medium'>{row.feature}</td>
+                                        <td className='p-6 font-[font1] text-white bg-[#D3FD50]/5 border-x border-[#D3FD50]/10'>
+                                            <div className='flex items-center gap-3'>
+                                                <div className='w-6 h-6 rounded-full bg-[#D3FD50] flex items-center justify-center text-black'>
+                                                    <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M5 13l4 4L19 7' /></svg>
+                                                </div>
+                                                {row.us}
+                                            </div>
+                                        </td>
+                                        <td className='p-6 font-[font1] text-white/50'>{row.them}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            {/* Features Deep Dive */}
+            <section className='py-20 lg:py-32 px-4 lg:px-12'>
+                <div className='max-w-7xl mx-auto'>
+                    <div className='text-center mb-16 lg:mb-24'>
+                        <h2 className='font-[font2] text-white text-[6vw] lg:text-[3vw] leading-none uppercase'>
+                            {t('why.features.title')}
+                        </h2>
+                    </div>
+
+                    <div className='grid md:grid-cols-2 gap-12 lg:gap-20'>
+                        {t('why.features.list', { returnObjects: true })?.map((item, index) => (
+                            <div key={index} className='flex gap-6 group'>
+                                <div className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 group-hover:border-[#D3FD50] group-hover:bg-[#D3FD50] group-hover:text-black transition-all duration-300'>
+                                    <span className='font-[font2]'>{index + 1}</span>
+                                </div>
+                                <div>
+                                    <h3 className='font-[font2] text-white text-xl lg:text-2xl mb-4 group-hover:text-[#D3FD50] transition-colors'>
+                                        {item.title}
+                                    </h3>
+                                    <p className='font-[font1] text-white/60 leading-relaxed text-justify'>
+                                        {item.desc}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* CTA Section */}
             <section className='py-20 lg:py-32 px-4 lg:px-12 bg-gradient-to-t from-zinc-950 to-black'>
                 <div className='max-w-4xl mx-auto text-center'>

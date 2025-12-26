@@ -10,10 +10,21 @@ const Contact = () => {
         name: '',
         email: '',
         company: '',
+        countryCode: '+352',
         phone: '',
         sector: '',
         message: ''
     })
+
+    const countryCodes = [
+        { code: '+352', country: 'LU', flag: '🇱🇺' },
+        { code: '+33', country: 'FR', flag: '🇫🇷' },
+        { code: '+49', country: 'DE', flag: '🇩🇪' },
+        { code: '+32', country: 'BE', flag: '🇧🇪' },
+        { code: '+41', country: 'CH', flag: '🇨🇭' },
+        { code: '+44', country: 'GB', flag: '🇬🇧' },
+        { code: '+1', country: 'US', flag: '🇺🇸' },
+    ]
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -180,14 +191,28 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <label className='text-white/60 text-sm block mb-2'>{t('contact.formPhone')}</label>
-                                        <input
-                                            type='tel'
-                                            name='phone'
-                                            value={formData.phone}
-                                            onChange={handleChange}
-                                            className='w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
-                                            placeholder={t('contact.placeholders.phone')}
-                                        />
+                                        <div className='flex gap-2'>
+                                            <select
+                                                name='countryCode'
+                                                value={formData.countryCode}
+                                                onChange={handleChange}
+                                                className='w-24 px-2 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
+                                            >
+                                                {countryCodes.map((c) => (
+                                                    <option key={c.code} value={c.code} className='bg-black'>
+                                                        {c.flag} {c.code}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                            <input
+                                                type='tel'
+                                                name='phone'
+                                                value={formData.phone}
+                                                onChange={handleChange}
+                                                className='flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
+                                                placeholder={t('contact.placeholders.phone')}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
 

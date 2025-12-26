@@ -25,7 +25,7 @@ const Agence = () => {
                 }
             />
 
-            <section className="py-24 px-4 lg:px-12 bg-black relative">
+            <section className="py-24 px-4 lg:px-12 bg-black relative z-10">
                 {/* Subtle background element */}
                 <div className='absolute top-0 right-0 w-[500px] h-[500px] bg-[#D3FD50]/5 blur-[150px] pointer-events-none'></div>
 

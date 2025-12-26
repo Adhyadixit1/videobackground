@@ -95,7 +95,7 @@ const Solutions = () => {
             />
 
             {/* Stats Section */}
-            <section id="stats" className='relative py-20 lg:py-32 border-y border-white/10'>
+            <section id="stats" className='relative z-10 py-20 lg:py-32 border-y border-white/10'>
                 <div className='max-w-7xl mx-auto px-4 lg:px-12'>
                     <div className='grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12'>
                         {stats.map((stat, index) => (

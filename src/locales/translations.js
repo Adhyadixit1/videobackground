@@ -227,10 +227,42 @@ export const translations = {
                 captive: 'Captive'
             },
             cta: {
-                title: 'Prêt à booster',
-                titleHighlight: 'votre visibilité ?',
-                desc: 'Rejoignez les 3,400+ annonceurs qui font confiance à Luxia media pour développer leur notoriété locale.',
+                title: 'Prêt à développer',
+                titleHighlight: 'votre impact ?',
+                desc: 'Rejoignez les 3400+ annonceurs qui font confiance à Luxio Media pour leurs communications.',
                 btn: 'Démarrer maintenant'
+            },
+            comparison: {
+                title: 'L\'Avantage Luxio Media',
+                us: 'Luxio Media',
+                them: 'Autres Solutions',
+                rows: [
+                    { feature: 'Attention Audience', us: '100% Captive & Sonore', them: 'Passif & Silencieux' },
+                    { feature: 'Ciblage', us: 'Hyperlocal & Contextuel', them: 'Large & Peu précis' },
+                    { feature: 'Créativité', us: 'Studio Motion Intégré', them: 'Adaptation Standard' },
+                    { feature: 'Mesure', us: 'Data Précise & ROI', them: 'Estimations' }
+                ]
+            },
+            features: {
+                title: 'Une technologie de pointe',
+                list: [
+                    {
+                        title: 'Écrans Haute Définition',
+                        desc: 'Des écrans LED et LCD dernière génération, visibles même en plein soleil, pour une qualité d\'image irréprochable qui valorise votre marque.'
+                    },
+                    {
+                        title: 'Diffusion Intelligente',
+                        desc: 'Notre algorithme optimise la diffusion de votre message en fonction des heures de pointe et du profil de l\'audience pour maximiser l\'impact.'
+                    },
+                    {
+                        title: 'Son Immersif',
+                        desc: 'Contrairement à l\'affichage classique, nos écrans diffusent du son (directionnel) pour capter l\'attention auditive et visuelle simultanément.'
+                    },
+                    {
+                        title: 'Reporting Détaillé',
+                        desc: 'Accédez à des statistiques précises sur les diffusions, l\'audience touchée et l\'impact de votre campagne en toute transparence.'
+                    }
+                ]
             }
         },
         agency: {
@@ -268,10 +300,84 @@ Luxio Media, c’est l’alliance de la technologie, de l’impact visuel et de 
             cta: 'Voir les offres'
         },
         investors: {
-            heroTitle: 'Investir dans',
-            heroTitleHighlight: 'l\'avenir du DOOH',
-            heroDesc: 'Fill Up Media est le leader français de l\'affichage digital en stations-service, un marché en pleine croissance avec un potentiel considérable.',
-            cta: 'En savoir plus'
+            heroTitle: 'Pourquoi investir dans',
+            heroTitleHighlight: 'Luxio Media',
+            heroDesc: 'Participez à la révolution de l\'affichage dynamique et du DOOH depuis le cœur technologique de l\'Europe.',
+            cta: 'Découvrir l\'opportunité',
+            anchor: {
+                title: 'Le Luxembourg comme point d’ancrage stratégique européen',
+                content1: 'Basée au Luxembourg, au cœur de l’Europe et de l’un des écosystèmes financiers et business les plus stables du continent, Luxio Media opère dans un environnement propice à l’innovation, à la structuration de projets internationaux et à l’attraction d’investisseurs institutionnels.',
+                content2: 'Depuis le Luxembourg, Luxio Media développe et pilote des stratégies de Digital Out-Of-Home (DOOH) et d’affichage dynamique à l’échelle européenne, en combinant rigueur financière, vision long terme et exécution opérationnelle.'
+            },
+            market: {
+                title: 'Un marché en pleine expansion : le DOOH',
+                desc: 'Luxio Media évolue au cœur d’un secteur à forte croissance : le Digital Out-Of-Home (DOOH), qui redéfinit la manière dont les marques captent l’attention des consommateurs dans les espaces physiques et digitaux.',
+                features: [
+                    'performance mesurable',
+                    'ciblage géographique et contextuel',
+                    'interaction et dynamisme des contenus',
+                    'exploitation intelligente de la donnée'
+                ]
+            },
+            mission: {
+                title: 'Notre mission',
+                desc: 'Chez Luxio Media, notre ambition est de redéfinir la communication extérieure pour l’ère digitale, en proposant des solutions à forte valeur ajoutée pour les annonceurs.',
+                items: [
+                    'Des campagnes DOOH hautement ciblées et mesurables, parfaitement synchronisées avec l’écosystème digital des marques.',
+                    'Une orchestration intégrée entre les impressions physiques (écrans LED, vitrines digitales, totems, réseaux urbains) et leur amplification sur les réseaux sociaux et plateformes digitales.',
+                    'Une technologie de diffusion intelligente, associée à un accompagnement sur-mesure, afin de maximiser la performance et le retour sur investissement.'
+                ]
+            },
+            model: {
+                title: 'Un modèle économique durable et scalable',
+                leviers: [
+                    'Location d’espaces publicitaires DOOH premium',
+                    'Prestations créatives et production de contenus enrichis',
+                    'Services de data, ciblage et optimisation de campagnes',
+                    'Offres SaaS dédiées à la planification DOOH automatisée'
+                ],
+                benefits: [
+                    'Une forte récurrence des revenus',
+                    'Une scalabilité naturelle',
+                    'Une création de valeur croissante à mesure que le réseau s’étend'
+                ]
+            },
+            traction: {
+                title: 'Traction & opportunités de croissance',
+                points: [
+                    'Un réseau d’écrans DOOH en expansion en Europe',
+                    'Un pipeline commercial solide et des partenaires stratégiques',
+                    'Un positionnement différenciant entre DOOH et digital'
+                ]
+            },
+            team: {
+                title: 'Équipe & gouvernance',
+                skills: [
+                    'Déploiement et exploitation de réseaux DOOH',
+                    'Marketing digital et stratégies d’amplification',
+                    'Développement international et montée en puissance'
+                ]
+            },
+            whyNow: {
+                title: 'Pourquoi investir maintenant',
+                points: [
+                    'un modèle économique scalable',
+                    'une expertise technologique différenciente',
+                    'une dynamique de croissance soutenue',
+                    'une intégration fluide DOOH & digital'
+                ],
+                ambitions: [
+                    'l’expansion dans les principales capitales européennes',
+                    'le développement de solutions propriétaires de mesure',
+                    'la mise en place de partenariats stratégiques'
+                ]
+            },
+            relations: {
+                title: 'Relations investisseurs',
+                desc: 'Pour accéder à notre dossier investisseurs, à nos projections financières détaillées et échanger sur les opportunités d’investissement, contactez-nous :',
+                email: 'investor@luxiomedia.lu',
+                phone: '+352 661 167 725'
+            }
         },
         contact: {
             heroTitle: 'Parlons de',
@@ -295,7 +401,7 @@ Luxio Media, c’est l’alliance de la technologie, de l’impact visuel et de 
                 name: 'Votre nom',
                 email: 'email@exemple.com',
                 company: 'Nom de votre entreprise',
-                phone: '+352 X XX XX XX XX',
+                phone: 'X XX XX XX XX',
                 sector: 'Sélectionnez votre secteur',
                 message: 'Décrivez votre projet...'
             },
@@ -685,10 +791,42 @@ Luxio Media, c’est l’alliance de la technologie, de l’impact visuel et de 
                 captive: 'Captive'
             },
             cta: {
-                title: 'Ready to boost',
-                titleHighlight: 'your visibility?',
-                desc: 'Join the 3,400+ advertisers who trust Fill Up Media to grow their local brand awareness.',
+                title: 'Ready to Boost',
+                titleHighlight: 'Your Visibility?',
+                desc: 'Join 3400+ advertisers who trust Luxio Media with their communication.',
                 btn: 'Start Now'
+            },
+            comparison: {
+                title: 'The Luxio Media Advantage',
+                us: 'Luxio Media',
+                them: 'Other Solutions',
+                rows: [
+                    { feature: 'Audience Attention', us: '100% Captive & Sound', them: 'Passive & Silent' },
+                    { feature: 'Targeting', us: 'Hyperlocal & Contextual', them: 'Broad & Imprecise' },
+                    { feature: 'Creativity', us: 'Integrated Motion Studio', them: 'Standard Adaptation' },
+                    { feature: 'Measurement', us: 'Precise Data & ROI', them: 'Estimates' }
+                ]
+            },
+            features: {
+                title: 'Cutting-Edge Technology',
+                list: [
+                    {
+                        title: 'High Definition Screens',
+                        desc: 'Latest generation LED and LCD screens, visible even in direct sunlight, for impeccable image quality that enhances your brand.'
+                    },
+                    {
+                        title: 'Smart Broadcasting',
+                        desc: 'Our algorithm optimizes the broadcasting of your message based on peak hours and audience profile to maximize impact.'
+                    },
+                    {
+                        title: 'Immersive Sound',
+                        desc: 'Unlike traditional signage, our screens broadcast sound (directional) to capture both auditory and visual attention simultaneously.'
+                    },
+                    {
+                        title: 'Detailed Reporting',
+                        desc: 'Access precise statistics on broadcasts, audience reached, and the impact of your campaign in complete transparency.'
+                    }
+                ]
             }
         },
         agency: {
@@ -726,10 +864,84 @@ Luxio Media is the alliance of technology, visual impact, and tailor-made suppor
             cta: 'View openings'
         },
         investors: {
-            heroTitle: 'Invest in',
-            heroTitleHighlight: 'the future of DOOH',
-            heroDesc: 'Fill Up Media is the French leader in digital signage in gas stations, a growing market with considerable potential.',
-            cta: 'Learn more'
+            heroTitle: 'Why Invest in',
+            heroTitleHighlight: 'Luxio Media',
+            heroDesc: 'Join the revolution of digital signage and DOOH from the technological heart of Europe.',
+            cta: 'Discover the Opportunity',
+            anchor: {
+                title: 'Luxembourg as a Strategic European Anchor',
+                content1: 'Based in Luxembourg, at the heart of Europe and one of the continent\'s most stable financial and business ecosystems, Luxio Media operates in an environment conducive to innovation, international project structuring, and attracting institutional investors.',
+                content2: 'From Luxembourg, Luxio Media develops and steers Digital Out-Of-Home (DOOH) and digital signage strategies on a European scale, combining financial rigor, long-term vision, and operational execution.'
+            },
+            market: {
+                title: 'A Rapidly Expanding Market: DOOH',
+                desc: 'Luxio Media operates in a high-growth sector: Digital Out-Of-Home (DOOH), which is redefining how brands capture consumer attention in physical and digital spaces.',
+                features: [
+                    'measurable performance',
+                    'geographical and contextual targeting',
+                    'interactive and dynamic content',
+                    'intelligent data exploitation'
+                ]
+            },
+            mission: {
+                title: 'Our Mission',
+                desc: 'At Luxio Media, our ambition is to redefine outdoor communication for the digital era, offering high-value solutions for advertisers.',
+                items: [
+                    'Highly targeted and measurable DOOH campaigns, perfectly synchronized with brand digital ecosystems.',
+                    'Integrated orchestration between physical impressions (LED screens, digital windows, totems, urban networks) and their amplification on social networks.',
+                    'Intelligent broadcast technology combined with tailor-made support to maximize performance and ROI.'
+                ]
+            },
+            model: {
+                title: 'A Sustainable and Scalable Business Model',
+                leviers: [
+                    'Premium DOOH advertising space rental',
+                    'Creative services and enriched content production',
+                    'Data, targeting, and campaign optimization services',
+                    'SaaS offers dedicated to automated DOOH planning'
+                ],
+                benefits: [
+                    'High revenue recurrence',
+                    'Natural scalability',
+                    'Increasing value creation as the network expands'
+                ]
+            },
+            traction: {
+                title: 'Traction & Growth Opportunities',
+                points: [
+                    'Expanding DOOH screen network in Europe',
+                    'Solid commercial pipeline and strategic partners',
+                    'Differentiating positioning between DOOH and digital'
+                ]
+            },
+            team: {
+                title: 'Team & Governance',
+                skills: [
+                    'DOOH network deployment and operation',
+                    'Digital marketing and amplification strategies',
+                    'International development and scaling'
+                ]
+            },
+            whyNow: {
+                title: 'Why Invest Now',
+                points: [
+                    'scalable business model',
+                    'differentiating technological expertise',
+                    'sustained growth dynamics',
+                    'seamless DOOH & digital integration'
+                ],
+                ambitions: [
+                    'expansion into major European capitals',
+                    'development of proprietary measurement solutions',
+                    'implementation of strategic partnerships'
+                ]
+            },
+            relations: {
+                title: 'Investor Relations',
+                desc: 'To access our investor file, detailed financial projections, and discuss investment opportunities, contact us:',
+                email: 'investor@luxiomedia.lu',
+                phone: '+352 661 167 725'
+            }
         },
         contact: {
             heroTitle: 'Let\'s talk about',
@@ -753,7 +965,7 @@ Luxio Media is the alliance of technology, visual impact, and tailor-made suppor
                 name: 'Your name',
                 email: 'email@example.com',
                 company: 'Company name',
-                phone: '+352 X XX XX XX XX',
+                phone: 'X XX XX XX XX',
                 sector: 'Select your industry',
                 message: 'Describe your project...'
             },
@@ -1143,9 +1355,43 @@ Luxio Media is the alliance of technology, visual impact, and tailor-made suppor
                 captive: 'Gefangenes Publikum'
             },
             cta: {
-                title: 'Bereit, Ihre Sichtbarkeit',
-                titleHighlight: 'zu steigern?',
+                title: 'Bereit, Ihre',
+                titleHighlight: 'Sichtbarkeit zu steigern?',
+                desc: 'Schließen Sie sich 3.400+ Werbetreibenden an, die Luxio Media ihre Kommunikation anvertrauen.',
+                btn: 'Jetzt starten'
             },
+            comparison: {
+                title: 'Der Luxio Media Vorteil',
+                us: 'Luxio Media',
+                them: 'Andere Lösungen',
+                rows: [
+                    { feature: 'Publikumsaufmerksamkeit', us: '100% Fesselnd & Ton', them: 'Passiv & Geräuschlos' },
+                    { feature: 'Targeting', us: 'Hyperlokal & Kontextuell', them: 'Breit & Ungenau' },
+                    { feature: 'Kreativität', us: 'Integriertes Motion Studio', them: 'Standardanpassung' },
+                    { feature: 'Messung', us: 'Präzise Daten & ROI', them: 'Schätzungen' }
+                ]
+            },
+            features: {
+                title: 'Spitzentechnologie',
+                list: [
+                    {
+                        title: 'High-Definition-Bildschirme',
+                        desc: 'LED- und LCD-Bildschirme der neuesten Generation, die selbst bei direkter Sonneneinstrahlung sichtbar sind, für eine tadellose Bildqualität, die Ihre Marke aufwertet.'
+                    },
+                    {
+                        title: 'Intelligente Ausstrahlung',
+                        desc: 'Unser Algorithmus optimiert die Ausstrahlung Ihrer Nachricht basierend auf Stoßzeiten und Publikumsprofil, um die Wirkung zu maximieren.'
+                    },
+                    {
+                        title: 'Immersiver Sound',
+                        desc: 'Im Gegensatz zu herkömmlicher Beschilderung übertragen unsere Bildschirme Ton (gerichtet), um gleichzeitig auditive und visuelle Aufmerksamkeit zu erregen.'
+                    },
+                    {
+                        title: 'Detailliertes Reporting',
+                        desc: 'Greifen Sie transparent auf präzise Statistiken zu Ausstrahlungen, erreichtem Publikum und der Wirkung Ihrer Kampagne zu.'
+                    }
+                ]
+            }
         },
         agency: {
             heroTitle: 'WER SIND WIR?',
@@ -1182,10 +1428,84 @@ Luxio Media ist die Allianz aus Technologie, visueller Wirkung und maßgeschneid
             cta: 'Angebote ansehen'
         },
         investors: {
-            heroTitle: 'Investieren in',
-            heroTitleHighlight: 'die Zukunft von DOOH',
-            heroDesc: 'Fill Up Media ist der französische Marktführer für Digital Signage an Tankstellen, ein Wachstumsmarkt mit erheblichem Potenzial.',
-            cta: 'Mehr erfahren'
+            heroTitle: 'Warum in',
+            heroTitleHighlight: 'Luxio Media investieren',
+            heroDesc: 'Beteiligen Sie sich an der Revolution von Digital Signage und DOOH aus dem technologischen Herzen Europas.',
+            cta: 'Gelegenheit entdecken',
+            anchor: {
+                title: 'Luxemburg als strategischer europäischer Ankerpunkt',
+                content1: 'Luxio Media hat seinen Sitz in Luxemburg, im Herzen Europas und in einem der stabilsten Finanz- und Wirtschafts-Ökosysteme des Kontinents. Das Unternehmen operiert in einem Umfeld, das Innovationen, die Strukturierung internationaler Projekte und die Gewinnung institutioneller Investoren begünstigt.',
+                content2: 'Von Luxemburg aus entwickelt und steuert Luxio Media Digital Out-Of-Home (DOOH) und Digital Signage Strategien auf europäischer Ebene und kombiniert finanzielle Stringenz, langfristige Vision und operative Umsetzung.'
+            },
+            market: {
+                title: 'Ein rasant wachsender Markt: DOOH',
+                desc: 'Luxio Media bewegt sich im Zentrum eines wachstumsstarken Sektors: Digital Out-Of-Home (DOOH), der die Art und Weise neu definiert, wie Marken die Aufmerksamkeit der Verbraucher in physischen und digitalen Räumen gewinnen.',
+                features: [
+                    'messbare Leistung',
+                    'geografisches und kontextbezogenes Targeting',
+                    'Interaktion und Dynamik der Inhalte',
+                    'intelligente Datennutzung'
+                ]
+            },
+            mission: {
+                title: 'Unsere Mission',
+                desc: 'Unser Ziel bei Luxio Media ist es, die Außenwerbe-Kommunikation für das digitale Zeitalter neu zu definieren und Werbetreibenden Lösungen mit hohem Mehrwert anzubieten.',
+                items: [
+                    'Hochgradig zielgerichtete und messbare DOOH-Kampagnen, perfekt synchronisiert mit den digitalen Ökosystemen der Marken.',
+                    'Integrierte Orchestrierung zwischen physischen Impressionen (LED-Bildschirme, digitale Schaufenster, Totems, städtische Netzwerke) and deren Verstärkung in sozialen Netzwerken.',
+                    'Intelligente Übertragungstechnologie kombiniert mit maßgeschneiderter Unterstützung zur Maximierung von Leistung und ROI.'
+                ]
+            },
+            model: {
+                title: 'Ein nachhaltiges und skalierbares Geschäftsmodell',
+                leviers: [
+                    'Vermietung von Premium-DOOH-Werbeflächen',
+                    'Kreativleistungen und Produktion angereicherter Inhalte',
+                    'Daten-, Targeting- und Kampagnenoptimierungsdienste',
+                    'SaaS-Angebote für die automatisierte DOOH-Planung'
+                ],
+                benefits: [
+                    'Hohe Umsatzwiederkehr',
+                    'Natürliche Skalierbarkeit',
+                    'Steigende Wertschöpfung bei Netzerweiterung'
+                ]
+            },
+            traction: {
+                title: 'Traktion & Wachstumschancen',
+                points: [
+                    'Expandierendes DOOH-Netzwerk in Europa',
+                    'Solide Vertriebspipeline und strategische Partner',
+                    'Differenzierende Positionierung zwischen DOOH und Digital'
+                ]
+            },
+            team: {
+                title: 'Team & Governance',
+                skills: [
+                    'Bereitstellung und Betrieb von DOOH-Netzwerken',
+                    'Digitales Marketing und Amplifikationsstrategien',
+                    'Internationale Entwicklung und Skalierung'
+                ]
+            },
+            whyNow: {
+                title: 'Warum jetzt investieren',
+                points: [
+                    'skalierbares Geschäftsmodell',
+                    'differenzierende Technologie-Expertise',
+                    'anhaltende Wachstumsdynamik',
+                    'nahtlose DOOH- & Digital-Integration'
+                ],
+                ambitions: [
+                    'Expansion in die wichtigsten europäischen Hauptstädte',
+                    'Entwicklung proprietärer Messlösungen',
+                    'Aufbau strategischer Partnerships'
+                ]
+            },
+            relations: {
+                title: 'Investor Relations',
+                desc: 'Um auf unsere Investoren-Unterlagen und detaillierten Finanzprognosen zuzugreifen und über Investitionsmöglichkeiten zu sprechen, kontaktieren Sie uns:',
+                email: 'investor@luxiomedia.lu',
+                phone: '+352 661 167 725'
+            }
         },
         contact: {
             heroTitle: 'Lassen Sie uns über',
@@ -1209,7 +1529,7 @@ Luxio Media ist die Allianz aus Technologie, visueller Wirkung und maßgeschneid
                 name: 'Ihr Name',
                 email: 'email@beispiel.com',
                 company: 'Firmenname',
-                phone: '+352 X XX XX XX XX',
+                phone: 'X XX XX XX XX',
                 sector: 'Wählen Sie Ihre Branche',
                 message: 'Beschreiben Sie Ihr Projekt...'
             },
