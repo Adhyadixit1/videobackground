@@ -133,9 +133,10 @@ const CaseStudies = () => {
                 <div className='max-w-7xl mx-auto'>
                     <div className='grid lg:grid-cols-2 gap-6 lg:gap-8'>
                         {filteredSectors.map((sector, index) => (
-                            <div
+                            <Link
+                                to={`/case-studies/${sector.id}`}
                                 key={sector.id}
-                                className='group relative rounded-3xl overflow-hidden border border-white/10 hover:border-[#D3FD50]/50 transition-all duration-500'
+                                className='group relative rounded-3xl overflow-hidden border border-white/10 hover:border-[#D3FD50]/50 transition-all duration-500 block'
                             >
                                 {/* Background Image */}
                                 <div className='absolute inset-0'>
@@ -187,7 +188,7 @@ const CaseStudies = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

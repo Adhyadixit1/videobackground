@@ -11,6 +11,7 @@ const Projects = lazy(() => import('./pages/Projects'))
 const Solutions = lazy(() => import('./pages/Solutions'))
 const WhyFillup = lazy(() => import('./pages/WhyFillup'))
 const CaseStudies = lazy(() => import('./pages/CaseStudies'))
+const CaseStudyDetail = lazy(() => import('./pages/CaseStudyDetail'))
 const Resources = lazy(() => import('./pages/Resources'))
 const Careers = lazy(() => import('./pages/Careers'))
 const Investors = lazy(() => import('./pages/Investors'))
@@ -94,6 +95,7 @@ const App = () => {
           <Route path='/solutions/interactive-kiosk' element={<InteractiveKiosk />} />
           <Route path='/why-fillup' element={<WhyFillup />} />
           <Route path='/case-studies' element={<CaseStudies />} />
+          <Route path='/case-studies/:id' element={<CaseStudyDetail />} />
           <Route path='/resources' element={<Resources />} />
           <Route path='/careers' element={<Careers />} />
           <Route path='/investors' element={<Investors />} />

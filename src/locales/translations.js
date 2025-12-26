@@ -1,3 +1,20 @@
+import { solutionsPart1 } from './solutionsPart1';
+import { solutionsPart2 } from './solutionsPart2';
+import { solutionsPart3 } from './solutionsPart3';
+import { solutionsPart4 } from './solutionsPart4';
+import { solutionsFR } from './solutionsFR';
+
+// English Solutions
+const solutionsEN = {
+    ...solutionsPart1,
+    ...solutionsPart2,
+    ...solutionsPart3,
+    ...solutionsPart4,
+    common: {
+        ...solutionsPart1.common,
+    }
+};
+
 export const translations = {
     fr: {
         nav: {
@@ -22,6 +39,7 @@ export const translations = {
             projects: 'Projets',
             agency: 'Agence'
         },
+        solutionPages: solutionsFR,
         footer: {
             tagline: 'Votre partenaire en affichage digital à travers l\'Europe. Des écrans premium pour une visibilité et un impact maximaux.',
             navTitle: 'Navigation',
@@ -82,6 +100,16 @@ export const translations = {
                 title1: 'Écrans',
                 title2: 'À la Une',
                 viewAll: 'Voir tous les écrans',
+                categories: {
+                    digitalDisplays: 'Affichage Digital',
+                    pumpDisplays: 'Écrans Pompe',
+                    outdoorScreens: 'Écrans Extérieurs',
+                    stationScreens: 'Écrans Station',
+                    freestandingDisplays: 'Écrans Autonomes',
+                    videoWalls: 'Murs Vidéo',
+                    touchDisplays: 'Écrans Tactiles',
+                    digitalMenus: 'Menus Digitaux'
+                },
                 projects: [
                     { title: 'Écran Station Service', category: 'Écrans LCD' },
                     { title: 'Pompe Digitale', category: 'Totems Digitaux' },
@@ -260,6 +288,92 @@ Luxio Media, c'est l'alliance de la technologie, de l'impact visuel et d'un acco
                     desc: 'Augmenter les visites physiques grâce au ciblage local et promouvoir les événements saisonniers ou offres vacances scolaires.'
                 }
             },
+            details: {
+                automobile: {
+                    sector: "Automobile",
+                    title: "Lancement Peugeot 3008 Hybride",
+                    summary: "Comment Peugeot a généré du trafic qualifié en concession et boosté les essais du nouveau 3008 Hybride grâce à une campagne DOOH ciblée.",
+                    challenge: "Peugeot souhaitait maximiser la visibilité de son nouveau modèle hybride et attirer des prospects intentionnistes en concession lors des journées portes ouvertes, tout en ciblant spécifiquement les zones de chalandise de chaque concessionnaire.",
+                    solution: "Déploiement d'une campagne d'affichage digital sur 500 écrans en stations-service stratégiquement situées à moins de 10km des concessions participantes. Usage de spots vidéo dynamiques de 10 secondes mettant en avant le design et l'offre de lancement.",
+                    results: [
+                        "+25% de trafic piéton en concession durant l'opération",
+                        "1,5 Millions de contacts délivrés sur la cible conducteurs",
+                        "Taux de mémorisation assistée de 45% post-campagne",
+                        "Augmentation significative des demandes d'essai"
+                    ],
+                    stats: [
+                        { value: "+25%", label: "Trafic Concession" },
+                        { value: "1.5M", label: "Impressions" },
+                        { value: "45%", label: "Mémorisation" },
+                        { value: "500", label: "Écrans Activés" }
+                    ],
+                    tags: ["Lancement Produit", "Drive-to-Store", "Automobile"],
+                    image: "/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg"
+                },
+                ameublement: {
+                    sector: "Ameublement",
+                    title: "Leroy Merlin - Opération Black Friday",
+                    summary: "Une stratégie Drive-to-Store efficace pour Leroy Merlin lors du Black Friday, augmentant la fréquentation et le panier moyen.",
+                    challenge: "Dans un contexte concurrentiel fort, Leroy Merlin voulait se démarquer pour annoncer ses offres exclusives Black Friday et inciter les consommateurs à se rendre en magasin plutôt que d'acheter en ligne.",
+                    solution: "Diffusion massive de spots promotionnels 'Compte à Rebours' sur les écrans digitaux à l'entrée des zones commerciales et en stations-service. Mise à jour dynamique des offres selon les stocks et les jours restants.",
+                    results: [
+                        "+18% de visites en magasin par rapport à l'année précédente",
+                        "ROAS (Retour sur dépenses pub) de x4 sur la période",
+                        "Panier moyen en hausse grâce à la promotion d'articles complémentaires",
+                        "Forte visibilité sur les zones de chalandise clés"
+                    ],
+                    stats: [
+                        { value: "+18%", label: "Visites Magasin" },
+                        { value: "x4", label: "ROAS" },
+                        { value: "3M", label: "Vues Totales" },
+                        { value: "100%", label: "Couverture Locale" }
+                    ],
+                    tags: ["Black Friday", "Retail", "Promotion"],
+                    image: "/WhatsApp Image 2025-12-25 at 10.13.15 AM.jpeg"
+                },
+                immobilier: {
+                    sector: "Immobilier",
+                    title: "Nexity - Lancement Eco-Quartier",
+                    summary: "Promotion réussie d'un nouveau programme immobilier éco-responsable auprès des investisseurs et résidents locaux.",
+                    challenge: "Nexity lançait un nouveau programme ambitieux et devait capter l'attention des riverains (acheteurs potentiels) et des investisseurs de passage, en mettant l'accent sur la qualité de vie et l'écologie.",
+                    solution: "Campagne d'hyper-proximité sur les totems digitaux et écrans de pompes dans un rayon de 15km autour du futur chantier. Visuels 3D immersifs du projet et QR code pour prise de rendez-vous immédiate.",
+                    results: [
+                        "50+ leads qualifiés générés en 2 semaines",
+                        "80% des prospects venaient de la zone de diffusion",
+                        "Accélération des pré-réservations de 30%",
+                        "Notoriété locale du projet établie avant même la première pierre"
+                    ],
+                    stats: [
+                        { value: "50+", label: "Leads Qualifiés" },
+                        { value: "80%", label: "Ciblage Local" },
+                        { value: "+30%", label: "Pré-réservations" },
+                        { value: "15km", label: "Rayon Ciblage" }
+                    ],
+                    tags: ["Lancement", "Immobilier", "Local"],
+                    image: "/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg"
+                },
+                loisirs: {
+                    sector: "Loisirs",
+                    title: "Disneyland Paris - Saison Halloween",
+                    summary: "Comment Disneyland a ensorcelé le public et boosté les visites pour sa saison d'Halloween avec une campagne immersive.",
+                    challenge: "Augmenter les ventes de billets pour la saison d'Halloween et promouvoir les événements spéciaux nocturnes auprès des familles et jeunes adultes.",
+                    solution: "Utilisation des murs LED géants et écrans outdoor pour diffuser des teasers vidéo spectaculaires et colorés. Ciblage des horaires de sortie d'école et week-ends pour toucher les familles.",
+                    results: [
+                        "Hausse significative des ventes de billets sur la période",
+                        "Engagement record sur les réseaux sociaux en lien avec la campagne",
+                        "Augmentation de la fréquentation des soirées spéciales",
+                        "Impact visuel fort renforçant l'image de marque"
+                    ],
+                    stats: [
+                        { value: "Record", label: "Ventes Billets" },
+                        { value: "Haute", label: "Fréquentation" },
+                        { value: "+40%", label: "Engagement Social" },
+                        { value: "4K", label: "Qualité Visuelle" }
+                    ],
+                    tags: ["Tourisme", "Événementiel", "Famille"],
+                    image: "/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg"
+                }
+            },
             featuredHeader: 'Ils nous font confiance',
             featuredTitle: 'Nos clients',
             ctaTitle: 'Rejoignez nos',
@@ -338,6 +452,7 @@ Luxio Media, c'est l'alliance de la technologie, de l'impact visuel et d'un acco
             projects: 'Projects',
             agency: 'Agency'
         },
+        solutionPages: solutionsEN,
         footer: {
             tagline: 'Your partner in digital signage across Europe. Premium screens for maximum visibility and impact.',
             navTitle: 'Navigation',
@@ -398,6 +513,16 @@ Luxio Media, c'est l'alliance de la technologie, de l'impact visuel et d'un acco
                 title1: 'Featured',
                 title2: 'Screens',
                 viewAll: 'View All Screens',
+                categories: {
+                    digitalDisplays: 'Digital Displays',
+                    pumpDisplays: 'Pump Displays',
+                    outdoorScreens: 'Outdoor Screens',
+                    stationScreens: 'Station Screens',
+                    freestandingDisplays: 'Freestanding Displays',
+                    videoWalls: 'Video Walls',
+                    touchDisplays: 'Touch Displays',
+                    digitalMenus: 'Digital Menus'
+                },
                 projects: [
                     { title: 'Station Service Display', category: 'LCD Screens' },
                     { title: 'Digital Pump', category: 'Digital Totems' },
@@ -576,6 +701,92 @@ Luxio Media is the alliance of technology, visual impact, and bespoke support to
                     desc: 'Increase physical visits through local targeting and promote seasonal events or school holiday offers.'
                 }
             },
+            details: {
+                automobile: {
+                    sector: "Automotive",
+                    title: "Peugeot 3008 Hybrid Launch",
+                    summary: "How Peugeot generated qualified dealership traffic and boosted test drives for the new 3008 Hybrid through a targeted DOOH campaign.",
+                    challenge: "Peugeot wanted to maximize visibility for its new hybrid model and attract intent-driven prospects to dealerships during open house days, while specifically targeting the catchment areas of each dealer.",
+                    solution: "Deployment of a digital signage campaign on 500 screens in service stations strategically located within 10km of participating dealerships. Use of dynamic 10-second video spots highlighting the design and launch offer.",
+                    results: [
+                        "+25% foot traffic in dealerships during the operation",
+                        "1.5 Million contacts delivered to the driver target",
+                        "45% aided recall rate post-campaign",
+                        "Significant increase in test drive requests"
+                    ],
+                    stats: [
+                        { value: "+25%", label: "Dealership Traffic" },
+                        { value: "1.5M", label: "Impressions" },
+                        { value: "45%", label: "Recall" },
+                        { value: "500", label: "Screens Activated" }
+                    ],
+                    tags: ["Product Launch", "Drive-to-Store", "Automotive"],
+                    image: "/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg"
+                },
+                ameublement: {
+                    sector: "Furniture",
+                    title: "Leroy Merlin - Black Friday Operation",
+                    summary: "An effective Drive-to-Store strategy for Leroy Merlin during Black Friday, increasing footfall and average basket size.",
+                    challenge: "In a highly competitive context, Leroy Merlin wanted to stand out to announce its exclusive Black Friday offers and encourage consumers to visit the store rather than buying online.",
+                    solution: "Massive broadcast of 'Countdown' promotional spots on digital screens at the entrance of commercial zones and in service stations. Dynamic update of offers based on stock and remaining days.",
+                    results: [
+                        "+18% store visits compared to the previous year",
+                        "ROAS (Return on Ad Spend) of x4 over the period",
+                        "Average basket increase thanks to the promotion of complementary items",
+                        "High visibility in key catchment areas"
+                    ],
+                    stats: [
+                        { value: "+18%", label: "Store Visits" },
+                        { value: "x4", label: "ROAS" },
+                        { value: "3M", label: "Total Views" },
+                        { value: "100%", label: "Local Coverage" }
+                    ],
+                    tags: ["Black Friday", "Retail", "Promotion"],
+                    image: "/WhatsApp Image 2025-12-25 at 10.13.15 AM.jpeg"
+                },
+                immobilier: {
+                    sector: "Real Estate",
+                    title: "Nexity - Eco-District Launch",
+                    summary: "Successful promotion of a new eco-responsible real estate program to local residents and investors.",
+                    challenge: "Nexity was launching an ambitious new program and needed to capture the attention of local residents (potential buyers) and passing investors, emphasizing quality of life and ecology.",
+                    solution: "Hyper-proximity campaign on digital totems and pump screens within a 15km radius around the future construction site. Immersive 3D visuals of the project and QR code for immediate appointment booking.",
+                    results: [
+                        "50+ qualified leads generated in 2 weeks",
+                        "80% of prospects came from the broadcast area",
+                        "30% acceleration in pre-reservations",
+                        "Local project awareness established even before the first stone"
+                    ],
+                    stats: [
+                        { value: "50+", label: "Qualified Leads" },
+                        { value: "80%", label: "Local Targeting" },
+                        { value: "+30%", label: "Pre-reservations" },
+                        { value: "15km", label: "Targeting Radius" }
+                    ],
+                    tags: ["Launch", "Real Estate", "Local"],
+                    image: "/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg"
+                },
+                loisirs: {
+                    sector: "Leisure",
+                    title: "Disneyland Paris - Halloween Season",
+                    summary: "How Disneyland enchanted the public and boosted visits for its Halloween season with an immersive campaign.",
+                    challenge: "Increase ticket sales for the Halloween season and promote special night events to families and young adults.",
+                    solution: "Use of giant LED walls and outdoor screens to broadcast spectacular and colorful video teasers. Targeting school exit times and weekends to reach families.",
+                    results: [
+                        "Significant increase in ticket sales over the period",
+                        "Record social media engagement linked to the campaign",
+                        "Increased attendance at special parties",
+                        "Strong visual impact reinforcing brand image"
+                    ],
+                    stats: [
+                        { value: "Record", label: "Ticket Sales" },
+                        { value: "High", label: "Attendance" },
+                        { value: "+40%", label: "Social Engagement" },
+                        { value: "4K", label: "Visual Quality" }
+                    ],
+                    tags: ["Tourism", "Events", "Family"],
+                    image: "/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg"
+                }
+            },
             featuredHeader: 'They trust us',
             featuredTitle: 'Our Clients',
             ctaTitle: 'Join our',
@@ -654,6 +865,7 @@ Luxio Media is the alliance of technology, visual impact, and bespoke support to
             projects: 'Projekte',
             agency: 'Agentur'
         },
+        solutionPages: solutionsEN,
         footer: {
             tagline: 'Ihr Partner für Digital Signage in ganz Europa. Premium-Bildschirme für maximale Sichtbarkeit und Wirkung.',
             navTitle: 'Navigation',
@@ -714,6 +926,16 @@ Luxio Media is the alliance of technology, visual impact, and bespoke support to
                 title1: 'Ausgewählte',
                 title2: 'Bildschirme',
                 viewAll: 'Alle Bildschirme ansehen',
+                categories: {
+                    digitalDisplays: 'Digital Displays',
+                    pumpDisplays: 'Pump Displays',
+                    outdoorScreens: 'Outdoor Screens',
+                    stationScreens: 'Station Screens',
+                    freestandingDisplays: 'Freestanding Displays',
+                    videoWalls: 'Video Walls',
+                    touchDisplays: 'Touch Displays',
+                    digitalMenus: 'Digital Menus'
+                },
                 projects: [
                     { title: 'Tankstellen-Display', category: 'LCD-Bildschirme' },
                     { title: 'Digitale Zapfsäule', category: 'Digitale Totems' },
@@ -888,6 +1110,92 @@ Luxio Media vereint Technologie, visuelle Wirkung und maßgeschneiderte Betreuun
                     title: 'Freizeit',
                     subtitle: 'Werbetreibende',
                     desc: 'Steigern Sie physische Besuche durch lokales Targeting und bewerben Sie saisonale Events oder Ferienangebote.'
+                }
+            },
+            details: {
+                automobile: {
+                    sector: "Automobil",
+                    title: "Peugeot 3008 Hybrid Launch",
+                    summary: "Wie Peugeot qualifizierten Traffic im Autohaus generierte und Probefahrten für den neuen 3008 Hybrid durch eine gezielte DOOH-Kampagne steigerte.",
+                    challenge: "Peugeot wollte die Sichtbarkeit seines neuen Hybridmodells maximieren und kaufbereite Interessenten während der Tage der offenen Tür in die Autohäuser locken, wobei speziell die Einzugsgebiete jedes Händlers angesprochen wurden.",
+                    solution: "Einsatz einer Digital-Signage-Kampagne auf 500 Bildschirmen an Tankstellen, die strategisch günstig im Umkreis von 10 km um die teilnehmenden Autohäuser liegen. Verwendung dynamischer 10-Sekunden-Videospots, die das Design und das Einführungsangebot hervorheben.",
+                    results: [
+                        "+25% Besucherfrequenz im Autohaus während der Aktion",
+                        "1,5 Millionen Kontakte in der Zielgruppe Autofahrer",
+                        "45% gestützte Erinnerungsrate nach der Kampagne",
+                        "Signifikante Steigerung der Probefahrtanfragen"
+                    ],
+                    stats: [
+                        { value: "+25%", label: "Autohaus Traffic" },
+                        { value: "1.5M", label: "Impressionen" },
+                        { value: "45%", label: "Erinnerung" },
+                        { value: "500", label: "Aktive Bildschirme" }
+                    ],
+                    tags: ["Produkteinführung", "Drive-to-Store", "Automobil"],
+                    image: "/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg"
+                },
+                ameublement: {
+                    sector: "Möbel",
+                    title: "Leroy Merlin - Black Friday Operation",
+                    summary: "Eine effektive Drive-to-Store-Strategie für Leroy Merlin während des Black Fridays, die die Kundenfrequenz und den durchschnittlichen Warenkorb erhöhte.",
+                    challenge: "In einem stark umkämpften Umfeld wollte sich Leroy Merlin abheben, um seine exklusiven Black-Friday-Angebote anzukündigen und die Verbraucher zu ermutigen, das Geschäft zu besuchen, anstatt online zu kaufen.",
+                    solution: "Massive Ausstrahlung von 'Countdown'-Werbespots auf digitalen Bildschirmen am Eingang von Gewerbegebieten und an Tankstellen. Dynamische Aktualisierung der Angebote je nach Lagerbestand und verbleibenden Tagen.",
+                    results: [
+                        "+18% Ladenbesuche im Vergleich zum Vorjahr",
+                        "ROAS (Return on Ad Spend) von x4 im Zeitraum",
+                        "Erhöhung des durchschnittlichen Warenkorbs durch die Bewerbung ergänzender Artikel",
+                        "Hohe Sichtbarkeit in den wichtigsten Einzugsgebieten"
+                    ],
+                    stats: [
+                        { value: "+18%", label: "Ladenbesuche" },
+                        { value: "x4", label: "ROAS" },
+                        { value: "3M", label: "Gesamtansichten" },
+                        { value: "100%", label: "Lokale Abdeckung" }
+                    ],
+                    tags: ["Black Friday", "Einzelhandel", "Promotion"],
+                    image: "/WhatsApp Image 2025-12-25 at 10.13.15 AM.jpeg"
+                },
+                immobilier: {
+                    sector: "Immobilien",
+                    title: "Nexity - Öko-Viertel Launch",
+                    summary: "Erfolgreiche Bewerbung eines neuen ökologisch verantwortlichen Immobilienprogramms bei Anwohnern und Investoren.",
+                    challenge: "Nexity startete ein ehrgeiziges neues Programm und musste die Aufmerksamkeit der Anwohner (potenzielle Käufer) und durchreisender Investoren gewinnen, wobei der Schwerpunkt auf Lebensqualität und Ökologie lag.",
+                    solution: "Hyper-Proximity-Kampagne auf digitalen Totems und Pumpenbildschirmen in einem Radius von 15 km um die zukünftige Baustelle. Immersive 3D-Visualisierungen des Projekts und QR-Code für sofortige Terminbuchung.",
+                    results: [
+                        "50+ qualifizierte Leads in 2 Wochen generiert",
+                        "80% der Interessenten kamen aus dem Sendegebiet",
+                        "30% Beschleunigung der Vorreservierungen",
+                        "Lokale Bekanntheit des Projekts bereits vor der Grundsteinlegung etabliert"
+                    ],
+                    stats: [
+                        { value: "50+", label: "Qualifizierte Leads" },
+                        { value: "80%", label: "Lokales Targeting" },
+                        { value: "+30%", label: "Vorreservierungen" },
+                        { value: "15km", label: "Targeting Radius" }
+                    ],
+                    tags: ["Launch", "Immobilien", "Lokal"],
+                    image: "/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg"
+                },
+                loisirs: {
+                    sector: "Freizeit",
+                    title: "Disneyland Paris - Halloween Saison",
+                    summary: "Wie Disneyland das Publikum verzauberte und die Besucherzahlen für seine Halloween-Saison mit einer immersiven Kampagne steigerte.",
+                    challenge: "Steigerung des Ticketverkaufs für die Halloween-Saison und Bewerbung spezieller Abendveranstaltungen bei Familien und jungen Erwachsenen.",
+                    solution: "Einsatz riesiger LED-Wände und Außenbildschirme zur Ausstrahlung spektakulärer und farbenfroher Video-Teaser. Ausrichtung auf Schulschlusszeiten und Wochenenden, um Familien zu erreichen.",
+                    results: [
+                        "Signifikante Steigerung des Ticketverkaufs im Zeitraum",
+                        "Rekord-Engagement in sozialen Medien im Zusammenhang mit der Kampagne",
+                        "Erhöhte Besucherzahlen bei Sonderveranstaltungen",
+                        "Starke visuelle Wirkung stärkt das Markenimage"
+                    ],
+                    stats: [
+                        { value: "Rekord", label: "Ticketverkauf" },
+                        { value: "Hoch", label: "Besucher" },
+                        { value: "+40%", label: "Social Engagement" },
+                        { value: "4K", label: "Visuelle Qualität" }
+                    ],
+                    tags: ["Tourismus", "Events", "Familie"],
+                    image: "/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg"
                 }
             },
             featuredHeader: 'Sie vertrauen uns',

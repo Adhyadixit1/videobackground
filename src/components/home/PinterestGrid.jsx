@@ -9,8 +9,8 @@ const PinterestGrid = () => {
         const staticData = [
             {
                 id: 1,
-                title: 'LCD Screens',
-                category: 'Digital Displays',
+                solutionKey: 'lcdScreens',
+                categoryKey: 'digitalDisplays',
                 size: 'tall',
                 color: 'from-purple-900/80 to-pink-900/80',
                 video: 'https://video.gumlet.io/694cef8ab122cbf176482b8c/694e4270e086c47a823f4aa7/download.mp4',
@@ -18,8 +18,8 @@ const PinterestGrid = () => {
             },
             {
                 id: 2,
-                title: 'Digital Pump',
-                category: 'Pump Displays',
+                solutionKey: 'digitalPump',
+                categoryKey: 'pumpDisplays',
                 size: 'normal',
                 color: 'from-blue-900/80 to-cyan-900/80',
                 image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (2).jpeg',
@@ -27,8 +27,8 @@ const PinterestGrid = () => {
             },
             {
                 id: 3,
-                title: 'Outdoor Display',
-                category: 'Outdoor Screens',
+                solutionKey: 'outdoorDisplay',
+                categoryKey: 'outdoorScreens',
                 size: 'wide',
                 color: 'from-[#D3FD50]/40 to-green-900/80',
                 image: '/WhatsApp Image 2025-12-25 at 10.13.15 AM.jpeg',
@@ -36,8 +36,8 @@ const PinterestGrid = () => {
             },
             {
                 id: 4,
-                title: 'Station Service Display',
-                category: 'Station Screens',
+                solutionKey: 'stationServiceDisplay',
+                categoryKey: 'stationScreens',
                 size: 'tall',
                 color: 'from-orange-900/80 to-red-900/80',
                 image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg',
@@ -45,8 +45,8 @@ const PinterestGrid = () => {
             },
             {
                 id: 5,
-                title: 'Digital Totems',
-                category: 'Freestanding Displays',
+                solutionKey: 'digitalTotems',
+                categoryKey: 'freestandingDisplays',
                 size: 'normal',
                 color: 'from-indigo-900/80 to-purple-900/80',
                 image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM (1).jpeg',
@@ -54,8 +54,8 @@ const PinterestGrid = () => {
             },
             {
                 id: 6,
-                title: 'LED Walls',
-                category: 'Video Walls',
+                solutionKey: 'ledWalls',
+                categoryKey: 'videoWalls',
                 size: 'normal',
                 color: 'from-teal-900/80 to-emerald-900/80',
                 image: '/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg',
@@ -63,8 +63,8 @@ const PinterestGrid = () => {
             },
             {
                 id: 7,
-                title: 'Interactive Kiosk',
-                category: 'Touch Displays',
+                solutionKey: 'interactiveKiosk',
+                categoryKey: 'touchDisplays',
                 size: 'wide',
                 color: 'from-pink-900/80 to-rose-900/80',
                 image: '/WhatsApp Image 2025-12-25 at 10.13.18 AM (1).jpeg',
@@ -72,8 +72,8 @@ const PinterestGrid = () => {
             },
             {
                 id: 8,
-                title: 'Menu Boards',
-                category: 'Digital Menus',
+                solutionKey: 'menuBoards',
+                categoryKey: 'digitalMenus',
                 size: 'normal',
                 color: 'from-amber-900/80 to-yellow-900/80',
                 image: '/WhatsApp Image 2025-12-25 at 10.13.20 AM.jpeg',
@@ -81,8 +81,12 @@ const PinterestGrid = () => {
             },
         ]
 
-        return staticData
-    }, [])
+        return staticData.map(item => ({
+            ...item,
+            title: t(`solutionPages.${item.solutionKey}.title`),
+            category: t(`home.pinterest.categories.${item.categoryKey}`)
+        }))
+    }, [t])
 
     return (
         <section className='min-h-screen bg-gradient-to-b from-black via-zinc-950 to-black relative z-10 py-20 lg:py-32 px-4 lg:px-12'>
