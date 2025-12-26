@@ -9,7 +9,7 @@ const FooterSection = () => {
 
     const navItems = [
         { name: 'Home', path: '/' },
-        { name: 'Why Luxio Media', path: '/why-fillup' },
+        { name: 'Why Luxio Media', path: '/why-luxio' },
         { name: 'Solutions', path: '/solutions' },
         { name: 'Contact', path: '/contact' }
     ]
