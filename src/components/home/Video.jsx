@@ -33,8 +33,9 @@ const Video = () => {
                 muted
                 playsInline
                 preload='auto'
+                poster='https://dummyimage.com/1920x1080/000/fff'
             >
-                <source src='/IMG_1267.MP4' type='video/mp4' />
+                <source src='/IMG_1288.MP4' type='video/mp4' />
             </video>
         </div>
     )

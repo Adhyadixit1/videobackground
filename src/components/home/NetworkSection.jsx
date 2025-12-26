@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
 
 const partnerLogos = [
@@ -47,11 +48,9 @@ const NetworkSection = () => {
                             </p>
                         </div>
 
-                        <div className='pt-2 flex flex-col sm:flex-row items-center sm:justify-start gap-4'>
-                            <a
-                                href='https://carte.fillupmedia.fr/'
-                                target='_blank'
-                                rel='noreferrer'
+                        <div className='pt-2 flex flex-col sm:flex-row items-center sm:justify-start gap-4 z-20 relative'>
+                            <Link
+                                to='/solutions'
                                 className='w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-gradient-to-r from-[#f9d976] via-[#d776ff] to-[#f9d976] text-black font-[font2] text-xs sm:text-sm uppercase tracking-[0.4em] hover:opacity-90 transition-opacity duration-300'
                             >
                                 {t('network.cta')}
@@ -59,7 +58,7 @@ const NetworkSection = () => {
                                     <path d='M5 12h14' strokeLinecap='round' strokeLinejoin='round' />
                                     <path d='M13 5l7 7-7 7' strokeLinecap='round' strokeLinejoin='round' />
                                 </svg>
-                            </a>
+                            </Link>
                         </div>
 
                         <div className='overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-white/5 backdrop-blur'>
@@ -74,25 +73,23 @@ const NetworkSection = () => {
                     </div>
 
                     {/* Visual */}
-                    <div className='lg:w-2/5 w-full'>
-                        <div className='relative rounded-[24px] sm:rounded-[32px] border border-[#D3FD50]/30 overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.6)] bg-black/40 w-full max-w-md mx-auto'>
-                            <div className='absolute inset-0 pointer-events-none'>
-                                <div className='absolute -top-10 -right-10 w-32 sm:w-40 h-32 sm:h-40 bg-[#D3FD50]/20 blur-[60px]'></div>
-                                <div className='absolute bottom-0 left-0 w-48 sm:w-56 h-48 sm:h-56 bg-purple-500/20 blur-[100px]'></div>
-                                <div className='absolute inset-0 border border-white/10 rounded-[24px] sm:rounded-[32px] mix-blend-screen'></div>
-                            </div>
-                            <video
-                                className='w-full h-full object-cover'
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                poster='https://fillupmedia.fr/wp-content/uploads/2023/01/CARTE-ECRANS-FUM-REVERSE.mp4'
-                            >
-                                <source src='https://fillupmedia.fr/wp-content/uploads/2023/01/CARTE-ECRANS-FUM-REVERSE.mp4' type='video/mp4' />
-                            </video>
-                            <div className='absolute inset-0 rounded-[24px] sm:rounded-[32px] border border-[#D3FD50]/40 mix-blend-screen pointer-events-none'></div>
+                    <div className='relative rounded-[24px] sm:rounded-[32px] border border-[#D3FD50]/30 overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.6)] bg-black/40 w-full max-w-md mx-auto'>
+                        <div className='absolute inset-0 pointer-events-none'>
+                            <div className='absolute -top-10 -right-10 w-32 sm:w-40 h-32 sm:h-40 bg-[#D3FD50]/20 blur-[60px]'></div>
+                            <div className='absolute bottom-0 left-0 w-48 sm:w-56 h-48 sm:h-56 bg-purple-500/20 blur-[100px]'></div>
+                            <div className='absolute inset-0 border border-white/10 rounded-[24px] sm:rounded-[32px] mix-blend-screen'></div>
                         </div>
+                        <video
+                            className='w-full h-full object-cover'
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            poster='https://fillupmedia.fr/wp-content/uploads/2023/01/CARTE-ECRANS-FUM-REVERSE.mp4'
+                        >
+                            <source src='https://fillupmedia.fr/wp-content/uploads/2023/01/CARTE-ECRANS-FUM-REVERSE.mp4' type='video/mp4' />
+                        </video>
+                        <div className='absolute inset-0 rounded-[24px] sm:rounded-[32px] border border-[#D3FD50]/40 mix-blend-screen pointer-events-none'></div>
                     </div>
                 </div>
             </div>

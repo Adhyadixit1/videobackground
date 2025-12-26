@@ -34,8 +34,8 @@ const Contact = () => {
                 </svg>
             ),
             label: t('contact.formEmail'),
-            value: 'contact@fillupmedia.fr',
-            link: 'mailto:contact@fillupmedia.fr'
+            value: 'contact@luxiomedia.lu',
+            link: 'mailto:contact@luxiomedia.lu'
         },
         {
             icon: (
@@ -44,8 +44,8 @@ const Contact = () => {
                 </svg>
             ),
             label: t('contact.formPhone'),
-            value: '+33 1 XX XX XX XX',
-            link: 'tel:+33100000000'
+            value: '+352 661 16 77 25',
+            link: 'tel:+352661167725'
         },
         {
             icon: (

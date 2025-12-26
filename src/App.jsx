@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
 import Navbar from './components/Navigation/Navbar'
 import FullScreenNav from './components/Navigation/FullScreenNav'
+import ScrollToTop from './components/common/ScrollToTop'
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'))
@@ -15,6 +16,15 @@ const Careers = lazy(() => import('./pages/Careers'))
 const Investors = lazy(() => import('./pages/Investors'))
 const Contact = lazy(() => import('./pages/Contact'))
 
+// Solution Sub-pages
+const SolutionPages = lazy(() => import('./pages/SolutionPages'))
+import {
+  StationServiceDisplay, DigitalPump, DigitalTotems, GasStationNetwork,
+  OutdoorScreens, OutdoorDisplay, LEDWalls, PromotionalScreen, VideoWalls,
+  StationNetwork, MenuBoards, FuelAdvertising, InfoDisplays, DigitalScreen,
+  InteractiveKiosk
+} from './pages/SolutionPages'
+
 import useLottiePrefetch from './hooks/useLottiePrefetch'
 
 const App = () => {
@@ -24,6 +34,7 @@ const App = () => {
     <div className='overflow-x-hidden'>
       <Navbar />
       <FullScreenNav />
+      <ScrollToTop />
       <Suspense fallback={<div className="h-screen w-screen bg-black"></div>}>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -63,6 +74,24 @@ const App = () => {
           <Route path='/agence' element={<Agence />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/solutions' element={<Solutions />} />
+
+          {/* Solution Sub-pages */}
+          <Route path='/solutions/lcd-screens' element={<SolutionPages />} />
+          <Route path='/solutions/station-service-display' element={<StationServiceDisplay />} />
+          <Route path='/solutions/digital-pump' element={<DigitalPump />} />
+          <Route path='/solutions/digital-totems' element={<DigitalTotems />} />
+          <Route path='/solutions/gas-station-network' element={<GasStationNetwork />} />
+          <Route path='/solutions/outdoor-screens' element={<OutdoorScreens />} />
+          <Route path='/solutions/outdoor-display' element={<OutdoorDisplay />} />
+          <Route path='/solutions/led-walls' element={<LEDWalls />} />
+          <Route path='/solutions/promotional-screen' element={<PromotionalScreen />} />
+          <Route path='/solutions/video-walls' element={<VideoWalls />} />
+          <Route path='/solutions/station-network' element={<StationNetwork />} />
+          <Route path='/solutions/menu-boards' element={<MenuBoards />} />
+          <Route path='/solutions/fuel-advertising' element={<FuelAdvertising />} />
+          <Route path='/solutions/info-displays' element={<InfoDisplays />} />
+          <Route path='/solutions/digital-screen' element={<DigitalScreen />} />
+          <Route path='/solutions/interactive-kiosk' element={<InteractiveKiosk />} />
           <Route path='/why-fillup' element={<WhyFillup />} />
           <Route path='/case-studies' element={<CaseStudies />} />
           <Route path='/resources' element={<Resources />} />

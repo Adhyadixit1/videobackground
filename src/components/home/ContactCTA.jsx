@@ -62,7 +62,7 @@ const ContactCTA = () => {
                     </Link>
 
                     <a
-                        href='mailto:contact@luxiomedia.com'
+                        href='mailto:contact@luxiomedia.lu'
                         className='group flex items-center gap-3 px-8 py-5 border-2 border-white/30 rounded-full
                                   hover:border-[#D3FD50] transition-all duration-300'
                     >
@@ -84,11 +84,11 @@ const ContactCTA = () => {
                         {t('home.cta.orReach')}
                     </p>
                     <a
-                        href='mailto:contact@luxiomedia.com'
+                        href='mailto:contact@luxiomedia.lu'
                         className='font-[font2] text-white text-2xl lg:text-4xl hover:text-[#D3FD50] 
                                   transition-colors duration-300'
                     >
-                        contact@luxiomedia.com
+                        contact@luxiomedia.lu
                     </a>
                 </div>
             </div>

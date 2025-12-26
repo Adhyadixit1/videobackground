@@ -165,8 +165,8 @@ const FullScreenNav = () => {
                             {/* Contact info */}
                             <div className='space-y-2'>
                                 <p className='text-white/40 text-xs uppercase tracking-widest'>Contact</p>
-                                <a href='mailto:contact@fillupmedia.fr' className='text-white hover:text-[#D3FD50] transition-colors text-sm lg:text-base'>
-                                    contact@fillupmedia.fr
+                                <a href='mailto:contact@luxiomedia.lu' className='text-white hover:text-[#D3FD50] transition-colors text-sm lg:text-base'>
+                                    contact@luxiomedia.lu
                                 </a>
                             </div>
 

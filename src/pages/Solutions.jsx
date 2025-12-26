@@ -50,186 +50,126 @@ const Solutions = () => {
         { value: '100%', label: t('solutions.statsLabel4'), sublabel: 'Captive Audience' }
     ]
 
-    const productTags = [
-        'Outdoor', 'Waterproof', 'All-in-one Display', '32/43/49/55/65 inches', 'IP65 series', 'Maintenance-free', 'Sunlight Readable'
+    const campaignTags = [
+        'Forecourt DOOH', '100% captive dwell time', 'Nationwide coverage', 'Guaranteed share of voice', 'Social amplification', 'Creative studio', 'Full-funnel reporting'
     ]
 
-    const productHighlights = [
+    const campaignHighlights = [
         {
-            title: 'OD Series High-Brightness LCD',
-            text: 'LCD backlight brightness ranges from 2000 to 5000 nits to guarantee best-in-class visibility even under direct sunlight.'
+            title: 'Owned Premium Inventory',
+            text: '2,000+ large-format TFT screens positioned across service stations and mobility hubs, already installed and maintained by our operations team.'
         },
         {
-            title: 'Industrial Grade Panel',
-            text: 'Wide temperature LCD panel with QWP technology prevents blackening and keeps content visible through polarized sunglasses.'
+            title: 'Audience Intelligence',
+            text: 'Fueling data, time-of-day clustering, and point-of-interest layering deliver media plans that mirror real consumer journeys.'
         },
         {
-            title: 'Intelligent Brightness Control',
-            text: 'Automatic brightness adjustment responds to ambient light to optimize legibility while saving energy.'
+            title: 'Creative That Converts',
+            text: 'Motion design, multilingual voice-over, and social cutdowns crafted for 10-second dwell times and omnichannel consistency.'
         },
         {
-            title: 'IP65 Waterproof & Fan Design',
-            text: 'Fully sealed chassis with integrated backlight, outdoor powder coating, and protection-grade IP65 keeps components safe year-round.'
+            title: '360° Amplification',
+            text: 'Meta, TikTok, Waze, and programmatic retargeting keep your message top-of-mind long after drivers leave the pump.'
         },
         {
-            title: 'Ultra-thin Form Factor',
-            text: 'Full lamination on the front glass plus narrow-border design supports both horizontal and vertical orientations.'
+            title: 'Transparent Performance',
+            text: 'Live dashboards, store uplift correlations, and post-campaign reviews tie each impression to measurable business outcomes.'
         }
     ]
 
-    const specRows = [
+    const audienceInsights = [
+        { title: 'Captive dwell time', value: '4m 12s average fueling session with eyesight directed to our TFT towers.' },
+        { title: 'Household decision makers', value: '73% of viewers identify as the primary buyer for food retail, mobility, or leisure expenses.' },
+        { title: 'Geo-context', value: 'Custom perimeters (5 km to nationwide) layered with socio-demo and store catchment logic.' },
+        { title: 'Daypart control', value: 'Breakfast, commute, and weekend bursts aligned with product launches or seasonal peaks.' }
+    ]
+
+    const activationStack = [
+        { title: 'Creative Studio', value: 'Scripts, storyboards, and multilingual adaptation delivered within 7 days.' },
+        { title: 'Media Trading', value: 'Share-of-voice guarantees, frequency capping, and A/B testing managed by Luxio traders.' },
+        { title: 'Social Extension', value: 'Lookalike audiences synced from on-site exposures to Meta, TikTok, and programmatic pipelines.' },
+        { title: 'Measurement Layer', value: 'QR uplift, store footfall, coupon redemptions, and brand-lift surveys in a single dashboard.' }
+    ]
+
+    const campaignPackages = [
         {
-            model: 'OD320-T',
-            size: `32"`,
-            resolution: '1920×1080',
-            brightness: '2500 nits',
-            contrast: '1200:1',
-            viewAngle: '178°/178°',
-            dimensions: '763×457×95.5 mm',
-            weight: '19 kg',
-            power: '160 W'
+            plan: 'Local Boost',
+            objective: 'Drive footfall within 15 km of your store network.',
+            channels: 'Forecourt DOOH + Meta Custom Audience',
+            formats: '10s DOOH loop + paid social cinemagraph',
+            reporting: 'Weekly reach & footfall snapshots.'
         },
         {
-            model: 'OD430-T',
-            size: `43"`,
-            resolution: '1920×1080',
-            brightness: '2500 nits',
-            contrast: '1200:1',
-            viewAngle: '178°/178°',
-            dimensions: '1014×602×95.5 mm',
-            weight: '28 kg',
-            power: '220 W'
+            plan: 'Regional Takeover',
+            objective: 'Own the conversation during key retail periods.',
+            channels: 'TFT Network + TikTok Spark Ads + Waze Pins',
+            formats: 'Contextual video, motion statics, audio callouts',
+            reporting: 'Mid-flight optimization and territory benchmarking.'
         },
         {
-            model: 'OD490-T',
-            size: `49"`,
-            resolution: '1920×1080',
-            brightness: '2500 nits',
-            contrast: '1200:1',
-            viewAngle: '178°/178°',
-            dimensions: '1147×677×95.5 mm',
-            weight: '36 kg',
-            power: '240 W'
-        },
-        {
-            model: 'OD550-T',
-            size: `55"`,
-            resolution: '1920×1080',
-            brightness: '2500 nits',
-            contrast: '1200:1',
-            viewAngle: '178°/178°',
-            dimensions: '1282×753×95.5 mm',
-            weight: '38 kg',
-            power: '280 W'
-        },
-        {
-            model: 'OD650-T',
-            size: `65"`,
-            resolution: '3840×2160',
-            brightness: '2500 nits',
-            contrast: '1200:1',
-            viewAngle: '178°/178°',
-            dimensions: '1500×875×95.5 mm',
-            weight: '65 kg',
-            power: '480 W'
+            plan: 'National Launch',
+            objective: 'Scale awareness for product drops or franchise rollouts.',
+            channels: 'Nationwide DOOH + Programmatic DOOH + Influencer seeding',
+            formats: 'Hero film, modular cutdowns, interactive QR overlays',
+            reporting: 'Full-funnel dashboard with brand & sales KPIs.'
         }
     ]
 
-    const environmentalSpecs = [
-        { title: 'Operating Temperature', value: '-20°C to 50°C' },
-        { title: 'Operating Humidity', value: '10% – 85%' },
-        { title: 'Ingress Protection', value: 'IP65 fully sealed with integrated backlight' },
-        { title: 'Protective Glass', value: '5 mm ultra-clear glass, 3% haze' }
-    ]
-
-    const electronicsSpecs = [
-        { title: 'Power Input', value: '180 – 264 V, 50/60 Hz' },
-        { title: 'Mainboard', value: '8-core CPU A55, Android 12.0, 2 GB RAM + 16 GB storage' },
-        { title: 'Interfaces', value: 'HDMI ×1 · USB ×2 · RJ45 ×1 · Wi-Fi ×1' },
-        { title: 'Polarized Sunglasses Ready', value: 'QWP technology maintains perfect readability' }
-    ]
-
-    const smartScreenSections = [
+    const campaignDeliverables = [
         {
-            title: 'Screen parameters',
+            title: 'Strategy & Insights',
             items: [
-                { field: 'Size', value: '65"' },
-                { field: 'Zoom', value: '6 – 16' },
-                { field: 'Display area', value: '1428.5 × 803.5 mm' },
-                { field: 'Overall size', value: '1504 × 879 × 100 mm' },
-                { field: 'Resolution', value: '2K (1920 × 1080) or 4K (3840 × 2160)' },
-                { field: 'Brightness', value: '350 cd/m²' },
-                { field: 'Touch type', value: 'Infrared touch (customized)' },
-                { field: 'Brands of displays', value: 'BOE' },
-                { field: 'Contrast', value: '1200:1' },
-                { field: 'Viewing angle', value: '89° (H) / 89° (V)' },
-                { field: 'LCD life', value: '50,000 hours' },
-                { field: 'Response time', value: '5 ms' }
+                'Audience definition workshops',
+                'Geo-intelligence & POI mapping',
+                'Budget pacing + flighting'
             ]
         },
         {
-            title: 'Hardware configuration',
+            title: 'Creative Production',
             items: [
-                { field: 'Motherboard', value: '3568' },
-                { field: 'Memory', value: '4 GB RAM + 32 GB storage' },
-                { field: 'System', value: 'Android 11.0' },
-                { field: 'Network support', value: 'Wi-Fi and Ethernet' },
-                { field: 'Interface', value: 'USB2, HDMI input, RJ45' },
-                {
-                    field: 'Video formats',
-                    value: 'AVI, RM, RMVB, WMV, MKV, MOV, MP4, MP4V, MPEG, DIVX, XVID, DAT, VOB, MPG, FLV, ASF, TS, TP, 3GP'
-                },
-                {
-                    field: 'Audio formats',
-                    value: 'MP3, WMA, WAV, EAAC+, MP2, Vorbis (Ogg), AC3, FLAC, APE, BSAC'
-                },
-                { field: 'Image formats', value: 'BMP, PNG, GIF, JPEG' },
-                { field: 'Text format', value: 'TXT' },
-                { field: 'Timer switch', value: 'Network remote management' },
-                { field: 'System upgrade', value: 'USB or Wi-Fi' },
-                { field: 'Language', value: 'Chinese, English, multiple languages' }
+                'Storyboard + copywriting',
+                'Motion design & sound design',
+                'Versioning per language/channel'
             ]
         },
         {
-            title: 'Speaker & power',
+            title: 'Activation & Ops',
             items: [
-                { field: 'Speaker', value: '2 × 5W (8Ω)' },
-                { field: 'Input voltage', value: 'AC 110 V – 230 V' },
-                { field: 'Frequency', value: '50 / 60 Hz' },
-                { field: 'Rated power', value: '≤ 150 W' },
-                { field: 'Operating temperature', value: '-20°C to +60°C' },
-                { field: 'Working humidity', value: '20% – 80%' }
+                'Network booking & trafficking',
+                'Dynamic daypart rules',
+                'Compliance & brand safety checks'
             ]
         },
         {
-            title: 'Physical',
+            title: 'Measurement & Learning',
             items: [
-                { field: 'Glass', value: 'Tempered safety glass' },
-                { field: 'Material', value: 'Galvanized sheet' },
-                { field: 'Packing', value: 'Carton packing' },
-                { field: 'Package size', value: '1835 × 158 × 687 mm' },
-                { field: 'Gross weight', value: '53 kg' },
-                { field: 'Net weight', value: '46 kg' }
-            ]
-        },
-        {
-            title: 'Accessory pack',
-            items: [
-                { field: 'Included', value: 'Power cord, keys, remote control, antenna' }
+                'Real-time dashboards',
+                'Footfall / sales attribution',
+                'Post-campaign review & next steps'
             ]
         }
     ]
 
     const heroVisual = (
-        <img
-            decoding='async'
-            width='500'
-            height='429'
-            src='https://fillupmedia.fr/wp-content/uploads/2023/01/ILLUSTRATION_HEADER_ANIMATION_5.gif'
-            alt='ILLUSTRATION HEADER ANIMATION 5'
-            title='ILLUSTRATION_HEADER_ANIMATION_5'
-            className='wp-image-1612 w-[min(90vw,500px)] h-auto block'
-        />
+        <div className='relative rounded-[32px] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.35)] border border-white/10 w-[min(90vw,520px)]'>
+            <video
+                className='w-full h-full object-cover'
+                src='/IMG_1288.MP4'
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload='metadata'
+                poster='https://dummyimage.com/500x420/000/fff'
+            >
+                Your browser does not support the video tag.
+            </video>
+            <div className='absolute inset-0 pointer-events-none bg-gradient-to-tr from-black/40 via-transparent to-black/10' />
+            <div className='absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-[font1] uppercase tracking-[0.3em] text-white/80'>
+                <span>Live Installation</span>
+                <span>Luxio Media</span>
+            </div>
+        </div>
     )
 
     return (
@@ -319,23 +259,23 @@ const Solutions = () => {
                 </div>
             </section>
 
-            {/* High Brightness Outdoor LCD Display */}
+            {/* Campaign Architecture Section */}
             <section className='relative py-20 lg:py-32 px-4 lg:px-12 bg-gradient-to-b from-black via-zinc-950 to-black'>
                 <div className='max-w-7xl mx-auto'>
                     <div className='flex flex-col lg:flex-row justify-between items-start gap-8 mb-12'>
                         <div>
-                            <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-3'>High Brightness Outdoor LCD</p>
+                            <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-3'>Luxembourg Network</p>
                             <h2 className='font-[font2] text-white text-3xl lg:text-5xl leading-tight uppercase'>
-                                Sunlight Readable OD Series
+                                Campaign Architecture & Media Stack
                             </h2>
                         </div>
                         <div className='max-w-2xl text-white/70 font-[font1] text-base leading-relaxed'>
-                            Outdoor, waterproof, maintenance-free displays engineered for 32" to 65" deployments. The OD Series pairs industrial-grade panels with IP65 enclosures to deliver reliable, high-impact messaging in any environment.
+                            We operate an owned DOOH footprint across Luxembourg mobility hubs. Every screen, data signal, and creative asset feeds back into Luxio’s trading desk to deliver measurable advertising plans—not hardware sales.
                         </div>
                     </div>
 
                     <div className='flex flex-wrap gap-3 mb-12'>
-                        {productTags.map((tag, idx) => (
+                        {campaignTags.map((tag, idx) => (
                             <span key={idx} className='px-4 py-2 text-xs font-[font1] uppercase tracking-widest border border-white/10 rounded-full text-white/70'>
                                 {tag}
                             </span>
@@ -343,7 +283,7 @@ const Solutions = () => {
                     </div>
 
                     <div className='grid lg:grid-cols-3 gap-6 mb-16'>
-                        {productHighlights.map((item, idx) => (
+                        {campaignHighlights.map((item, idx) => (
                             <div key={idx} className='p-6 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-[#D3FD50]/40 transition-all duration-300'>
                                 <h3 className='font-[font2] text-white text-lg mb-3 uppercase'>{item.title}</h3>
                                 <p className='font-[font1] text-white/70 text-sm leading-relaxed'>{item.text}</p>
@@ -353,28 +293,28 @@ const Solutions = () => {
 
                     <div className='grid lg:grid-cols-2 gap-8 mb-16'>
                         <div className='p-6 rounded-3xl border border-white/10 bg-white/5'>
-                            <h4 className='font-[font2] text-white text-xl uppercase mb-4'>Environment & Mechanics</h4>
+                            <h4 className='font-[font2] text-white text-xl uppercase mb-4'>Audience Insights</h4>
                             <ul className='space-y-3'>
-                                {environmentalSpecs.map((spec, idx) => (
+                                {audienceInsights.map((insight, idx) => (
                                     <li key={idx} className='flex items-start gap-3 text-white/70 font-[font1] text-sm'>
                                         <span className='w-2 h-2 mt-2 rounded-full bg-[#D3FD50]' />
                                         <div>
-                                            <p className='text-white font-[font2] text-sm uppercase tracking-wide'>{spec.title}</p>
-                                            <p>{spec.value}</p>
+                                            <p className='text-white font-[font2] text-sm uppercase tracking-wide'>{insight.title}</p>
+                                            <p>{insight.value}</p>
                                         </div>
                                     </li>
                                 ))}
                             </ul>
                         </div>
                         <div className='p-6 rounded-3xl border border-white/10 bg-white/5'>
-                            <h4 className='font-[font2] text-white text-xl uppercase mb-4'>Electronics & Interfaces</h4>
+                            <h4 className='font-[font2] text-white text-xl uppercase mb-4'>Activation Stack</h4>
                             <ul className='space-y-3'>
-                                {electronicsSpecs.map((spec, idx) => (
+                                {activationStack.map((layer, idx) => (
                                     <li key={idx} className='flex items-start gap-3 text-white/70 font-[font1] text-sm'>
                                         <span className='w-2 h-2 mt-2 rounded-full bg-[#D3FD50]' />
                                         <div>
-                                            <p className='text-white font-[font2] text-sm uppercase tracking-wide'>{spec.title}</p>
-                                            <p>{spec.value}</p>
+                                            <p className='text-white font-[font2] text-sm uppercase tracking-wide'>{layer.title}</p>
+                                            <p>{layer.value}</p>
                                         </div>
                                     </li>
                                 ))}
@@ -382,68 +322,44 @@ const Solutions = () => {
                         </div>
                     </div>
 
-                    <div className='overflow-x-auto rounded-3xl border border-white/10'>
-                        <table className='min-w-full text-left text-sm font-[font1] text-white/80'>
-                            <thead className='bg-white/5 text-white uppercase tracking-widest text-xs'>
-                                <tr>
-                                    <th className='px-4 py-3'>Model</th>
-                                    <th className='px-4 py-3'>Size</th>
-                                    <th className='px-4 py-3'>Resolution</th>
-                                    <th className='px-4 py-3'>Brightness</th>
-                                    <th className='px-4 py-3'>Contrast</th>
-                                    <th className='px-4 py-3'>Viewing Angle</th>
-                                    <th className='px-4 py-3'>Dimensions</th>
-                                    <th className='px-4 py-3'>Weight</th>
-                                    <th className='px-4 py-3'>Max Power</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {specRows.map((row, idx) => (
-                                    <tr key={row.model} className={idx % 2 === 0 ? 'bg-white/0' : 'bg-white/5'}>
-                                        <td className='px-4 py-3 font-[font2] text-white'>{row.model}</td>
-                                        <td className='px-4 py-3'>{row.size}</td>
-                                        <td className='px-4 py-3'>{row.resolution}</td>
-                                        <td className='px-4 py-3'>{row.brightness}</td>
-                                        <td className='px-4 py-3'>{row.contrast}</td>
-                                        <td className='px-4 py-3'>{row.viewAngle}</td>
-                                        <td className='px-4 py-3 whitespace-nowrap'>{row.dimensions}</td>
-                                        <td className='px-4 py-3'>{row.weight}</td>
-                                        <td className='px-4 py-3'>{row.power}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-
                     <div className='mt-20'>
                         <div className='flex flex-col lg:flex-row items-start justify-between gap-6 mb-10'>
                             <div>
                                 <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-3'>
-                                    65" Interactive Smart Screen
+                                    Media Playbooks
                                 </p>
                                 <h3 className='font-[font2] text-white text-3xl lg:text-4xl uppercase leading-tight'>
-                                    Deep-dive Specifications
+                                    Packaged Advertising Programs
                                 </h3>
                             </div>
                             <p className='font-[font1] text-white/70 max-w-2xl text-base leading-relaxed'>
-                                Detailed hardware, power, and physical specifications derived from the manufacturer data sheet ensure
-                                our team can scope deployments, maintenance, and integrations with full confidence.
+                                Pick a managed playbook or let us build a custom trade plan from Luxembourg, orchestrating every DOOH impression and its social echo.
                             </p>
                         </div>
 
+                        <div className='grid md:grid-cols-3 gap-6 mb-16'>
+                            {campaignPackages.map(pkg => (
+                                <div key={pkg.plan} className='p-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent hover:border-[#D3FD50]/30 transition-colors duration-300'>
+                                    <div className='text-[#D3FD50] font-[font1] text-xs tracking-[0.3em] uppercase mb-4'>{pkg.plan}</div>
+                                    <p className='text-white font-[font2] text-xl uppercase mb-3'>{pkg.objective}</p>
+                                    <ul className='text-white/60 font-[font1] text-sm space-y-2'>
+                                        <li><span className='text-white/40 uppercase text-xs tracking-[0.2em]'>Channels</span><br />{pkg.channels}</li>
+                                        <li><span className='text-white/40 uppercase text-xs tracking-[0.2em]'>Formats</span><br />{pkg.formats}</li>
+                                        <li><span className='text-white/40 uppercase text-xs tracking-[0.2em]'>Reporting</span><br />{pkg.reporting}</li>
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+
                         <div className='grid md:grid-cols-2 gap-6'>
-                            {smartScreenSections.map(section => (
-                                <div key={section.title} className='p-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent'>
-                                    <h4 className='font-[font2] text-white text-xl uppercase mb-5'>{section.title}</h4>
-                                    <ul className='space-y-4'>
-                                        {section.items.map(item => (
-                                            <li key={item.field} className='flex flex-col gap-1'>
-                                                <span className='text-white/60 text-xs font-[font1] uppercase tracking-[0.2em]'>
-                                                    {item.field}
-                                                </span>
-                                                <span className='text-white font-[font2] text-base leading-snug'>
-                                                    {item.value}
-                                                </span>
+                            {campaignDeliverables.map(block => (
+                                <div key={block.title} className='p-6 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent'>
+                                    <h4 className='font-[font2] text-white text-xl uppercase mb-5'>{block.title}</h4>
+                                    <ul className='space-y-3 text-white/70 font-[font1] text-sm'>
+                                        {block.items.map(item => (
+                                            <li key={item} className='flex items-center gap-3'>
+                                                <span className='w-1.5 h-1.5 rounded-full bg-[#D3FD50]' />
+                                                {item}
                                             </li>
                                         ))}
                                     </ul>
@@ -484,15 +400,29 @@ const Solutions = () => {
 
                         {/* Right Visual */}
                         <div className='relative'>
-                            <div className='aspect-square rounded-3xl bg-gradient-to-br from-[#D3FD50]/20 to-transparent border border-white/10 p-8 lg:p-12'>
-                                {/* Decorative circles - retained purely visual */}
-                                <div className='absolute inset-0 flex items-center justify-center'>
-                                    <div className='w-64 h-64 rounded-full border border-[#D3FD50]/20 animate-pulse' />
-                                    <div className='absolute w-48 h-48 rounded-full border border-[#D3FD50]/30' />
-                                    <div className='absolute w-32 h-32 rounded-full bg-[#D3FD50]/10 flex items-center justify-center'>
-                                        <svg className='w-12 h-12 text-[#D3FD50]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z' />
-                                        </svg>
+                            <div className='aspect-square rounded-3xl bg-gradient-to-br from-[#D3FD50]/20 to-transparent border border-white/10 p-1 lg:p-2 overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.35)]'>
+                                <div className='relative w-full h-full rounded-[28px] lg:rounded-[36px] overflow-hidden'>
+                                    <video
+                                        className='w-full h-full object-cover'
+                                        src='/From%20KlickPin%20CF%20Pin%20on%20Activation.mp4'
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        preload='auto'
+                                        poster='https://i.pinimg.com/originals/7d/7a/7d/7d7a7d5cb4d5c7ccf6b344adcc781234.jpg'
+                                    >
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div className='absolute inset-0 pointer-events-none bg-gradient-to-tr from-black/30 via-transparent to-black/10' />
+                                    <div className='absolute inset-0 flex items-center justify-center pointer-events-none'>
+                                        <div className='w-64 h-64 rounded-full border border-[#D3FD50]/20 animate-pulse' />
+                                        <div className='absolute w-48 h-48 rounded-full border border-[#D3FD50]/30' />
+                                        <div className='absolute w-32 h-32 rounded-full bg-[#D3FD50]/10 flex items-center justify-center shadow-[0_10px_40px_rgba(0,0,0,0.35)]'>
+                                            <svg className='w-12 h-12 text-[#D3FD50]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                                                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z' />
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

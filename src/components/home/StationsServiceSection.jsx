@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
 
 const Icon = ({ type }) => {
@@ -92,19 +93,22 @@ const StationsServiceSection = () => {
             label: t('stations.notoriety'),
             description: t('stations.notorietyDesc'),
             accent: 'from-[#4dbdc6] via-[#a4c87d] to-[#fcd434]',
-            icon: 'radar'
+            icon: 'radar',
+            link: '/solutions/info-displays'
         },
         {
             label: t('stations.coverage'),
             description: t('stations.coverageDesc'),
             accent: 'from-[#fcd434] via-[#d776ff] to-[#4dbdc6]',
-            icon: 'map'
+            icon: 'map',
+            link: '/solutions/gas-station-network'
         },
         {
             label: t('stations.captivating'),
             description: t('stations.captivatingDesc'),
             accent: 'from-[#d776ff] via-[#f9d976] to-[#d3fd50]',
-            icon: 'eye'
+            icon: 'eye',
+            link: '/solutions/promotional-screen'
         }
     ]
 
@@ -135,11 +139,12 @@ const StationsServiceSection = () => {
                     </div>
                 </div>
 
-                <div className='mt-12 grid gap-6 sm:gap-8 lg:gap-10 grid-cols-1 md:grid-cols-3'>
+                <div className='mt-12 grid gap-6 sm:gap-8 lg:gap-10 grid-cols-1 md:grid-cols-3 relative z-20'>
                     {features.map((feature) => (
-                        <div
+                        <Link
+                            to={feature.link}
                             key={feature.label}
-                            className='relative p-8 rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-md flex flex-col gap-6 hover:border-[#d3fd50]/40 transition-all duration-300'
+                            className='relative p-8 rounded-[28px] border border-white/10 bg-white/5 backdrop-blur-md flex flex-col gap-6 hover:border-[#d3fd50]/40 transition-all duration-300 group'
                         >
                             <div className={`w-24 h-24 rounded-3xl bg-gradient-to-br ${feature.accent} flex items-center justify-center text-black shadow-[0_20px_40px_rgba(0,0,0,0.4)]`}>
                                 <Icon type={feature.icon} />
@@ -153,7 +158,7 @@ const StationsServiceSection = () => {
                             <div className='pt-4 mt-auto'>
                                 <div className='h-px bg-gradient-to-r from-transparent via-white/20 to-transparent' />
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 

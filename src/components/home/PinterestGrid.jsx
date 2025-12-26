@@ -1,67 +1,88 @@
 import React, { useMemo } from 'react'
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
 
 const PinterestGrid = () => {
     const { t } = useLanguage()
 
     const projects = useMemo(() => {
-        const translatedProjects = t('home.pinterest.projects', { returnObjects: true }) || []
         const staticData = [
             {
                 id: 1,
+                title: 'LCD Screens',
+                category: 'Digital Displays',
                 size: 'tall',
                 color: 'from-purple-900/80 to-pink-900/80',
-                image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg'
+                video: 'https://video.gumlet.io/694cef8ab122cbf176482b8c/694e4270e086c47a823f4aa7/download.mp4',
+                link: '/solutions/lcd-screens'
             },
             {
                 id: 2,
+                title: 'Digital Pump',
+                category: 'Pump Displays',
                 size: 'normal',
                 color: 'from-blue-900/80 to-cyan-900/80',
-                image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (2).jpeg'
+                image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (2).jpeg',
+                link: '/solutions/digital-pump'
             },
             {
                 id: 3,
+                title: 'Outdoor Display',
+                category: 'Outdoor Screens',
                 size: 'wide',
                 color: 'from-[#D3FD50]/40 to-green-900/80',
-                image: '/WhatsApp Image 2025-12-25 at 10.13.15 AM.jpeg'
+                image: '/WhatsApp Image 2025-12-25 at 10.13.15 AM.jpeg',
+                link: '/solutions/outdoor-display'
             },
             {
                 id: 4,
+                title: 'Station Service Display',
+                category: 'Station Screens',
                 size: 'tall',
                 color: 'from-orange-900/80 to-red-900/80',
-                image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg'
+                image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg',
+                link: '/solutions/station-service-display'
             },
             {
                 id: 5,
+                title: 'Digital Totems',
+                category: 'Freestanding Displays',
                 size: 'normal',
                 color: 'from-indigo-900/80 to-purple-900/80',
-                image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM (1).jpeg'
+                image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM (1).jpeg',
+                link: '/solutions/digital-totems'
             },
             {
                 id: 6,
+                title: 'LED Walls',
+                category: 'Video Walls',
                 size: 'normal',
                 color: 'from-teal-900/80 to-emerald-900/80',
-                image: '/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg'
+                image: '/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg',
+                link: '/solutions/led-walls'
             },
             {
                 id: 7,
+                title: 'Interactive Kiosk',
+                category: 'Touch Displays',
                 size: 'wide',
                 color: 'from-pink-900/80 to-rose-900/80',
-                image: '/WhatsApp Image 2025-12-25 at 10.13.18 AM (1).jpeg'
+                image: '/WhatsApp Image 2025-12-25 at 10.13.18 AM (1).jpeg',
+                link: '/solutions/interactive-kiosk'
             },
             {
                 id: 8,
+                title: 'Menu Boards',
+                category: 'Digital Menus',
                 size: 'normal',
                 color: 'from-amber-900/80 to-yellow-900/80',
-                image: '/WhatsApp Image 2025-12-25 at 10.13.20 AM.jpeg'
+                image: '/WhatsApp Image 2025-12-25 at 10.13.20 AM.jpeg',
+                link: '/solutions/menu-boards'
             },
         ]
 
-        return staticData.map((project, index) => ({
-            ...project,
-            ...(translatedProjects[index] || {})
-        }))
-    }, [t])
+        return staticData
+    }, [])
 
     return (
         <section className='min-h-screen bg-gradient-to-b from-black via-zinc-950 to-black relative z-10 py-20 lg:py-32 px-4 lg:px-12'>
@@ -79,12 +100,13 @@ const PinterestGrid = () => {
             </div>
 
             {/* Pinterest-style masonry grid */}
-            <div className='columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 lg:gap-6'>
+            <div className='columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 lg:gap-6 relative z-20'>
                 {projects.map((project, index) => (
-                    <div
+                    <Link
+                        to={project.link || '/projects'}
                         key={project.id}
                         className={`
-                            break-inside-avoid mb-4 lg:mb-6 group cursor-pointer
+                            break-inside-avoid mb-4 lg:mb-6 group cursor-pointer block
                             ${project.size === 'tall' ? 'h-[400px] lg:h-[500px]' : ''}
                             ${project.size === 'wide' ? 'h-[250px] lg:h-[300px]' : ''}
                             ${project.size === 'normal' ? 'h-[280px] lg:h-[350px]' : ''}
@@ -97,13 +119,26 @@ const PinterestGrid = () => {
                         `}>
                             {/* Background image - subtle and overlayed */}
                             <div className='absolute inset-0'>
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className='w-full h-full object-cover opacity-60 
-                                              group-hover:opacity-70 group-hover:scale-110
-                                              transition-all duration-700'
-                                />
+                                {project.video ? (
+                                    <video
+                                        src={project.video}
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        className='w-full h-full object-cover opacity-60 
+                                                  group-hover:opacity-70 group-hover:scale-110
+                                                  transition-all duration-700'
+                                    />
+                                ) : (
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className='w-full h-full object-cover opacity-60 
+                                                  group-hover:opacity-70 group-hover:scale-110
+                                                  transition-all duration-700'
+                                    />
+                                )}
                             </div>
 
                             {/* Color gradient overlay - sits on top of image */}
@@ -142,13 +177,13 @@ const PinterestGrid = () => {
                                 </svg>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
 
             {/* View all button */}
-            <div className='flex justify-center mt-16'>
-                <button className='group flex items-center gap-4 px-8 py-4 border-2 border-white/30 rounded-full
+            <div className='flex justify-center mt-16 relative z-20'>
+                <Link to='/projects' className='group flex items-center gap-4 px-8 py-4 border-2 border-white/30 rounded-full
                                   hover:border-[#D3FD50] hover:bg-[#D3FD50]/10 transition-all duration-300'>
                     <span className='font-[font2] text-white text-lg uppercase group-hover:text-[#D3FD50] transition-colors'>
                         {t('home.pinterest.viewAll')}
@@ -159,7 +194,7 @@ const PinterestGrid = () => {
                             <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
                         </svg>
                     </div>
-                </button>
+                </Link>
             </div>
         </section>
     )

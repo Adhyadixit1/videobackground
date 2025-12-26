@@ -100,14 +100,14 @@ const FooterSection = () => {
                         </h4>
                         <div className='space-y-4'>
                             <a
-                                href='mailto:contact@luxiomedia.com'
+                                href='mailto:contact@luxiomedia.lu'
                                 className='block font-[font1] text-gray-400 text-sm hover:text-[#D3FD50] 
                                           transition-colors duration-300'
                             >
-                                contact@luxiomedia.com
+                                contact@luxiomedia.lu
                             </a>
                             <p className='font-[font1] text-gray-400 text-sm'>
-                                +33 1 23 45 67 89
+                                +352 661 16 77 25
                             </p>
                             <p className='font-[font1] text-gray-400 text-sm leading-relaxed'>
                                 72 Avenue des Champs-Élysées<br />

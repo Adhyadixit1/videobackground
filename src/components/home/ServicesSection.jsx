@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
 
 const ServicesSection = () => {
@@ -10,36 +11,41 @@ const ServicesSection = () => {
             title: t('services.s1Title'),
             description: t('services.s1Desc'),
             icon: '◇',
-            image: 'https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80'
+            image: 'https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&q=80',
+            link: '/solutions/lcd-screens'
         },
         {
             number: '02',
             title: t('services.s2Title'),
             description: t('services.s2Desc'),
             icon: '○',
-            image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80'
+            image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80',
+            link: '/solutions/digital-pump'
         },
         {
             number: '03',
             title: t('services.s3Title'),
             description: t('services.s3Desc'),
             icon: '△',
-            image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80'
+            image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80',
+            link: '/solutions/outdoor-display'
         },
         {
             number: '04',
             title: t('services.s4Title'),
             description: t('services.s4Desc'),
             icon: '□',
-            image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80'
+            image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80',
+            link: '/solutions/station-network'
         }
     ]
 
     return (
         <section className='min-h-screen bg-black relative z-10 overflow-hidden py-20 lg:py-32'>
             {/* Background gradient orbs */}
-            <div className='absolute top-20 left-10 w-96 h-96 bg-[#D3FD50]/10 rounded-full blur-[120px]'></div>
-            <div className='absolute bottom-20 right-10 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[150px]'></div>
+            {/* Background gradient orbs */}
+            <div className='absolute top-20 left-10 w-96 h-96 bg-[#D3FD50]/10 rounded-full blur-[120px] pointer-events-none'></div>
+            <div className='absolute bottom-20 right-10 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[150px] pointer-events-none'></div>
 
             <div className='relative z-10 px-6 lg:px-20'>
                 {/* Section header */}
@@ -51,9 +57,10 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Services grid */}
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 relative z-20'>
                     {services.map((service, index) => (
-                        <div
+                        <Link
+                            to={service.link}
                             key={index}
                             className='group relative p-8 lg:p-12 rounded-3xl overflow-hidden
                                        hover:border-[#D3FD50]/50 transition-all duration-500 cursor-pointer'
@@ -109,7 +116,7 @@ const ServicesSection = () => {
                                     </svg>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
