@@ -8,67 +8,48 @@ import { useLanguage } from '../context/LanguageContext'
 const Resources = () => {
     const { t } = useLanguage()
 
-    const resources = [
+    const resourcesList = [
         {
             type: 'Guide',
             title: 'Guide de lancement campagne DOOH',
             description: 'Tout ce que vous devez savoir pour réussir votre première campagne d\'affichage digital.',
-            icon: (
-                <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253' />
-                </svg>
-            )
+            icon: '📖',
+            image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (2).jpeg'
         },
         {
             type: 'Étude',
             title: 'Impact du DOOH sur le trafic en point de vente',
             description: 'Découvrez les résultats de notre étude sur l\'efficacité de l\'affichage digital en stations-service.',
-            icon: (
-                <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z' />
-                </svg>
-            )
+            icon: '📊',
+            image: '/WhatsApp Image 2025-12-25 at 10.13.15 AM.jpeg'
         },
         {
             type: 'Webinar',
             title: 'Synergie DOOH + Social Media',
             description: 'Comment maximiser l\'impact de vos campagnes avec une approche cross-canal intégrée.',
-            icon: (
-                <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z' />
-                </svg>
-            )
+            icon: '🎥',
+            image: '/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg'
         },
         {
             type: 'Infographie',
             title: 'Les chiffres clés du marché DOOH en France',
             description: 'Une vue d\'ensemble du marché de l\'affichage digital Out Of Home en 2024.',
-            icon: (
-                <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z' />
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z' />
-                </svg>
-            )
+            icon: '📈',
+            image: '/WhatsApp Image 2025-12-25 at 10.13.18 AM (1).jpeg'
         },
         {
             type: 'Template',
             title: 'Kit de création vidéo publicitaire',
             description: 'Modèles et bonnes pratiques pour créer des spots vidéo efficaces de 10 secondes.',
-            icon: (
-                <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z' />
-                </svg>
-            )
+            icon: '✨',
+            image: '/WhatsApp Image 2025-12-25 at 10.13.20 AM.jpeg'
         },
         {
             type: 'Case Study',
             title: 'Success Stories par secteur',
             description: 'Retours d\'expérience détaillés de nos clients dans l\'automobile, l\'immobilier et le retail.',
-            icon: (
-                <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z' />
-                </svg>
-            )
+            icon: '🏆',
+            image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg'
         }
     ]
 
@@ -92,50 +73,49 @@ const Resources = () => {
     ]
 
     return (
-        <div className='bg-black text-white min-h-screen'>
+        <div className='bg-[#050505] text-white min-h-screen overflow-x-hidden'>
             {/* Hero Section */}
             <PageHero
                 title={t('resources.heroTitle')}
                 highlight={t('resources.heroTitleHighlight')}
                 description={t('resources.heroDesc')}
                 ctaText={t('resources.cta')}
-                ctaLink="#resources"
+                ctaLink="#resources-grid"
                 visual={<LottieVisual url="https://assets3.lottiefiles.com/packages/lf20_sk5h1kfn.json" />}
             />
 
-            {/* Resources Grid */}
-            <section id="resources" className='py-20 lg:py-32 px-4 lg:px-12'>
+            {/* Resources Grid - Premium Tile Design */}
+            <section id="resources-grid" className='relative py-12 lg:py-20 px-6'>
                 <div className='max-w-7xl mx-auto'>
-                    <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'>
-                        {resources.map((resource, index) => (
-                            <div
-                                key={index}
-                                className='group p-8 rounded-3xl border border-white/10 hover:border-[#D3FD50]/50 bg-gradient-to-br from-white/5 to-transparent transition-all duration-500 hover:scale-[1.02] cursor-pointer'
-                            >
-                                {/* Type Badge */}
-                                <span className='inline-block px-3 py-1 bg-[#D3FD50]/10 text-[#D3FD50] text-xs font-[font1] uppercase tracking-wider rounded-full mb-6'>
-                                    {resource.type}
-                                </span>
+                    <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                        {resourcesList.map((item, index) => (
+                            <div key={index} className='group relative aspect-[4/5] rounded-[40px] overflow-hidden border border-white/10 hover:border-[#D3FD50]/50 transition-all duration-700 bg-black'>
+                                <img src={item.image} className='absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-110 transition-transform duration-700' alt='' />
+                                <div className='absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent' />
 
-                                {/* Icon */}
-                                <div className='w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white group-hover:text-[#D3FD50] group-hover:bg-[#D3FD50]/10 transition-all duration-300 mb-6'>
-                                    {resource.icon}
-                                </div>
+                                <div className='absolute inset-0 p-10 flex flex-col justify-end'>
+                                    <span className='inline-block px-3 py-1 bg-[#D3FD50]/10 text-[#D3FD50] text-[10px] font-[font2] uppercase tracking-[0.2em] rounded-full mb-6 w-fit'>
+                                        {item.type}
+                                    </span>
 
-                                {/* Content */}
-                                <h3 className='font-[font2] text-white text-lg lg:text-xl mb-3 group-hover:text-[#D3FD50] transition-colors duration-300'>
-                                    {resource.title}
-                                </h3>
-                                <p className='font-[font1] text-white/60 text-sm leading-relaxed mb-6'>
-                                    {resource.description}
-                                </p>
+                                    <div className='w-14 h-14 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center text-3xl mb-6 group-hover:bg-[#D3FD50] group-hover:text-black transition-all duration-300'>
+                                        {item.icon}
+                                    </div>
 
-                                {/* CTA */}
-                                <div className='flex items-center gap-2 text-white/40 group-hover:text-[#D3FD50] transition-colors duration-300'>
-                                    <span className='text-sm font-[font1]'>Accéder</span>
-                                    <svg className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
-                                    </svg>
+                                    <h3 className='font-[font2] text-2xl mb-4 uppercase leading-tight group-hover:text-[#D3FD50] transition-colors'>
+                                        {item.title}
+                                    </h3>
+
+                                    <p className='text-white/40 font-[font1] text-sm leading-relaxed mb-8 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500'>
+                                        {item.description}
+                                    </p>
+
+                                    <div className='flex items-center gap-3 text-[#D3FD50] font-[font2] text-[10px] uppercase tracking-widest translate-y-8 group-hover:translate-y-0 transition-all duration-500'>
+                                        Accéder
+                                        <svg className='w-4 h-4 translate-x-0 group-hover:translate-x-2 transition-transform' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         ))}
@@ -143,28 +123,28 @@ const Resources = () => {
                 </div>
             </section>
 
-            {/* FAQ Section */}
-            <section className='py-20 lg:py-32 px-4 lg:px-12 bg-gradient-to-b from-zinc-950 to-black'>
+            {/* FAQ Section - Clean & Tight */}
+            <section className='relative py-12 lg:py-20 px-6 bg-[#080808]'>
                 <div className='max-w-4xl mx-auto'>
-                    <div className='text-center mb-16'>
-                        <span className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block'>
+                    <div className='text-center mb-12 lg:mb-16'>
+                        <span className='text-[#D3FD50] font-[font1] text-[10px] tracking-[0.4em] uppercase mb-4 block'>
                             FAQ
                         </span>
-                        <h2 className='font-[font2] text-white text-[8vw] lg:text-[3vw] uppercase'>
+                        <h2 className='font-[font2] text-white text-4xl lg:text-6xl uppercase tracking-tighter'>
                             Questions fréquentes
                         </h2>
                     </div>
 
-                    <div className='space-y-4'>
+                    <div className='grid gap-4'>
                         {faqs.map((faq, index) => (
                             <div
                                 key={index}
-                                className='p-6 lg:p-8 rounded-2xl border border-white/10 hover:border-[#D3FD50]/30 bg-white/5 transition-all duration-300'
+                                className='group p-8 rounded-3xl border border-white/5 bg-white/5 hover:border-[#D3FD50]/30 transition-all duration-300'
                             >
-                                <h4 className='font-[font2] text-white text-lg mb-3'>
+                                <h4 className='font-[font2] text-white text-lg mb-4 uppercase tracking-wide group-hover:text-[#D3FD50] transition-colors'>
                                     {faq.question}
                                 </h4>
-                                <p className='font-[font1] text-white/60 text-sm lg:text-base leading-relaxed'>
+                                <p className='font-[font1] text-white/40 text-sm lg:text-base leading-relaxed'>
                                     {faq.answer}
                                 </p>
                             </div>
@@ -172,12 +152,9 @@ const Resources = () => {
                     </div>
 
                     <div className='text-center mt-12'>
-                        <p className='font-[font1] text-white/60 mb-4'>
-                            Vous avez d'autres questions ?
-                        </p>
                         <Link
                             to='/contact'
-                            className='inline-flex items-center gap-3 px-6 py-3 bg-[#D3FD50] text-black font-[font2] text-sm uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300'
+                            className='inline-flex items-center gap-4 px-10 py-4 bg-[#D3FD50] text-black font-[font2] text-[10px] uppercase tracking-[0.3em] rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_20px_40px_rgba(211,253,80,0.2)]'
                         >
                             Contactez-nous
                         </Link>

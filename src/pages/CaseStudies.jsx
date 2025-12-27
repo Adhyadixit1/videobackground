@@ -17,7 +17,7 @@ const CaseStudies = () => {
             subtitle: t('caseStudies.sectors.automobile.subtitle'),
             description: t('caseStudies.sectors.automobile.desc'),
             image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg',
-            color: 'from-blue-900/80 to-cyan-900/80',
+            color: 'from-blue-600/20 to-cyan-600/20',
             clients: ['Peugeot', 'Citroën', 'BYmyCAR', '123 Pare-Brise']
         },
         {
@@ -27,7 +27,7 @@ const CaseStudies = () => {
             subtitle: t('caseStudies.sectors.ameublement.subtitle'),
             description: t('caseStudies.sectors.ameublement.desc'),
             image: '/WhatsApp Image 2025-12-25 at 10.13.15 AM.jpeg',
-            color: 'from-amber-900/80 to-orange-900/80',
+            color: 'from-amber-600/20 to-orange-600/20',
             clients: ['Leroy Merlin', 'Decathlon', 'But', 'Conforama']
         },
         {
@@ -37,7 +37,7 @@ const CaseStudies = () => {
             subtitle: t('caseStudies.sectors.immobilier.subtitle'),
             description: t('caseStudies.sectors.immobilier.desc'),
             image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg',
-            color: 'from-emerald-900/80 to-teal-900/80',
+            color: 'from-emerald-600/20 to-teal-600/20',
             clients: ['Nexity', 'IAD', 'Century 21', 'Orpi']
         },
         {
@@ -47,7 +47,7 @@ const CaseStudies = () => {
             subtitle: t('caseStudies.sectors.loisirs.subtitle'),
             description: t('caseStudies.sectors.loisirs.desc'),
             image: '/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg',
-            color: 'from-purple-900/80 to-pink-900/80',
+            color: 'from-purple-600/20 to-pink-600/20',
             clients: ['Center Parcs', 'Puy du Fou', 'Futuroscope', 'Disneyland']
         }
     ], [t])
@@ -68,7 +68,7 @@ const CaseStudies = () => {
         : sectors.filter(s => s.id === activeFilter)
 
     return (
-        <div className='bg-black text-white min-h-screen'>
+        <div className='bg-[#050505] text-white min-h-screen'>
             {/* Hero Section */}
             <PageHero
                 title={t('caseStudies.heroTitle')}
@@ -79,35 +79,37 @@ const CaseStudies = () => {
                 visual={<LottieVisual url="https://assets9.lottiefiles.com/packages/lf20_jcikwtux.json" />}
             />
 
-            {/* Stats Bar */}
-            <section id="stats" className='relative py-12 border-y border-white/10 bg-gradient-to-r from-transparent via-[#D3FD50]/5 to-transparent'>
-                <div className='max-w-7xl mx-auto px-4 lg:px-12'>
-                    <div className='flex flex-wrap justify-center gap-8 lg:gap-16'>
-                        <div className='text-center'>
-                            <div className='font-[font2] text-[#D3FD50] text-3xl lg:text-4xl'>3,400+</div>
-                            <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>{t('caseStudies.stats.advertisers')}</div>
+            {/* Stats Bar - Tight & Minimal */}
+            <section id="stats" className='relative z-10 border-y border-white/5 bg-white/[0.02] backdrop-blur-md'>
+                <div className='max-w-7xl mx-auto py-8 lg:py-12 px-6'>
+                    <div className='flex flex-wrap justify-between items-center gap-8'>
+                        <div className='flex flex-col'>
+                            <span className='text-[#D3FD50] font-[font2] text-4xl lg:text-5xl mb-1'>3,400+</span>
+                            <span className='text-white/40 font-[font1] text-[10px] tracking-[0.2em] uppercase'>{t('caseStudies.stats.advertisers')}</span>
                         </div>
-                        <div className='text-center'>
-                            <div className='font-[font2] text-[#D3FD50] text-3xl lg:text-4xl'>15+</div>
-                            <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>{t('caseStudies.stats.sectors')}</div>
+                        <div className='flex flex-col'>
+                            <span className='text-[#D3FD50] font-[font2] text-4xl lg:text-5xl mb-1'>15+</span>
+                            <span className='text-white/40 font-[font1] text-[10px] tracking-[0.2em] uppercase'>{t('caseStudies.stats.sectors')}</span>
                         </div>
-                        <div className='text-center'>
-                            <div className='font-[font2] text-[#D3FD50] text-3xl lg:text-4xl'>98%</div>
-                            <div className='font-[font1] text-white/60 text-sm uppercase tracking-wider'>{t('caseStudies.stats.satisfaction')}</div>
+                        <div className='flex flex-col'>
+                            <span className='text-[#D3FD50] font-[font2] text-4xl lg:text-5xl mb-1'>98%</span>
+                            <span className='text-white/40 font-[font1] text-[10px] tracking-[0.2em] uppercase'>{t('caseStudies.stats.satisfaction')}</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Filter Tabs */}
-            <section className='py-12 px-4 lg:px-12'>
+            {/* Content Section */}
+            <section className='relative py-12 lg:py-20 px-6'>
                 <div className='max-w-7xl mx-auto'>
-                    <div className='flex flex-wrap justify-center gap-3'>
+
+                    {/* Filter Tabs - Modern & Slim */}
+                    <div className='mb-12 lg:mb-16 flex flex-wrap justify-center gap-3'>
                         <button
                             onClick={() => setActiveFilter('all')}
-                            className={`px-6 py-3 rounded-full font-[font1] text-sm uppercase tracking-wider transition-all duration-300 ${activeFilter === 'all'
-                                ? 'bg-[#D3FD50] text-black'
-                                : 'border border-white/20 text-white/60 hover:border-[#D3FD50] hover:text-[#D3FD50]'
+                            className={`px-6 py-2 rounded-full font-[font2] text-[10px] uppercase tracking-[0.3em] transition-all duration-300 ${activeFilter === 'all'
+                                ? 'bg-[#D3FD50] text-black shadow-[0_10px_20px_rgba(211,253,80,0.3)]'
+                                : 'border border-white/10 text-white/40 hover:border-white/30 hover:text-white'
                                 }`}
                         >
                             {t('caseStudies.filterAll')}
@@ -116,71 +118,65 @@ const CaseStudies = () => {
                             <button
                                 key={sector.id}
                                 onClick={() => setActiveFilter(sector.id)}
-                                className={`px-6 py-3 rounded-full font-[font1] text-sm uppercase tracking-wider transition-all duration-300 ${activeFilter === sector.id
-                                    ? 'bg-[#D3FD50] text-black'
-                                    : 'border border-white/20 text-white/60 hover:border-[#D3FD50] hover:text-[#D3FD50]'
+                                className={`px-6 py-2 rounded-full font-[font2] text-[10px] uppercase tracking-[0.3em] transition-all duration-300 ${activeFilter === sector.id
+                                    ? 'bg-[#D3FD50] text-black shadow-[0_10px_20px_rgba(211,253,80,0.3)]'
+                                    : 'border border-white/10 text-white/40 hover:border-white/30 hover:text-white'
                                     }`}
                             >
                                 {sector.title}
                             </button>
                         ))}
                     </div>
-                </div>
-            </section>
 
-            {/* Sectors Grid */}
-            <section className='py-12 lg:py-20 px-4 lg:px-12'>
-                <div className='max-w-7xl mx-auto'>
-                    <div className='grid lg:grid-cols-2 gap-6 lg:gap-8'>
-                        {filteredSectors.map((sector, index) => (
+                    {/* Sectors Grid - Premium Cards */}
+                    <div className='grid lg:grid-cols-2 gap-8 lg:gap-10'>
+                        {filteredSectors.map((sector) => (
                             <Link
                                 to={`/case-studies/${sector.id}`}
                                 key={sector.id}
-                                className='group relative rounded-3xl overflow-hidden border border-white/10 hover:border-[#D3FD50]/50 transition-all duration-500 block'
+                                className='group relative aspect-[16/10] lg:aspect-[16/9] rounded-[40px] overflow-hidden border border-white/10 hover:border-[#D3FD50]/50 transition-all duration-700 block'
                             >
                                 {/* Background Image */}
                                 <div className='absolute inset-0'>
                                     <img
                                         src={sector.image}
                                         alt={sector.title}
-                                        className='w-full h-full object-cover opacity-40 group-hover:opacity-50 group-hover:scale-110 transition-all duration-700'
+                                        className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s]'
                                     />
-                                    <div className={`absolute inset-0 bg-gradient-to-br ${sector.color} mix-blend-multiply opacity-80`} />
-                                    <div className='absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent' />
+                                    <div className={`absolute inset-0 bg-gradient-to-br ${sector.color} mix-blend-multiply opacity-60`} />
+                                    <div className='absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent' />
                                 </div>
 
                                 {/* Content */}
-                                <div className='relative z-10 p-8 lg:p-12 min-h-[400px] flex flex-col justify-between'>
-                                    {/* Top */}
+                                <div className='relative z-10 p-8 lg:p-12 h-full flex flex-col justify-between'>
                                     <div className='flex justify-between items-start'>
-                                        <div>
-                                            <span className='text-[#D3FD50] font-[font2] text-5xl lg:text-6xl'>
+                                        <div className='space-y-1'>
+                                            <span className='text-[#D3FD50] font-[font2] text-5xl lg:text-7xl block tracking-tighter'>
                                                 {sector.count}
                                             </span>
-                                            <span className='text-white/60 font-[font1] text-sm uppercase tracking-wider block mt-1'>
+                                            <span className='text-white/40 font-[font2] text-[10px] lg:text-xs uppercase tracking-[0.3em] block'>
                                                 {sector.subtitle}
                                             </span>
                                         </div>
-                                        <div className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#D3FD50] group-hover:bg-[#D3FD50]/10 transition-all duration-300'>
-                                            <svg className='w-5 h-5 text-white group-hover:text-[#D3FD50]' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                                        <div className='w-14 h-14 rounded-full border border-white/10 flex items-center justify-center bg-black/40 backdrop-blur-md group-hover:bg-[#D3FD50] group-hover:border-[#D3FD50] transition-all duration-500'>
+                                            <svg className='w-6 h-6 text-white group-hover:text-black transition-colors' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                                                 <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
                                             </svg>
                                         </div>
                                     </div>
 
-                                    {/* Bottom */}
-                                    <div>
-                                        <h3 className='font-[font2] text-white text-2xl lg:text-3xl uppercase mb-4 group-hover:text-[#D3FD50] transition-colors duration-300'>
+                                    <div className='space-y-4'>
+                                        <h3 className='font-[font2] text-white text-3xl lg:text-4xl uppercase tracking-tight group-hover:text-[#D3FD50] transition-colors duration-300'>
                                             {sector.title}
                                         </h3>
-                                        <p className='font-[font1] text-white/70 text-sm lg:text-base mb-6 leading-relaxed'>
+                                        <p className='font-[font1] text-white/50 text-sm lg:text-base leading-relaxed max-w-lg'>
                                             {sector.description}
                                         </p>
-                                        <div className='flex flex-wrap gap-2'>
+                                        <div className='flex flex-wrap gap-2 pt-2'>
                                             {sector.clients.map((client, cIndex) => (
                                                 <span
                                                     key={cIndex}
-                                                    className='px-3 py-1 bg-white/10 rounded-full text-white/70 text-xs font-[font1]'
+                                                    className='px-3 py-1 bg-white/5 border border-white/10 rounded-full text-white/40 text-[10px] font-[font2] uppercase tracking-wider'
                                                 >
                                                     {client}
                                                 </span>
@@ -194,28 +190,28 @@ const CaseStudies = () => {
                 </div>
             </section>
 
-            {/* Featured Clients */}
-            <section className='py-20 lg:py-32 px-4 lg:px-12 bg-gradient-to-b from-zinc-950 to-black'>
+            {/* Featured Clients - Modern Grid */}
+            <section className='relative py-12 lg:py-20 px-6 bg-[#080808]'>
                 <div className='max-w-7xl mx-auto'>
-                    <div className='text-center mb-16'>
-                        <span className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block'>
+                    <div className='text-center mb-12 lg:mb-16'>
+                        <span className='text-[#D3FD50] font-[font1] text-[10px] tracking-[0.4em] uppercase mb-4 block'>
                             {t('caseStudies.featuredHeader')}
                         </span>
-                        <h2 className='font-[font2] text-white text-[8vw] lg:text-[3vw] uppercase'>
+                        <h2 className='font-[font2] text-white text-4xl lg:text-6xl uppercase tracking-tighter'>
                             {t('caseStudies.featuredTitle')}
                         </h2>
                     </div>
 
-                    <div className='grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6'>
+                    <div className='grid grid-cols-2 md:grid-cols-4 border-l border-t border-white/5'>
                         {featuredClients.map((client, index) => (
                             <div
                                 key={index}
-                                className='group p-6 lg:p-8 rounded-2xl border border-white/10 hover:border-[#D3FD50]/50 bg-white/5 hover:bg-[#D3FD50]/5 transition-all duration-300 text-center'
+                                className='group p-10 border-r border-b border-white/5 hover:bg-[#D3FD50]/5 transition-all duration-300 text-center'
                             >
-                                <h4 className='font-[font2] text-white text-lg lg:text-xl group-hover:text-[#D3FD50] transition-colors duration-300'>
+                                <h4 className='font-[font2] text-white text-xl lg:text-2xl group-hover:text-[#D3FD50] transition-colors'>
                                     {client.name}
                                 </h4>
-                                <span className='font-[font1] text-white/40 text-xs uppercase tracking-wider'>
+                                <span className='font-[font1] text-white/20 text-[10px] uppercase tracking-widest block mt-2'>
                                     {client.sector}
                                 </span>
                             </div>
@@ -224,24 +220,18 @@ const CaseStudies = () => {
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className='py-20 lg:py-32 px-4 lg:px-12'>
+            {/* CTA - Impactful */}
+            <section className='relative py-12 lg:py-20 px-6'>
                 <div className='max-w-4xl mx-auto text-center'>
-                    <h2 className='font-[font2] text-white text-[8vw] lg:text-[3vw] leading-tight uppercase mb-6'>
+                    <h2 className='font-[font2] text-white text-4xl lg:text-7xl leading-tight uppercase mb-8'>
                         {t('caseStudies.ctaTitle')}<br />
                         <span className='text-[#D3FD50]'>{t('caseStudies.ctaTitleHighlight')}</span>
                     </h2>
-                    <p className='font-[font1] text-white/60 text-lg mb-8'>
-                        {t('caseStudies.ctaDesc')}
-                    </p>
                     <Link
                         to='/contact'
-                        className='inline-flex items-center gap-3 px-8 py-4 bg-[#D3FD50] text-black font-[font2] text-sm uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300'
+                        className='px-12 py-5 bg-[#D3FD50] text-black font-[font2] text-sm uppercase tracking-[0.2em] rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_20px_40px_rgba(211,253,80,0.2)]'
                     >
                         {t('caseStudies.ctaBtn')}
-                        <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
-                        </svg>
                     </Link>
                 </div>
             </section>

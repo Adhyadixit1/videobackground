@@ -110,8 +110,8 @@ const FooterSection = () => {
                                 +352 661 16 77 25
                             </p>
                             <p className='font-[font1] text-gray-400 text-sm leading-relaxed'>
-                                9 Rue du Laboratoire,<br />
-                                L-1911 Luxembourg
+                                26 Bd Royal Level 5,<br />
+                                2449 Ville-Haute Luxembourg
                             </p>
                         </div>
                     </div>

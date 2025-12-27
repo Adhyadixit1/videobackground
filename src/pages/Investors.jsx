@@ -13,7 +13,7 @@ const Investors = () => {
     const getList = (key) => t(key, { returnObjects: true }) || []
 
     return (
-        <div className='bg-black text-white min-h-screen'>
+        <div className='bg-[#050505] text-white min-h-screen overflow-x-hidden'>
             {/* Hero Section */}
             <PageHero
                 title={t('investors.heroTitle')}
@@ -24,56 +24,63 @@ const Investors = () => {
                 visual={<LottieVisual url="https://assets2.lottiefiles.com/packages/lf20_t9gkkhz4.json" />}
             />
 
-            {/* Strategic Anchor Section */}
-            <section id="anchor" className='py-20 lg:py-32 px-4 lg:px-12 relative overflow-hidden'>
-                <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#D3FD50]/5 to-transparent pointer-events-none' />
-                <div className='max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center'>
-                    <div className='relative z-10'>
-                        <span className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block'>
-                            Strategic Positioning
-                        </span>
-                        <h2 className='font-[font2] text-white text-[8vw] lg:text-[3vw] leading-tight uppercase mb-8'>
-                            {t('investors.anchor.title')}
-                        </h2>
-                        <div className='space-y-6 text-white/70 font-[font1] text-lg leading-relaxed'>
-                            <p>{t('investors.anchor.content1')}</p>
-                            <p>{t('investors.anchor.content2')}</p>
+            {/* Strategic Anchor Section - High Tech Feel */}
+            <section id="anchor" className='relative py-12 lg:py-20 px-6 overflow-hidden'>
+                <div className='absolute -top-40 -left-40 w-96 h-96 bg-[#D3FD50]/5 blur-[120px] rounded-full' />
+                <div className='max-w-7xl mx-auto'>
+                    <div className='grid lg:grid-cols-2 gap-16 items-center'>
+                        <div className='relative z-10'>
+                            <span className='text-[#D3FD50] font-[font1] text-[10px] tracking-[0.4em] uppercase mb-4 block'>
+                                Strategic Positioning
+                            </span>
+                            <h2 className='font-[font2] text-4xl lg:text-7xl leading-none text-white uppercase tracking-tighter mb-8'>
+                                {t('investors.anchor.title')}
+                            </h2>
+                            <div className='space-y-6 text-white/40 font-[font1] text-lg leading-relaxed max-w-xl'>
+                                <p>{t('investors.anchor.content1')}</p>
+                                <p>{t('investors.anchor.content2')}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className='relative aspect-square rounded-[40px] border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center p-8'>
-                        <DotLottieVisual src="https://lottie.host/866fa7cd-b789-4c45-8810-4546625dc9b1/akhqTKyDA4.lottie" />
+                        <div className='relative aspect-square rounded-[40px] border border-white/5 bg-white/[0.02] backdrop-blur-sm overflow-hidden flex items-center justify-center p-12'>
+                            <DotLottieVisual src="https://lottie.host/866fa7cd-b789-4c45-8810-4546625dc9b1/akhqTKyDA4.lottie" />
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Market Section */}
-            <section className='py-20 lg:py-32 px-4 lg:px-12 bg-zinc-950'>
+            {/* Market Section - Clean Split */}
+            <section className='relative py-12 lg:py-20 px-6 bg-[#080808]'>
                 <div className='max-w-7xl mx-auto'>
-                    <div className='grid lg:grid-cols-2 gap-16'>
-                        <div>
-                            <h2 className='font-[font2] text-white text-[8vw] lg:text-[3vw] uppercase mb-8'>
+                    <div className='grid lg:grid-cols-2 gap-1 gap-y-16'>
+                        <div className='p-12 border border-white/5'>
+                            <h2 className='font-[font2] text-3xl lg:text-5xl uppercase mb-8 tracking-tight'>
                                 {t('investors.market.title')}
                             </h2>
-                            <p className='text-white/60 text-lg mb-10 leading-relaxed font-[font1]'>
+                            <p className='text-white/40 text-base mb-10 leading-relaxed font-[font1]'>
                                 {t('investors.market.desc')}
                             </p>
-                            <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+                            <div className='grid gap-3'>
                                 {getList('investors.market.features').map((feature, i) => (
-                                    <div key={i} className='flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10'>
-                                        <div className='w-2 h-2 rounded-full bg-[#D3FD50]' />
-                                        <span className='text-sm uppercase tracking-wide'>{feature}</span>
+                                    <div key={i} className='flex items-center gap-4 py-3 border-b border-white/5'>
+                                        <div className='w-1.5 h-1.5 rounded-full bg-[#D3FD50]' />
+                                        <span className='text-[10px] uppercase font-[font2] tracking-[0.3em] text-white/60'>{feature}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className='bg-gradient-to-br from-[#D3FD50]/10 to-transparent p-8 lg:p-12 rounded-[40px] border border-[#D3FD50]/20'>
-                            <h3 className='font-[font2] text-white text-2xl uppercase mb-8'>{t('investors.mission.title')}</h3>
-                            <p className='text-white/70 mb-8 font-[font1]'>{t('investors.mission.desc')}</p>
-                            <div className='space-y-6'>
+                        <div className='p-12 bg-white/[0.02] border border-white/5 relative'>
+                            <div className='absolute top-0 right-0 p-8'>
+                                <div className='w-12 h-12 rounded-full border border-[#D3FD50]/50 flex items-center justify-center text-[#D3FD50] text-sm font-[font2]'>
+                                    01
+                                </div>
+                            </div>
+                            <h3 className='font-[font2] text-2xl uppercase mb-10 text-[#D3FD50] tracking-wide'>{t('investors.mission.title')}</h3>
+                            <p className='text-white/60 mb-10 font-[font1] text-lg leading-relaxed'>{t('investors.mission.desc')}</p>
+                            <div className='space-y-8'>
                                 {getList('investors.mission.items').map((item, i) => (
-                                    <div key={i} className='flex gap-4'>
-                                        <span className='text-[#D3FD50] font-[font2] text-xl'>0{i + 1}</span>
-                                        <p className='text-sm text-white/60 leading-relaxed'>{item}</p>
+                                    <div key={i} className='flex gap-6'>
+                                        <span className='text-white/20 font-[font2] text-xl'>0{i + 1}</span>
+                                        <p className='text-sm text-white/40 leading-relaxed font-[font1]'>{item}</p>
                                     </div>
                                 ))}
                             </div>
@@ -82,128 +89,108 @@ const Investors = () => {
                 </div>
             </section>
 
-            {/* Model & Traction */}
-            <section className='py-20 lg:py-32 px-4 lg:px-12'>
+            {/* Model & Traction - Clean Tiles */}
+            <section className='relative py-12 lg:py-20 px-6'>
                 <div className='max-w-7xl mx-auto'>
-                    <div className='text-center mb-20'>
-                        <h2 className='font-[font2] text-white text-[8vw] lg:text-[3vw] uppercase mb-6'>
+                    <div className='text-center mb-12 lg:mb-16'>
+                        <span className='text-[#D3FD50] font-[font1] text-[10px] tracking-[0.4em] uppercase mb-4 block'>
+                            Execution Framework
+                        </span>
+                        <h2 className='font-[font2] text-4xl lg:text-7xl uppercase tracking-tighter'>
                             {t('investors.model.title')}
                         </h2>
                     </div>
-                    <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
+
+                    <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-1'>
                         {getList('investors.model.leviers').map((levier, i) => (
-                            <div key={i} className='p-8 rounded-3xl border border-white/5 bg-white/5 hover:border-[#D3FD50]/30 transition-all duration-300'>
-                                <div className='w-10 h-10 rounded-full bg-[#D3FD50]/10 flex items-center justify-center text-[#D3FD50] mb-6'>
-                                    <svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                            <div key={i} className='p-10 bg-white/[0.02] border border-white/5 hover:bg-[#D3FD50]/5 transition-all duration-500 group'>
+                                <div className='w-8 h-8 rounded bg-white/5 flex items-center justify-center text-[#D3FD50] mb-8 group-hover:scale-110 transition-transform'>
+                                    <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 7h8m0 0v8m0-8l-8 8-4-4-6 6' />
                                     </svg>
                                 </div>
-                                <p className='text-sm uppercase tracking-wider leading-relaxed'>{levier}</p>
+                                <p className='text-[10px] font-[font2] uppercase tracking-[0.3em] leading-loose text-white/40 group-hover:text-white transition-colors'>{levier}</p>
                             </div>
                         ))}
                     </div>
-                    <div className='mt-12 flex flex-wrap justify-center gap-6'>
+
+                    <div className='mt-12 flex flex-wrap justify-center gap-4'>
                         {getList('investors.model.benefits').map((benefit, i) => (
-                            <div key={i} className='flex items-center gap-3 px-6 py-3 rounded-full border border-[#D3FD50]/20 bg-[#D3FD50]/5'>
-                                <span className='text-[#D3FD50]'>●</span>
-                                <span className='text-xs uppercase tracking-widest text-[#D3FD50]'>{benefit}</span>
+                            <div key={i} className='px-6 py-2 rounded-full border border-white/10 bg-white/5'>
+                                <span className='text-[9px] font-[font2] uppercase tracking-[0.4em] text-white/40'>{benefit}</span>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Traction & Team */}
-            <section className='py-20 lg:py-32 px-4 lg:px-12 bg-zinc-950 rounded-[60px] mx-4'>
-                <div className='max-w-7xl mx-auto grid lg:grid-cols-2 gap-20'>
-                    <div>
-                        <h2 className='font-[font2] text-white text-3xl lg:text-4xl uppercase mb-10'>{t('investors.traction.title')}</h2>
-                        <div className='space-y-4'>
-                            {getList('investors.traction.points').map((point, i) => (
-                                <div key={i} className='flex items-center gap-4 p-6 rounded-2xl border border-white/5 bg-black/40'>
-                                    <div className='w-12 h-px bg-[#D3FD50]' />
-                                    <p className='text-white/80 font-[font1]'>{point}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    <div>
-                        <h2 className='font-[font2] text-white text-3xl lg:text-4xl uppercase mb-10'>{t('investors.team.title')}</h2>
-                        <div className='space-y-4'>
-                            {getList('investors.team.skills').map((skill, i) => (
-                                <div key={i} className='flex items-center gap-4 p-6 rounded-2xl border border-white/5 bg-black/40'>
-                                    <div className='w-2 h-2 rounded-full bg-[#D3FD50]' />
-                                    <p className='text-white/80 font-[font1]'>{skill}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Why Invest Now Section */}
-            <section className='py-20 lg:py-32 px-4 lg:px-12'>
+            {/* Why Invest Now - Impact Highlight */}
+            <section className='relative py-12 lg:py-20 px-6'>
                 <div className='max-w-6xl mx-auto'>
-                    <div className='bg-gradient-to-br from-[#D3FD50] to-[#9FE000] rounded-[50px] p-12 lg:p-20 text-black'>
-                        <h2 className='font-[font2] text-[8vw] lg:text-[4vw] uppercase leading-none mb-12'>
-                            {t('investors.whyNow.title')}
-                        </h2>
-                        <div className='grid md:grid-cols-2 gap-12'>
-                            <div className='space-y-6'>
-                                {getList('investors.whyNow.points').map((point, i) => (
-                                    <div key={i} className='flex items-center gap-4'>
-                                        <div className='w-6 h-6 rounded-full border border-black/20 flex items-center justify-center font-bold'>✓</div>
-                                        <p className='text-xl font-[font2] uppercase'>{point}</p>
+                    <div className='bg-[#D3FD50] rounded-[60px] p-12 lg:p-24 text-black relative overflow-hidden'>
+                        <div className='absolute -bottom-20 -right-20 w-96 h-96 bg-black/5 rounded-full' />
+
+                        <div className='relative z-10'>
+                            <h2 className='font-[font2] text-4xl lg:text-7xl uppercase leading-none tracking-tighter mb-16'>
+                                {t('investors.whyNow.title')}
+                            </h2>
+
+                            <div className='grid md:grid-cols-2 gap-16'>
+                                <div className='space-y-8'>
+                                    {getList('investors.whyNow.points').map((point, i) => (
+                                        <div key={i} className='flex items-start gap-6 group'>
+                                            <div className='w-8 h-8 rounded-full border border-black/10 flex items-center justify-center font-bold text-xs'>0{i + 1}</div>
+                                            <p className='text-2xl font-[font2] uppercase leading-tight tracking-tight group-hover:px-2 transition-all'>{point}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className='bg-black/5 backdrop-blur-md p-10 lg:p-12 rounded-[40px] space-y-8 border border-black/5'>
+                                    <p className='font-[font2] uppercase tracking-[0.3em] text-[10px] opacity-40'>Projections & Ambitions</p>
+                                    <div className='space-y-6'>
+                                        {getList('investors.whyNow.ambitions').map((ambition, i) => (
+                                            <div key={i} className='flex items-start gap-4'>
+                                                <div className='mt-1.5 w-1.5 h-1.5 rotate-45 bg-black' />
+                                                <p className='text-sm font-[font1] leading-relaxed opacity-80'>{ambition}</p>
+                                            </div>
+                                        ))}
                                     </div>
-                                ))}
-                            </div>
-                            <div className='bg-black/10 p-8 rounded-3xl space-y-4'>
-                                <p className='font-bold uppercase tracking-widest text-sm mb-4'>Nos ambitions :</p>
-                                {getList('investors.whyNow.ambitions').map((ambition, i) => (
-                                    <div key={i} className='flex items-start gap-4'>
-                                        <span className='text-black/40 leading-tight'>➡</span>
-                                        <p className='text-sm leading-tight'>{ambition}</p>
-                                    </div>
-                                ))}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Investor Relations Contact */}
-            <section className='py-20 lg:py-32 px-4 lg:px-12 border-t border-white/10'>
+            {/* Relations Contact - Premium Minimal */}
+            <section className='relative py-12 lg:py-20 px-6 border-t border-white/5'>
                 <div className='max-w-4xl mx-auto text-center'>
-                    <h2 className='font-[font2] text-white text-4xl lg:text-5xl uppercase mb-8'>
+                    <span className='text-[#D3FD50] font-[font1] text-[10px] tracking-[0.4em] uppercase mb-6 block'>
                         {t('investors.relations.title')}
-                    </h2>
-                    <p className='text-white/60 text-lg mb-12 font-[font1] max-w-2xl mx-auto leading-relaxed'>
+                    </span>
+                    <p className='text-white/40 text-lg lg:text-2xl mb-16 font-[font1] max-w-2xl mx-auto leading-relaxed'>
                         {t('investors.relations.desc')}
                     </p>
-                    <div className='flex flex-wrap justify-center gap-6 lg:gap-12'>
-                        <div className='flex flex-col items-center gap-2'>
-                            <span className='text-xs uppercase tracking-widest text-white/40'>Email</span>
-                            <a href={`mailto:${t('investors.relations.email')}`} className='text-xl lg:text-2xl font-[font2] text-[#D3FD50] hover:text-white transition-colors'>
+
+                    <div className='grid md:grid-cols-3 gap-12 mb-16'>
+                        <div className='space-y-4'>
+                            <span className='text-[10px] font-[font2] uppercase tracking-[0.4em] text-white/20'>Direct Channel</span>
+                            <a href={`mailto:${t('investors.relations.email')}`} className='block text-xl font-[font2] text-white hover:text-[#D3FD50] transition-colors'>
                                 {t('investors.relations.email')}
                             </a>
                         </div>
-                        <div className='flex flex-col items-center gap-2'>
-                            <span className='text-xs uppercase tracking-widest text-white/40'>Phone</span>
-                            <p className='text-xl lg:text-2xl font-[font2]'>{t('investors.relations.phone')}</p>
+                        <div className='space-y-4'>
+                            <span className='text-[10px] font-[font2] uppercase tracking-[0.4em] text-white/20'>Operational Desk</span>
+                            <p className='text-xl font-[font2] text-white'>{t('investors.relations.phone')}</p>
                         </div>
-                        <div className='flex flex-col items-center gap-2'>
-                            <span className='text-xs uppercase tracking-widest text-white/40'>Base</span>
-                            <p className='text-xl lg:text-2xl font-[font2] uppercase'>Luxembourg – Europe</p>
+                        <div className='space-y-4'>
+                            <span className='text-[10px] font-[font2] uppercase tracking-[0.4em] text-white/20'>HQ Region</span>
+                            <p className='text-xl font-[font2] text-white uppercase tracking-tight'>Luxembourg – EU</p>
                         </div>
                     </div>
-                    <div className='mt-16'>
-                        <Link to="/contact" className='inline-flex items-center gap-4 px-10 py-5 bg-white text-black rounded-full font-[font2] uppercase tracking-wider hover:bg-[#D3FD50] transition-all duration-300'>
-                            Planifier un échange
-                            <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
-                            </svg>
-                        </Link>
-                    </div>
+
+                    <Link to="/contact" className='group px-12 py-5 bg-white text-black rounded-full font-[font2] text-[10px] uppercase tracking-[0.3em] hover:bg-[#D3FD50] transition-all duration-300 shadow-2xl'>
+                        Schedule Strategic Briefing
+                    </Link>
                 </div>
             </section>
 

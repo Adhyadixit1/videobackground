@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useRef, useEffect } from 'react'
 import FooterSection from '../components/home/FooterSection'
 import PageHero from '../components/common/PageHero'
 import LottieVisual from '../components/common/LottieVisual'
@@ -16,57 +16,67 @@ const Contact = () => {
         message: ''
     })
 
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+    const dropdownRef = useRef(null)
+
     const countryCodes = [
-        { code: '+352', country: 'LU', flag: '🇱🇺' },
-        { code: '+33', country: 'FR', flag: '🇫🇷' },
-        { code: '+49', country: 'DE', flag: '🇩🇪' },
-        { code: '+32', country: 'BE', flag: '🇧🇪' },
-        { code: '+41', country: 'CH', flag: '🇨🇭' },
-        { code: '+44', country: 'GB', flag: '🇬🇧' },
-        { code: '+1', country: 'US', flag: '🇺🇸' },
+        { code: '+352', country: 'LU', flag: '🇱🇺', name: 'Luxembourg' },
+        { code: '+33', country: 'FR', flag: '🇫🇷', name: 'France' },
+        { code: '+49', country: 'DE', flag: '🇩🇪', name: 'Germany' },
+        { code: '+32', country: 'BE', flag: '🇧🇪', name: 'Belgium' },
+        { code: '+41', country: 'CH', flag: '🇨🇭', name: 'Switzerland' },
+        { code: '+44', country: 'GB', flag: '🇬🇧', name: 'United Kingdom' },
+        { code: '+1', country: 'US', flag: '🇺🇸', name: 'United States' },
+        { code: '+31', country: 'NL', flag: '🇳🇱', name: 'Netherlands' },
+        { code: '+39', country: 'IT', flag: '🇮🇹', name: 'Italy' },
+        { code: '+34', country: 'ES', flag: '🇪🇸', name: 'Spain' },
+        { code: '+351', country: 'PT', flag: '🇵🇹', name: 'Portugal' },
     ]
+
+    const selectedCountry = countryCodes.find(c => c.code === formData.countryCode) || countryCodes[0]
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsDropdownOpen(false)
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside)
+        return () => document.removeEventListener('mousedown', handleClickOutside)
+    }, [])
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
     }
 
+    const handleCountrySelect = (code) => {
+        setFormData({ ...formData, countryCode: code })
+        setIsDropdownOpen(false)
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault()
-        // Handle form submission
         console.log('Form submitted:', formData)
         alert(t('contact.success'))
     }
 
     const contactInfo = useMemo(() => [
         {
-            icon: (
-                <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' />
-                </svg>
-            ),
+            icon: '✉️',
             label: t('contact.formEmail'),
             value: 'contact@luxiomedia.lu',
             link: 'mailto:contact@luxiomedia.lu'
         },
         {
-            icon: (
-                <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z' />
-                </svg>
-            ),
+            icon: '📞',
             label: t('contact.formPhone'),
             value: '+352 661 16 77 25',
             link: 'tel:+352661167725'
         },
         {
-            icon: (
-                <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z' />
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M15 11a3 3 0 11-6 0 3 3 0 016 0z' />
-                </svg>
-            ),
+            icon: '📍',
             label: t('contact.address'),
-            value: '9 Rue du Laboratoire, L-1911 Luxembourg',
+            value: '26 Bd Royal, L-2449 Luxembourg',
             link: '#'
         }
     ], [t])
@@ -74,7 +84,7 @@ const Contact = () => {
     const sectors = t('contact.sectorsList', { returnObjects: true }) || []
 
     return (
-        <div className='bg-black text-white min-h-screen'>
+        <div className='bg-[#050505] text-white min-h-screen overflow-x-hidden'>
             {/* Hero Section */}
             <PageHero
                 title={t('contact.heroTitle')}
@@ -85,36 +95,36 @@ const Contact = () => {
                 visual={<LottieVisual url="https://assets10.lottiefiles.com/packages/lf20_u25cckyh.json" />}
             />
 
-            {/* Contact Content */}
-            <section id="contact-form" className='py-20 lg:py-32 px-4 lg:px-12'>
+            {/* Contact Content - High Contrast Redesign */}
+            <section id="contact-form" className='relative py-12 lg:py-20 px-6'>
                 <div className='max-w-7xl mx-auto'>
-                    <div className='grid lg:grid-cols-2 gap-12 lg:gap-20'>
-                        {/* Left Side - Info */}
-                        <div>
-                            <h2 className='font-[font2] text-white text-2xl lg:text-3xl uppercase mb-6'>
-                                {t('contact.desc', { returnObjects: true }).toString().replace(/local.*$/, '')}<br />
-                                <span className='text-[#D3FD50]'>{t('contact.desc').split(' ').slice(-2).join(' ')}</span>
-                            </h2>
-                            <p className='font-[font1] text-white/60 text-base lg:text-lg leading-relaxed mb-12'>
-                                {t('contact.intro')}
-                            </p>
+                    <div className='grid lg:grid-cols-2 gap-12 lg:gap-24'>
 
-                            {/* Contact Info Cards */}
-                            <div className='space-y-4 mb-12'>
+                        {/* Left Side - Visual Info */}
+                        <div className='space-y-12 lg:sticky lg:top-32 h-fit'>
+                            <div>
+                                <h2 className='font-[font2] text-4xl lg:text-7xl uppercase tracking-tighter leading-none mb-8'>
+                                    {t('contact.desc', { returnObjects: true })?.toString().replace(/local.*$/, '')}<br />
+                                    <span className='text-[#D3FD50]'>{t('contact.desc')?.split(' ').slice(-2).join(' ')}</span>
+                                </h2>
+                                <p className='font-[font1] text-white/40 text-lg lg:text-xl leading-relaxed max-w-lg'>
+                                    Nous sommes basés au cœur du centre financier de l'Europe pour propulser votre visibilité régionale.
+                                </p>
+                            </div>
+
+                            <div className='grid gap-1'>
                                 {contactInfo.map((info, index) => (
                                     <a
                                         key={index}
                                         href={info.link}
-                                        className='group flex items-center gap-4 p-5 rounded-2xl border border-white/10 hover:border-[#D3FD50]/50 bg-white/5 hover:bg-[#D3FD50]/5 transition-all duration-300'
+                                        className='group flex items-center gap-6 p-8 bg-white/[0.02] border border-white/5 hover:bg-[#D3FD50]/5 hover:border-[#D3FD50]/30 transition-all duration-500'
                                     >
-                                        <div className='w-12 h-12 rounded-xl bg-[#D3FD50]/10 flex items-center justify-center text-[#D3FD50]'>
-                                            {info.icon}
-                                        </div>
+                                        <div className='text-3xl grayscale group-hover:grayscale-0 transition-all'>{info.icon}</div>
                                         <div>
-                                            <span className='text-white/40 text-xs uppercase tracking-wider block'>
+                                            <span className='text-white/20 text-[10px] uppercase tracking-[0.4em] block mb-1'>
                                                 {info.label}
                                             </span>
-                                            <span className='font-[font1] text-white group-hover:text-[#D3FD50] transition-colors duration-300'>
+                                            <span className='font-[font2] text-white uppercase tracking-tight text-lg group-hover:text-[#D3FD50] transition-colors'>
                                                 {info.value}
                                             </span>
                                         </div>
@@ -122,145 +132,158 @@ const Contact = () => {
                                 ))}
                             </div>
 
-                            {/* Social Links */}
-                            <div>
-                                <span className='text-white/40 text-xs uppercase tracking-wider mb-4 block'>
-                                    {t('contact.followUs')}
-                                </span>
-                                <div className='flex gap-4'>
-                                    {['linkedin', 'twitter', 'instagram'].map((social) => (
-                                        <a
-                                            key={social}
-                                            href='#'
-                                            className='w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:border-[#D3FD50] hover:bg-[#D3FD50]/10 transition-all duration-300 group'
-                                        >
-                                            <span className='text-white group-hover:text-[#D3FD50] capitalize text-xs'>
-                                                {social[0].toUpperCase()}
-                                            </span>
-                                        </a>
-                                    ))}
-                                </div>
+                            <div className='flex gap-1'>
+                                {['linkedin', 'instagram', 'facebook'].map((social) => (
+                                    <a
+                                        key={social}
+                                        href='#'
+                                        className='flex-1 py-4 border border-white/5 bg-white/[0.01] text-center font-[font2] text-[10px] uppercase tracking-[0.3em] text-white/20 hover:text-[#D3FD50] hover:bg-[#D3FD50]/5 transition-all'
+                                    >
+                                        {social}
+                                    </a>
+                                ))}
                             </div>
                         </div>
 
-                        {/* Right Side - Form */}
-                        <div className='p-8 lg:p-12 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent'>
-                            <h3 className='font-[font2] text-white text-xl lg:text-2xl uppercase mb-8'>
-                                {t('contact.formTitle')}
-                            </h3>
+                        {/* Right Side - Premium Form */}
+                        <div className='relative'>
+                            <div className='p-8 lg:p-16 rounded-[40px] border border-white/5 bg-white/[0.02] backdrop-blur-xl shadow-2xl relative overflow-hidden'>
+                                <div className='absolute -top-32 -right-32 w-64 h-64 bg-[#D3FD50]/5 rounded-full blur-[80px]' />
 
-                            <form onSubmit={handleSubmit} className='space-y-6'>
-                                <div className='grid md:grid-cols-2 gap-6'>
-                                    <div>
-                                        <label className='text-white/60 text-sm block mb-2'>{t('contact.formName')} *</label>
-                                        <input
-                                            type='text'
-                                            name='name'
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            required
-                                            className='w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
-                                            placeholder={t('contact.placeholders.name')}
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className='text-white/60 text-sm block mb-2'>{t('contact.formEmail')} *</label>
-                                        <input
-                                            type='email'
-                                            name='email'
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            required
-                                            className='w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
-                                            placeholder={t('contact.placeholders.email')}
-                                        />
-                                    </div>
-                                </div>
+                                <h3 className='font-[font2] text-2xl lg:text-3xl uppercase mb-10 tracking-tight'>
+                                    {t('contact.formTitle')}
+                                </h3>
 
-                                <div className='grid md:grid-cols-2 gap-6'>
-                                    <div>
-                                        <label className='text-white/60 text-sm block mb-2'>{t('contact.formCompany')}</label>
-                                        <input
-                                            type='text'
-                                            name='company'
-                                            value={formData.company}
-                                            onChange={handleChange}
-                                            className='w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
-                                            placeholder={t('contact.placeholders.company')}
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className='text-white/60 text-sm block mb-2'>{t('contact.formPhone')}</label>
-                                        <div className='flex gap-2'>
-                                            <select
-                                                name='countryCode'
-                                                value={formData.countryCode}
-                                                onChange={handleChange}
-                                                className='w-24 px-2 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
-                                            >
-                                                {countryCodes.map((c) => (
-                                                    <option key={c.code} value={c.code} className='bg-black'>
-                                                        {c.flag} {c.code}
-                                                    </option>
-                                                ))}
-                                            </select>
+                                <form onSubmit={handleSubmit} className='space-y-8'>
+                                    <div className='grid md:grid-cols-2 gap-8'>
+                                        <div className='space-y-2'>
+                                            <label className='text-white/20 text-[10px] font-[font2] uppercase tracking-[0.3em] ml-1'>{t('contact.formName')}</label>
                                             <input
-                                                type='tel'
-                                                name='phone'
-                                                value={formData.phone}
+                                                type='text'
+                                                name='name'
+                                                value={formData.name}
                                                 onChange={handleChange}
-                                                className='flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
-                                                placeholder={t('contact.placeholders.phone')}
+                                                required
+                                                className='w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-white/20 focus:border-[#D3FD50] focus:outline-none transition-all'
+                                                placeholder={t('contact.placeholders.name')}
+                                            />
+                                        </div>
+                                        <div className='space-y-2'>
+                                            <label className='text-white/20 text-[10px] font-[font2] uppercase tracking-[0.3em] ml-1'>{t('contact.formEmail')}</label>
+                                            <input
+                                                type='email'
+                                                name='email'
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                                required
+                                                className='w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-white/20 focus:border-[#D3FD50] focus:outline-none transition-all'
+                                                placeholder={t('contact.placeholders.email')}
                                             />
                                         </div>
                                     </div>
-                                </div>
 
-                                <div>
-                                    <label className='text-white/60 text-sm block mb-2'>{t('contact.formSector')}</label>
-                                    <select
-                                        name='sector'
-                                        value={formData.sector}
-                                        onChange={handleChange}
-                                        className='w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:border-[#D3FD50] focus:outline-none transition-colors duration-300'
+                                    <div className='grid md:grid-cols-2 gap-8'>
+                                        <div className='space-y-2'>
+                                            <label className='text-white/20 text-[10px] font-[font2] uppercase tracking-[0.3em] ml-1'>{t('contact.formCompany')}</label>
+                                            <input
+                                                type='text'
+                                                name='company'
+                                                value={formData.company}
+                                                onChange={handleChange}
+                                                className='w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-white/20 focus:border-[#D3FD50] focus:outline-none transition-all'
+                                                placeholder={t('contact.placeholders.company')}
+                                            />
+                                        </div>
+                                        <div className='space-y-2'>
+                                            <label className='text-white/20 text-[10px] font-[font2] uppercase tracking-[0.3em] ml-1'>{t('contact.formPhone')}</label>
+                                            <div className='flex gap-3 relative'>
+                                                <div ref={dropdownRef} className='relative w-28 shrink-0'>
+                                                    <button
+                                                        type='button'
+                                                        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                                                        className='w-full h-full flex items-center justify-between px-4 py-4 bg-white/5 border border-white/10 rounded-2xl text-white hover:border-[#D3FD50]/50 transition-all'
+                                                    >
+                                                        <span className='flex items-center gap-2'>
+                                                            <span>{selectedCountry.flag}</span>
+                                                            <span className='text-xs font-bold'>{selectedCountry.code}</span>
+                                                        </span>
+                                                        <svg className={`w-3 h-3 text-[#D3FD50] transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                                                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
+                                                        </svg>
+                                                    </button>
+                                                    {isDropdownOpen && (
+                                                        <div className='absolute bottom-full left-0 mb-4 w-64 max-h-64 overflow-y-auto bg-zinc-900 border border-white/10 rounded-3xl shadow-2xl z-50 p-2'>
+                                                            {countryCodes.map((c) => (
+                                                                <button
+                                                                    key={c.code}
+                                                                    type='button'
+                                                                    onClick={() => handleCountrySelect(c.code)}
+                                                                    className='w-full flex items-center gap-4 px-4 py-3 rounded-2xl hover:bg-[#D3FD50]/10 text-left transition-all group'
+                                                                >
+                                                                    <span className='text-xl'>{c.flag}</span>
+                                                                    <span className='text-xs font-bold text-white group-hover:text-[#D3FD50]'>{c.code}</span>
+                                                                    <span className='text-[10px] text-white/40'>{c.name}</span>
+                                                                </button>
+                                                            ))}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                                <input
+                                                    type='tel'
+                                                    name='phone'
+                                                    value={formData.phone}
+                                                    onChange={handleChange}
+                                                    className='flex-1 min-w-0 px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-white/20 focus:border-[#D3FD50] focus:outline-none transition-all'
+                                                    placeholder={t('contact.placeholders.phone')}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className='space-y-2'>
+                                        <label className='text-white/20 text-[10px] font-[font2] uppercase tracking-[0.3em] ml-1'>{t('contact.formSector')}</label>
+                                        <select
+                                            name='sector'
+                                            value={formData.sector}
+                                            onChange={handleChange}
+                                            className='w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white focus:border-[#D3FD50] focus:outline-none transition-all appearance-none cursor-pointer'
+                                            style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'%23D3FD50\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M19 9l-7 7-7-7\' /%3E%3C/svg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1.5rem center', backgroundSize: '1rem' }}
+                                        >
+                                            <option value='' className='bg-black'>{t('contact.placeholders.sector')}</option>
+                                            {Array.isArray(sectors) && sectors.map((sector) => (
+                                                <option key={sector} value={sector} className='bg-black'>{sector}</option>
+                                            ))}
+                                        </select>
+                                    </div>
+
+                                    <div className='space-y-2'>
+                                        <label className='text-white/20 text-[10px] font-[font2] uppercase tracking-[0.3em] ml-1'>{t('contact.formMessage')}</label>
+                                        <textarea
+                                            name='message'
+                                            value={formData.message}
+                                            onChange={handleChange}
+                                            required
+                                            rows={4}
+                                            className='w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-white/20 focus:border-[#D3FD50] focus:outline-none transition-all resize-none'
+                                            placeholder={t('contact.placeholders.message')}
+                                        />
+                                    </div>
+
+                                    <button
+                                        type='submit'
+                                        className='w-full py-6 bg-[#D3FD50] text-black font-[font2] text-xs uppercase tracking-[0.4em] rounded-full hover:bg-white hover:scale-[1.02] active:scale-95 transition-all shadow-[0_20px_40px_rgba(211,253,80,0.2)]'
                                     >
-                                        <option value='' className='bg-black'>{t('contact.placeholders.sector')}</option>
-                                        {Array.isArray(sectors) && sectors.map((sector) => (
-                                            <option key={sector} value={sector} className='bg-black'>{sector}</option>
-                                        ))}
-                                    </select>
-                                </div>
-
-                                <div>
-                                    <label className='text-white/60 text-sm block mb-2'>{t('contact.formMessage')} *</label>
-                                    <textarea
-                                        name='message'
-                                        value={formData.message}
-                                        onChange={handleChange}
-                                        required
-                                        rows={5}
-                                        className='w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:border-[#D3FD50] focus:outline-none transition-colors duration-300 resize-none'
-                                        placeholder={t('contact.placeholders.message')}
-                                    />
-                                </div>
-
-                                <button
-                                    type='submit'
-                                    className='w-full py-4 bg-[#D3FD50] text-black font-[font2] text-sm uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300 flex items-center justify-center gap-3'
-                                >
-                                    {t('contact.submit')}
-                                    <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M14 5l7 7m0 0l-7 7m7-7H3' />
-                                    </svg>
-                                </button>
-                            </form>
+                                        {t('contact.submit')}
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section >
+            </section>
 
             <FooterSection />
-        </div >
+        </div>
     )
 }
 

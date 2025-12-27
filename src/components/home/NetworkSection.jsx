@@ -16,7 +16,7 @@ const NetworkSection = () => {
     const logos = [...partnerLogos, ...partnerLogos]
 
     return (
-        <section id='network' className='relative z-10 bg-black py-16 sm:py-20 lg:py-36 overflow-hidden'>
+        <section id='network' className='relative z-10 bg-black py-12 lg:py-20 overflow-hidden'>
             <div className='absolute inset-0 pointer-events-none'>
                 <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black via-[#0b0315] to-[#020305] opacity-95'></div>
                 <div className='absolute -top-40 -left-20 w-[420px] h-[420px] bg-[#D3FD50]/15 blur-[140px]'></div>
@@ -25,7 +25,7 @@ const NetworkSection = () => {
             </div>
 
             <div className='relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-                <div className='flex flex-col lg:flex-row gap-10 lg:gap-20 items-center'>
+                <div className='flex flex-col lg:flex-row gap-8 lg:gap-16 items-center'>
                     {/* Content */}
                     <div className='lg:w-3/5 w-full space-y-6 sm:space-y-8 text-center lg:text-left'>
                         <div className='space-y-4'>

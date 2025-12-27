@@ -114,12 +114,7 @@ const StationsServiceSection = () => {
 
     return (
         <section className='relative z-10 bg-[#050307] py-16 sm:py-24 lg:py-32 overflow-hidden'>
-            {/* background accents */}
-            <div className='absolute inset-0 pointer-events-none'>
-                <div className='absolute -top-40 -left-10 w-[420px] h-[420px] bg-[#d3fd50]/10 blur-[140px]' />
-                <div className='absolute bottom-0 right-0 w-[520px] h-[520px] bg-[#a855f7]/20 blur-[200px]' />
-                <div className='absolute inset-0 opacity-[0.03]' style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #fff 1px, transparent 0)', backgroundSize: '45px 45px' }} />
-            </div>
+
 
             <div className='relative z-10 max-w-6xl mx-auto px-5 sm:px-8'>
                 <div className='text-center space-y-6'>

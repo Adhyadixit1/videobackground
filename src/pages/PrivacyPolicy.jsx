@@ -55,8 +55,8 @@ const PrivacyPolicy = () => {
                         If you have any questions about this Privacy Policy, please contact us at:
                         <br /><br />
                         <strong>Luxio Media</strong><br />
-                        9 Rue du Laboratoire,<br />
-                        L-1911 Luxembourg<br />
+                        26 Bd Royal Level 5,<br />
+                        2449 Ville-Haute Luxembourg<br />
                         Email: contact@luxiomedia.lu<br />
                         Phone: +352 661 16 77 25
                     </p>

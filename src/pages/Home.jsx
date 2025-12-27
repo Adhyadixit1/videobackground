@@ -43,8 +43,7 @@ const Home = ({ seo }) => {
             {/* Client Marquee */}
             <MarqueeSection />
 
-            {/* Stations-service focus */}
-            <StationsServiceSection />
+
 
             {/* Pinterest-style Projects Grid */}
             <PinterestGrid />

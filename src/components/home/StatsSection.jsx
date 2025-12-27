@@ -12,7 +12,7 @@ const StatsSection = () => {
     ]
 
     return (
-        <section className='relative z-10 overflow-hidden bg-black py-20 lg:py-32'>
+        <section className='relative z-10 overflow-hidden bg-black py-12 lg:py-20'>
             {/* Animated lines background */}
             <div className='absolute inset-0'>
                 <div className='absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent'></div>
@@ -26,11 +26,11 @@ const StatsSection = () => {
 
             <div className='relative z-10 px-6 lg:px-20'>
                 {/* Header */}
-                <div className='text-center mb-16 lg:mb-24'>
+                <div className='text-center mb-10 lg:mb-14'>
                     <h2 className='font-[font2] text-white text-[14vw] lg:text-[8vw] leading-none uppercase'>
                         {t('stats.title')}
                     </h2>
-                    <p className='font-[font1] text-white/60 text-sm lg:text-lg max-w-xl mx-auto mt-6 leading-relaxed'>
+                    <p className='font-[font1] text-white/60 text-sm lg:text-lg max-w-xl mx-auto mt-4 leading-relaxed'>
                         {t('stats.subtitle')}
                     </p>
                 </div>
@@ -40,7 +40,7 @@ const StatsSection = () => {
                     {stats.map((stat, index) => (
                         <div
                             key={index}
-                            className='group relative text-center py-12 lg:py-16'
+                            className='group relative text-center py-8 lg:py-10'
                         >
                             {/* Hover background */}
                             <div className='absolute inset-0 bg-gradient-to-b from-[#D3FD50]/5 to-transparent 

@@ -28,8 +28,8 @@ const TestimonialsSection = () => {
     }, [t])
 
     return (
-        <section className='min-h-screen bg-gradient-to-b from-zinc-950 via-black to-zinc-950 
-                          relative z-10 overflow-hidden py-20 lg:py-32'>
+        <section className='bg-gradient-to-b from-zinc-950 via-black to-zinc-950 
+                          relative z-10 overflow-hidden py-12 lg:py-20'>
             {/* Subtle background pattern */}
             <div className='absolute inset-0 opacity-[0.03]'
                 style={{
@@ -48,7 +48,7 @@ const TestimonialsSection = () => {
 
             <div className='relative z-10 px-6 lg:px-20'>
                 {/* Section header */}
-                <div className='mb-16 lg:mb-24'>
+                <div className='mb-10 lg:mb-14'>
                     <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4'>{t('home.testimonials.subtitle')}</p>
                     <h2 className='font-[font2] text-white text-[10vw] lg:text-[5vw] leading-none uppercase'>
                         {t('home.testimonials.title1')}

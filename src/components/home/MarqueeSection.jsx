@@ -11,7 +11,7 @@ const companies = [
 
 const MarqueeSection = () => {
     return (
-        <section className='bg-black relative z-10 py-16 lg:py-24 overflow-hidden border-y border-white/10'>
+        <section className='bg-black relative z-10 py-8 lg:py-12 overflow-hidden border-y border-white/10'>
             {/* Main marquee container */}
             <div className='overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-white/5 backdrop-blur max-w-7xl mx-auto'>
                 <div className='flex items-center gap-8 sm:gap-10 min-w-max animate-marquee'>

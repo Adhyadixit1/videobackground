@@ -6,7 +6,7 @@ const ContactCTA = () => {
     const { t } = useLanguage()
 
     return (
-        <section className='min-h-screen bg-black relative z-10 overflow-hidden flex items-center justify-center'>
+        <section className='bg-black relative z-10 overflow-hidden flex items-center justify-center py-12 lg:py-20'>
             {/* Animated gradient background */}
             <div className='absolute inset-0'>
                 <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#D3FD50]/10 via-transparent to-purple-900/20'></div>
@@ -29,21 +29,21 @@ const ContactCTA = () => {
 
             <div className='relative z-10 text-center px-6'>
                 {/* Subtitle */}
-                <p className='font-[font1] text-[#D3FD50] tracking-[0.5em] uppercase text-sm mb-8'>
+                <p className='font-[font1] text-[#D3FD50] tracking-[0.5em] uppercase text-sm mb-6'>
                     {t('home.cta.subtitle')}
                 </p>
 
                 {/* Main heading */}
-                <h2 className='font-[font2] text-white text-[12vw] lg:text-[10vw] leading-none uppercase mb-4'>
+                <h2 className='font-[font2] text-white text-[12vw] lg:text-[10vw] leading-none uppercase mb-2'>
                     {t('home.cta.title1')}
                 </h2>
-                <h2 className='font-[font2] text-transparent text-[12vw] lg:text-[10vw] leading-none uppercase mb-8
+                <h2 className='font-[font2] text-transparent text-[12vw] lg:text-[10vw] leading-none uppercase mb-6
                               bg-clip-text bg-gradient-to-r from-[#D3FD50] via-[#B5FF00] to-[#D3FD50]
                               animate-gradient bg-[length:200%_auto]'>
                     {t('home.cta.title2')}
                 </h2>
 
-                <p className='font-[font1] text-white/60 text-base lg:text-xl max-w-2xl mx-auto mb-12 leading-relaxed'>
+                <p className='font-[font1] text-white/60 text-base lg:text-xl max-w-2xl mx-auto mb-10 leading-relaxed'>
                     {t('home.cta.desc')}
                 </p>
 
@@ -79,7 +79,7 @@ const ContactCTA = () => {
                 </div>
 
                 {/* Email display */}
-                <div className='mt-16 pt-16 border-t border-white/10'>
+                <div className='mt-12 pt-12 border-t border-white/10'>
                     <p className='font-[font1] text-white/40 text-sm uppercase tracking-wider mb-4'>
                         {t('home.cta.orReach')}
                     </p>

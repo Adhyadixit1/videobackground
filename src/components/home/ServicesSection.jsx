@@ -41,15 +41,14 @@ const ServicesSection = () => {
     ]
 
     return (
-        <section className='min-h-screen bg-black relative z-10 overflow-hidden py-20 lg:py-32'>
-            {/* Background gradient orbs */}
+        <section className='bg-black relative z-10 overflow-hidden py-12 lg:py-20'>
             {/* Background gradient orbs */}
             <div className='absolute top-20 left-10 w-96 h-96 bg-[#D3FD50]/10 rounded-full blur-[120px] pointer-events-none'></div>
             <div className='absolute bottom-20 right-10 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[150px] pointer-events-none'></div>
 
             <div className='relative z-10 px-6 lg:px-20'>
                 {/* Section header */}
-                <div className='mb-20'>
+                <div className='mb-12'>
                     <p className='text-[#D3FD50] font-[font1] text-sm lg:text-base tracking-[0.3em] uppercase mb-4'>{t('services.headerTiny')}</p>
                     <h2 className='font-[font2] text-white text-[10vw] lg:text-[6vw] leading-none uppercase'>
                         {t('services.headerBig')}

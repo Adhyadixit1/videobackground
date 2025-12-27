@@ -89,9 +89,9 @@ const PinterestGrid = () => {
     }, [t])
 
     return (
-        <section className='min-h-screen bg-gradient-to-b from-black via-zinc-950 to-black relative z-10 py-20 lg:py-32 px-4 lg:px-12'>
+        <section className='bg-gradient-to-b from-black via-zinc-950 to-black relative z-10 py-12 lg:py-20 px-4 lg:px-12'>
             {/* Section header */}
-            <div className='text-center mb-16 lg:mb-24'>
+            <div className='text-center mb-10 lg:mb-14'>
                 <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4'>
                     {t('home.pinterest.subtitle')}
                 </p>
@@ -186,9 +186,9 @@ const PinterestGrid = () => {
             </div>
 
             {/* View all button */}
-            <div className='flex justify-center mt-16 relative z-20'>
+            <div className='flex justify-center mt-10 relative z-20'>
                 <Link to='/projects' className='group flex items-center gap-4 px-8 py-4 border-2 border-white/30 rounded-full
-                                  hover:border-[#D3FD50] hover:bg-[#D3FD50]/10 transition-all duration-300'>
+                                   hover:border-[#D3FD50] hover:bg-[#D3FD50]/10 transition-all duration-300'>
                     <span className='font-[font2] text-white text-lg uppercase group-hover:text-[#D3FD50] transition-colors'>
                         {t('home.pinterest.viewAll')}
                     </span>
