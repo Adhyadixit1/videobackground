@@ -85,9 +85,9 @@ const NetworkSection = () => {
                             loop
                             muted
                             playsInline
-                            poster='https://video.gumlet.io/694cef8ab122cbf176482b8c/694f7b8db122cbf1766a66a2/download.mp4'
+                            poster='https://video.gumlet.io/694cef8ab122cbf176482b8c/694f895eb122cbf1766b1074/download.mp4'
                         >
-                            <source src='https://video.gumlet.io/694cef8ab122cbf176482b8c/694f7b8db122cbf1766a66a2/download.mp4' type='video/mp4' />
+                            <source src='https://video.gumlet.io/694cef8ab122cbf176482b8c/694f895eb122cbf1766b1074/download.mp4' type='video/mp4' />
                         </video>
                         <div className='absolute inset-0 rounded-[24px] sm:rounded-[32px] border border-[#D3FD50]/40 mix-blend-screen pointer-events-none'></div>
                     </div>
