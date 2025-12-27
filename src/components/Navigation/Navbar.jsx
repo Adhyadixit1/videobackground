@@ -10,6 +10,8 @@ const Navbar = () => {
     const [navColor, setNavColor] = useContext(NavbarColorContext)
     const navigate = useNavigate()
 
+    if (navOpen) return null
+
     return (
         <div className='z-[100] flex absolute top-0 w-full items-start justify-between'>
             <>

@@ -30,6 +30,7 @@ export const translations = {
             subtitles: {
                 solutions: 'Nos solutions',
                 whyFillup: 'Pourquoi choisir Luxio Media ?',
+                aboutUs: 'En savoir plus sur nous',
                 caseStudies: 'Nos réussites clients',
                 resources: 'Nos ressources',
                 careers: 'Rejoignez-nous',
@@ -387,7 +388,7 @@ Luxio Media, c’est l’alliance de la technologie, de l’impact visuel et de 
                 title: 'Pourquoi investir maintenant',
                 points: [
                     'un modèle économique scalable',
-                    'une expertise technologique différenciente',
+                    'une expertise technologique distinctive',
                     'une dynamique de croissance soutenue',
                     'une intégration fluide DOOH & digital'
                 ],
@@ -619,6 +620,7 @@ Luxio Media, c’est l’alliance de la technologie, de l’impact visuel et de 
             subtitles: {
                 solutions: 'Our solutions',
                 whyFillup: 'Why choose Luxio Media?',
+                aboutUs: 'Learn more about us',
                 caseStudies: 'Customer success stories',
                 resources: 'Our resources',
                 careers: 'Join us / Careers',
@@ -1208,6 +1210,7 @@ Luxio Media is the alliance of technology, visual impact, and tailor-made suppor
             subtitles: {
                 solutions: 'Unsere Lösungen',
                 whyFillup: 'Warum Luxio Media wählen?',
+                aboutUs: 'Erfahren Sie mehr über uns',
                 caseStudies: 'Kundenerfolgsgeschichten',
                 resources: 'Unsere Ressourcen',
                 careers: 'Karriere / Melden Sie sich',

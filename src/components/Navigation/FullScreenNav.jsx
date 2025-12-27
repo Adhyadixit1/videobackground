@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { NavbarContext } from '../../context/NavContext'
 import { useLanguage } from '../../context/LanguageContext'
+import LanguageSelector from '../common/LanguageSelector'
 
 const FullScreenNav = () => {
     const { t } = useLanguage()
@@ -14,7 +15,6 @@ const FullScreenNav = () => {
         { title: t('nav.solutions'), subtitle: t('nav.subtitles.solutions'), path: '/solutions' },
         { title: t('nav.whyFillup'), subtitle: t('nav.subtitles.whyFillup'), path: '/why-luxio' },
         { title: t('nav.aboutUs'), subtitle: t('nav.subtitles.aboutUs'), path: '/agence' },
-        { title: t('nav.caseStudies'), subtitle: t('nav.subtitles.caseStudies'), path: '/case-studies' },
         { title: t('nav.resources'), subtitle: t('nav.subtitles.resources'), path: '/resources' },
         { title: t('nav.careers'), subtitle: t('nav.subtitles.careers'), path: '/careers' },
         { title: t('nav.investors'), subtitle: t('nav.subtitles.investors'), path: '/investors' },
@@ -58,7 +58,7 @@ const FullScreenNav = () => {
     if (!navOpen) return null
 
     return (
-        <div className='fixed inset-0 z-50 bg-black'>
+        <div className='fixed inset-0 z-[200] bg-black'>
             {/* Decorative background elements */}
             <div className='absolute inset-0 overflow-hidden pointer-events-none'>
                 <div className='absolute top-1/4 -left-32 w-96 h-96 bg-[#D3FD50]/5 rounded-full blur-3xl'></div>
@@ -83,17 +83,22 @@ const FullScreenNav = () => {
                     />
                 </div>
 
-                {/* Close Button - Clean X design */}
-                <button
-                    onClick={() => setNavOpen(false)}
-                    className='group relative w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-full border border-white/20 hover:border-[#D3FD50] hover:bg-[#D3FD50]/10 transition-all duration-300'
-                    aria-label='Close menu'
-                >
-                    <div className='relative w-5 h-5 lg:w-6 lg:h-6'>
-                        <span className='absolute top-1/2 left-0 w-full h-0.5 bg-white group-hover:bg-[#D3FD50] transform -translate-y-1/2 rotate-45 transition-colors duration-300'></span>
-                        <span className='absolute top-1/2 left-0 w-full h-0.5 bg-white group-hover:bg-[#D3FD50] transform -translate-y-1/2 -rotate-45 transition-colors duration-300'></span>
-                    </div>
-                </button>
+                {/* Right Side Actions */}
+                <div className='flex items-center gap-4 lg:gap-8'>
+                    <LanguageSelector />
+
+                    {/* Close Button - Clean X design */}
+                    <button
+                        onClick={() => setNavOpen(false)}
+                        className='group relative w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center rounded-full border border-white/20 hover:border-[#D3FD50] hover:bg-[#D3FD50]/10 transition-all duration-300'
+                        aria-label='Close menu'
+                    >
+                        <div className='relative w-5 h-5 lg:w-6 lg:h-6'>
+                            <span className='absolute top-1/2 left-0 w-full h-0.5 bg-white group-hover:bg-[#D3FD50] transform -translate-y-1/2 rotate-45 transition-colors duration-300'></span>
+                            <span className='absolute top-1/2 left-0 w-full h-0.5 bg-white group-hover:bg-[#D3FD50] transform -translate-y-1/2 -rotate-45 transition-colors duration-300'></span>
+                        </div>
+                    </button>
+                </div>
             </div>
 
             {/* Menu Content */}

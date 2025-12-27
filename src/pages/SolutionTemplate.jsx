@@ -75,12 +75,6 @@ const SolutionTemplate = ({
                                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
                                 </svg>
                             </Link>
-                            <Link
-                                to="/case-studies"
-                                className="inline-flex items-center gap-3 px-8 py-4 border border-white/30 text-white font-[font2] text-sm uppercase tracking-wider rounded-full hover:border-[#D3FD50] hover:text-[#D3FD50] transition-all duration-300"
-                            >
-                                {common.viewCaseStudies || 'View Case Studies'}
-                            </Link>
                         </div>
                     </div>
 
