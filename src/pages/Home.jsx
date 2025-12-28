@@ -28,14 +28,18 @@ const Home = ({ seo }) => {
         <div className='text-white'>
             <Seo {...finalSeo} />
 
-            {/* Hero Section with Video Background */}
-            <div className='h-screen w-screen fixed'>
-                <Video />
-            </div>
-            <div className='h-screen w-screen relative pb-5 overflow-hidden flex flex-col justify-between'>
-                <HomeHeroText />
-                <HomeBottomText />
-            </div>
+            {/* Hero Section with Video Background - contained within hero bounds */}
+            <section className='relative h-screen w-full overflow-hidden'>
+                {/* Video container - absolute within the hero section, not fixed */}
+                <div className='absolute inset-0 z-0'>
+                    <Video />
+                </div>
+                {/* Content overlay */}
+                <div className='relative z-10 h-full w-full pb-5 flex flex-col justify-between'>
+                    <HomeHeroText />
+                    <HomeBottomText />
+                </div>
+            </section>
 
             {/* Services Section */}
             <ServicesSection />
