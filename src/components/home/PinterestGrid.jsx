@@ -199,7 +199,7 @@ const PinterestGrid = () => {
                             {/* Special badge */}
                             {project.isSpecial && (
                                 <div className='absolute top-4 right-4 px-4 py-2 bg-[#D3FD50] text-black text-xs font-[font1] font-bold rounded-full uppercase tracking-wider z-10 shadow-lg shadow-[#D3FD50]/50 animate-pulse'>
-                                    ⭐ Featured
+                                    ⭐ {t('projects.featuredBadge')}
                                 </div>
                             )}
 

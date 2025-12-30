@@ -88,7 +88,7 @@ const Projects = () => {
                 categoryKey: 'outdoorScreens',
                 size: 'tall',
                 color: 'from-green-900/80 to-emerald-900/80',
-                image: '/Picture1.jpg',
+                image: 'https://sc04.alicdn.com/kf/Hbc4f05f302d444cb889ad42c3afc11f5X/229562533/Hbc4f05f302d444cb889ad42c3afc11f5X.jpeg',
                 link: '/projects/outdoor-lcd-43',
                 isSpecial: true
             },
@@ -234,14 +234,13 @@ const Projects = () => {
                                     {/* Featured badge */}
                                     {project.isSpecial && (
                                         <div className='absolute top-4 right-4 px-4 py-2 bg-[#D3FD50] text-black text-xs font-[font1] font-bold rounded-full uppercase tracking-wider z-10 shadow-lg shadow-[#D3FD50]/40'>
-                                            ⭐ Featured
+                                            ⭐ {t('projects.featuredBadge')}
                                         </div>
                                     )}
 
                                     {/* Content */}
                                     <div className='absolute bottom-0 left-0 right-0 p-6 lg:p-8'>
-                                        <span className={`
-                                            inline-block px-3 py-1 backdrop-blur-md rounded-full text-xs font-[font1] tracking-wider uppercase mb-3
+                                        <span className={`inline-block px-3 py-1 backdrop-blur-md rounded-full text-xs font-[font1] tracking-wider uppercase mb-3
                                             transition-all duration-300
                                             ${project.isSpecial
                                                 ? 'bg-[#D3FD50]/20 text-[#D3FD50]'

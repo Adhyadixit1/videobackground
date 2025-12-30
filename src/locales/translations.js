@@ -394,6 +394,7 @@ Luxio Media, c’est l’alliance de la technologie, de l’impact visuel et de 
             heroTitleHighlight: 'Réalisations',
             heroDesc: 'Découvrez comment nous transformons les espaces avec nos écrans digitaux.',
             cta: 'Voir les projets',
+            featuredBadge: 'En vedette',
             list: [
                 { id: 1, title: 'Station TotalEnergies', category: 'Publicité Carburant', image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg', link: '/solutions/fuel-advertising' },
                 { id: 2, title: 'Hub Shell EV', category: 'Pompe Digitale', image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (2).jpeg', link: '/solutions/digital-pump' },
@@ -1040,7 +1041,8 @@ Luxio Media is the alliance of technology, visual impact, and bespoke support to
             heroTitle: 'Our',
             heroTitleHighlight: 'Projects',
             heroDesc: 'Discover how we transform spaces with our digital screens.',
-            cta: 'View projects',
+            cta: 'View Projects',
+            featuredBadge: 'Featured',
             list: [
                 { id: 1, title: 'TotalEnergies Station', category: 'Fuel Advertising', image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg', link: '/solutions/fuel-advertising' },
                 { id: 2, title: 'Shell EV Hub', category: 'Digital Pump', image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (2).jpeg', link: '/solutions/digital-pump' },
@@ -1672,6 +1674,7 @@ Luxio Media ist die Allianz aus Technologie, visueller Wirkung und maßgeschneid
             heroTitleHighlight: 'Projekte',
             heroDesc: 'Entdecken Sie, wie unsere digitalen Lösungen Räume transformieren und Zielgruppen in ganz Europa begeistern.',
             cta: 'Projekte ansehen',
+            featuredBadge: 'Ausgewählt',
             list: [
                 { id: 1, title: 'TotalEnergies Station', category: 'Kraftstoffwerbung', image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg', link: '/solutions/fuel-advertising' },
                 { id: 2, title: 'Shell EV Hub', category: 'Digitale Zapfsäule', image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (2).jpeg', link: '/solutions/digital-pump' },
