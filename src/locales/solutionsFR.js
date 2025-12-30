@@ -1132,7 +1132,7 @@ export const solutionsFR = {
             { title: "Qualité d'Affichage Premium", description: "Écran LCD LG/BOE/Samsung avec résolution 1920×1080 et angle de vision 178°." },
             { title: "Construction Robuste", description: "Verre trempé 25.9MM avec finition sablée anodisée pour une durabilité maximale." },
             { title: "Installation Facile", description: "Conception modulaire intégrée permettant un assemblage et une maintenance rapides." },
-            { title: "Garantie Complète", description: "Garantie qualité 365 jours avec prise en charge des frais d'expédition pour tout défaut dans le premier mois." }
+            { title: "Garantie Complète", description: "Garantie qualité 2 ans avec prise en charge des frais d'expédition pour tout défaut dans le premier mois." }
         ],
         specs: [
             { value: "1920×1080", label: "Résolution FHD" },
@@ -1142,7 +1142,7 @@ export const solutionsFR = {
             { value: "18mm", label: "Profil Min." },
             { value: "46kg", label: "Poids Net" },
             { value: "60 000h", label: "Vie LED" },
-            { value: "365 Jours", label: "Garantie" }
+            { value: "2 Ans", label: "Garantie" }
         ],
         detailedSpecs: [
             {
@@ -1192,7 +1192,7 @@ export const solutionsFR = {
             {
                 category: "5. Service & Garantie",
                 items: [
-                    { label: "Garantie Qualité", value: "365 Jours" },
+                    { label: "Garantie Qualité", value: "2 Ans" },
                     { label: "Politique de Retour", value: "Livraison offerte pour défauts sous 30 jours" },
                     { label: "Facilité de Maintenance", value: "Conception modulaire intégrée" }
                 ]
@@ -1208,7 +1208,7 @@ export const solutionsFR = {
             { question: "Quelles marques d'écran LCD sont utilisées ?", answer: "Nous utilisons des dalles LCD de qualité supérieure de LG, BOE ou Samsung selon la disponibilité." },
             { question: "Quelles sont les dimensions du produit ?", answer: "1790×731.2×28MM (Longueur×Largeur×Épaisseur) avec un poids net de 46kg." },
             { question: "Quelles couleurs sont disponibles ?", answer: "Disponible en Argent, Noir, Or et Blanc." },
-            { question: "Quelle est la garantie ?", answer: "Garantie qualité 365 jours. Nous couvrons les frais d'expédition pour tout défaut produit dans le premier mois." },
+            { question: "Quelle est la garantie ?", answer: "Garantie qualité 2 ans. Nous couvrons les frais d'expédition pour tout défaut produit dans le premier mois." },
             { question: "Quelle est la durée de vie du rétroéclairage ?", answer: "Le rétroéclairage ELED a une durée de vie de 60 000 heures." }
         ],
         gallery: [

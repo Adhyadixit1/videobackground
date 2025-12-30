@@ -529,7 +529,7 @@ export const solutionsPart4 = {
             { title: "Premium Display Quality", description: "LG/BOE/Samsung LCD panel with 1920×1080 resolution and 178° viewing angle." },
             { title: "Robust Construction", description: "25.9MM tempered glass with sandblasted anodized finish for maximum durability." },
             { title: "Easy Installation", description: "Integrated modular design allowing quick assembly and maintenance." },
-            { title: "Complete Warranty", description: "365-day quality guarantee with shipping coverage for any defects within the first month." }
+            { title: "Complete Warranty", description: "2-year quality guarantee with shipping coverage for any defects within the first month." }
         ],
         specs: [
             { value: "1920×1080", label: "Full HD Res" },
@@ -539,7 +539,7 @@ export const solutionsPart4 = {
             { value: "18mm", label: "Min. Profile" },
             { value: "46kg", label: "Net Weight" },
             { value: "60,000h", label: "LED Life" },
-            { value: "365 Days", label: "Warranty" }
+            { value: "2 Years", label: "Warranty" }
         ],
         detailedSpecs: [
             {
@@ -589,7 +589,7 @@ export const solutionsPart4 = {
             {
                 category: "5. Service & Warranty",
                 items: [
-                    { label: "Quality Guarantee", value: "365 Days" },
+                    { label: "Quality Guarantee", value: "2 Years" },
                     { label: "Return Policy", value: "Free shipping for defects within 30 days" },
                     { label: "Ease of Maintenance", value: "Integrated modular design" }
                 ]
@@ -605,7 +605,7 @@ export const solutionsPart4 = {
             { question: "Which LCD screen brands are used?", answer: "We use premium LCD panels from LG, BOE or Samsung depending on availability." },
             { question: "What are the product dimensions?", answer: "1790×731.2×28MM (Length×Width×Thickness) with a net weight of 46kg." },
             { question: "What colors are available?", answer: "Available in Silver, Black, Gold and White." },
-            { question: "What is the warranty?", answer: "365-day quality guarantee. We cover shipping costs for any product defects within the first month." },
+            { question: "What is the warranty?", answer: "2-year quality guarantee. We cover shipping costs for any product defects within the first month." },
             { question: "What is the backlight lifespan?", answer: "The ELED backlight has a lifespan of 60,000 hours." }
         ],
         gallery: [

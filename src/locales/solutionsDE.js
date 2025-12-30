@@ -330,7 +330,7 @@ export const solutionsDE = {
             { title: "Premium-Displayqualität", description: "LG/BOE/Samsung LCD-Panel mit 1920×1080 Auflösung und 178° Blickwinkel." },
             { title: "Robuste Konstruktion", description: "25,9MM gehärtetes Glas mit sandgestrahlter eloxierter Oberfläche für maximale Haltbarkeit." },
             { title: "Einfache Installation", description: "Integriertes modulares Design für schnelle Montage und Wartung." },
-            { title: "Vollständige Garantie", description: "365-Tage-Qualitätsgarantie mit Versandkosten-Übernahme bei Mängeln im ersten Monat." }
+            { title: "Vollständige Garantie", description: "2-Jahre-Qualitätsgarantie mit Versandkosten-Übernahme bei Mängeln im ersten Monat." }
         ],
         specs: [
             { value: "1920×1080", label: "Full-HD Auflösung" },
@@ -340,7 +340,7 @@ export const solutionsDE = {
             { value: "18mm", label: "Min. Profil" },
             { value: "46kg", label: "Nettogewicht" },
             { value: "60.000h", label: "LED-Lebensdauer" },
-            { value: "365 Tage", label: "Garantie" }
+            { value: "2 Jahre", label: "Garantie" }
         ],
         detailedSpecs: [
             {
@@ -390,7 +390,7 @@ export const solutionsDE = {
             {
                 category: "5. Service & Garantie",
                 items: [
-                    { label: "Qualitätsgarantie", value: "365 Tage" },
+                    { label: "Qualitätsgarantie", value: "2 Jahre" },
                     { label: "Rückgaberichtlinie", value: "Kostenloser Versand bei Mängeln innerhalb von 30 Tagen" },
                     { label: "Wartungsfreundlichkeit", value: "Integriertes modulares Design" }
                 ]
@@ -406,7 +406,7 @@ export const solutionsDE = {
             { question: "Welche LCD-Bildschirmmarken werden verwendet?", answer: "Wir verwenden Premium-LCD-Panels von LG, BOE oder Samsung je nach Verfügbarkeit." },
             { question: "Was sind die Produktabmessungen?", answer: "1790×731,2×28MM (Länge×Breite×Dicke) mit einem Nettogewicht von 46kg." },
             { question: "Welche Farben sind verfügbar?", answer: "Erhältlich in Silber, Schwarz, Gold und Weiß." },
-            { question: "Wie ist die Garantie?", answer: "365-Tage-Qualitätsgarantie. Wir übernehmen die Versandkosten für alle Produktmängel im ersten Monat." },
+            { question: "Wie ist die Garantie?", answer: "2-Jahre-Qualitätsgarantie. Wir übernehmen die Versandkosten für alle Produktmängel im ersten Monat." },
             { question: "Wie lange hält die Hintergrundbeleuchtung?", answer: "Die ELED-Hintergrundbeleuchtung hat eine Lebensdauer von 60.000 Stunden." }
         ],
         gallery: [
