@@ -77,7 +77,7 @@ const Chatbot = () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     message: userMsg,
-                    language: language.split('-')[0], // 'en-US' -> 'en'
+                    language: language ? language.split('-')[0] : 'en',
                     lead_id: currentLeadId
                 })
             });
@@ -143,7 +143,7 @@ const Chatbot = () => {
                                             type="text"
                                             placeholder="Name"
                                             required
-                                            className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 pl-10 pr-4 text-sm focus:border-[#D3FD50] focus:outline-none transition-colors"
+                                            className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 pl-10 pr-4 text-base focus:border-[#D3FD50] focus:outline-none transition-colors"
                                             value={userData.name}
                                             onChange={e => setUserData({ ...userData, name: e.target.value })}
                                         />
@@ -154,7 +154,7 @@ const Chatbot = () => {
                                             type="email"
                                             placeholder="Email"
                                             required
-                                            className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 pl-10 pr-4 text-sm focus:border-[#D3FD50] focus:outline-none transition-colors"
+                                            className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 pl-10 pr-4 text-base focus:border-[#D3FD50] focus:outline-none transition-colors"
                                             value={userData.email}
                                             onChange={e => setUserData({ ...userData, email: e.target.value })}
                                         />
@@ -164,7 +164,7 @@ const Chatbot = () => {
                                         <input
                                             type="tel"
                                             placeholder="Phone (Optional)"
-                                            className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 pl-10 pr-4 text-sm focus:border-[#D3FD50] focus:outline-none transition-colors"
+                                            className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 pl-10 pr-4 text-base focus:border-[#D3FD50] focus:outline-none transition-colors"
                                             value={userData.phone}
                                             onChange={e => setUserData({ ...userData, phone: e.target.value })}
                                         />
@@ -222,9 +222,11 @@ const Chatbot = () => {
                                 <input
                                     type="text"
                                     placeholder="Type a message..."
-                                    className="flex-1 bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2 text-sm text-white focus:border-[#D3FD50] focus:outline-none"
+                                    className="flex-1 bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2 text-base text-white focus:border-[#D3FD50] focus:outline-none"
                                     value={input}
                                     onChange={e => setInput(e.target.value)}
+                                    inputMode="text"
+                                    autoComplete="off"
                                 />
                                 <button
                                     type="submit"

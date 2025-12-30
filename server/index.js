@@ -34,10 +34,34 @@ app.post('/api/chat', async (req, res) => {
 
         const words = lowerMsg.split(/[\s,.?!]+/);
 
+        // Language Detection Heuristic
+        const englishIndicators = ['the', 'is', 'are', 'what', 'how', 'why', 'who', 'thank', 'thanks', 'hello', 'hi', 'good', 'morning', 'afternoon', 'evening', 'help', 'can', 'you', 'please'];
+        const frenchIndicators = ['le', 'la', 'les', 'est', 'sont', 'comment', 'pourquoi', 'qui', 'merci', 'bonjour', 'salut', 'bonsoir', 'aide', 'pouvez', 'vous', 'svp', 'garantie'];
+        const germanIndicators = ['der', 'die', 'das', 'ist', 'sind', 'wie', 'warum', 'wer', 'danke', 'hallo', 'guten', 'morgen', 'tag', 'abend', 'hilfe', 'können', 'sie', 'bitte'];
+
+        let detectedLang = language;
+
+        const enCount = words.filter(w => englishIndicators.includes(w)).length;
+        const frCount = words.filter(w => frenchIndicators.includes(w)).length;
+        const deCount = words.filter(w => germanIndicators.includes(w)).length;
+
+        console.log(`Debug: Msg="${message}", InitLang="${language}"`);
+        console.log(`Counts: EN=${enCount}, FR=${frCount}, DE=${deCount}`);
+
+        if (enCount > frCount && enCount > deCount) detectedLang = 'en';
+        else if (frCount > enCount && frCount > deCount) detectedLang = 'fr';
+        else if (deCount > enCount && deCount > frCount) detectedLang = 'de';
+
+        console.log(`Final Detected Lang: ${detectedLang}`);
+
         // Check DB for any matching keywords
+        // Optimized to find the best match based on the number of matching keywords
         const query = `
-      SELECT * FROM chatbot_responses 
+      SELECT *, 
+             (SELECT count(*) FROM unnest(keywords) k WHERE k = ANY($1::text[])) as match_count
+      FROM chatbot_responses 
       WHERE keywords && $1::text[]
+      ORDER BY match_count DESC
       LIMIT 1;
     `;
 
@@ -46,19 +70,24 @@ app.post('/api/chat', async (req, res) => {
 
         if (result.rows.length > 0) {
             const row = result.rows[0];
-            responseText = language === 'fr' ? row.response_fr : (language === 'de' ? row.response_de : row.response_en);
+            responseText = detectedLang === 'fr' ? row.response_fr : (detectedLang === 'de' ? row.response_de : row.response_en);
         }
 
-        // Log Bot Response if lead_id exists and response exists
-        if (lead_id && responseText) {
+        // Fallback if no specific response found or response is empty (generic fallback)
+        if (!responseText) {
+            const fallbackResponse = {
+                en: "I'm not sure specifically, but I can tell you about our Outdoor Screens, Video Walls, or Digital Marketing services. What are you interested in?",
+                fr: "Je ne suis pas sûr spécifiquement, mais je peux vous parler de nos écrans extérieurs, murs vidéo ou services de marketing numérique. Qu'est-ce qui vous intéresse ?",
+                de: "Ich bin mir nicht sicher, aber ich kann Ihnen von unseren Außenbildschirmen, Videowänden oder digitalen Marketingdiensten erzählen. Woran sind Sie interessiert?"
+            };
+            responseText = fallbackResponse[detectedLang] || fallbackResponse['en'];
+        }
+
+        // Log Bot Response if lead_id exists
+        if (lead_id) {
             await pool.query(
                 'INSERT INTO chat_logs (lead_id, role, message) VALUES ($1, $2, $3)',
                 [lead_id, 'bot', responseText]
-            );
-        } else if (lead_id && !responseText) {
-            await pool.query(
-                'INSERT INTO chat_logs (lead_id, role, message) VALUES ($1, $2, $3)',
-                [lead_id, 'bot', 'FALLBACK_TRIGGERED']
             );
         }
 
