@@ -137,4 +137,12 @@ export const InfraredTouch55 = () => (
     />
 )
 
+// Digital Marketing Services
+export const DigitalMarketingServices = () => (
+    <SolutionTemplate
+        solutionKey="digitalMarketingServices"
+        image="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80"
+    />
+)
+
 export default LCDScreens

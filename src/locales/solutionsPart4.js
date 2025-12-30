@@ -399,5 +399,246 @@ export const solutionsPart4 = {
             { title: "Digital Screens", description: "Versatile digital display", link: "/solutions/digital-screen" },
             { title: "43\" LCD Screen", description: "High-brightness outdoor screen", link: "/projects/outdoor-lcd-43" }
         ]
+    },
+    digitalMarketingServices: {
+        title: "Digital Marketing Services",
+        description: "Full-funnel digital marketing that links our premium DOOH network with data-driven social, search, and content programs. We orchestrate your message across physical screens and the internet to drive measurable growth.",
+        features: [
+            "Cross-channel campaign strategy",
+            "DOOH + social synchronization",
+            "Creative and content studio",
+            "Audience intelligence & segmentation",
+            "Always-on optimization",
+            "Full-funnel analytics"
+        ],
+        stats: [
+            { value: "3400+", label: "Campaigns" },
+            { value: "15M", label: "Monthly Reach" },
+            { value: "50+", label: "Data Signals" },
+            { value: "4x", label: "Avg. ROAS" }
+        ],
+        benefits: [
+            { title: "Unified Storytelling", description: "We align on-site digital screens, paid social, and search ads so every touchpoint reinforces the same narrative." },
+            { title: "Audience Intelligence", description: "Blend station-level dwell data with online behavioral signals to build precise segments and lookalikes." },
+            { title: "Creative Engine", description: "From DOOH cuts to thumb-stopping reels, our studio crafts assets adapted to each surface and ratio." },
+            { title: "Agile Optimization", description: "Daily pacing, creative rotations, and bid adjustments keep campaigns efficient and contextual." },
+            { title: "Attribution & Lift", description: "Footfall, ecommerce, and brand-lift dashboards prove the halo effect of combining physical and digital." },
+            { title: "White-Glove Support", description: "Dedicated strategists, traders, and analysts partner with your team end-to-end." }
+        ],
+        specs: [
+            { value: "Strategy", label: "Campaign Blueprint" },
+            { value: "10s / 30s", label: "Asset Versions" },
+            { value: "Meta • TikTok • Google", label: "Digital Stack" },
+            { value: "Programmatic DOOH", label: "Screen Network" },
+            { value: "Lookalike / POI", label: "Targeting" },
+            { value: "Live", label: "Reporting" }
+        ],
+        useCases: [
+            { title: "Product Launch Sequencing", description: "Create teaser waves on digital forecourts, retarget exposed audiences online, and convert with social proof." },
+            { title: "Store Traffic & Ecommerce", description: "Drive immediate visits with DOOH while running geo-fenced social offers that capture CRM data." },
+            { title: "Franchise Support", description: "Provide turnkey campaigns for franchisees that blend national creative and hyperlocal calls-to-action." },
+            { title: "Thought Leadership", description: "Publish premium content and capture leads while reinforcing authority on large format LED canvases." }
+        ],
+        faqs: [
+            { question: "Do you handle media buying?", answer: "Yes, our in-house traders manage DOOH, paid social, search, and programmatic budgets under a single plan." },
+            { question: "Can we plug in our Martech?", answer: "We integrate with major analytics, CDP, and CRM platforms to share audiences and performance data." },
+            { question: "How fast can we launch?", answer: "Most cross-channel campaigns go live within 15 working days, including creative adaptation." },
+            { question: "Is reporting multilingual?", answer: "Dashboards, insights, and executive recaps can be delivered in English, French, or German." }
+        ],
+        relatedSolutions: [
+            { title: "Digital Totems", description: "High-impact city screens", link: "/solutions/digital-totems" },
+            { title: "LED Walls", description: "Immersive storytelling", link: "/solutions/led-walls" },
+            { title: "Interactive Kiosks", description: "Data capture touchpoints", link: "/solutions/interactive-kiosk" }
+        ],
+        gallery: [
+            {
+                src: "/digital maketing/Gemini_Generated_Image_jxjgs8jxjgs8jxjg (7).png",
+                alt: "Digital marketing strategy meeting",
+                title: "Strategy Sprints",
+                description: "Mapping customer journey and aligning DOOH and digital KPIs."
+            },
+            {
+                src: "/digital maketing/Gemini_Generated_Image_jxjgs8jxjgs8jxjg (6).png",
+                alt: "Creative studio producing assets",
+                title: "Creative Engine",
+                description: "Cross-format adaptations produced in our in-house studio."
+            },
+            {
+                src: "/digital maketing/Gemini_Generated_Image_jxjgs8jxjgs8jxjg (5).png",
+                alt: "Live dashboard on laptop",
+                title: "Live Intelligence",
+                description: "Unified dashboards show screen impressions, social engagement, and conversions in real time."
+            },
+            {
+                src: "/digital maketing/Gemini_Generated_Image_jxjgs8jxjgs8jxjg (4).png",
+                alt: "Team collaborating on campaign",
+                title: "Team Collaboration",
+                description: "Cross-functional teams working together on integrated campaigns."
+            },
+            {
+                src: "/digital maketing/Gemini_Generated_Image_jxjgs8jxjgs8jxjg (3).png",
+                alt: "Data analytics visualization",
+                title: "Data Analytics",
+                description: "Advanced analytics providing insights into campaign performance."
+            },
+            {
+                src: "/digital maketing/Gemini_Generated_Image_jxjgs8jxjgs8jxjg (2).png",
+                alt: "Digital campaign planning",
+                title: "Campaign Planning",
+                description: "Strategic planning sessions for multi-channel campaigns."
+            },
+            {
+                src: "/digital maketing/Gemini_Generated_Image_jxjgs8jxjgs8jxjg (1).png",
+                alt: "Creative design workspace",
+                title: "Design Workspace",
+                description: "Creative environment for designing compelling campaign assets."
+            },
+            {
+                src: "/digital maketing/Gemini_Generated_Image_jxjgs8jxjgs8jxjg.png",
+                alt: "Marketing technology stack",
+                title: "Tech Stack",
+                description: "Cutting-edge marketing technology powering our campaigns."
+            }
+        ],
+        process: [
+            {
+                step: "1",
+                title: "Discovery & Strategy",
+                description: "We analyze your business goals, target audience, and competitive landscape to develop a comprehensive digital marketing strategy that aligns with your objectives."
+            },
+            {
+                step: "2", 
+                title: "Audience Research",
+                description: "Deep dive into audience demographics, behaviors, and preferences to create detailed customer personas and identify optimal touchpoints."
+            },
+            {
+                step: "3",
+                title: "Creative Development",
+                description: "Our creative team develops compelling content and visuals tailored for each platform, ensuring brand consistency while optimizing for platform-specific requirements."
+            },
+            {
+                step: "4",
+                title: "Campaign Setup",
+                description: "Technical implementation across all channels including tracking setup, audience segmentation, and automated workflows for seamless execution."
+            },
+            {
+                step: "5",
+                title: "Launch & Monitor",
+                description: "Campaign go-live with real-time monitoring, immediate optimization, and continuous performance tracking against established KPIs."
+            },
+            {
+                step: "6",
+                title: "Optimize & Scale",
+                description: "Data-driven optimization to improve performance, scale successful campaigns, and provide detailed insights for future marketing initiatives."
+            }
+        ],
+        industries: [
+            {
+                name: "Retail & E-commerce",
+                description: "Drive online and offline sales through integrated DOOH, social media, and search campaigns that create seamless customer journeys.",
+                icon: ""
+            },
+            {
+                name: "Automotive",
+                description: "Generate qualified leads and showroom traffic with targeted campaigns across digital screens and online platforms.",
+                icon: ""
+            },
+            {
+                name: "Food & Beverage",
+                description: "Increase brand awareness and drive foot traffic with mouth-watering visuals and strategic placement across our network.",
+                icon: ""
+            },
+            {
+                name: "Entertainment",
+                description: "Promote events, movies, and experiences with high-impact campaigns that capture attention and drive ticket sales.",
+                icon: ""
+            },
+            {
+                name: "Technology",
+                description: "Launch new products and build thought leadership with data-driven campaigns that reach tech-savvy audiences.",
+                icon: ""
+            },
+            {
+                name: "Healthcare",
+                description: "Reach patients and healthcare providers with compliant, targeted campaigns that build trust and drive appointments.",
+                icon: ""
+            },
+            {
+                name: "Travel & Hospitality",
+                description: "Inspire wanderlust and drive bookings with visually stunning campaigns across our premium screen network.",
+                icon: ""
+            },
+            {
+                name: "Finance & Insurance",
+                description: "Build brand trust and generate qualified leads with professional, compliance-friendly campaigns across all channels.",
+                icon: ""
+            }
+        ],
+        testimonials: [
+            {
+                name: "Sarah Chen",
+                role: "Marketing Director, RetailChain",
+                content: "Luxio Media's integrated approach increased our foot traffic by 45% and online sales by 32%. The coordination between DOOH and digital channels is seamless.",
+                avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&q=80"
+            },
+            {
+                name: "Marcus Weber",
+                role: "Brand Manager, AutoTech",
+                content: "The campaign results exceeded our expectations. The combination of station screens and social retargeting created a powerful funnel that drove quality leads.",
+                avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+            },
+            {
+                name: "Emma Thompson",
+                role: "CMO, FoodCorp",
+                content: "Their creative team understands our brand perfectly. The cross-channel campaigns maintain consistency while optimizing for each platform's strengths.",
+                avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80"
+            }
+        ],
+        pricing: [
+            {
+                tier: "Starter",
+                price: "€5,000",
+                period: "per campaign",
+                features: [
+                    "Basic strategy consultation",
+                    "2-channel campaign (DOOH + Social)",
+                    "Standard creative assets",
+                    "Weekly reporting",
+                    "Email support"
+                ],
+                highlighted: false
+            },
+            {
+                tier: "Professional",
+                price: "€15,000",
+                period: "per campaign",
+                features: [
+                    "Comprehensive strategy",
+                    "4-channel campaign (DOOH + Social + Search + Display)",
+                    "Premium creative assets",
+                    "Daily reporting & analytics",
+                    "Dedicated account manager",
+                    "A/B testing",
+                    "Advanced audience targeting"
+                ],
+                highlighted: true
+            },
+            {
+                tier: "Enterprise",
+                price: "Custom",
+                period: "custom pricing",
+                features: [
+                    "Full-service strategy",
+                    "Unlimited channels",
+                    "Bespoke creative production",
+                    "Real-time reporting dashboard",
+                    "Dedicated strategy team",
+                    "Custom integrations",
+                    "Priority support",
+                    "Performance guarantees"
+                ],
+                highlighted: false
+            }
+        ]
     }
 }

@@ -112,6 +112,16 @@ const Projects = () => {
                 link: '/projects/outdoor-waterproof-display',
                 isSpecial: true
             },
+            {
+                id: 12,
+                solutionKey: 'digitalMarketingServices',
+                categoryKey: 'digitalServices',
+                size: 'wide',
+                color: 'from-fuchsia-900/80 to-blue-900/80',
+                image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80',
+                link: '/solutions/digital-marketing-services',
+                isSpecial: true
+            },
         ]
 
         return staticData.map(item => ({

@@ -33,7 +33,17 @@ const solutionsEN = {
         ctaDescription: "Contact our team today to discuss your project requirements and get a customized solution tailored to your needs.",
         contactUs: "Contact Us",
         callUs: "Call",
-        productGallery: "Product Gallery"
+        productGallery: "Product Gallery",
+        ourProcess: "Our Process",
+        howItWorks: "How It Works",
+        industries: "Industries",
+        industriesWeServe: "Industries We Serve",
+        testimonials: "Testimonials",
+        whatClientsSay: "What Our Clients Say",
+        pricing: "Pricing",
+        chooseYourPlan: "Choose Your Plan",
+        recommended: "Recommended",
+        getStarted: "Get Started"
     },
     legal: legal.en
 };
@@ -63,7 +73,17 @@ const solutionsPagesDE = {
         ctaDescription: "Kontaktieren Sie unser Team noch heute, um Ihre Projektanforderungen zu besprechen und eine maßgeschneiderte Lösung zu erhalten.",
         contactUs: "Kontaktieren Sie uns",
         callUs: "Anrufen",
-        productGallery: "Produktgalerie"
+        productGallery: "Produktgalerie",
+        ourProcess: "Unser Prozess",
+        howItWorks: "Wie es funktioniert",
+        industries: "Industrien",
+        industriesWeServe: "Branchen, die wir bedienen",
+        testimonials: "Testimonials",
+        whatClientsSay: "Was unsere Kunden sagen",
+        pricing: "Preise",
+        chooseYourPlan: "Wählen Sie Ihren Plan",
+        recommended: "Empfohlen",
+        getStarted: "Loslegen"
     },
     legal: legal.de
 };
@@ -181,7 +201,8 @@ export const translations = {
                     freestandingDisplays: 'Écrans Autonomes',
                     videoWalls: 'Murs Vidéo',
                     touchDisplays: 'Écrans Tactiles',
-                    digitalMenus: 'Menus Digitaux'
+                    digitalMenus: 'Menus Digitaux',
+                    digitalServices: 'Marketing Digital'
                 },
                 projects: [
                     { title: 'Écran Station Service', category: 'Écrans LCD' },
@@ -674,7 +695,37 @@ Luxio Media, c’est l’alliance de la technologie, de l’impact visuel et de 
             viewAll: 'Tout voir',
             readMore: 'Lire la suite',
             apply: 'Postuler',
-            download: 'Télécharger'
+            download: 'Télécharger',
+            backToSolutions: "← Retour aux Solutions",
+            keyFeatures: "Caractéristiques Clés",
+            requestQuote: "Demander un Devis",
+            viewCaseStudies: "Voir les Études de Cas",
+            whyChoose: "Pourquoi Choisir",
+            campaign: "Campagne",
+            specifications: "Spécifications",
+            specsDescription: "Tout ce que vous devez savoir sur les campagnes sur ce format.",
+            applications: "Applications",
+            useCases: "Cas d'Usage",
+            support: "Support",
+            faq: "Questions Fréquemment Posées",
+            exploreMore: "Explorer Plus",
+            relatedSolutions: "Solutions Connexes",
+            learnMore: "En Savoir Plus",
+            readyToStart: "Prêt à Commencer avec",
+            ctaDescription: "Contactez notre équipe aujourd'hui pour discuter de vos besoins de projet et obtenir une solution personnalisée.",
+            contactUs: "Nous Contacter",
+            callUs: "Appeler",
+            productGallery: "Galerie de Produits",
+            ourProcess: "Notre Processus",
+            howItWorks: "Comment ça Marche",
+            industries: "Industries",
+            industriesWeServe: "Industries que Nous Servons",
+            testimonials: "Témoignages",
+            whatClientsSay: "Ce que Disent Nos Clients",
+            pricing: "Tarifs",
+            chooseYourPlan: "Choisissez Votre Plan",
+            recommended: "Recommandé",
+            getStarted: "Commencer"
         }
     },
     en: {
@@ -789,7 +840,8 @@ Luxio Media, c’est l’alliance de la technologie, de l’impact visuel et de 
                     freestandingDisplays: 'Freestanding Displays',
                     videoWalls: 'Video Walls',
                     touchDisplays: 'Touch Displays',
-                    digitalMenus: 'Digital Menus'
+                    digitalMenus: 'Digital Menus',
+                    digitalServices: 'Digital Marketing'
                 },
                 projects: [
                     { title: 'Station Service Display', category: 'LCD Screens' },
@@ -1282,7 +1334,37 @@ Luxio Media is the alliance of technology, visual impact, and bespoke support to
             viewAll: 'View All',
             readMore: 'Read More',
             apply: 'Apply',
-            download: 'Download'
+            download: 'Download',
+            backToSolutions: "← Back to Solutions",
+            keyFeatures: "Key Features",
+            requestQuote: "Request a Quote",
+            viewCaseStudies: "View Case Studies",
+            whyChoose: "Why Choose",
+            campaign: "Campaign",
+            specifications: "Specifications",
+            specsDescription: "Everything you need to know about running campaigns on this format.",
+            applications: "Applications",
+            useCases: "Use Cases",
+            support: "Support",
+            faq: "Frequently Asked Questions",
+            exploreMore: "Explore More",
+            relatedSolutions: "Related Solutions",
+            learnMore: "Learn More",
+            readyToStart: "Ready to Get Started with",
+            ctaDescription: "Contact our team today to discuss your project requirements and get a customized solution tailored to your needs.",
+            contactUs: "Contact Us",
+            callUs: "Call",
+            productGallery: "Product Gallery",
+            ourProcess: "Our Process",
+            howItWorks: "How It Works",
+            industries: "Industries",
+            industriesWeServe: "Industries We Serve",
+            testimonials: "Testimonials",
+            whatClientsSay: "What Our Clients Say",
+            pricing: "Pricing",
+            chooseYourPlan: "Choose Your Plan",
+            recommended: "Recommended",
+            getStarted: "Get Started"
         }
     },
     de: {
@@ -1397,7 +1479,8 @@ Luxio Media is the alliance of technology, visual impact, and bespoke support to
                     freestandingDisplays: 'Freestanding Displays',
                     videoWalls: 'Video Walls',
                     touchDisplays: 'Touch Displays',
-                    digitalMenus: 'Digital Menus'
+                    digitalMenus: 'Digital Menus',
+                    digitalServices: 'Digital Marketing'
                 },
                 projects: [
                     { title: 'Tankstellen-Display', category: 'LCD-Bildschirme' },
@@ -1875,7 +1958,37 @@ Luxio Media ist die Allianz aus Technologie, visueller Wirkung und maßgeschneid
             viewAll: 'Alle ansehen',
             readMore: 'Mehr lesen',
             apply: 'Bewerben',
-            download: 'Herunterladen'
+            download: 'Herunterladen',
+            backToSolutions: "← Zurück zu Lösungen",
+            keyFeatures: "Hauptmerkmale",
+            requestQuote: "Angebot anfordern",
+            viewCaseStudies: "Fallstudien ansehen",
+            whyChoose: "Warum wählen",
+            campaign: "Kampagne",
+            specifications: "Spezifikationen",
+            specsDescription: "Alles, was Sie über Kampagnen auf diesem Format wissen müssen.",
+            applications: "Anwendungen",
+            useCases: "Anwendungsfälle",
+            support: "Support",
+            faq: "Häufig gestellte Fragen",
+            exploreMore: "Mehr entdecken",
+            relatedSolutions: "Verwandte Lösungen",
+            learnMore: "Mehr erfahren",
+            readyToStart: "Bereit zu starten mit",
+            ctaDescription: "Kontaktieren Sie unser Team noch heute, um Ihre Projektanforderungen zu besprechen und eine maßgeschneiderte Lösung zu erhalten.",
+            contactUs: "Kontaktieren Sie uns",
+            callUs: "Anrufen",
+            productGallery: "Produktgalerie",
+            ourProcess: "Unser Prozess",
+            howItWorks: "Wie es funktioniert",
+            industries: "Industrien",
+            industriesWeServe: "Branchen, die wir bedienen",
+            testimonials: "Testimonials",
+            whatClientsSay: "Was unsere Kunden sagen",
+            pricing: "Preise",
+            chooseYourPlan: "Wählen Sie Ihren Plan",
+            recommended: "Empfohlen",
+            getStarted: "Loslegen"
         }
     }
 };

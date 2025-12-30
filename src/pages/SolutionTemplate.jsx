@@ -26,7 +26,11 @@ const SolutionTemplate = ({
         useCases = [],
         faqs = [],
         relatedSolutions = [],
-        gallery = []
+        gallery = [],
+        process = [],
+        industries = [],
+        testimonials = [],
+        pricing = []
     } = solution
 
     return (
@@ -233,6 +237,151 @@ const SolutionTemplate = ({
                                             </p>
                                         )}
                                     </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* Process Section */}
+            {process && process.length > 0 && (
+                <section className="py-20 px-4 bg-gradient-to-b from-zinc-950 to-black">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-center mb-16">
+                            <span className="text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block">
+                                {common.ourProcess || 'Our Process'}
+                            </span>
+                            <h2 className="font-[font2] text-white text-3xl lg:text-5xl uppercase">
+                                {common.howItWorks || 'How It Works'}
+                            </h2>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {process.map((step, idx) => (
+                                <div key={idx} className="relative">
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-12 h-12 rounded-xl bg-[#D3FD50] flex items-center justify-center flex-shrink-0">
+                                            <span className="text-black font-[font2] text-lg font-bold">{step.step}</span>
+                                        </div>
+                                        <div className="flex-1">
+                                            <h3 className="font-[font2] text-white text-xl mb-3">{step.title}</h3>
+                                            <p className="text-white/60 font-[font1] text-sm leading-relaxed">{step.description}</p>
+                                        </div>
+                                    </div>
+                                    {idx < process.length - 1 && (
+                                        <div className="hidden lg:block absolute top-12 left-6 w-0.5 h-full bg-gradient-to-b from-[#D3FD50]/30 to-transparent" />
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* Industries Section */}
+            {industries && industries.length > 0 && (
+                <section className="py-20 px-4">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-center mb-16">
+                            <span className="text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block">
+                                {common.industries || 'Industries'}
+                            </span>
+                            <h2 className="font-[font2] text-white text-3xl lg:text-5xl uppercase">
+                                {common.industriesWeServe || 'Industries We Serve'}
+                            </h2>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {industries.map((industry, idx) => (
+                                <div key={idx} className="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-[#D3FD50]/30 transition-colors text-center group">
+                                    <div className="text-4xl mb-4">{industry.icon}</div>
+                                    <h3 className="font-[font2] text-white text-lg mb-3 group-hover:text-[#D3FD50] transition-colors">{industry.name}</h3>
+                                    <p className="text-white/60 font-[font1] text-sm leading-relaxed">{industry.description}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* Testimonials Section */}
+            {testimonials && testimonials.length > 0 && (
+                <section className="py-20 px-4 bg-gradient-to-b from-black to-zinc-950">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-center mb-16">
+                            <span className="text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block">
+                                {common.testimonials || 'Testimonials'}
+                            </span>
+                            <h2 className="font-[font2] text-white text-3xl lg:text-5xl uppercase">
+                                {common.whatClientsSay || 'What Our Clients Say'}
+                            </h2>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {testimonials.map((testimonial, idx) => (
+                                <div key={idx} className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-[#D3FD50]/30 transition-colors">
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <img
+                                            src={testimonial.avatar}
+                                            alt={testimonial.name}
+                                            className="w-12 h-12 rounded-full object-cover"
+                                        />
+                                        <div>
+                                            <h4 className="font-[font2] text-white text-lg">{testimonial.name}</h4>
+                                            <p className="text-white/60 font-[font1] text-sm">{testimonial.role}</p>
+                                        </div>
+                                    </div>
+                                    <p className="text-white/80 font-[font1] text-sm leading-relaxed italic">"{testimonial.content}"</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* Pricing Section */}
+            {pricing && pricing.length > 0 && (
+                <section className="py-20 px-4">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-center mb-16">
+                            <span className="text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block">
+                                {common.pricing || 'Pricing'}
+                            </span>
+                            <h2 className="font-[font2] text-white text-3xl lg:text-5xl uppercase">
+                                {common.chooseYourPlan || 'Choose Your Plan'}
+                            </h2>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {pricing.map((plan, idx) => (
+                                <div key={idx} className={`relative p-8 rounded-2xl border ${plan.highlighted ? 'border-[#D3FD50] bg-[#D3FD50]/5' : 'border-white/10 bg-white/5'} hover:border-[#D3FD50]/50 transition-all duration-300`}>
+                                    {plan.highlighted && (
+                                        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-2 bg-[#D3FD50] text-black text-xs font-[font1] font-bold rounded-full uppercase tracking-wider">
+                                            {common.recommended || 'Recommended'}
+                                        </div>
+                                    )}
+                                    <div className="text-center mb-8">
+                                        <h3 className="font-[font2] text-white text-2xl mb-2">{plan.tier}</h3>
+                                        <div className="text-4xl lg:text-5xl font-[font2] text-[#D3FD50] mb-2">{plan.price}</div>
+                                        <p className="text-white/60 font-[font1] text-sm">{plan.period}</p>
+                                    </div>
+                                    <ul className="space-y-3 mb-8">
+                                        {plan.features.map((feature, featureIdx) => (
+                                            <li key={featureIdx} className="flex items-start gap-3 text-white/70 font-[font1] text-sm">
+                                                <svg className="w-5 h-5 text-[#D3FD50] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <Link
+                                        to="/contact"
+                                        className={`w-full py-3 rounded-full font-[font2] text-sm uppercase tracking-wider text-center transition-colors duration-300 ${
+                                            plan.highlighted 
+                                                ? 'bg-[#D3FD50] text-black hover:bg-white' 
+                                                : 'border border-white/30 text-white hover:border-[#D3FD50] hover:text-[#D3FD50]'
+                                        }`}
+                                    >
+                                        {common.getStarted || 'Get Started'}
+                                    </Link>
                                 </div>
                             ))}
                         </div>

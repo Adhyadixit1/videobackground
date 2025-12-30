@@ -16,7 +16,7 @@ const HomeHeroText = () => {
                         {t('home.heroBtn')}
                     </Link>
                     <a
-                        href='#network'
+                        href='#pinterest-grid'
                         className='px-4 py-2 lg:px-10 lg:py-5 rounded-full border border-white/40 text-white font-[font2] text-[0.6rem] sm:text-xs lg:text-sm uppercase tracking-[0.3em] hover:border-[#D3FD50] hover:text-[#D3FD50] transition-colors duration-300'
                     >
                         {t('home.heroBtnSecondary')}

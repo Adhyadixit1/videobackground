@@ -38,6 +38,16 @@ const PinterestGrid = () => {
                 isSpecial: true
             },
             {
+                id: 12,
+                solutionKey: 'digitalMarketingServices',
+                categoryKey: 'digitalServices',
+                size: 'wide',
+                color: 'from-fuchsia-900/80 to-blue-900/80',
+                image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80',
+                link: '/solutions/digital-marketing-services',
+                isSpecial: true
+            },
+            {
                 id: 1,
                 solutionKey: 'lcdScreens',
                 categoryKey: 'digitalDisplays',
@@ -119,7 +129,7 @@ const PinterestGrid = () => {
     }, [t])
 
     return (
-        <section className='bg-gradient-to-b from-black via-zinc-950 to-black relative z-10 py-12 lg:py-20 px-4 lg:px-12'>
+        <section id='pinterest-grid' className='bg-gradient-to-b from-black via-zinc-950 to-black relative z-10 py-12 lg:py-20 px-4 lg:px-12'>
             {/* Section header */}
             <div className='text-center mb-10 lg:mb-14'>
                 <p className='text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4'>
