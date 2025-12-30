@@ -4,19 +4,19 @@ import { useLanguage } from '../context/LanguageContext'
 import PageHero from '../components/common/PageHero'
 import FooterSection from '../components/home/FooterSection'
 
-const PrivacyPolicy = () => {
+const CookiesPolicy = () => {
     const { t } = useLanguage()
 
-    // Get privacy translation
-    const privacyContent = t('solutionPages.legal.privacy', { returnObjects: true }) || {}
-    const sections = privacyContent.sections || []
+    // Get cookies translation, fallback to empty object if not found
+    const cookiesContent = t('solutionPages.legal.cookies', { returnObjects: true }) || {}
+    const sections = cookiesContent.sections || []
 
     return (
         <div className='bg-black text-white min-h-screen'>
             <PageHero
-                title={privacyContent.title || 'Privacy'}
-                highlight={privacyContent.highlight || 'Policy'}
-                description={privacyContent.description || 'How we handle and protect your data.'}
+                title={cookiesContent.title || 'Cookies Policy'}
+                highlight={cookiesContent.highlight || ''}
+                description={cookiesContent.description || 'How we use cookies.'}
                 visual={
                     <div className='relative w-full h-full flex items-center justify-center'>
                         <div className='absolute inset-0 bg-gradient-to-br from-[#D3FD50]/20 via-transparent to-transparent blur-3xl' />
@@ -40,8 +40,8 @@ const PrivacyPolicy = () => {
                     ))
                 ) : (
                     <div>
-                        <h2 className='text-2xl font-[font2] text-white mb-4 uppercase'>Privacy Policy</h2>
-                        <p>Loading privacy policy...</p>
+                        <h2 className='text-2xl font-[font2] text-white mb-4 uppercase'>Under Maintenance</h2>
+                        <p>Usage policy content is being updated.</p>
                     </div>
                 )}
             </section>
@@ -51,4 +51,4 @@ const PrivacyPolicy = () => {
     )
 }
 
-export default PrivacyPolicy
+export default CookiesPolicy

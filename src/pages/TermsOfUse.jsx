@@ -1,4 +1,5 @@
 import React from 'react'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import { useLanguage } from '../context/LanguageContext'
 import PageHero from '../components/common/PageHero'
 import FooterSection from '../components/home/FooterSection'
@@ -6,62 +7,43 @@ import FooterSection from '../components/home/FooterSection'
 const TermsOfUse = () => {
     const { t } = useLanguage()
 
+    // Get terms translation
+    const termsContent = t('solutionPages.legal.terms', { returnObjects: true }) || {}
+    const sections = termsContent.sections || []
+
     return (
         <div className='bg-black text-white min-h-screen'>
             <PageHero
-                title="Terms of"
-                highlight="Use"
-                description="The rules and regulations for using Luxio Media's website and services."
+                title={termsContent.title || 'Terms of'}
+                highlight={termsContent.highlight || 'Use'}
+                description={termsContent.description || 'The rules and regulations for using Luxio Media\'s website and services.'}
+                visual={
+                    <div className='relative w-full h-full flex items-center justify-center'>
+                        <div className='absolute inset-0 bg-gradient-to-br from-[#D3FD50]/20 via-transparent to-transparent blur-3xl' />
+                        <DotLottieReact
+                            src='https://lottie.host/9035f597-b086-4a7c-b28b-0a5360312668/bhS3OLfHHT.lottie'
+                            loop
+                            autoplay
+                            className='w-full h-full max-w-[420px]'
+                        />
+                    </div>
+                }
             />
 
             <section className='py-20 px-4 lg:px-12 max-w-4xl mx-auto font-[font1] leading-relaxed text-white/80 space-y-8'>
-                <div>
-                    <h2 className='text-2xl font-[font2] text-white mb-4 uppercase'>1. Acceptance of Terms</h2>
-                    <p>
-                        By accessing this website, you agree to be bound by these Terms of Use and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.
-                    </p>
-                </div>
-
-                <div>
-                    <h2 className='text-2xl font-[font2] text-white mb-4 uppercase'>2. Intellectual Property</h2>
-                    <p>
-                        All content on this website, including text, graphics, logos, images, and software, is the property of Luxio Media or its content suppliers and is protected by international copyright laws.
-                    </p>
-                </div>
-
-                <div>
-                    <h2 className='text-2xl font-[font2] text-white mb-4 uppercase'>3. Use License</h2>
-                    <p>
-                        Permission is granted to temporarily download one copy of the materials on Luxio Media's website for personal, non-commercial transitory viewing only.
-                    </p>
-                </div>
-
-                <div>
-                    <h2 className='text-2xl font-[font2] text-white mb-4 uppercase'>4. Limitations</h2>
-                    <p>
-                        In no event shall Luxio Media or its suppliers be liable for any damages arising out of the use or inability to use the materials on Luxio Media's website.
-                    </p>
-                </div>
-
-                <div>
-                    <h2 className='text-2xl font-[font2] text-white mb-4 uppercase'>5. Governing Law</h2>
-                    <p>
-                        These terms and conditions are governed by and construed in accordance with the laws of Luxembourg, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
-                    </p>
-                </div>
-
-                <div>
-                    <h2 className='text-2xl font-[font2] text-white mb-4 uppercase'>6. Contact</h2>
-                    <p>
-                        For any questions regarding these terms, please reach out to us:
-                        <br /><br />
-                        <strong>Luxio Media</strong><br />
-                        26 Bd Royal Level 5,<br />
-                        2449 Ville-Haute Luxembourg<br />
-                        Email: contact@luxiomedia.lu<br />
-                        Phone: +352 661 16 77 25
-                    </p>
-                </div>
+                {sections.length > 0 ? (
+                    sections.map((section, idx) => (
+                        <div key={idx}>
+                            <h2 className='text-2xl font-[font2] text-white mb-4 uppercase'>{section.title}</h2>
+                            <p>{section.content}</p>
+                        </div>
+                    ))
+                ) : (
+                    <div>
+                        <h2 className='text-2xl font-[font2] text-white mb-4 uppercase'>Terms of Use</h2>
+                        <p>Loading terms of use...</p>
+                    </div>
+                )}
             </section>
 
             <FooterSection />

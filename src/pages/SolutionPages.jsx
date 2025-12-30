@@ -121,4 +121,20 @@ export const InteractiveKiosk = () => (
     />
 )
 
+// Outdoor LCD 43 inch
+export const OutdoorLCD43 = () => (
+    <SolutionTemplate
+        solutionKey="outdoorLCD43"
+        image="/Picture1.jpg"
+    />
+)
+
+// 55 inch Infrared Touch Screen
+export const InfraredTouch55 = () => (
+    <SolutionTemplate
+        solutionKey="infraredTouch55"
+        image="/Fiche technique ecran intérieur_files/image001.png"
+    />
+)
+
 export default LCDScreens

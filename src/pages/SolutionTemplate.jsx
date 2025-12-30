@@ -25,7 +25,8 @@ const SolutionTemplate = ({
         specs = [],
         useCases = [],
         faqs = [],
-        relatedSolutions = []
+        relatedSolutions = [],
+        gallery = []
     } = solution
 
     return (
@@ -184,6 +185,61 @@ const SolutionTemplate = ({
                 </section>
             )}
 
+            {/* Product Gallery - Images with original sizes alongside text */}
+            {gallery && gallery.length > 0 && (
+                <section className="py-20 px-4 bg-gradient-to-b from-black to-zinc-950">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-center mb-16">
+                            <span className="text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block">
+                                {common.productGallery || 'Product Gallery'}
+                            </span>
+                            <h2 className="font-[font2] text-white text-3xl lg:text-5xl uppercase">{title}</h2>
+                        </div>
+
+                        {/* Images with original sizes and descriptions */}
+                        <div className="space-y-16">
+                            {gallery.map((img, idx) => (
+                                <div
+                                    key={idx}
+                                    className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 items-center`}
+                                >
+                                    {/* Image - Original Size */}
+                                    <div className="flex-1 flex justify-center">
+                                        <div className="relative group rounded-2xl overflow-hidden border border-white/10 bg-zinc-900/50 p-4 hover:border-[#D3FD50]/30 transition-all duration-500">
+                                            <img
+                                                src={img.src}
+                                                alt={img.alt}
+                                                className="max-w-full h-auto rounded-lg"
+                                                loading="lazy"
+                                                style={{ maxHeight: '600px' }}
+                                            />
+                                        </div>
+                                    </div>
+
+                                    {/* Text Description */}
+                                    <div className="flex-1 space-y-4">
+                                        <div className="flex items-center gap-3">
+                                            <span className="w-10 h-10 rounded-xl bg-[#D3FD50]/10 flex items-center justify-center text-[#D3FD50] font-[font2] text-lg">
+                                                {String(idx + 1).padStart(2, '0')}
+                                            </span>
+                                            <div className="h-px flex-1 bg-gradient-to-r from-[#D3FD50]/30 to-transparent" />
+                                        </div>
+                                        <h3 className="font-[font2] text-white text-xl lg:text-2xl">
+                                            {img.alt}
+                                        </h3>
+                                        {img.description && (
+                                            <p className="text-white/60 font-[font1] text-base leading-relaxed">
+                                                {img.description}
+                                            </p>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
             {/* Use Cases */}
             {useCases && useCases.length > 0 && (
                 <section className="py-20 px-4">
@@ -213,65 +269,70 @@ const SolutionTemplate = ({
                         </div>
                     </div>
                 </section>
-            )}
+            )
+            }
 
             {/* FAQ Section */}
-            {faqs && faqs.length > 0 && (
-                <section className="py-20 px-4 bg-gradient-to-b from-black to-zinc-950">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="text-center mb-16">
-                            <span className="text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block">
-                                {common.support || 'Support'}
-                            </span>
-                            <h2 className="font-[font2] text-white text-3xl lg:text-5xl uppercase">
-                                {common.faq || 'Frequently Asked Questions'}
-                            </h2>
+            {
+                faqs && faqs.length > 0 && (
+                    <section className="py-20 px-4 bg-gradient-to-b from-black to-zinc-950">
+                        <div className="max-w-4xl mx-auto">
+                            <div className="text-center mb-16">
+                                <span className="text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block">
+                                    {common.support || 'Support'}
+                                </span>
+                                <h2 className="font-[font2] text-white text-3xl lg:text-5xl uppercase">
+                                    {common.faq || 'Frequently Asked Questions'}
+                                </h2>
+                            </div>
+                            <div className="space-y-4">
+                                {faqs.map((faq, idx) => (
+                                    <div key={idx} className="p-6 rounded-2xl border border-white/10 bg-white/5">
+                                        <h3 className="font-[font2] text-white text-lg mb-3">{faq.question}</h3>
+                                        <p className="text-white/60 font-[font1] text-sm leading-relaxed">{faq.answer}</p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                        <div className="space-y-4">
-                            {faqs.map((faq, idx) => (
-                                <div key={idx} className="p-6 rounded-2xl border border-white/10 bg-white/5">
-                                    <h3 className="font-[font2] text-white text-lg mb-3">{faq.question}</h3>
-                                    <p className="text-white/60 font-[font1] text-sm leading-relaxed">{faq.answer}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-            )}
+                    </section>
+                )
+            }
 
             {/* Related Solutions */}
-            {relatedSolutions && relatedSolutions.length > 0 && (
-                <section className="py-20 px-4">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="text-center mb-16">
-                            <span className="text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block">
-                                {common.exploreMore || 'Explore More'}
-                            </span>
-                            <h2 className="font-[font2] text-white text-3xl lg:text-5xl uppercase">
-                                {common.relatedSolutions || 'Related Solutions'}
-                            </h2>
+            {
+                relatedSolutions && relatedSolutions.length > 0 && (
+                    <section className="py-20 px-4">
+                        <div className="max-w-7xl mx-auto">
+                            <div className="text-center mb-16">
+                                <span className="text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block">
+                                    {common.exploreMore || 'Explore More'}
+                                </span>
+                                <h2 className="font-[font2] text-white text-3xl lg:text-5xl uppercase">
+                                    {common.relatedSolutions || 'Related Solutions'}
+                                </h2>
+                            </div>
+                            <div className="grid md:grid-cols-3 gap-6">
+                                {relatedSolutions.map((solution, idx) => (
+                                    <Link
+                                        key={idx}
+                                        to={solution.link}
+                                        className="group p-6 rounded-3xl border border-white/10 bg-white/5 hover:border-[#D3FD50]/50 transition-all duration-300"
+                                    >
+                                        <h3 className="font-[font2] text-white text-xl mb-2 group-hover:text-[#D3FD50] transition-colors">{solution.title}</h3>
+                                        <p className="text-white/60 font-[font1] text-sm mb-4">{solution.description}</p>
+                                        <span className="text-[#D3FD50] font-[font1] text-sm uppercase tracking-wider inline-flex items-center gap-2">
+                                            {common.learnMore || 'Learn More'}
+                                            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </span>
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
-                        <div className="grid md:grid-cols-3 gap-6">
-                            {relatedSolutions.map((solution, idx) => (
-                                <Link
-                                    key={idx}
-                                    to={solution.link}
-                                    className="group p-6 rounded-3xl border border-white/10 bg-white/5 hover:border-[#D3FD50]/50 transition-all duration-300"
-                                >
-                                    <h3 className="font-[font2] text-white text-xl mb-2 group-hover:text-[#D3FD50] transition-colors">{solution.title}</h3>
-                                    <p className="text-white/60 font-[font1] text-sm mb-4">{solution.description}</p>
-                                    <span className="text-[#D3FD50] font-[font1] text-sm uppercase tracking-wider inline-flex items-center gap-2">
-                                        {common.learnMore || 'Learn More'}
-                                        <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                        </svg>
-                                    </span>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-            )}
+                    </section>
+                )
+            }
 
             {/* CTA Section */}
             <section className="py-20 px-4">
@@ -300,7 +361,7 @@ const SolutionTemplate = ({
             </section>
 
             <FooterSection />
-        </div>
+        </div >
     )
 }
 

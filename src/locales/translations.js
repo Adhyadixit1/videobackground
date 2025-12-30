@@ -3,6 +3,9 @@ import { solutionsPart2 } from './solutionsPart2';
 import { solutionsPart3 } from './solutionsPart3';
 import { solutionsPart4 } from './solutionsPart4';
 import { solutionsFR } from './solutionsFR';
+import { solutionsDE } from './solutionsDE';
+
+import { legal } from './legal';
 
 // English Solutions
 const solutionsEN = {
@@ -11,8 +14,58 @@ const solutionsEN = {
     ...solutionsPart3,
     ...solutionsPart4,
     common: {
-        ...solutionsPart1.common,
-    }
+        backToSolutions: "← Back to Solutions",
+        keyFeatures: "Key Features",
+        requestQuote: "Request a Quote",
+        viewCaseStudies: "View Case Studies",
+        whyChoose: "Why Choose",
+        campaign: "Campaign",
+        specifications: "Specifications",
+        specsDescription: 'Everything you need to know about running campaigns on this format.',
+        applications: "Applications",
+        useCases: "Use Cases",
+        support: "Support",
+        faq: "Frequently Asked Questions",
+        exploreMore: "Explore More",
+        relatedSolutions: "Related Solutions",
+        learnMore: "Learn More",
+        readyToStart: "Ready to Get Started with",
+        ctaDescription: "Contact our team today to discuss your project requirements and get a customized solution tailored to your needs.",
+        contactUs: "Contact Us",
+        callUs: "Call",
+        productGallery: "Product Gallery"
+    },
+    legal: legal.en
+};
+
+// German Solutions (English base with German overrides for specific products)
+const solutionsPagesDE = {
+    ...solutionsEN,
+    ...solutionsDE,
+    common: {
+        ...solutionsEN.common,
+        backToSolutions: "← Zurück zu Lösungen",
+        keyFeatures: "Hauptmerkmale",
+        requestQuote: "Angebot anfordern",
+        viewCaseStudies: "Fallstudien ansehen",
+        whyChoose: "Warum wählen",
+        campaign: "Kampagne",
+        specifications: "Spezifikationen",
+        specsDescription: "Alles, was Sie über Kampagnen auf diesem Format wissen müssen.",
+        applications: "Anwendungen",
+        useCases: "Anwendungsfälle",
+        support: "Support",
+        faq: "Häufig gestellte Fragen",
+        exploreMore: "Mehr entdecken",
+        relatedSolutions: "Verwandte Lösungen",
+        learnMore: "Mehr erfahren",
+        readyToStart: "Bereit zu starten mit",
+        ctaDescription: "Kontaktieren Sie unser Team noch heute, um Ihre Projektanforderungen zu besprechen und eine maßgeschneiderte Lösung zu erhalten.",
+        contactUs: "Kontaktieren Sie uns",
+        callUs: "Anrufen",
+        productGallery: "Produktgalerie"
+    },
+    legal: legal.de
 };
 
 export const translations = {
@@ -41,18 +94,36 @@ export const translations = {
             projects: 'Projets',
             agency: 'Agence'
         },
-        solutionPages: solutionsFR,
+        solutionPages: { ...solutionsFR, legal: legal.fr },
         footer: {
+            contactCTA: 'Contactez-nous',
+            companyName: 'Luxio Media',
             tagline: 'Votre partenaire en affichage digital à travers l\'Europe. Des écrans premium pour une visibilité et un impact maximaux.',
             navTitle: 'Navigation',
+            navItems: [
+                { label: 'Accueil', path: '/' },
+                { label: 'Pourquoi Luxio Media', path: '/why-luxio' },
+                { label: 'Solutions', path: '/solutions' },
+                { label: 'Contact', path: '/contact' }
+            ],
             servicesTitle: 'Services',
+            servicesList: [
+                { label: 'Diffusion sur écran', path: '/solutions#screen-diffusion' },
+                { label: 'Publicités digitales', path: '/solutions#digital-ads' },
+                { label: 'Production vidéo', path: '/solutions#video-production' },
+                { label: 'Installation d\'écrans', path: '/solutions#screen-installation' }
+            ],
             contactTitle: 'Contact',
-            servicesList: ['Diffusion sur écran', 'Publicités digitales', 'Production vidéo', 'Installation d\'écrans'],
+            contactDetails: {
+                email: 'contact@luxiomedia.lu',
+                phone: '+352 661 16 77 25',
+                addressLines: ['26 Bd Royal Level 5,', '2449 Ville-Haute Luxembourg']
+            },
             legal: {
+                rights: '© 2024 Luxio Media. Tous droits réservés.',
                 privacy: 'Politique de confidentialité',
                 terms: 'Conditions d\'utilisation',
-                cookies: 'Cookies',
-                rights: 'Tous droits réservés.'
+                cookies: 'Cookies'
             }
         },
         home: {
@@ -633,16 +704,34 @@ Luxio Media, c’est l’alliance de la technologie, de l’impact visuel et de 
         },
         solutionPages: solutionsEN,
         footer: {
+            contactCTA: 'Contact us',
+            companyName: 'Luxio Media',
             tagline: 'Your partner in digital signage across Europe. Premium screens for maximum visibility and impact.',
             navTitle: 'Navigation',
+            navItems: [
+                { label: 'Home', path: '/' },
+                { label: 'Why Luxio Media', path: '/why-luxio' },
+                { label: 'Solutions', path: '/solutions' },
+                { label: 'Contact', path: '/contact' }
+            ],
             servicesTitle: 'Services',
-            contactTitle: 'Get In Touch',
-            servicesList: ['Screen Diffusion', 'Digital Ads', 'Video Production', 'Screen Installation'],
+            servicesList: [
+                { label: 'Screen Diffusion', path: '/solutions#screen-diffusion' },
+                { label: 'Digital Ads', path: '/solutions#digital-ads' },
+                { label: 'Video Production', path: '/solutions#video-production' },
+                { label: 'Screen Installation', path: '/solutions#screen-installation' }
+            ],
+            contactTitle: 'Contact',
+            contactDetails: {
+                email: 'contact@luxiomedia.lu',
+                phone: '+352 661 16 77 25',
+                addressLines: ['26 Bd Royal Level 5,', '2449 Ville-Haute Luxembourg']
+            },
             legal: {
+                rights: '© 2024 Luxio Media. All rights reserved.',
                 privacy: 'Privacy Policy',
                 terms: 'Terms of Service',
-                cookies: 'Cookies',
-                rights: 'All rights reserved.'
+                cookies: 'Cookies'
             }
         },
         home: {
@@ -883,7 +972,7 @@ Our solutions are designed to meet the requirements of urban, commercial, and in
 
 With solid expertise and a forward-looking vision, our team supports each client from design to installation, through to maintenance and performance optimization. Thanks to a network of qualified partners and technicians, Luxio Media guarantees a local, reactive service adapted to Luxembourgish and European standards.
 
-Luxio Media is the alliance of technology, visual impact, and tailor-made support to give a new dimension to your communication.`,
+Luxio Media is the alliance of technology, visual impact, and bespoke support to give a new dimension to your communication.`,
             tagline: 'The alliance of technology, visual impact, and bespoke support.',
             cta: 'Contact Us'
         },
@@ -1152,7 +1241,7 @@ Luxio Media is the alliance of technology, visual impact, and tailor-made suppor
             subtitle: 'Our Network',
             titlePart1: 'A national network serving',
             titlePart2: 'local efficiency',
-            desc1: 'With over 600 gas stations and nearly 4,000 screens in France and luxembourg, you will definitely find a location near your establishment.',
+            desc1: 'With over 600 gas stations and nearly 4,000 screens in France and Luxembourg, you will definitely find a location near your establishment.',
             desc2: 'Whether you are a local or national advertiser, we meet various communication objectives.',
             cta: 'Find a screen near you'
         },
@@ -1221,18 +1310,36 @@ Luxio Media is the alliance of technology, visual impact, and tailor-made suppor
             projects: 'Projekte',
             agency: 'Agentur'
         },
-        solutionPages: solutionsEN,
+        solutionPages: { ...solutionsPagesDE, legal: legal.de },
         footer: {
+            contactCTA: 'Kontaktieren Sie uns',
+            companyName: 'Luxio Media',
             tagline: 'Ihr Partner für Digital Signage in ganz Europa. Premium-Bildschirme für maximale Sichtbarkeit und Wirkung.',
             navTitle: 'Navigation',
+            navItems: [
+                { label: 'Startseite', path: '/' },
+                { label: 'Warum Luxio Media', path: '/why-luxio' },
+                { label: 'Lösungen', path: '/solutions' },
+                { label: 'Kontakt', path: '/contact' }
+            ],
             servicesTitle: 'Dienstleistungen',
+            servicesList: [
+                { label: 'Bildschirmübertragung', path: '/solutions#screen-diffusion' },
+                { label: 'Digitale Anzeigen', path: '/solutions#digital-ads' },
+                { label: 'Videoproduktion', path: '/solutions#video-production' },
+                { label: 'Bildschirminstallation', path: '/solutions#screen-installation' }
+            ],
             contactTitle: 'Kontakt',
-            servicesList: ['Bildschirmübertragung', 'Digitale Anzeigen', 'Videoproduktion', 'Bildschirminstallation'],
+            contactDetails: {
+                email: 'contact@luxiomedia.lu',
+                phone: '+352 661 16 77 25',
+                addressLines: ['26 Bd Royal Level 5,', '2449 Ville-Haute Luxembourg']
+            },
             legal: {
+                rights: '© 2024 Luxio Media. Alle Rechte vorbehalten.',
                 privacy: 'Datenschutzrichtlinie',
                 terms: 'Nutzungsbedingungen',
-                cookies: 'Cookies',
-                rights: 'Alle Rechte vorbehalten.'
+                cookies: 'Cookies'
             }
         },
         home: {

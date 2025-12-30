@@ -802,6 +802,207 @@ export const solutionsFR = {
             { title: "Murs Vidéo", description: "Gros impact", link: "/solutions/video-walls" }
         ]
     },
+    outdoorLCD43: {
+        title: "Écran LCD extérieur 43 pouces",
+        description: "Dans cette ère colorée, laissez-nous dépasser le noir et blanc qui couvre nos yeux, et ressentir avec le cœur ce monde multicolore ! Une interprétation parfaite grâce à de multiples points forts. Spécifications du produit conçues pour une performance exceptionnelle en extérieur.",
+        features: [
+            "Surface extérieure avec peinture métallique importée, anti-magnétique et antistatique",
+            "Conception standard IP55 - protection complète contre l'eau et la poussière",
+            "Protection anti-vol et anti-explosion intégrée",
+            "Système d'amplification stéréo à double canal (8Ω 2×10W)",
+            "Fonctionnement adapté de +110°C à -50°C",
+            "Vitre trempée laminée AR de 6 mm",
+            "Design modulaire durable et facile à entretenir",
+            "Système de détection de lumière performant avec réglage automatique"
+        ],
+        stats: [
+            { value: "1800", label: "cd/m² Luminosité" },
+            { value: "43\"", label: "Taille d'affichage" },
+            { value: "IP55", label: "Protection" },
+            { value: "60 000h", label: "Durée de vie" }
+        ],
+        benefits: [
+            { title: "Haute Luminosité", description: "Écran LCD rétroéclairé LED haute luminosité (1800 nits) pour une visibilité parfaite même en plein soleil." },
+            { title: "Résistance Extrême", description: "Fonctionnement stable dans une plage de -50°C à +110°C grâce au refroidissement par air forcé et substrat de dissipation thermique de qualité militaire." },
+            { title: "Résolution Ultra HD", description: "Résolution jusqu'à 2160 × 3840 pour des visuels d'une clarté exceptionnelle." },
+            { title: "Structure Robuste", description: "Structure métallique extérieure en acier galvanisé résistante à la pluie et à la chaleur avec peinture extérieure premium." },
+            { title: "Options Intégrées", description: "Carte lecteur intégrée, ordinateur industriel en option, écran multi-touch en option." },
+            { title: "Protection Électrique Complète", description: "Protection contre les fuites, surcharge, surtension, dispositif anti-foudre et protection surchauffe." }
+        ],
+        specs: [
+            { value: "943×531mm", label: "Taille affichage" },
+            { value: "16:9", label: "Format" },
+            { value: "1080×1920", label: "Résolution" },
+            { value: "16,7M", label: "Couleurs" },
+            { value: "3500:1", label: "Contraste" },
+            { value: "178°/178°", label: "Angle de vision" },
+            { value: "5ms", label: "Temps de réponse" },
+            { value: "Android 11", label: "OS" }
+        ],
+        useCases: [
+            { title: "Affichage Publicitaire Extérieur", description: "Idéal pour les zones à fort trafic, centres commerciaux et espaces publics nécessitant une visibilité haute luminosité." },
+            { title: "Signalétique de Station-Service", description: "Résiste aux conditions météorologiques extrêmes tout en maintenant une qualité d'image parfaite pour les promotions carburant." },
+            { title: "Information Municipale", description: "Écrans d'information publique pour mairies, gares et aéroports avec batterie autonome de 14 heures." },
+            { title: "Marketing Événementiel", description: "Solution portable avec batterie intégrée 5000mAh, parfait pour les événements temporaires et les salons." }
+        ],
+        faqs: [
+            { question: "Quelle est l'autonomie de la batterie ?", answer: "La batterie type Blade offre 14 heures d'autonomie avec une capacité de 5000mAh et un temps de charge de 7 heures." },
+            { question: "Quels formats vidéo sont supportés ?", answer: "Plus de 30 formats vidéo sont supportés, ainsi que les images BMP, JPG, PNG et GIF." },
+            { question: "Comment se fait la mise à jour du contenu ?", answer: "Le contenu peut être mis à jour via USB, carte SD ou à distance via connexion 3G/4G/Ethernet/WiFi." },
+            { question: "Quelles certifications possède le produit ?", answer: "L'écran est certifié ISO9001, 3C, FCC et UL pour garantir qualité et sécurité." },
+            { question: "Quelles couleurs sont disponibles ?", answer: "Disponible en Argent, Gris, Blanc, Noir et Rouge." }
+        ],
+        relatedSolutions: [
+            { title: "Écrans Extérieurs", description: "Réseau complet d'affichage extérieur", link: "/projects/outdoor-lcd-43" },
+            { title: "Totems Digitaux", description: "Solutions totem haute visibilité", link: "/solutions/digital-totems" },
+            { title: "Affichage LED", description: "Murs LED grand format", link: "/solutions/led-walls" }
+        ],
+        gallery: [
+            { src: "https://sc04.alicdn.com/kf/Hbc4f05f302d444cb889ad42c3afc11f5X/229562533/Hbc4f05f302d444cb889ad42c3afc11f5X.jpeg", alt: "Écran LCD extérieur 43 pouces - Vue avant" },
+            { src: "https://sc04.alicdn.com/kf/H9fe9c1b4615b4c87bed668bc1c01aeabi/229562533/H9fe9c1b4615b4c87bed668bc1c01aeabi.jpeg", alt: "Écran LCD extérieur - Vue latérale" },
+            { src: "https://sc04.alicdn.com/kf/H5dca400328e84b11bce1d423205a53c42/229562533/H5dca400328e84b11bce1d423205a53c42.jpeg", alt: "Écran LCD extérieur - Installation murale" },
+            { src: "https://sc04.alicdn.com/kf/H157d452fd367472baf1e3f6c28d44fa0g/229562533/H157d452fd367472baf1e3f6c28d44fa0g.jpeg", alt: "Écran LCD extérieur - Vue de détail" },
+            { src: "https://sc04.alicdn.com/kf/H65672701d4734a0384ecae5e1922e6e9Q/229562533/H65672701d4734a0384ecae5e1922e6e9Q.jpg", alt: "Écran LCD extérieur - Spécifications techniques" }
+        ]
+    },
+    outdoorWaterproofDisplay: {
+        title: "Écran tout-en-un extérieur étanche Série OD",
+        description: "Série OD - Écrans tout-en-un extérieurs étanches sans entretien. Haute luminosité 2000-5000 nits, protection IP65, design ultra-mince. Disponible en 32/43/49/55/65 pouces pour une performance exceptionnelle en extérieur.",
+        features: [
+            "Écran LCD haute luminosité 2000-5000 nits",
+            "Contrôle intelligent de la luminosité",
+            "Panneau de qualité industrielle",
+            "Visible avec lunettes polarisées",
+            "Ventilateur étanche IP65",
+            "Design industriel ultra-mince",
+            "Protection complète IP65",
+            "Processus de stratification complète"
+        ],
+        stats: [
+            { value: "2000-5000", label: "nits Luminosité" },
+            { value: "IP65", label: "Protection" },
+            { value: "32-65\"", label: "Tailles" },
+            { value: "50 000h", label: "Durée de vie" }
+        ],
+        benefits: [
+            { title: "Luminosité Extrême", description: "Écran LCD rétroéclairé 2000-5000 nits pour une visibilité parfaite sous la lumière directe du soleil." },
+            { title: "Contrôle Intelligent", description: "Ajustement automatique de la luminosité selon la lumière ambiante pour économiser l'énergie au maximum." },
+            { title: "Panneau Industriel", description: "Panneau LCD à large température ne noircissant pas sous la lumière directe du soleil." },
+            { title: "Lunettes Polarisées", description: "Technologie QWP améliorant la visibilité, les lunettes polarisées n'affectent pas la vision." },
+            { title: "Design Ultra-Mince", description: "Design à bordure étroite ultra-mince supportant les écrans horizontaux et verticaux." },
+            { title: "Protection Complète", description: "Design entièrement scellé avec protection IP65, résistant aux conditions extérieures extrêmes." }
+        ],
+        specs: [
+            { value: "1920×1080", label: "Résolution (32-55\")" },
+            { value: "3840×2160", label: "Résolution (65\")" },
+            { value: "2500nits", label: "Luminosité" },
+            { value: "1200:1", label: "Contraste" },
+            { value: "178°/178°", label: "Angle de vision" },
+            { value: "IPS", label: "Technologie" },
+            { value: "Android 12.0", label: "OS" },
+            { value: "2+16GB", label: "Mémoire" }
+        ],
+        useCases: [
+            { title: "Affichage Publicitaire Extérieur", description: "Parfait pour les zones à fort trafic, centres commerciaux et espaces publics nécessitant une visibilité extrême." },
+            { title: "Signalétique Municipale", description: "Idéal pour les informations publiques, mairies, gares et aéroports avec protection IP65 complète." },
+            { title: "Affichage Commercial", description: "Solution parfaite pour les devantures de magasins et promotions en extérieur avec haute luminosité." },
+            { title: "Événements Extérieurs", description: "Excellent pour les festivals, événements sportifs et manifestations temporaires avec installation facile." }
+        ],
+        faqs: [
+            { question: "Quelles tailles sont disponibles ?", answer: "La série OD est disponible en 32\", 43\", 49\", 55\" et 65\" pouces avec différentes résolutions." },
+            { question: "Quelle est la luminosité maximale ?", answer: "L'écran atteint 2000-5000 nits de luminosité pour une visibilité parfaite en plein soleil." },
+            { question: "Quelle est la protection IP ?", answer: "Protection IP65 complète contre l'eau et la poussière, adaptée aux conditions extérieures extrêmes." },
+            { question: "Quel système d'exploitation ?", answer: "Android 12.0 avec processeur 8-core A55 et 2+16GB de mémoire." },
+            { question: "Peut-on utiliser des lunettes polarisées ?", answer: "Oui, la technologie QWP permet une visibilité parfaite même avec des lunettes polarisées." }
+        ],
+        relatedSolutions: [
+            { title: "Écrans Extérieurs", description: "Réseau complet d'affichage extérieur", link: "/projects/outdoor-lcd-43" },
+            { title: "Totems Digitaux", description: "Solutions totem haute visibilité", link: "/solutions/digital-totems" },
+            { title: "Affichage LED", description: "Murs LED grand format", link: "/solutions/led-walls" }
+        ],
+        gallery: [
+            { src: "/3rdproduct/image002.jpg", alt: "Écran tout-en-un extérieur Série OD - Vue principale", title: "Design Industriel Moderne", description: "Design ultra-mince avec protection IP65 complète pour une performance extérieure exceptionnelle." },
+            { src: "/3rdproduct/image003.png", alt: "Écran haute luminosité - Détail technique", title: "Haute Luminosité", description: "Écran LCD 2000-5000 nits avec contrôle intelligent de la luminosité." },
+            { src: "/3rdproduct/image004.png", alt: "Contrôle intelligent de la luminosité", title: "Contrôle Intelligent", description: "Ajustement automatique selon la lumière ambiante pour économie d'énergie." },
+            { src: "/3rdproduct/image005.png", alt: "Panneau industriel - Vue rapprochée", title: "Panneau Industriel", description: "Panneau LCD à large température ne noircissant pas sous la lumière directe du soleil." },
+            { src: "/3rdproduct/image006.png", alt: "Technologie QWP - Lunettes polarisées", title: "Lunettes Polarisées", description: "Technologie QWP permettant une visibilité parfaite avec lunettes polarisées." },
+            { src: "/3rdproduct/image007.png", alt: "Ventilateur étanche IP65 - Détail", title: "Ventilateur Étanche", description: "Ventilateur étanche IP65 avec processus de stratification complète." },
+            { src: "/3rdproduct/image008.png", alt: "Design ultra-mince - Profil latéral", title: "Design Ultra-Mince", description: "Design à bordure étroite ultra-mince supportant écrans horizontaux/verticaux." },
+            { src: "/3rdproduct/image009.png", alt: "Interface et connectivité - Vue arrière", title: "Interface Complète", description: "Interfaces multiples avec HDMI, USB, RJ45 et WiFi pour une connectivité complète." },
+            { src: "/3rdproduct/image010.png", alt: "Installation murale - Montage VESA", title: "Installation Facile", description: "Montage VESA standard pour une installation facile et sécurisée." },
+            { src: "/WhatsApp Image 2025-12-25 at 10.13.18 AM (1).jpeg", alt: "Vue d'ensemble du produit", title: "Vue Complète", description: "Vue complète du produit avec design moderne et finitions de qualité." },
+            { src: "/3rdproduct/image027.png", alt: "Détails techniques - Spécifications", title: "Spécifications Techniques", description: "Détails techniques complets avec dimensions et caractéristiques précises." },
+            { src: "/3rdproduct/image031.jpg", alt: "Installation en environnement réel", title: "Application Réelle", description: "Installation typique en environnement extérieur avec performance optimale." },
+            { src: "/3rdproduct/image029.jpg", alt: "Finition et qualité de construction", title: "Qualité de Construction", description: "Finition de haute qualité avec matériaux durables pour une longue durée de vie." }
+        ]
+    },
+    infraredTouch55: {
+        title: "Écran Tactile Infrarouge Vertical 55 pouces",
+        description: "Machine publicitaire tactile infrarouge verticale de 55 pouces avec affichage haute définition et conception ultra-mince. Une solution publicitaire interactive de qualité professionnelle avec écran LCD LG/BOE/Samsung.",
+        features: [
+            "Rétroéclairage ELED intégré haute performance",
+            "Verre trempé 19MM avec bordure noire sérigraphiée",
+            "Corps ultra-mince, seulement 18MM au point le plus fin",
+            "Finition brillante sablée et anodisée sur le cadre extérieur",
+            "Toutes les cartes mères et composants électroniques montés verticalement pour un assemblage facile",
+            "Conception intégrée, seuls la carte mère et le câblage sont nécessaires pour assembler toute la machine",
+            "Affichage en verre trempé haute transparence",
+            "Durée de vie LED 60 000 heures"
+        ],
+        stats: [
+            { value: "55\"", label: "Taille d'écran" },
+            { value: "300", label: "cd/㎡ Luminosité" },
+            { value: "1920×1080", label: "Résolution" },
+            { value: "60 000h", label: "Durée de vie LED" }
+        ],
+        benefits: [
+            { title: "Écran Tactile Infrarouge", description: "Technologie tactile infrarouge précise pour une interaction utilisateur fluide et réactive." },
+            { title: "Design Ultra-Mince", description: "Épaisseur de seulement 18MM au point le plus fin pour une intégration élégante dans tout environnement." },
+            { title: "Qualité d'Affichage Premium", description: "Écran LCD LG/BOE/Samsung avec résolution 1920×1080 et angle de vision 178°." },
+            { title: "Construction Robuste", description: "Verre trempé 25.9MM avec finition sablée anodisée pour une durabilité maximale." },
+            { title: "Installation Facile", description: "Conception modulaire intégrée permettant un assemblage et une maintenance rapides." },
+            { title: "Garantie Complète", description: "Garantie qualité 365 jours avec prise en charge des frais d'expédition pour tout défaut dans le premier mois." }
+        ],
+        specs: [
+            { value: "1208.6×679.4mm", label: "Zone d'affichage" },
+            { value: "16:9", label: "Format" },
+            { value: "1920×1080", label: "Résolution" },
+            { value: "1400:1", label: "Contraste" },
+            { value: "178°/178°", label: "Angle de vision" },
+            { value: "8-bit", label: "Couleur" },
+            { value: "75%", label: "Uniformité rétroéclairage" },
+            { value: "18MM", label: "Épaisseur min." }
+        ],
+        useCases: [
+            { title: "Affichage Publicitaire Interactif", description: "Parfait pour les centres commerciaux, halls d'hôtels et espaces d'accueil nécessitant une interaction client." },
+            { title: "Kiosque d'Information", description: "Solution idéale pour l'orientation, les catalogues produits et les informations en libre-service." },
+            { title: "Signalétique Retail", description: "Présentez vos produits de manière interactive avec navigation tactile intuitive." },
+            { title: "Affichage Corporate", description: "Écrans d'accueil et de présentation pour bureaux et salles de conférence." }
+        ],
+        faqs: [
+            { question: "Quelles marques d'écran LCD sont utilisées ?", answer: "Nous utilisons des dalles LCD de qualité supérieure de LG, BOE ou Samsung selon la disponibilité." },
+            { question: "Quelles sont les dimensions du produit ?", answer: "1790×731.2×28MM (Longueur×Largeur×Épaisseur) avec un poids net de 46kg." },
+            { question: "Quelles couleurs sont disponibles ?", answer: "Disponible en Argent, Noir, Or et Blanc." },
+            { question: "Quelle est la garantie ?", answer: "Garantie qualité 365 jours. Nous couvrons les frais d'expédition pour tout défaut produit dans le premier mois." },
+            { question: "Quelle est la durée de vie du rétroéclairage ?", answer: "Le rétroéclairage ELED a une durée de vie de 60 000 heures." }
+        ],
+        gallery: [
+            { src: "/Fiche technique ecran intérieur_files/image001.png", alt: "Vue principale de l'écran tactile 55 pouces" },
+            { src: "/Fiche technique ecran intérieur_files/image003.jpg", alt: "Vue de profil ultra-mince" },
+            { src: "/Fiche technique ecran intérieur_files/image005.jpg", alt: "Détail du cadre anodisé" },
+            { src: "/Fiche technique ecran intérieur_files/image007.jpg", alt: "Vue arrière et connectiques" },
+            { src: "/Fiche technique ecran intérieur_files/image009.jpg", alt: "Montage vertical" },
+            { src: "/Fiche technique ecran intérieur_files/image011.jpg", alt: "Système de montage" },
+            { src: "/Fiche technique ecran intérieur_files/image013.png", alt: "Spécifications techniques" },
+            { src: "/Fiche technique ecran intérieur_files/image015.jpg", alt: "Application en environnement réel" },
+            { src: "/Fiche technique ecran intérieur_files/image017.jpg", alt: "Interface tactile en action" }
+        ],
+        relatedSolutions: [
+            { title: "Bornes Interactives", description: "Solutions kiosk tactiles", link: "/projects/infrared-touch-55" },
+            { title: "Écrans Digitaux", description: "Affichage digital polyvalent", link: "/solutions/digital-screen" },
+            { title: "Écran LCD 43\"", description: "Écran extérieur haute luminosité", link: "/projects/outdoor-lcd-43" }
+        ]
+    },
     common: {
         backToSolutions: "← Retour aux Solutions",
         keyFeatures: "Fonctionnalités Clés",
@@ -821,6 +1022,7 @@ export const solutionsFR = {
         readyToStart: "Prêt à Commencer avec",
         ctaDescription: "Contactez notre équipe dès aujourd'hui pour discuter de votre projet et obtenir une solution sur mesure.",
         contactUs: "Nous Contacter",
-        callUs: "Appeler"
+        callUs: "Appeler",
+        productGallery: "Galerie Produit"
     }
 }

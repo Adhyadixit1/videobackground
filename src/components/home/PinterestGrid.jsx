@@ -8,6 +8,36 @@ const PinterestGrid = () => {
     const projects = useMemo(() => {
         const staticData = [
             {
+                id: 9,
+                solutionKey: 'outdoorLCD43',
+                categoryKey: 'outdoorScreens',
+                size: 'tall',
+                color: 'from-green-900/80 to-emerald-900/80',
+                image: 'https://sc04.alicdn.com/kf/Hbc4f05f302d444cb889ad42c3afc11f5X/229562533/Hbc4f05f302d444cb889ad42c3afc11f5X.jpeg',
+                link: '/projects/outdoor-lcd-43',
+                isSpecial: true
+            },
+            {
+                id: 10,
+                solutionKey: 'infraredTouch55',
+                categoryKey: 'touchDisplays',
+                size: 'wide',
+                color: 'from-cyan-900/80 to-blue-900/80',
+                image: '/Fiche technique ecran intérieur_files/image001.png',
+                link: '/projects/infrared-touch-55',
+                isSpecial: true
+            },
+            {
+                id: 11,
+                solutionKey: 'outdoorWaterproofDisplay',
+                categoryKey: 'outdoorScreens',
+                size: 'normal',
+                color: 'from-orange-900/80 to-red-900/80',
+                image: '/3rdproduct/image002.jpg',
+                link: '/projects/outdoor-waterproof-display',
+                isSpecial: true
+            },
+            {
                 id: 1,
                 solutionKey: 'lcdScreens',
                 categoryKey: 'digitalDisplays',
@@ -120,6 +150,7 @@ const PinterestGrid = () => {
                             relative h-full w-full rounded-2xl lg:rounded-3xl overflow-hidden
                             border border-white/10 group-hover:border-[#D3FD50]/50
                             transition-all duration-500 group-hover:scale-[1.02]
+                            ${project.isSpecial ? 'ring-2 ring-[#D3FD50]/30 ring-offset-2 ring-offset-black' : ''}
                         `}>
                             {/* Background image - subtle and overlayed */}
                             <div className='absolute inset-0'>
@@ -130,53 +161,69 @@ const PinterestGrid = () => {
                                         muted
                                         loop
                                         playsInline
-                                        className='w-full h-full object-cover opacity-60 
+                                        className={`w-full h-full object-cover 
                                                   group-hover:opacity-70 group-hover:scale-110
-                                                  transition-all duration-700'
+                                                  transition-all duration-700
+                                                  ${project.isSpecial ? 'opacity-80' : 'opacity-60'}`}
                                     />
                                 ) : (
                                     <img
                                         src={project.image}
                                         alt={project.title}
-                                        className='w-full h-full object-cover opacity-60 
+                                        className={`w-full h-full object-cover 
                                                   group-hover:opacity-70 group-hover:scale-110
-                                                  transition-all duration-700'
+                                                  transition-all duration-700
+                                                  ${project.isSpecial ? 'opacity-80' : 'opacity-60'}`}
                                     />
                                 )}
                             </div>
 
                             {/* Color gradient overlay - sits on top of image */}
                             <div className={`absolute inset-0 bg-gradient-to-br ${project.color} 
-                                           mix-blend-multiply opacity-90`}></div>
+                                           mix-blend-multiply ${project.isSpecial ? 'opacity-70' : 'opacity-90'}`}></div>
 
                             {/* Dark gradient overlay from bottom for text readability */}
-                            <div className='absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent 
-                                           opacity-80 group-hover:opacity-70 transition-opacity duration-500'></div>
+                            <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent 
+                                           ${project.isSpecial ? 'opacity-60' : 'opacity-80'} group-hover:opacity-70 transition-opacity duration-500`}></div>
+
+                            {/* Special badge */}
+                            {project.isSpecial && (
+                                <div className='absolute top-4 right-4 px-4 py-2 bg-[#D3FD50] text-black text-xs font-[font1] font-bold rounded-full uppercase tracking-wider z-10 shadow-lg shadow-[#D3FD50]/50 animate-pulse'>
+                                    ⭐ Featured
+                                </div>
+                            )}
 
                             {/* Floating shapes decoration */}
-                            <div className='absolute top-8 right-8 w-16 h-16 border border-white/20 rounded-full 
-                                           group-hover:border-[#D3FD50]/50 group-hover:scale-110 transition-all duration-500'></div>
-                            <div className='absolute top-20 right-12 w-8 h-8 bg-white/10 rounded-full 
-                                           group-hover:bg-[#D3FD50]/30 transition-all duration-500'></div>
+                            <div className={`absolute top-8 right-8 border rounded-full 
+                                           group-hover:border-[#D3FD50]/50 group-hover:scale-110 transition-all duration-500
+                                           ${project.isSpecial ? 'w-20 h-20 border-[#D3FD50]/40' : 'w-16 h-16 border-white/20'}`}></div>
+                            <div className={`absolute top-20 right-12 rounded-full 
+                                           group-hover:bg-[#D3FD50]/30 transition-all duration-500
+                                           ${project.isSpecial ? 'w-10 h-10 bg-[#D3FD50]/20' : 'w-8 h-8 bg-white/10'}`}></div>
 
                             {/* Content */}
                             <div className='absolute bottom-0 left-0 right-0 p-6 lg:p-8'>
-                                <span className='inline-block px-3 py-1 bg-white/10 backdrop-blur-md rounded-full 
-                                               text-white/80 text-xs font-[font1] tracking-wider uppercase mb-3
-                                               group-hover:bg-[#D3FD50]/20 group-hover:text-[#D3FD50] transition-all duration-300'>
+                                <span className={`inline-block px-3 py-1 backdrop-blur-md rounded-full 
+                                               text-xs font-[font1] tracking-wider uppercase mb-3
+                                               transition-all duration-300
+                                               ${project.isSpecial 
+                                                 ? 'bg-[#D3FD50]/20 text-[#D3FD50] group-hover:bg-[#D3FD50]/30' 
+                                                 : 'bg-white/10 text-white/80 group-hover:bg-[#D3FD50]/20 group-hover:text-[#D3FD50]'}`}>
                                     {project.category}
                                 </span>
-                                <h3 className='font-[font2] text-white text-xl lg:text-2xl leading-tight
-                                              group-hover:text-[#D3FD50] transition-colors duration-300'>
+                                <h3 className={`font-[font2] leading-tight
+                                              group-hover:text-[#D3FD50] transition-colors duration-300
+                                              ${project.isSpecial ? 'text-white text-2xl lg:text-3xl' : 'text-white text-xl lg:text-2xl'}`}>
                                     {project.title}
                                 </h3>
                             </div>
 
                             {/* Hover arrow */}
-                            <div className='absolute top-6 left-6 w-10 h-10 rounded-full bg-[#D3FD50] 
+                            <div className={`absolute top-6 left-6 rounded-full bg-[#D3FD50] 
                                            flex items-center justify-center opacity-0 scale-50
-                                           group-hover:opacity-100 group-hover:scale-100 transition-all duration-300'>
-                                <svg className='w-4 h-4 text-black' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                                           group-hover:opacity-100 group-hover:scale-100 transition-all duration-300
+                                           ${project.isSpecial ? 'w-12 h-12' : 'w-10 h-10'}`}>
+                                <svg className={`text-black ${project.isSpecial ? 'w-5 h-5' : 'w-4 h-4'}`} fill='none' viewBox='0 0 24 24' stroke='currentColor'>
                                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M7 17L17 7M17 7H7M17 7v10' />
                                 </svg>
                             </div>

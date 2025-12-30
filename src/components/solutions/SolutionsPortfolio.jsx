@@ -30,6 +30,12 @@ const SolutionsPortfolio = () => {
         '/WhatsApp Image 2025-12-25 at 10.13.20 AM (2).jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.20 AM (3).jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.20 AM.jpeg',
+        // Outdoor LCD 43 inch product images
+        '/Picture1.jpg',
+        '/Picture2.jpg',
+        '/Picture3.png',
+        '/Picture4.jpg',
+        '/Picture5.jpg',
     ]
 
     // Randomize images function

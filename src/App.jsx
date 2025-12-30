@@ -18,6 +18,7 @@ const Investors = lazy(() => import('./pages/Investors'))
 const Contact = lazy(() => import('./pages/Contact'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
 const TermsOfUse = lazy(() => import('./pages/TermsOfUse'))
+const CookiesPolicy = lazy(() => import('./pages/CookiesPolicy'))
 
 // Solution Sub-pages
 const SolutionPages = lazy(() => import('./pages/SolutionPages'))
@@ -25,8 +26,14 @@ import {
   StationServiceDisplay, DigitalPump, DigitalTotems, GasStationNetwork,
   OutdoorScreens, OutdoorDisplay, LEDWalls, PromotionalScreen, VideoWalls,
   StationNetwork, MenuBoards, FuelAdvertising, InfoDisplays, DigitalScreen,
-  InteractiveKiosk
+  InteractiveKiosk, OutdoorLCD43, InfraredTouch55
 } from './pages/SolutionPages'
+
+// Project Sub-pages
+const ProjectPages = lazy(() => import('./pages/ProjectPages'))
+import {
+  OutdoorLCD43Project, InfraredTouch55Project, OutdoorWaterproofDisplayProject
+} from './pages/ProjectPages'
 
 import useLottiePrefetch from './hooks/useLottiePrefetch'
 
@@ -95,6 +102,14 @@ const App = () => {
           <Route path='/solutions/info-displays' element={<InfoDisplays />} />
           <Route path='/solutions/digital-screen' element={<DigitalScreen />} />
           <Route path='/solutions/interactive-kiosk' element={<InteractiveKiosk />} />
+          <Route path='/solutions/outdoor-lcd-43' element={<OutdoorLCD43 />} />
+          <Route path='/solutions/infrared-touch-55' element={<InfraredTouch55 />} />
+
+          {/* Project Sub-pages */}
+          <Route path='/projects/outdoor-lcd-43' element={<OutdoorLCD43Project />} />
+          <Route path='/projects/infrared-touch-55' element={<InfraredTouch55Project />} />
+          <Route path='/projects/outdoor-waterproof-display' element={<OutdoorWaterproofDisplayProject />} />
+
           <Route path='/why-luxio' element={<WhyFillup />} />
           <Route path='/case-studies' element={<CaseStudies />} />
           <Route path='/case-studies/:id' element={<CaseStudyDetail />} />
@@ -104,6 +119,7 @@ const App = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/privacy' element={<PrivacyPolicy />} />
           <Route path='/terms' element={<TermsOfUse />} />
+          <Route path='/cookies' element={<CookiesPolicy />} />
         </Routes>
       </Suspense>
     </div>
