@@ -25,12 +25,6 @@ const SolutionsPortfolio = () => {
         '/WhatsApp Image 2025-12-25 at 10.13.20 AM (1).jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.20 AM (2).jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.20 AM (3).jpeg',
-        // Outdoor LCD 43 inch product images
-        '/Picture1.jpg',
-        '/Picture2.jpg',
-        '/Picture3.png',
-        '/Picture4.jpg',
-        '/Picture5.jpg',
         '/Digital Menu Boards, LCD Display Boards, Digital Menu Displays.jpg',
     ]
 

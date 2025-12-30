@@ -125,7 +125,7 @@ export const InteractiveKiosk = () => (
 export const OutdoorLCD43 = () => (
     <SolutionTemplate
         solutionKey="outdoorLCD43"
-        image="/Picture1.jpg"
+        image="/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg"
     />
 )
 
