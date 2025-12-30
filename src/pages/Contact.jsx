@@ -5,7 +5,7 @@ import LottieVisual from '../components/common/LottieVisual'
 import { useLanguage } from '../context/LanguageContext'
 
 const Contact = () => {
-    const { t } = useLanguage()
+    const { t, language } = useLanguage()
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -54,10 +54,40 @@ const Contact = () => {
         setIsDropdownOpen(false)
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log('Form submitted:', formData)
-        alert(t('contact.success'))
+        try {
+            const response = await fetch('/api/leads', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    phone: `${formData.countryCode} ${formData.phone}`,
+                    language: language,
+                    query: `Message: ${formData.message} | Company: ${formData.company} | Sector: ${formData.sector}`,
+                    source: 'contact_form'
+                })
+            });
+
+            if (response.ok) {
+                alert(t('contact.success') || 'Message sent successfully!');
+                setFormData({
+                    name: '',
+                    email: '',
+                    company: '',
+                    countryCode: '+352',
+                    phone: '',
+                    sector: '',
+                    message: ''
+                });
+            } else {
+                alert('Failed to send message. Please try again.');
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            alert('An error occurred. Please try again later.');
+        }
     }
 
     const contactInfo = useMemo(() => [

@@ -1,8 +1,9 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
 import Navbar from './components/Navigation/Navbar'
 import FullScreenNav from './components/Navigation/FullScreenNav'
 import ScrollToTop from './components/common/ScrollToTop'
+import Chatbot from './components/Chatbot'
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'))
@@ -19,6 +20,7 @@ const Contact = lazy(() => import('./pages/Contact'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
 const TermsOfUse = lazy(() => import('./pages/TermsOfUse'))
 const CookiesPolicy = lazy(() => import('./pages/CookiesPolicy'))
+const Admin = lazy(() => import('./pages/Admin'))
 
 // Solution Sub-pages
 const SolutionPages = lazy(() => import('./pages/SolutionPages'))
@@ -39,12 +41,15 @@ import useLottiePrefetch from './hooks/useLottiePrefetch'
 
 const App = () => {
   useLottiePrefetch()
+  const location = useLocation()
+  const isAdminPage = location.pathname.startsWith('/admin')
 
   return (
     <div className='overflow-x-hidden'>
-      <Navbar />
-      <FullScreenNav />
+      {!isAdminPage && <Navbar />}
+      {!isAdminPage && <FullScreenNav />}
       <ScrollToTop />
+      {!isAdminPage && <Chatbot />}
       <Suspense fallback={<div className="h-screen w-screen bg-black"></div>}>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -121,6 +126,7 @@ const App = () => {
           <Route path='/privacy' element={<PrivacyPolicy />} />
           <Route path='/terms' element={<TermsOfUse />} />
           <Route path='/cookies' element={<CookiesPolicy />} />
+          <Route path='/admin' element={<Admin />} />
         </Routes>
       </Suspense>
     </div>

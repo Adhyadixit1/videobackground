@@ -184,7 +184,7 @@ const Solutions = () => {
                     <div className='grid lg:grid-cols-2 gap-12 lg:gap-24 items-center'>
                         <div className='order-2 lg:order-1'>
                             <div className='relative rounded-[40px] overflow-hidden border border-white/10'>
-                                <img src='/WhatsApp Image 2025-12-25 at 10.13.20 AM.jpeg' className='w-full h-full object-cover lg:h-[600px] opacity-70' alt='' />
+                                <img src='/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg' className='w-full h-full object-cover lg:h-[600px] opacity-70' alt='' />
                                 <div className='absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40' />
                                 <div className='absolute bottom-10 left-10 p-8 rounded-3xl bg-black/60 backdrop-blur-xl border border-white/10 max-w-[80%]'>
                                     <div className='text-[#D3FD50] font-[font2] text-4xl mb-1'>4m 12s</div>

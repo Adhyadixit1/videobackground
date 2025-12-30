@@ -7,10 +7,8 @@ const SolutionsPortfolio = () => {
     // List of images from public folder
     const allImages = [
         '/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg',
-        '/WhatsApp Image 2025-12-25 at 10.13.14 AM (2).jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.14 AM.jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.15 AM (1).jpeg',
-        '/WhatsApp Image 2025-12-25 at 10.13.15 AM (2).jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.15 AM (3).jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.15 AM.jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.16 AM (1).jpeg',
@@ -20,22 +18,20 @@ const SolutionsPortfolio = () => {
         '/WhatsApp Image 2025-12-25 at 10.13.17 AM (2).jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.17 AM (3).jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg',
-        '/WhatsApp Image 2025-12-25 at 1.38.14 PM.jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.18 AM (1).jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.18 AM.jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.19 AM (1).jpeg',
-        '/WhatsApp Image 2025-12-25 at 10.13.19 AM (2).jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.19 AM.jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.20 AM (1).jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.20 AM (2).jpeg',
         '/WhatsApp Image 2025-12-25 at 10.13.20 AM (3).jpeg',
-        '/WhatsApp Image 2025-12-25 at 10.13.20 AM.jpeg',
         // Outdoor LCD 43 inch product images
         '/Picture1.jpg',
         '/Picture2.jpg',
         '/Picture3.png',
         '/Picture4.jpg',
         '/Picture5.jpg',
+        '/Digital Menu Boards, LCD Display Boards, Digital Menu Displays.jpg',
     ]
 
     // Randomize images function

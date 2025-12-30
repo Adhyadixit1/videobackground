@@ -725,7 +725,15 @@ Luxio Media, c’est l’alliance de la technologie, de l’impact visuel et de 
             pricing: "Tarifs",
             chooseYourPlan: "Choisissez Votre Plan",
             recommended: "Recommandé",
-            getStarted: "Commencer"
+            getStarted: 'Commencer'
+        },
+        chatbot: {
+            welcome: "Bonjour ! Comment puis-je vous aider aujourd'hui ?",
+            fallback: "Je ne suis pas en mesure de répondre à cette question spécifique. Veuillez contacter notre équipe d'assistance via WhatsApp.",
+            startChat: "Démarrer le chat",
+            connecting: "Connexion...",
+            placeholder: "Tapez votre message...",
+            welcomeBack: "Bonjour [name], comment puis-je vous aider ?"
         }
     },
     en: {
@@ -1365,13 +1373,20 @@ Luxio Media is the alliance of technology, visual impact, and bespoke support to
             chooseYourPlan: "Choose Your Plan",
             recommended: "Recommended",
             getStarted: "Get Started"
+        },
+        chatbot: {
+            welcome: "Hello! How can I help you today?",
+            fallback: "I am unable to answer that specific question. Please contact our support team via WhatsApp.",
+            startChat: "Start Chat",
+            connecting: "Connecting...",
+            placeholder: "Type a message...",
+            welcomeBack: "Hello [name], how can I help you today?"
         }
     },
     de: {
         nav: {
             solutions: 'Unsere Lösungen',
             whyFillup: 'Warum Luxio Media?',
-            aboutUs: 'Über uns',
             caseStudies: 'Fallstudien',
             resources: 'Ressourcen',
             careers: 'Karriere',
@@ -1989,6 +2004,14 @@ Luxio Media ist die Allianz aus Technologie, visueller Wirkung und maßgeschneid
             chooseYourPlan: "Wählen Sie Ihren Plan",
             recommended: "Empfohlen",
             getStarted: "Loslegen"
+        },
+        chatbot: {
+            welcome: "Hallo! Wie kann ich Ihnen heute helfen?",
+            fallback: "Ich kann diese spezifische Frage leider nicht beantworten. Bitte kontaktieren Sie unser Support-Team über WhatsApp.",
+            startChat: "Chat starten",
+            connecting: "Verbinde...",
+            placeholder: "Nachricht eingeben...",
+            welcomeBack: "Hallo [name], wie kann ich Ihnen heute helfen?"
         }
     }
 };
