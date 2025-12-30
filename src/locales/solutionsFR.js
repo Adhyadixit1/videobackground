@@ -830,14 +830,80 @@ export const solutionsFR = {
             { title: "Protection Électrique Complète", description: "Protection contre les fuites, surcharge, surtension, dispositif anti-foudre et protection surchauffe." }
         ],
         specs: [
-            { value: "943×531mm", label: "Taille affichage" },
-            { value: "16:9", label: "Format" },
+            { value: "43\"", label: "Taille d'écran" },
+            { value: "1800 nits", label: "Luminosité" },
             { value: "1080×1920", label: "Résolution" },
-            { value: "16,7M", label: "Couleurs" },
-            { value: "3500:1", label: "Contraste" },
-            { value: "178°/178°", label: "Angle de vision" },
-            { value: "5ms", label: "Temps de réponse" },
-            { value: "Android 11", label: "OS" }
+            { value: "IP55", label: "Protection" },
+            { value: "Android 11", label: "OS" },
+            { value: "14h", label: "Batterie (Autonomie)" },
+            { value: "40kg", label: "Poids" },
+            { value: "60 000h", label: "Durée de vie" }
+        ],
+        detailedSpecs: [
+            {
+                category: "1. Paramètres de la dalle",
+                items: [
+                    { label: "Type", value: "Écran LED 43\"" },
+                    { label: "Taille d’affichage", value: "943 × 531 mm" },
+                    { label: "Format", value: "16:9" },
+                    { label: "Rétroéclairage", value: "Module LED breveté" },
+                    { label: "Résolution", value: "1080 × 1920" },
+                    { label: "Couleurs", value: "16,7 M" },
+                    { label: "Luminosité", value: "1800 cd/m²" },
+                    { label: "Contraste", value: "3500:1" },
+                    { label: "Angle de vision", value: "178°/178°" },
+                    { label: "Temps de réponse", value: "5 ms" },
+                    { label: "Système vidéo", value: "PAL/NTSC/SECAM" },
+                    { label: "Durée de vie", value: "60 000 h" }
+                ]
+            },
+            {
+                category: "2. Paramètres de la carte mère",
+                items: [
+                    { label: "CPU", value: "Cortex-A7, 1,2 GHz" },
+                    { label: "RAM", value: "DDR3 1 Go" },
+                    { label: "Stockage", value: "TF max 32 Go" },
+                    { label: "OS", value: "Android 11, 2+32 GB" },
+                    { label: "Réseau", value: "3G/4G/Ethernet/WiFi" },
+                    { label: "Vidéo", value: "30+ formats supportés" },
+                    { label: "Images", value: "BMP, JPG, PNG, GIF" },
+                    { label: "Ports USB", value: "2×USB HOST + 2 extensions" },
+                    { label: "Mise à jour", value: "USB/SD/remote" }
+                ]
+            },
+            {
+                category: "3. Paramètres de la batterie",
+                items: [
+                    { label: "Technologie", value: "Batterie type Blade" },
+                    { label: "Charge", value: "7 h" },
+                    { label: "Autonomie", value: "14 h" },
+                    { label: "Capacité", value: "5000 mAh" },
+                    { label: "Tension d’entrée", value: "24 V" }
+                ]
+            },
+            {
+                category: "4. Environnement de fonctionnement",
+                items: [
+                    { label: "Température", value: "-50 °C ~ 110 °C" },
+                    { label: "Stockage", value: "-45 °C ~ 80 °C" },
+                    { label: "Humidité", value: "10% ~ 90%" },
+                    { label: "Alimentation", value: "AC100V–240V" },
+                    { label: "Consommation", value: "≤100W" },
+                    { label: "Veille", value: "≤3W" }
+                ]
+            },
+            {
+                category: "5. Apparence et matériaux",
+                items: [
+                    { label: "Couleurs", value: "Argent, gris, blanc, noir, rouge" },
+                    { label: "Matériau", value: "Acier galvanisé + peinture extérieure" },
+                    { label: "Certifications", value: "ISO9001, 3C, FCC, UL" },
+                    { label: "Poids net", value: "40 kg" },
+                    { label: "Poids brut", value: "48 kg" },
+                    { label: "Taille produit", value: "1236 × 148 × 588 mm" },
+                    { label: "Taille emballage", value: "1350 × 300 × 700 mm" }
+                ]
+            }
         ],
         useCases: [
             { title: "Affichage Publicitaire Extérieur", description: "Idéal pour les zones à fort trafic, centres commerciaux et espaces publics nécessitant une visibilité haute luminosité." },
@@ -858,11 +924,36 @@ export const solutionsFR = {
             { title: "Affichage LED", description: "Murs LED grand format", link: "/solutions/led-walls" }
         ],
         gallery: [
-            { src: "https://sc04.alicdn.com/kf/Hbc4f05f302d444cb889ad42c3afc11f5X/229562533/Hbc4f05f302d444cb889ad42c3afc11f5X.jpeg", alt: "Écran LCD extérieur 43 pouces - Vue avant" },
-            { src: "https://sc04.alicdn.com/kf/H9fe9c1b4615b4c87bed668bc1c01aeabi/229562533/H9fe9c1b4615b4c87bed668bc1c01aeabi.jpeg", alt: "Écran LCD extérieur - Vue latérale" },
-            { src: "https://sc04.alicdn.com/kf/H5dca400328e84b11bce1d423205a53c42/229562533/H5dca400328e84b11bce1d423205a53c42.jpeg", alt: "Écran LCD extérieur - Installation murale" },
-            { src: "https://sc04.alicdn.com/kf/H157d452fd367472baf1e3f6c28d44fa0g/229562533/H157d452fd367472baf1e3f6c28d44fa0g.jpeg", alt: "Écran LCD extérieur - Vue de détail" },
-            { src: "https://sc04.alicdn.com/kf/H65672701d4734a0384ecae5e1922e6e9Q/229562533/H65672701d4734a0384ecae5e1922e6e9Q.jpg", alt: "Écran LCD extérieur - Spécifications techniques" }
+            {
+                src: "https://sc04.alicdn.com/kf/Hbc4f05f302d444cb889ad42c3afc11f5X/229562533/Hbc4f05f302d444cb889ad42c3afc11f5X.jpeg",
+                alt: "Écran LCD extérieur 43 pouces - Vue avant",
+                title: "Design Élégant & Robuste",
+                description: "Une structure métallique en acier galvanisé avec une finition premium pour résister aux environnements extérieurs les plus exigeants."
+            },
+            {
+                src: "https://sc04.alicdn.com/kf/H9fe9c1b4615b4c87bed668bc1c01aeabi/229562533/H9fe9c1b4615b4c87bed668bc1c01aeabi.jpeg",
+                alt: "Écran LCD extérieur - Vue latérale",
+                title: "Profil Ultra-Mince",
+                description: "Un design compact et moderne qui s'intègre parfaitement dans tout paysage urbain ou commercial."
+            },
+            {
+                src: "https://sc04.alicdn.com/kf/H5dca400328e84b11bce1d423205a53c42/229562533/H5dca400328e84b11bce1d423205a53c42.jpeg",
+                alt: "Écran LCD extérieur - Installation murale",
+                title: "Installation Polyvalente",
+                description: "Support de montage flexible permettant une installation murale sécurisée ou sur pied autoportant."
+            },
+            {
+                src: "https://sc04.alicdn.com/kf/H157d452fd367472baf1e3f6c28d44fa0g/229562533/H157d452fd367472baf1e3f6c28d44fa0g.jpeg",
+                alt: "Écran LCD extérieur - Vue de détail",
+                title: "Détails de Haute Qualité",
+                description: "Composants de qualité industrielle et verre trempé laminé AR pour une clarté et une sécurité maximales."
+            },
+            {
+                src: "https://sc04.alicdn.com/kf/H65672701d4734a0384ecae5e1922e6e9Q/229562533/H65672701d4734a0384ecae5e1922e6e9Q.jpg",
+                alt: "Écran LCD extérieur - Spécifications techniques",
+                title: "Performance Garantie",
+                description: "Système de refroidissement intelligent et composants certifiés pour un fonctionnement continu 24/7."
+            }
         ]
     },
     outdoorWaterproofDisplay: {
@@ -893,14 +984,94 @@ export const solutionsFR = {
             { title: "Protection Complète", description: "Design entièrement scellé avec protection IP65, résistant aux conditions extérieures extrêmes." }
         ],
         specs: [
-            { value: "1920×1080", label: "Résolution (32-55\")" },
-            { value: "3840×2160", label: "Résolution (65\")" },
-            { value: "2500nits", label: "Luminosité" },
-            { value: "1200:1", label: "Contraste" },
-            { value: "178°/178°", label: "Angle de vision" },
-            { value: "IPS", label: "Technologie" },
-            { value: "Android 12.0", label: "OS" },
-            { value: "2+16GB", label: "Mémoire" }
+            { value: "32-65\"", label: "Tailles Disponibles" },
+            { value: "2500 nits", label: "Luminosité" },
+            { value: "IP65", label: "Protection" },
+            { value: "4K/FHD", label: "Résolution" },
+            { value: "ELED", label: "Rétroéclairage" },
+            { value: "Aluminium", label: "Matériau" },
+            { value: "Android 12", label: "Système" },
+            { value: "H/V", label: "Mode d'Affichage" }
+        ],
+        detailedSpecs: [
+            {
+                category: "Modèle OD320-T (32\")",
+                items: [
+                    { label: "Taille de Dalle", value: "32\" IPS (16:9)" },
+                    { label: "Résolution", value: "1920 * 1080" },
+                    { label: "Luminosité", value: "2500 nits (Contraste 1200:1)" },
+                    { label: "Dimensions Extérieures", value: "763 * 457 * 95,5 mm" },
+                    { label: "Poids (Net/Brut)", value: "19kg / 26kg" },
+                    { label: "Puissance Max", value: "160W" },
+                    { label: "Montage", value: "VESA 670 * 300 mm" },
+                    { label: "Temp. de Fonctionnement", value: "-20 à 50℃" }
+                ]
+            },
+            {
+                category: "Modèle OD430-T (43\")",
+                items: [
+                    { label: "Taille de Dalle", value: "43\" IPS (16:9)" },
+                    { label: "Résolution", value: "1920 * 1080" },
+                    { label: "Luminosité", value: "2500 nits (Contraste 1200:1)" },
+                    { label: "Dimensions Extérieures", value: "1014 * 602 * 95,5 mm" },
+                    { label: "Poids (Net/Brut)", value: "28kg / 36kg" },
+                    { label: "Puissance Max", value: "220W" },
+                    { label: "Montage", value: "VESA 900 * 400 mm" },
+                    { label: "Temp. de Fonctionnement", value: "-20 à 50℃" }
+                ]
+            },
+            {
+                category: "Modèle OD490-T (49\")",
+                items: [
+                    { label: "Taille de Dalle", value: "49\" IPS (16:9)" },
+                    { label: "Résolution", value: "1920 * 1080" },
+                    { label: "Luminosité", value: "2500 nits (Contraste 1200:1)" },
+                    { label: "Dimensions Extérieures", value: "1147 * 677 * 95,5 mm" },
+                    { label: "Poids (Net/Brut)", value: "36kg / 44kg" },
+                    { label: "Puissance Max", value: "240W" },
+                    { label: "Montage", value: "VESA 1075 * 400 mm" },
+                    { label: "Temp. de Fonctionnement", value: "-20 à 50℃" }
+                ]
+            },
+            {
+                category: "Modèle OD550-T (55\")",
+                items: [
+                    { label: "Taille de Dalle", value: "55\" IPS (16:9)" },
+                    { label: "Résolution", value: "1920 * 1080" },
+                    { label: "Luminosité", value: "2500 nits (Contraste 1200:1)" },
+                    { label: "Dimensions Extérieures", value: "1282 * 753 * 95,5 mm" },
+                    { label: "Poids (Net/Brut)", value: "38kg / 48kg" },
+                    { label: "Puissance Max", value: "280W" },
+                    { label: "Montage", value: "VESA 1200 * 400 mm" },
+                    { label: "Temp. de Fonctionnement", value: "-20 à 50℃" }
+                ]
+            },
+            {
+                category: "Modèle OD650-T (65\")",
+                items: [
+                    { label: "Taille de Dalle", value: "65\" IPS (16:9)" },
+                    { label: "Résolution", value: "3840 * 2160 (4K)" },
+                    { label: "Luminosité", value: "2500 nits (Contraste 1200:1)" },
+                    { label: "Dimensions Extérieures", value: "1500 * 875 * 95,5 mm" },
+                    { label: "Poids (Net/Brut)", value: "65kg / 75kg" },
+                    { label: "Puissance Max", value: "480W" },
+                    { label: "Montage", value: "VESA 1400 * 400 mm" },
+                    { label: "Temp. de Fonctionnement", value: "-20 à 50℃" }
+                ]
+            },
+            {
+                category: "Spécifications Générales",
+                items: [
+                    { label: "Carte Mère", value: "8-core CPU A55, Android 12.0, 2+16GB" },
+                    { label: "Interfaces", value: "HDMI*1, USB*2, RJ45*1, WIFI*1" },
+                    { label: "Matériaux", value: "Aluminium, Plaque de fer galvanisé" },
+                    { label: "Protection", value: "IP65 Étanche, Verre ultra-clair 5mm" },
+                    { label: "Surface", value: "Revêtement extérieur, Haze 3%" },
+                    { label: "Durée de Vie", value: "50 000 Heures" },
+                    { label: "Environnement", value: "10% - 85% Humidité" },
+                    { label: "Alimentation", value: "180-264V, 50/60Hz" }
+                ]
+            }
         ],
         useCases: [
             { title: "Affichage Publicitaire Extérieur", description: "Parfait pour les zones à fort trafic, centres commerciaux et espaces publics nécessitant une visibilité extrême." },
@@ -964,14 +1135,68 @@ export const solutionsFR = {
             { title: "Garantie Complète", description: "Garantie qualité 365 jours avec prise en charge des frais d'expédition pour tout défaut dans le premier mois." }
         ],
         specs: [
-            { value: "1208.6×679.4mm", label: "Zone d'affichage" },
-            { value: "16:9", label: "Format" },
-            { value: "1920×1080", label: "Résolution" },
+            { value: "1920×1080", label: "Résolution FHD" },
+            { value: "300 nits", label: "Luminosité" },
             { value: "1400:1", label: "Contraste" },
-            { value: "178°/178°", label: "Angle de vision" },
-            { value: "8-bit", label: "Couleur" },
-            { value: "75%", label: "Uniformité rétroéclairage" },
-            { value: "18MM", label: "Épaisseur min." }
+            { value: "ELED", label: "Rétroéclairage" },
+            { value: "18mm", label: "Profil Min." },
+            { value: "46kg", label: "Poids Net" },
+            { value: "60 000h", label: "Vie LED" },
+            { value: "365 Jours", label: "Garantie" }
+        ],
+        detailedSpecs: [
+            {
+                category: "1. Performance d'Affichage",
+                items: [
+                    { label: "Nom du Produit", value: "Machine Publicitaire Tactile Infrarouge Verticale 55\"" },
+                    { label: "Surface d'Affichage", value: "1208,6 (H) × 679,4 (V) mm" },
+                    { label: "Format d'Image", value: "16:9" },
+                    { label: "Résolution", value: "1920 × 1080 (Full HD)" },
+                    { label: "Luminosité", value: "300 cd/㎡ (Typique)" },
+                    { label: "Contraste", value: "1400:1" },
+                    { label: "Profondeur de Couleur", value: "8-bit" },
+                    { label: "Angle de Vision", value: "178°(V) / 178°(H)" },
+                    { label: "Qualité de Dalle", value: "LG / BOE / Samsung" }
+                ]
+            },
+            {
+                category: "2. Rétroéclairage & Technologie",
+                items: [
+                    { label: "Type de Rétroéclairage", value: "Rétroéclairage ELED" },
+                    { label: "Uniformité", value: "75%" },
+                    { label: "Courant & Tension", value: "76V / 720mA (360mA × 2)" },
+                    { label: "Durée de Vie LED", value: "60 000 Heures" },
+                    { label: "Technologie Tactile", value: "Infrarouge Multi-Touch" }
+                ]
+            },
+            {
+                category: "3. Dimensions Physiques",
+                items: [
+                    { label: "Taille du Produit", value: "1790 × 731,2 × 28 mm" },
+                    { label: "Épaisseur Min.", value: "18 mm" },
+                    { label: "Type de Verre", value: "Verre Trempé 25,9 mm" },
+                    { label: "Caractéristiques Verre", value: "Bordure noire sérigraphiée" },
+                    { label: "Finition Coque", value: "Sablée & Anodisée Haute Brillance" },
+                    { label: "Couleurs", value: "Argent / Noir / Or / Blanc" }
+                ]
+            },
+            {
+                category: "4. Logistique & Poids",
+                items: [
+                    { label: "Dimensions Carton", value: "1865 × 140 × 842 mm" },
+                    { label: "Poids Net", value: "46 kg" },
+                    { label: "Poids Brut", value: "49 kg" },
+                    { label: "Conception Assemblage", value: "Composants internes verticaux" }
+                ]
+            },
+            {
+                category: "5. Service & Garantie",
+                items: [
+                    { label: "Garantie Qualité", value: "365 Jours" },
+                    { label: "Politique de Retour", value: "Livraison offerte pour défauts sous 30 jours" },
+                    { label: "Facilité de Maintenance", value: "Conception modulaire intégrée" }
+                ]
+            }
         ],
         useCases: [
             { title: "Affichage Publicitaire Interactif", description: "Parfait pour les centres commerciaux, halls d'hôtels et espaces d'accueil nécessitant une interaction client." },
@@ -987,15 +1212,48 @@ export const solutionsFR = {
             { question: "Quelle est la durée de vie du rétroéclairage ?", answer: "Le rétroéclairage ELED a une durée de vie de 60 000 heures." }
         ],
         gallery: [
-            { src: "/Fiche technique ecran intérieur_files/image001.png", alt: "Vue principale de l'écran tactile 55 pouces" },
-            { src: "/Fiche technique ecran intérieur_files/image003.jpg", alt: "Vue de profil ultra-mince" },
-            { src: "/Fiche technique ecran intérieur_files/image005.jpg", alt: "Détail du cadre anodisé" },
-            { src: "/Fiche technique ecran intérieur_files/image007.jpg", alt: "Vue arrière et connectiques" },
-            { src: "/Fiche technique ecran intérieur_files/image009.jpg", alt: "Montage vertical" },
-            { src: "/Fiche technique ecran intérieur_files/image011.jpg", alt: "Système de montage" },
-            { src: "/Fiche technique ecran intérieur_files/image013.png", alt: "Spécifications techniques" },
-            { src: "/Fiche technique ecran intérieur_files/image015.jpg", alt: "Application en environnement réel" },
-            { src: "/Fiche technique ecran intérieur_files/image017.jpg", alt: "Interface tactile en action" }
+            {
+                src: "/Fiche technique ecran intérieur_files/image001.png",
+                alt: "Vue principale de l'écran tactile 55 pouces",
+                title: "Format Vertical Élégant",
+                description: "Un écran 55 pouces imposant avec une surface tactile réactive pour une interaction utilisateur optimale dans les lieux publics."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image003.jpg",
+                alt: "Vue de profil ultra-mince",
+                title: "Épaisseur Minimale",
+                description: "Seulement 18mm d'épaisseur au point le plus fin, offrant l'un des profils les plus fins du marché pour cette catégorie."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image005.jpg",
+                alt: "Détail du cadre anodisé",
+                title: "Finition Premium",
+                description: "Cadre en aluminium sablé et anodisé pour un aspect luxueux et une résistance accrue aux rayures."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image007.jpg",
+                alt: "Vue arrière et connectiques",
+                title: "Connectivité Complète",
+                description: "Interfaces multiples discrètement intégrées pour une gestion simplifiée des sources de contenu."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image009.jpg",
+                alt: "Montage vertical",
+                title: "Conception Modulaire",
+                description: "Composants internes organisés verticalement pour faciliter la maintenance et optimiser la durée de vie."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image011.jpg",
+                alt: "Système de montage",
+                title: "Structure Stable",
+                description: "Base lestée et châssis renforcé assurant une stabilité parfaite même dans les zones à fort passage."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image013.png",
+                alt: "Spécifications techniques",
+                title: "Composants de Grade A",
+                description: "Utilisation exclusive de dalles LG/BOE/Samsung pour une luminosité et un contraste exceptionnels."
+            }
         ],
         relatedSolutions: [
             { title: "Bornes Interactives", description: "Solutions kiosk tactiles", link: "/projects/infrared-touch-55" },
@@ -1110,7 +1368,7 @@ export const solutionsFR = {
                 description: "Nous analysons vos objectifs business, audience cible et paysage concurrentiel pour développer une stratégie marketing digitale complète alignée avec vos objectifs."
             },
             {
-                step: "2", 
+                step: "2",
                 title: "Recherche Audience",
                 description: "Plongée profonde dans les démographies, comportements et préférences d'audience pour créer des personas clients détaillés et identifier les points de contact optimaux."
             },

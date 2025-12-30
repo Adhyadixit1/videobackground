@@ -21,7 +21,7 @@ const PinterestGrid = () => {
                 id: 10,
                 solutionKey: 'infraredTouch55',
                 categoryKey: 'touchDisplays',
-                size: 'wide',
+                size: 'tall',
                 color: 'from-cyan-900/80 to-blue-900/80',
                 image: '/Fiche technique ecran intérieur_files/image001.png',
                 link: '/projects/infrared-touch-55',
@@ -31,7 +31,7 @@ const PinterestGrid = () => {
                 id: 11,
                 solutionKey: 'outdoorWaterproofDisplay',
                 categoryKey: 'outdoorScreens',
-                size: 'normal',
+                size: 'tall',
                 color: 'from-orange-900/80 to-red-900/80',
                 image: '/3rdproduct/image002.jpg',
                 link: '/projects/outdoor-waterproof-display',
@@ -41,7 +41,7 @@ const PinterestGrid = () => {
                 id: 12,
                 solutionKey: 'digitalMarketingServices',
                 categoryKey: 'digitalServices',
-                size: 'wide',
+                size: 'tall',
                 color: 'from-fuchsia-900/80 to-blue-900/80',
                 image: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80',
                 link: '/solutions/digital-marketing-services',
@@ -145,7 +145,7 @@ const PinterestGrid = () => {
 
             {/* Pinterest-style masonry grid */}
             <div className='columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 lg:gap-6 relative z-20'>
-                {projects.map((project, index) => (
+                {projects.filter(project => project.isSpecial).map((project, index) => (
                     <Link
                         to={project.link || '/projects'}
                         key={project.id}

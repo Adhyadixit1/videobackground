@@ -220,21 +220,87 @@ export const solutionsPart4 = {
         ],
         benefits: [
             { title: "High Brightness", description: "High-brightness LED backlit LCD screen (1800 nits) for perfect visibility even in direct sunlight." },
-            { title: "Extreme Resistance", description: "Stable operation in a range of -50°C to +110°C thanks to forced air cooling and military-grade heat dissipation substrate." },
+            { title: "Extreme Resistance", description: "Stable operation in a range of -50°C to +110°C thanks to forced air cooling and military-grade heat dissipation." },
             { title: "Ultra HD Resolution", description: "Resolution up to 2160 × 3840 for exceptionally clear visuals." },
-            { title: "Robust Structure", description: "Outdoor metal structure in galvanized steel resistant to rain and heat with premium exterior paint." },
-            { title: "Integrated Options", description: "Built-in media player card, optional industrial computer, optional multi-touch screen." },
-            { title: "Complete Electrical Protection", description: "Protection against leaks, overload, overvoltage, lightning protection device and overheat protection." }
+            { title: "Robust Structure", description: "Galvanized steel outdoor metal structure resistant to rain and heat with premium exterior paint." },
+            { title: "Integrated Options", description: "Integrated player card, industrial computer optional, multi-touch screen optional." },
+            { title: "Complete Protection", description: "Protection against leaks, overload, overvoltage, lightning, and overheating." }
         ],
         specs: [
-            { value: "943×531mm", label: "Display Size" },
-            { value: "16:9", label: "Format" },
+            { value: "43\"", label: "Screen Size" },
+            { value: "1800 nits", label: "Brightness" },
             { value: "1080×1920", label: "Resolution" },
-            { value: "16.7M", label: "Colors" },
-            { value: "3500:1", label: "Contrast" },
-            { value: "178°/178°", label: "Viewing Angle" },
-            { value: "5ms", label: "Response Time" },
-            { value: "Android 11", label: "OS" }
+            { value: "IP55", label: "Protection" },
+            { value: "Android 11", label: "OS" },
+            { value: "14h", label: "Battery Autonomy" },
+            { value: "40kg", label: "Net Weight" },
+            { value: "60,000h", label: "Lifespan" }
+        ],
+        detailedSpecs: [
+            {
+                category: "1. Panel Parameters",
+                items: [
+                    { label: "Type", value: "43\" LED Screen" },
+                    { label: "Display Size", value: "943 × 531 mm" },
+                    { label: "Format", value: "16:9" },
+                    { label: "Backlight", value: "Patented LED module" },
+                    { label: "Resolution", value: "1080 × 1920" },
+                    { label: "Colors", value: "16.7 M" },
+                    { label: "Brightness", value: "1800 cd/m²" },
+                    { label: "Contrast", value: "3500:1" },
+                    { label: "Viewing Angle", value: "178°/178°" },
+                    { label: "Response Time", value: "5 ms" },
+                    { label: "Video System", value: "PAL/NTSC/SECAM" },
+                    { label: "Life Span", value: "60,000 h" }
+                ]
+            },
+            {
+                category: "2. Motherboard Parameters",
+                items: [
+                    { label: "CPU", value: "Cortex-A7, 1.2 GHz" },
+                    { label: "RAM", value: "DDR3 1 GB" },
+                    { label: "Storage", value: "TF max 32 GB" },
+                    { label: "OS", value: "Android 11, 2+32 GB" },
+                    { label: "Network", value: "3G/4G/Ethernet/WiFi" },
+                    { label: "Video", value: "30+ formats supported" },
+                    { label: "Images", value: "BMP, JPG, PNG, GIF" },
+                    { label: "USB Ports", value: "2×USB HOST + 2 extensions" },
+                    { label: "Update", value: "USB/SD/remote" }
+                ]
+            },
+            {
+                category: "3. Battery Parameters",
+                items: [
+                    { label: "Technology", value: "Blade type battery" },
+                    { label: "Charge", value: "7 h" },
+                    { label: "Autonomy", value: "14 h" },
+                    { label: "Capacity", value: "5000 mAh" },
+                    { label: "Input Voltage", value: "24 V" }
+                ]
+            },
+            {
+                category: "4. Operating Environment",
+                items: [
+                    { label: "Temperature", value: "-50 °C ~ 110 °C" },
+                    { label: "Storage", value: "-45 °C ~ 80 °C" },
+                    { label: "Humidity", value: "10% ~ 90%" },
+                    { label: "Power Supply", value: "AC100V–240V" },
+                    { label: "Consumption", value: "≤100W" },
+                    { label: "Standby", value: "≤3W" }
+                ]
+            },
+            {
+                category: "5. Appearance and Materials",
+                items: [
+                    { label: "Colors", value: "Silver, gray, white, black, red" },
+                    { label: "Material", value: "Galvanized steel + outdoor paint" },
+                    { label: "Certifications", value: "ISO9001, 3C, FCC, UL" },
+                    { label: "Net Weight", value: "40 kg" },
+                    { label: "Gross Weight", value: "48 kg" },
+                    { label: "Product Size", value: "1236 × 148 × 588 mm" },
+                    { label: "Package Size", value: "1350 × 300 × 700 mm" }
+                ]
+            }
         ],
         useCases: [
             { title: "Outdoor Advertising Display", description: "Ideal for high-traffic areas, shopping centers and public spaces requiring high-brightness visibility." },
@@ -255,11 +321,36 @@ export const solutionsPart4 = {
             { title: "LED Display", description: "Large format LED walls", link: "/solutions/led-walls" }
         ],
         gallery: [
-            { src: "https://sc04.alicdn.com/kf/Hbc4f05f302d444cb889ad42c3afc11f5X/229562533/Hbc4f05f302d444cb889ad42c3afc11f5X.jpeg", alt: "43 inch Outdoor LCD Display - Front view" },
-            { src: "https://sc04.alicdn.com/kf/H9fe9c1b4615b4c87bed668bc1c01aeabi/229562533/H9fe9c1b4615b4c87bed668bc1c01aeabi.jpeg", alt: "Outdoor LCD Display - Side view" },
-            { src: "https://sc04.alicdn.com/kf/H5dca400328e84b11bce1d423205a53c42/229562533/H5dca400328e84b11bce1d423205a53c42.jpeg", alt: "Outdoor LCD Display - Wall mounting" },
-            { src: "https://sc04.alicdn.com/kf/H157d452fd367472baf1e3f6c28d44fa0g/229562533/H157d452fd367472baf1e3f6c28d44fa0g.jpeg", alt: "Outdoor LCD Display - Detail view" },
-            { src: "https://sc04.alicdn.com/kf/H65672701d4734a0384ecae5e1922e6e9Q/229562533/H65672701d4734a0384ecae5e1922e6e9Q.jpg", alt: "Outdoor LCD Display - Technical specifications" }
+            {
+                src: "https://sc04.alicdn.com/kf/Hbc4f05f302d444cb889ad42c3afc11f5X/229562533/Hbc4f05f302d444cb889ad42c3afc11f5X.jpeg",
+                alt: "43 inch Outdoor LCD Display - Front view",
+                title: "Elegant & Robust Design",
+                description: "A galvanized steel metal structure with a premium finish to withstand the most demanding outdoor environments."
+            },
+            {
+                src: "https://sc04.alicdn.com/kf/H9fe9c1b4615b4c87bed668bc1c01aeabi/229562533/H9fe9c1b4615b4c87bed668bc1c01aeabi.jpeg",
+                alt: "Outdoor LCD Display - Side view",
+                title: "Ultra-Thin Profile",
+                description: "A compact and modern design that fits perfectly into any urban or commercial landscape."
+            },
+            {
+                src: "https://sc04.alicdn.com/kf/H5dca400328e84b11bce1d423205a53c42/229562533/H5dca400328e84b11bce1d423205a53c42.jpeg",
+                alt: "Outdoor LCD Display - Wall mounting",
+                title: "Versatile Installation",
+                description: "Flexible mounting support allowing secure wall installation or a self-standing base."
+            },
+            {
+                src: "https://sc04.alicdn.com/kf/H157d452fd367472baf1e3f6c28d44fa0g/229562533/H157d452fd367472baf1e3f6c28d44fa0g.jpeg",
+                alt: "Outdoor LCD Display - Detail view",
+                title: "High-Quality Details",
+                description: "Industrial-grade components and AR-laminated tempered glass for maximum clarity and safety."
+            },
+            {
+                src: "https://sc04.alicdn.com/kf/H65672701d4734a0384ecae5e1922e6e9Q/229562533/H65672701d4734a0384ecae5e1922e6e9Q.jpg",
+                alt: "Outdoor LCD Display - Technical specifications",
+                title: "Guaranteed Performance",
+                description: "Intelligent cooling system and certified components for continuous 24/7 operation."
+            }
         ]
     },
     outdoorWaterproofDisplay: {
@@ -290,14 +381,94 @@ export const solutionsPart4 = {
             { title: "Complete Protection", description: "Fully sealed design supports various interface expansions. The surface meets outdoor protection requirements." }
         ],
         specs: [
-            { value: "1920×1080", label: "Resolution (32-55\")" },
-            { value: "3840×2160", label: "Resolution (65\")" },
-            { value: "2500nits", label: "Brightness" },
-            { value: "1200:1", label: "Contrast" },
-            { value: "178°/178°", label: "Viewing Angle" },
-            { value: "IPS", label: "Technology" },
-            { value: "Android 12.0", label: "OS" },
-            { value: "2+16GB", label: "Memory" }
+            { value: "32-65\"", label: "Available Sizes" },
+            { value: "2500 nits", label: "Brightness" },
+            { value: "IP65", label: "Protection" },
+            { value: "4K/FHD", label: "Resolution" },
+            { value: "ELED", label: "Backlight" },
+            { value: "Aluminum", label: "Material" },
+            { value: "Android 12", label: "OS" },
+            { value: "H/V", label: "Display Mode" }
+        ],
+        detailedSpecs: [
+            {
+                category: "Model OD320-T (32\")",
+                items: [
+                    { label: "Panel Size", value: "32\" IPS (16:9)" },
+                    { label: "Resolution", value: "1920 * 1080" },
+                    { label: "Brightness", value: "2500 nits (1200:1 Contrast)" },
+                    { label: "Outline Dimension", value: "763 * 457 * 95.5 mm" },
+                    { label: "Weight (N.W/G.W)", value: "19kg / 26kg" },
+                    { label: "Max Power", value: "160W" },
+                    { label: "Mounting", value: "VESA 670 * 300 mm" },
+                    { label: "Operating Temp", value: "-20 to 50℃" }
+                ]
+            },
+            {
+                category: "Model OD430-T (43\")",
+                items: [
+                    { label: "Panel Size", value: "43\" IPS (16:9)" },
+                    { label: "Resolution", value: "1920 * 1080" },
+                    { label: "Brightness", value: "2500 nits (1200:1 Contrast)" },
+                    { label: "Outline Dimension", value: "1014 * 602 * 95.5 mm" },
+                    { label: "Weight (N.W/G.W)", value: "28kg / 36kg" },
+                    { label: "Max Power", value: "220W" },
+                    { label: "Mounting", value: "VESA 900 * 400 mm" },
+                    { label: "Operating Temp", value: "-20 to 50℃" }
+                ]
+            },
+            {
+                category: "Model OD490-T (49\")",
+                items: [
+                    { label: "Panel Size", value: "49\" IPS (16:9)" },
+                    { label: "Resolution", value: "1920 * 1080" },
+                    { label: "Brightness", value: "2500 nits (1200:1 Contrast)" },
+                    { label: "Outline Dimension", value: "1147 * 677 * 95.5 mm" },
+                    { label: "Weight (N.W/G.W)", value: "36kg / 44kg" },
+                    { label: "Max Power", value: "240W" },
+                    { label: "Mounting", value: "VESA 1075 * 400 mm" },
+                    { label: "Operating Temp", value: "-20 to 50℃" }
+                ]
+            },
+            {
+                category: "Model OD550-T (55\")",
+                items: [
+                    { label: "Panel Size", value: "55\" IPS (16:9)" },
+                    { label: "Resolution", value: "1920 * 1080" },
+                    { label: "Brightness", value: "2500 nits (1200:1 Contrast)" },
+                    { label: "Outline Dimension", value: "1282 * 753 * 95.5 mm" },
+                    { label: "Weight (N.W/G.W)", value: "38kg / 48kg" },
+                    { label: "Max Power", value: "280W" },
+                    { label: "Mounting", value: "VESA 1200 * 400 mm" },
+                    { label: "Operating Temp", value: "-20 to 50℃" }
+                ]
+            },
+            {
+                category: "Model OD650-T (65\")",
+                items: [
+                    { label: "Panel Size", value: "65\" IPS (16:9)" },
+                    { label: "Resolution", value: "3840 * 2160 (4K)" },
+                    { label: "Brightness", value: "2500 nits (1200:1 Contrast)" },
+                    { label: "Outline Dimension", value: "1500 * 875 * 95.5 mm" },
+                    { label: "Weight (N.W/G.W)", value: "65kg / 75kg" },
+                    { label: "Max Power", value: "480W" },
+                    { label: "Mounting", value: "VESA 1400 * 400 mm" },
+                    { label: "Operating Temp", value: "-20 to 50℃" }
+                ]
+            },
+            {
+                category: "General Tech Specs",
+                items: [
+                    { label: "Mainboard", value: "8-core CPU A55, Android 12.0, 2+16GB" },
+                    { label: "Interfaces", value: "HDMI*1, USB*2, RJ45*1, WIFI*1" },
+                    { label: "Materials", value: "Aluminum, Galvanized Iron Plate" },
+                    { label: "Protection", value: "IP65 Waterproof, 5mm Ultra-Clear Glass" },
+                    { label: "Surface", value: "Outdoor Powder, Haze 3%" },
+                    { label: "Lifetime", value: "50,000 Hours" },
+                    { label: "Environment", value: "10% - 85% Humidity" },
+                    { label: "Input Power", value: "180-264V, 50/60Hz" }
+                ]
+            }
         ],
         useCases: [
             { title: "Outdoor Advertising Display", description: "Perfect for high-traffic areas, shopping centers and public spaces requiring extreme visibility." },
@@ -361,14 +532,68 @@ export const solutionsPart4 = {
             { title: "Complete Warranty", description: "365-day quality guarantee with shipping coverage for any defects within the first month." }
         ],
         specs: [
-            { value: "1208.6×679.4mm", label: "Display Area" },
-            { value: "16:9", label: "Aspect Ratio" },
-            { value: "1920×1080", label: "Resolution" },
-            { value: "1400:1", label: "Contrast Ratio" },
-            { value: "178°/178°", label: "Viewing Angle" },
-            { value: "8-bit", label: "Color" },
-            { value: "75%", label: "Backlight Uniformity" },
-            { value: "18MM", label: "Min. Thickness" }
+            { value: "1920×1080", label: "Full HD Res" },
+            { value: "300 nits", label: "Brightness" },
+            { value: "1400:1", label: "Contrast" },
+            { value: "ELED", label: "Backlight" },
+            { value: "18mm", label: "Min. Profile" },
+            { value: "46kg", label: "Net Weight" },
+            { value: "60,000h", label: "LED Life" },
+            { value: "365 Days", label: "Warranty" }
+        ],
+        detailedSpecs: [
+            {
+                category: "1. Display Performance",
+                items: [
+                    { label: "Product Name", value: "55-inch Vertical Infrared Touch Advertising Machine" },
+                    { label: "Display Area", value: "1208.6 (H) × 679.4 (V) mm" },
+                    { label: "Aspect Ratio", value: "16:9" },
+                    { label: "Resolution", value: "1920 × 1080 (Full HD)" },
+                    { label: "Brightness", value: "300 cd/㎡ (Typical)" },
+                    { label: "Contrast Ratio", value: "1400:1" },
+                    { label: "Color Support", value: "8-bit" },
+                    { label: "Viewing Angle", value: "178°(V) / 178°(H)" },
+                    { label: "Panel Grade", value: "LG / BOE / Samsung" }
+                ]
+            },
+            {
+                category: "2. Backlight & Technology",
+                items: [
+                    { label: "Backlight Type", value: "ELED Backlight" },
+                    { label: "Uniformity", value: "75%" },
+                    { label: "Current & Voltage", value: "76V / 720mA (360mA × 2)" },
+                    { label: "LED Lifespan", value: "60,000 Hours" },
+                    { label: "Touch Technology", value: "Infrared Multi-Touch" }
+                ]
+            },
+            {
+                category: "3. Physical Dimensions",
+                items: [
+                    { label: "Product Size", value: "1790 × 731.2 × 28 mm" },
+                    { label: "Min. Thickness", value: "18 mm" },
+                    { label: "Glass Type", value: "25.9 mm Tempered Glass" },
+                    { label: "Glass Features", value: "Silkscreened black border" },
+                    { label: "Shell Finish", value: "Sandblasted & Anodized High-Gloss" },
+                    { label: "Colors", value: "Silver / Black / Gold / White" }
+                ]
+            },
+            {
+                category: "4. Logistics & Weight",
+                items: [
+                    { label: "Carton Dimensions", value: "1865 × 140 × 842 mm" },
+                    { label: "Net Weight", value: "46 kg" },
+                    { label: "Gross Weight", value: "49 kg" },
+                    { label: "Assembly Design", value: "Upright internal components" }
+                ]
+            },
+            {
+                category: "5. Service & Warranty",
+                items: [
+                    { label: "Quality Guarantee", value: "365 Days" },
+                    { label: "Return Policy", value: "Free shipping for defects within 30 days" },
+                    { label: "Ease of Maintenance", value: "Integrated modular design" }
+                ]
+            }
         ],
         useCases: [
             { title: "Interactive Advertising Display", description: "Perfect for shopping centers, hotel lobbies and reception areas requiring customer interaction." },
@@ -384,15 +609,48 @@ export const solutionsPart4 = {
             { question: "What is the backlight lifespan?", answer: "The ELED backlight has a lifespan of 60,000 hours." }
         ],
         gallery: [
-            { src: "/Fiche technique ecran intérieur_files/image001.png", alt: "Main view of the 55-inch touch screen" },
-            { src: "/Fiche technique ecran intérieur_files/image003.jpg", alt: "Ultra-thin profile view" },
-            { src: "/Fiche technique ecran intérieur_files/image005.jpg", alt: "Anodized frame detail" },
-            { src: "/Fiche technique ecran intérieur_files/image007.jpg", alt: "Rear view and connections" },
-            { src: "/Fiche technique ecran intérieur_files/image009.jpg", alt: "Vertical mounting" },
-            { src: "/Fiche technique ecran intérieur_files/image011.jpg", alt: "Mounting system" },
-            { src: "/Fiche technique ecran intérieur_files/image013.png", alt: "Technical specifications" },
-            { src: "/Fiche technique ecran intérieur_files/image015.jpg", alt: "Real environment application" },
-            { src: "/Fiche technique ecran intérieur_files/image017.jpg", alt: "Touch interface in action" }
+            {
+                src: "/Fiche technique ecran intérieur_files/image001.png",
+                alt: "Main view of the 55-inch touch screen",
+                title: "Elegant Vertical Format",
+                description: "An impressive 55-inch screen with a responsive touch surface for optimal user interaction in public spaces."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image003.jpg",
+                alt: "Ultra-thin profile view",
+                title: "Minimum Thickness",
+                description: "Only 18mm thick at the thinnest point, offering one of the slimmest profiles on the market for this category."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image005.jpg",
+                alt: "Anodized frame detail",
+                title: "Premium Finish",
+                description: "Sandblasted and anodized aluminum frame for a luxurious appearance and increased scratch resistance."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image007.jpg",
+                alt: "Rear view and connections",
+                title: "Complete Connectivity",
+                description: "Multiple discreetly integrated interfaces for simplified management of content sources."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image009.jpg",
+                alt: "Vertical mounting",
+                title: "Modular Design",
+                description: "Internal components organized vertically to facilitate maintenance and optimize lifespan."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image011.jpg",
+                alt: "Mounting system",
+                title: "Stable Structure",
+                description: "Weighted base and reinforced chassis ensuring perfect stability even in high-traffic areas."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image013.png",
+                alt: "Technical specifications",
+                title: "Grade A Components",
+                description: "Exclusive use of LG/BOE/Samsung panels for exceptional brightness and contrast."
+            }
         ],
         relatedSolutions: [
             { title: "Interactive Kiosks", description: "Touch kiosk solutions", link: "/projects/infrared-touch-55" },
@@ -507,7 +765,7 @@ export const solutionsPart4 = {
                 description: "We analyze your business goals, target audience, and competitive landscape to develop a comprehensive digital marketing strategy that aligns with your objectives."
             },
             {
-                step: "2", 
+                step: "2",
                 title: "Audience Research",
                 description: "Deep dive into audience demographics, behaviors, and preferences to create detailed customer personas and identify optimal touchpoints."
             },
@@ -638,6 +896,26 @@ export const solutionsPart4 = {
                     "Performance guarantees"
                 ],
                 highlighted: false
+            }
+        ],
+        gallery: [
+            {
+                src: "/digital maketing/Gemini_Generated_Image_jxjgs8jxjgs8jxjg (7).png",
+                alt: "Digital marketing strategy workshop",
+                title: "Strategic Sprints",
+                description: "Customer journey mapping and alignment of DOOH + digital KPIs."
+            },
+            {
+                src: "/digital maketing/Gemini_Generated_Image_jxjgs8jxjgs8jxjg (6).png",
+                alt: "Luxio Media creative studio",
+                title: "Creative Engine",
+                description: "Multi-format adaptations produced by our integrated studio."
+            },
+            {
+                src: "/digital maketing/Gemini_Generated_Image_jxjgs8jxjgs8jxjg (5).png",
+                alt: "Live performance dashboard",
+                title: "Live Intelligence",
+                description: "Real-time performance dashboards and cross-channel optimization."
             }
         ]
     }

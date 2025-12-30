@@ -20,22 +20,88 @@ export const solutionsDE = {
             { value: "60.000h", label: "Lebensdauer" }
         ],
         benefits: [
-            { title: "Hohe Helligkeit", description: "LED-hintergrundbeleuchteter LCD-Bildschirm mit hoher Helligkeit (1800 nits) für perfekte Sichtbarkeit auch bei direkter Sonneneinstrahlung." },
+            { title: "Hohe Helligkeit", description: "LCD-Bildschirm mit hoher Helligkeit (1800 nits) und LED-Hintergrundbeleuchtung für perfekte Sichtbarkeit auch bei direkter Sonneneinstrahlung." },
             { title: "Extreme Widerstandsfähigkeit", description: "Stabiler Betrieb im Bereich von -50°C bis +110°C dank Zwangsluftkühlung und Wärmeableitung auf Militärniveau." },
             { title: "Ultra HD Auflösung", description: "Auflösung bis zu 2160 × 3840 für außergewöhnlich klare Bilder." },
-            { title: "Robuste Struktur", description: "Outdoor-Metallstruktur aus verzinktem Stahl, regen- und hitzebeständig mit Premium-Außenfarbe." },
-            { title: "Integrierte Optionen", description: "Integrierte Media-Player-Karte, optionaler Industriecomputer, optionaler Multi-Touch-Bildschirm." },
+            { title: "Robuste Struktur", description: "Regen- und hitzebeständige Metallstruktur im Außenbereich aus verzinktem Stahl mit Premium-Außenlackierung." },
+            { title: "Integrierte Optionen", description: "Integrierte Player-Karte, Industrie-PC optional, Multi-Touch-Bildschirm optional." },
             { title: "Vollständiger elektrischer Schutz", description: "Schutz vor Leckagen, Überlastung, Überspannung, Blitzschutzgerät und Überhitzungsschutz." }
         ],
         specs: [
-            { value: "943×531mm", label: "Displaygröße" },
-            { value: "16:9", label: "Format" },
+            { value: "43\"", label: "Bildschirmgröße" },
+            { value: "1800 nits", label: "Helligkeit" },
             { value: "1080×1920", label: "Auflösung" },
-            { value: "16,7M", label: "Farben" },
-            { value: "3500:1", label: "Kontrast" },
-            { value: "178°/178°", label: "Blickwinkel" },
-            { value: "5ms", label: "Reaktionszeit" },
-            { value: "Android 11", label: "Betriebssystem" }
+            { value: "IP55", label: "Schutzart" },
+            { value: "Android 11", label: "Betriebssystem" },
+            { value: "14h", label: "Batterieautonomie" },
+            { value: "40kg", label: "Nettogewicht" },
+            { value: "60.000h", label: "Lebensdauer" }
+        ],
+        detailedSpecs: [
+            {
+                category: "1. Panel-Parameter",
+                items: [
+                    { label: "Typ", value: "43\" LED-Bildschirm" },
+                    { label: "Displaygröße", value: "943 × 531 mm" },
+                    { label: "Format", value: "16:9" },
+                    { label: "Hintergrundbeleuchtung", value: "Patentiertes LED-Modul" },
+                    { label: "Auflösung", value: "1080 × 1920" },
+                    { label: "Farben", value: "16,7 M" },
+                    { label: "Helligkeit", value: "1800 cd/m²" },
+                    { label: "Kontrast", value: "3500:1" },
+                    { label: "Blickwinkel", value: "178°/178°" },
+                    { label: "Reaktionszeit", value: "5 ms" },
+                    { label: "Videosystem", value: "PAL/NTSC/SECAM" },
+                    { label: "Lebensdauer", value: "60.000 h" }
+                ]
+            },
+            {
+                category: "2. Motherboard-Parameter",
+                items: [
+                    { label: "CPU", value: "Cortex-A7, 1,2 GHz" },
+                    { label: "RAM", value: "DDR3 1 GB" },
+                    { label: "Speicher", value: "TF max. 32 GB" },
+                    { label: "OS", value: "Android 11, 2+32 GB" },
+                    { label: "Netzwerk", value: "3G/4G/Ethernet/WiFi" },
+                    { label: "Video", value: "30+ Formate unterstützt" },
+                    { label: "Bilder", value: "BMP, JPG, PNG, GIF" },
+                    { label: "USB-Ports", value: "2×USB HOST + 2 Erweiterungen" },
+                    { label: "Aktualisierung", value: "USB/SD/Remote" }
+                ]
+            },
+            {
+                category: "3. Batterie-Parameter",
+                items: [
+                    { label: "Technologie", value: "Blade-Batterie" },
+                    { label: "Ladezeit", value: "7 h" },
+                    { label: "Autonomie", value: "14 h" },
+                    { label: "Kapazität", value: "5000 mAh" },
+                    { label: "Eingangsspannung", value: "24 V" }
+                ]
+            },
+            {
+                category: "4. Betriebsumgebung",
+                items: [
+                    { label: "Betriebstemperatur", value: "-50 °C ~ 110 °C" },
+                    { label: "Lagerung", value: "-45 °C ~ 80 °C" },
+                    { label: "Luftfeuchtigkeit", value: "10% ~ 90%" },
+                    { label: "Stromversorgung", value: "AC100V–240V" },
+                    { label: "Verbrauch", value: "≤100W" },
+                    { label: "Standby", value: "≤3W" }
+                ]
+            },
+            {
+                category: "5. Aussehen und Materialien",
+                items: [
+                    { label: "Farben", value: "Silber, Grau, Weiß, Schwarz, Rot" },
+                    { label: "Material", value: "Galvanisierter Stahl + Außenlackierung" },
+                    { label: "Zertifizierungen", value: "ISO9001, 3C, FCC, UL" },
+                    { label: "Nettogewicht", value: "40 kg" },
+                    { label: "Bruttogewicht", value: "48 kg" },
+                    { label: "Produktgröße", value: "1236 × 148 × 588 mm" },
+                    { label: "Verpackungsgröße", value: "1350 × 300 × 700 mm" }
+                ]
+            }
         ],
         useCases: [
             { title: "Outdoor-Werbedisplay", description: "Ideal für stark frequentierte Bereiche, Einkaufszentren und öffentliche Räume, die hohe Helligkeit erfordern." },
@@ -56,11 +122,36 @@ export const solutionsDE = {
             { title: "LED-Display", description: "Großformat LED-Wände", link: "/solutions/led-walls" }
         ],
         gallery: [
-            { src: "https://sc04.alicdn.com/kf/Hbc4f05f302d444cb889ad42c3afc11f5X/229562533/Hbc4f05f302d444cb889ad42c3afc11f5X.jpeg", alt: "43 Zoll Outdoor LCD Bildschirm - Frontansicht" },
-            { src: "https://sc04.alicdn.com/kf/H9fe9c1b4615b4c87bed668bc1c01aeabi/229562533/H9fe9c1b4615b4c87bed668bc1c01aeabi.jpeg", alt: "Outdoor LCD Bildschirm - Seitenansicht" },
-            { src: "https://sc04.alicdn.com/kf/H5dca400328e84b11bce1d423205a53c42/229562533/H5dca400328e84b11bce1d423205a53c42.jpeg", alt: "Outdoor LCD Bildschirm - Wandmontage" },
-            { src: "https://sc04.alicdn.com/kf/H157d452fd367472baf1e3f6c28d44fa0g/229562533/H157d452fd367472baf1e3f6c28d44fa0g.jpeg", alt: "Outdoor LCD Bildschirm - Detailansicht" },
-            { src: "https://sc04.alicdn.com/kf/H65672701d4734a0384ecae5e1922e6e9Q/229562533/H65672701d4734a0384ecae5e1922e6e9Q.jpg", alt: "Outdoor LCD Bildschirm - Technische Spezifikationen" }
+            {
+                src: "https://sc04.alicdn.com/kf/Hbc4f05f302d444cb889ad42c3afc11f5X/229562533/Hbc4f05f302d444cb889ad42c3afc11f5X.jpeg",
+                alt: "43 Zoll Outdoor LCD Bildschirm - Frontansicht",
+                title: "Elegantes & Robustes Design",
+                description: "Eine metallische Struktur aus verzinktem Stahl mit Premium-Finish, um anspruchsvollsten Außenumgebungen standzuhalten."
+            },
+            {
+                src: "https://sc04.alicdn.com/kf/H9fe9c1b4615b4c87bed668bc1c01aeabi/229562533/H9fe9c1b4615b4c87bed668bc1c01aeabi.jpeg",
+                alt: "Outdoor LCD Bildschirm - Seitenansicht",
+                title: "Ultradünnes Profil",
+                description: "Ein kompaktes und modernes Design, das sich perfekt in jede Stadt- oder Geschäftslandschaft einfügt."
+            },
+            {
+                src: "https://sc04.alicdn.com/kf/H5dca400328e84b11bce1d423205a53c42/229562533/H5dca400328e84b11bce1d423205a53c42.jpeg",
+                alt: "Outdoor LCD Bildschirm - Wandmontage",
+                title: "Vielseitige Installation",
+                description: "Flexible Montageunterstützung für eine sichere Wandmontage oder einen selbststehenden Sockel."
+            },
+            {
+                src: "https://sc04.alicdn.com/kf/H157d452fd367472baf1e3f6c28d44fa0g/229562533/H157d452fd367472baf1e3f6c28d44fa0g.jpeg",
+                alt: "Outdoor LCD Bildschirm - Detailansicht",
+                title: "Hochwertige Details",
+                description: "Industrielle Komponenten und AR-laminiertes gehärtetes Glas für maximale Klarheit und Sicherheit."
+            },
+            {
+                src: "https://sc04.alicdn.com/kf/H65672701d4734a0384ecae5e1922e6e9Q/229562533/H65672701d4734a0384ecae5e1922e6e9Q.jpg",
+                alt: "Outdoor LCD Bildschirm - Technische Spezifikationen",
+                title: "Garantierte Leistung",
+                description: "Intelligentes Kühlsystem und zertifizierte Komponenten für den kontinuierlichen 24/7-Betrieb."
+            }
         ]
     },
     outdoorWaterproofDisplay: {
@@ -91,14 +182,94 @@ export const solutionsDE = {
             { title: "Vollständiger Schutz", description: "Vollständig versiegeltes Design mit IP65-Schutz, widersteht extremen Outdoor-Bedingungen." }
         ],
         specs: [
-            { value: "1920×1080", label: "Auflösung (32-55\")" },
-            { value: "3840×2160", label: "Auflösung (65\")" },
-            { value: "2500nits", label: "Helligkeit" },
-            { value: "1200:1", label: "Kontrast" },
-            { value: "178°/178°", label: "Blickwinkel" },
-            { value: "IPS", label: "Technologie" },
-            { value: "Android 12.0", label: "Betriebssystem" },
-            { value: "2+16GB", label: "Speicher" }
+            { value: "32-65\"", label: "Verfügbare Größen" },
+            { value: "2500 Nits", label: "Helligkeit" },
+            { value: "IP65", label: "Schutzart" },
+            { value: "4K/FHD", label: "Auflösung" },
+            { value: "ELED", label: "Hintergrundbeleuchtung" },
+            { value: "Aluminium", label: "Material" },
+            { value: "Android 12", label: "System" },
+            { value: "H/V", label: "Anzeigemodus" }
+        ],
+        detailedSpecs: [
+            {
+                category: "Modell OD320-T (32\")",
+                items: [
+                    { label: "Panel-Größe", value: "32\" IPS (16:9)" },
+                    { label: "Auflösung", value: "1920 * 1080" },
+                    { label: "Helligkeit", value: "2500 Nits (Kontrast 1200:1)" },
+                    { label: "Außenmaße", value: "763 * 457 * 95,5 mm" },
+                    { label: "Gewicht (Netto/Brutto)", value: "19kg / 26kg" },
+                    { label: "Max. Leistung", value: "160W" },
+                    { label: "Montage", value: "VESA 670 * 300 mm" },
+                    { label: "Betriebstemperatur", value: "-20 bis 50℃" }
+                ]
+            },
+            {
+                category: "Modell OD430-T (43\")",
+                items: [
+                    { label: "Panel-Größe", value: "43\" IPS (16:9)" },
+                    { label: "Auflösung", value: "1920 * 1080" },
+                    { label: "Helligkeit", value: "2500 Nits (Kontrast 1200:1)" },
+                    { label: "Außenmaße", value: "1014 * 602 * 95,5 mm" },
+                    { label: "Gewicht (Netto/Brutto)", value: "28kg / 36kg" },
+                    { label: "Max. Leistung", value: "220W" },
+                    { label: "Montage", value: "VESA 900 * 400 mm" },
+                    { label: "Betriebstemperatur", value: "-20 bis 50℃" }
+                ]
+            },
+            {
+                category: "Modell OD490-T (49\")",
+                items: [
+                    { label: "Panel-Größe", value: "49\" IPS (16:9)" },
+                    { label: "Auflösung", value: "1920 * 1080" },
+                    { label: "Helligkeit", value: "2500 Nits (Kontrast 1200:1)" },
+                    { label: "Außenmaße", value: "1147 * 677 * 95,5 mm" },
+                    { label: "Gewicht (Netto/Brutto)", value: "36kg / 44kg" },
+                    { label: "Max. Leistung", value: "240W" },
+                    { label: "Montage", value: "VESA 1075 * 400 mm" },
+                    { label: "Betriebstemperatur", value: "-20 bis 50℃" }
+                ]
+            },
+            {
+                category: "Modell OD550-T (55\")",
+                items: [
+                    { label: "Panel-Größe", value: "55\" IPS (16:9)" },
+                    { label: "Auflösung", value: "1920 * 1080" },
+                    { label: "Helligkeit", value: "2500 Nits (Kontrast 1200:1)" },
+                    { label: "Außenmaße", value: "1282 * 753 * 95,5 mm" },
+                    { label: "Gewicht (Netto/Brutto)", value: "38kg / 48kg" },
+                    { label: "Max. Leistung", value: "280W" },
+                    { label: "Montage", value: "VESA 1200 * 400 mm" },
+                    { label: "Betriebstemperatur", value: "-20 bis 50℃" }
+                ]
+            },
+            {
+                category: "Modell OD650-T (65\")",
+                items: [
+                    { label: "Panel-Größe", value: "65\" IPS (16:9)" },
+                    { label: "Auflösung", value: "3840 * 2160 (4K)" },
+                    { label: "Helligkeit", value: "2500 Nits (Kontrast 1200:1)" },
+                    { label: "Außenmaße", value: "1500 * 875 * 95,5 mm" },
+                    { label: "Gewicht (Netto/Brutto)", value: "65kg / 75kg" },
+                    { label: "Max. Leistung", value: "480W" },
+                    { label: "Montage", value: "VESA 1400 * 400 mm" },
+                    { label: "Betriebstemperatur", value: "-20 bis 50℃" }
+                ]
+            },
+            {
+                category: "Allgemeine Tech Specs",
+                items: [
+                    { label: "Hauptplatine", value: "8-core CPU A55, Android 12.0, 2+16GB" },
+                    { label: "Schnittstellen", value: "HDMI*1, USB*2, RJ45*1, WIFI*1" },
+                    { label: "Materialien", value: "Aluminium, galvanisiertes Eisenblech" },
+                    { label: "Schutzart", value: "IP65 Wasserdicht, 5mm ultraklares Glas" },
+                    { label: "Oberfläche", value: "Außenpulverbeschichtung, Haze 3%" },
+                    { label: "Lebensdauer", value: "50.000 Stunden" },
+                    { label: "Umgebung", value: "10% - 85% Luftfeuchtigkeit" },
+                    { label: "Stromversorgung", value: "180-264V, 50/60Hz" }
+                ]
+            }
         ],
         useCases: [
             { title: "Outdoor-Werbedisplay", description: "Perfekt für stark frequentierte Bereiche, Einkaufszentren und öffentliche Räume mit extremer Sichtbarkeit." },
@@ -162,14 +333,68 @@ export const solutionsDE = {
             { title: "Vollständige Garantie", description: "365-Tage-Qualitätsgarantie mit Versandkosten-Übernahme bei Mängeln im ersten Monat." }
         ],
         specs: [
-            { value: "1208,6×679,4mm", label: "Anzeigebereich" },
-            { value: "16:9", label: "Seitenverhältnis" },
-            { value: "1920×1080", label: "Auflösung" },
-            { value: "1400:1", label: "Kontrastverhältnis" },
-            { value: "178°/178°", label: "Blickwinkel" },
-            { value: "8-bit", label: "Farbe" },
-            { value: "75%", label: "Hintergrundbeleuchtung-Gleichmäßigkeit" },
-            { value: "18MM", label: "Min. Dicke" }
+            { value: "1920×1080", label: "Full-HD Auflösung" },
+            { value: "300 Nits", label: "Helligkeit" },
+            { value: "1400:1", label: "Kontrast" },
+            { value: "ELED", label: "Hintergrundbeleuchtung" },
+            { value: "18mm", label: "Min. Profil" },
+            { value: "46kg", label: "Nettogewicht" },
+            { value: "60.000h", label: "LED-Lebensdauer" },
+            { value: "365 Tage", label: "Garantie" }
+        ],
+        detailedSpecs: [
+            {
+                category: "1. Display-Leistung",
+                items: [
+                    { label: "Produktname", value: "55-Zoll Vertikale Infrarot-Touch-Werbebox" },
+                    { label: "Anzeigebereich", value: "1208,6 (H) × 679,4 (V) mm" },
+                    { label: "Seitenverhältnis", value: "16:9" },
+                    { label: "Auflösung", value: "1920 × 1080 (Full HD)" },
+                    { label: "Helligkeit", value: "300 cd/㎡ (Typisch)" },
+                    { label: "Kontrastverhältnis", value: "1400:1" },
+                    { label: "Farbunterstützung", value: "8-bit" },
+                    { label: "Blickwinkel", value: "178°(V) / 178°(H)" },
+                    { label: "Panel-Güte", value: "LG / BOE / Samsung" }
+                ]
+            },
+            {
+                category: "2. Hintergrundbeleuchtung & Technik",
+                items: [
+                    { label: "Hintergrundbeleuchtung", value: "ELED Hintergrundbeleuchtung" },
+                    { label: "Gleichmäßigkeit", value: "75%" },
+                    { label: "Strom & Spannung", value: "76V / 720mA (360mA × 2)" },
+                    { label: "LED-Lebensdauer", value: "60.000 Stunden" },
+                    { label: "Touch-Technologie", value: "Infrarot Multi-Touch" }
+                ]
+            },
+            {
+                category: "3. Physikalische Maße",
+                items: [
+                    { label: "Produktgröße", value: "1790 × 731,2 × 28 mm" },
+                    { label: "Min. Dicke", value: "18 mm" },
+                    { label: "Glastyp", value: "25,9 mm Gehärtetes Glas" },
+                    { label: "Glasmerkmale", value: "Siebgedruckter schwarzer Rand" },
+                    { label: "Gehäusefinish", value: "Sandgestrahlt & Eloxiert Hochglanz" },
+                    { label: "Farben", value: "Silber / Schwarz / Gold / Weiß" }
+                ]
+            },
+            {
+                category: "4. Logistik & Gewicht",
+                items: [
+                    { label: "Kartonmaße", value: "1865 × 140 × 842 mm" },
+                    { label: "Nettogewicht", value: "46 kg" },
+                    { label: "Bruttogewicht", value: "49 kg" },
+                    { label: "Montage-Design", value: "Aufrechte interne Komponenten" }
+                ]
+            },
+            {
+                category: "5. Service & Garantie",
+                items: [
+                    { label: "Qualitätsgarantie", value: "365 Tage" },
+                    { label: "Rückgaberichtlinie", value: "Kostenloser Versand bei Mängeln innerhalb von 30 Tagen" },
+                    { label: "Wartungsfreundlichkeit", value: "Integriertes modulares Design" }
+                ]
+            }
         ],
         useCases: [
             { title: "Interaktives Werbedisplay", description: "Perfekt für Einkaufszentren, Hotelfoyers und Empfangsbereiche, die Kundeninteraktion erfordern." },
@@ -185,15 +410,48 @@ export const solutionsDE = {
             { question: "Wie lange hält die Hintergrundbeleuchtung?", answer: "Die ELED-Hintergrundbeleuchtung hat eine Lebensdauer von 60.000 Stunden." }
         ],
         gallery: [
-            { src: "/Fiche technique ecran intérieur_files/image001.png", alt: "Hauptansicht des 55-Zoll-Touchscreens" },
-            { src: "/Fiche technique ecran intérieur_files/image003.jpg", alt: "Ultradünne Profilansicht" },
-            { src: "/Fiche technique ecran intérieur_files/image005.jpg", alt: "Detail des eloxierten Rahmens" },
-            { src: "/Fiche technique ecran intérieur_files/image007.jpg", alt: "Rückansicht und Anschlüsse" },
-            { src: "/Fiche technique ecran intérieur_files/image009.jpg", alt: "Vertikale Montage" },
-            { src: "/Fiche technique ecran intérieur_files/image011.jpg", alt: "Montagesystem" },
-            { src: "/Fiche technique ecran intérieur_files/image013.png", alt: "Technische Spezifikationen" },
-            { src: "/Fiche technique ecran intérieur_files/image015.jpg", alt: "Anwendung in realer Umgebung" },
-            { src: "/Fiche technique ecran intérieur_files/image017.jpg", alt: "Touch-Oberfläche in Aktion" }
+            {
+                src: "/Fiche technique ecran intérieur_files/image001.png",
+                alt: "Hauptansicht des 55-Zoll-Touchscreens",
+                title: "Elegantes Vertikales Format",
+                description: "Ein beeindruckender 55-Zoll-Bildschirm mit einer reaktionsschnellen Touch-Oberfläche für optimale Benutzerinteraktion im öffentlichen Raum."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image003.jpg",
+                alt: "Ultradünne Profilansicht",
+                title: "Minimale Dicke",
+                description: "Nur 18 mm dick an der dünnsten Stelle, eines der schlanksten Profile auf dem Markt für diese Kategorie."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image005.jpg",
+                alt: "Detail des eloxierten Rahmens",
+                title: "Premium-Finish",
+                description: "Sandgestrahlter und eloxierter Aluminiumrahmen für ein luxuriöses Erscheinungsbild und erhöhte Kratzfestigkeit."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image007.jpg",
+                alt: "Rückansicht und Anschlüsse",
+                title: "Vollständige Konnektivität",
+                description: "Mehrere diskret integrierte Schnittstellen für eine vereinfachte Verwaltung der Inhaltsquellen."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image009.jpg",
+                alt: "Vertikale Montage",
+                title: "Modulares Design",
+                description: "Interne Komponenten sind vertikal organisiert, um die Wartung zu erleichtern und die Lebensdauer zu optimieren."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image011.jpg",
+                alt: "Montagesystem",
+                title: "Stabile Struktur",
+                description: "Beschwerter Sockel und verstärktes Chassis sorgen für perfekte Stabilität auch in stark frequentierten Bereichen."
+            },
+            {
+                src: "/Fiche technique ecran intérieur_files/image013.png",
+                alt: "Technische Spezifikationen",
+                title: "Grade A Komponenten",
+                description: "Exklusive Verwendung von LG/BOE/Samsung Panels für außergewöhnliche Helligkeit und Kontrast."
+            }
         ],
         relatedSolutions: [
             { title: "Interaktive Kioske", description: "Touch-Kiosk-Lösungen", link: "/projects/infrared-touch-55" },
@@ -308,7 +566,7 @@ export const solutionsDE = {
                 description: "Wir analysieren Ihre Geschäftsziele, Zielgruppe und Wettbewerbsumfeld zur Entwicklung einer umfassenden Digitalmarketing-Strategie."
             },
             {
-                step: "2", 
+                step: "2",
                 title: "Audience-Recherche",
                 description: "Tiefgehende Analyse von Demografie, Verhalten und Präferenzen zur Erstellung detaillierter Customer Personas."
             },
@@ -439,6 +697,26 @@ export const solutionsDE = {
                     "Performance-Garantien"
                 ],
                 highlighted: false
+            }
+        ],
+        gallery: [
+            {
+                src: "/digital maketing/Gemini_Generated_Image_jxjgs8jxjgs8jxjg (7).png",
+                alt: "Workshop für digitale Marketingstrategie",
+                title: "Strategische Sprints",
+                description: "Customer Journey Mapping und Ausrichtung von DOOH + digitalen KPIs."
+            },
+            {
+                src: "/digital maketing/Gemini_Generated_Image_jxjgs8jxjgs8jxjg (6).png",
+                alt: "Kreativstudio von Luxio Media",
+                title: "Creative Engine",
+                description: "Multi-Format-Adaptionen, produziert von unserem integrierten Studio."
+            },
+            {
+                src: "/digital maketing/Gemini_Generated_Image_jxjgs8jxjgs8jxjg (5).png",
+                alt: "Live-Performance-Dashboard",
+                title: "Live Intelligence",
+                description: "Echtzeit-Performance-Dashboards und kanalübergreifende Optimierung."
             }
         ]
     }

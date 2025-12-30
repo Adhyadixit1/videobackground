@@ -15,7 +15,6 @@ const FullScreenNav = () => {
         { title: t('nav.solutions'), subtitle: t('nav.subtitles.solutions'), path: '/solutions' },
         { title: t('nav.whyFillup'), subtitle: t('nav.subtitles.whyFillup'), path: '/why-luxio' },
         { title: t('nav.aboutUs'), subtitle: t('nav.subtitles.aboutUs'), path: '/agence' },
-        { title: t('nav.resources'), subtitle: t('nav.subtitles.resources'), path: '/resources' },
         { title: t('nav.careers'), subtitle: t('nav.subtitles.careers'), path: '/careers' },
         { title: t('nav.investors'), subtitle: t('nav.subtitles.investors'), path: '/investors' },
         { title: t('nav.contact'), subtitle: t('nav.subtitles.contact'), path: '/contact' },

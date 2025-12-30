@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navigation/Navbar'
 import FullScreenNav from '../components/Navigation/FullScreenNav'
 import FooterSection from '../components/home/FooterSection'
@@ -30,8 +30,32 @@ const SolutionTemplate = ({
         process = [],
         industries = [],
         testimonials = [],
-        pricing = []
+        pricing = [],
+        detailedSpecs = []
     } = solution
+
+    const [activeSlide, setActiveSlide] = useState(0)
+    const [lastInteraction, setLastInteraction] = useState(0)
+    const [activeTab, setActiveTab] = useState(0)
+
+    useEffect(() => {
+        if (!gallery || gallery.length === 0) return
+
+        const totalSlides = gallery.length + (detailedSpecs?.length || 1)
+        const interval = setInterval(() => {
+            const now = Date.now()
+            if (now - lastInteraction >= 20000) {
+                setActiveSlide((prev) => (prev + 1) % totalSlides)
+            }
+        }, 10000)
+
+        return () => clearInterval(interval)
+    }, [gallery, lastInteraction])
+
+    const handleManualChange = (index) => {
+        setActiveSlide(index)
+        setLastInteraction(Date.now())
+    }
 
     return (
         <div className="bg-black min-h-screen text-white">
@@ -189,57 +213,177 @@ const SolutionTemplate = ({
                 </section>
             )}
 
-            {/* Product Gallery - Images with original sizes alongside text */}
+            {/* Product Slider */}
             {gallery && gallery.length > 0 && (
-                <section className="py-20 px-4 bg-gradient-to-b from-black to-zinc-950">
+                <section className="py-20 px-4 bg-gradient-to-b from-black to-zinc-950 relative overflow-hidden">
                     <div className="max-w-7xl mx-auto">
-                        <div className="text-center mb-16">
+                        <div className="text-center mb-20 lg:mb-24 relative z-30">
                             <span className="text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block">
                                 {common.productGallery || 'Product Gallery'}
                             </span>
                             <h2 className="font-[font2] text-white text-3xl lg:text-5xl uppercase">{title}</h2>
                         </div>
 
-                        {/* Images with original sizes and descriptions */}
-                        <div className="space-y-16">
-                            {gallery.map((img, idx) => (
-                                <div
-                                    key={idx}
-                                    className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 items-center`}
-                                >
-                                    {/* Image - Original Size */}
-                                    <div className="flex-1 flex justify-center">
-                                        <div className="relative group rounded-2xl overflow-hidden border border-white/10 bg-zinc-900/50 p-4 hover:border-[#D3FD50]/30 transition-all duration-500">
-                                            <img
-                                                src={img.src}
-                                                alt={img.alt}
-                                                className="max-w-full h-auto rounded-lg"
-                                                loading="lazy"
-                                                style={{ maxHeight: '600px' }}
-                                            />
-                                        </div>
-                                    </div>
+                        <div className="relative h-[650px] lg:h-[700px] mt-16">
+                            {/* Slides */}
+                            <div className="relative w-full h-full">
+                                {[...gallery, ...(detailedSpecs?.length > 0 ? detailedSpecs.map((spec, i) => ({ isSpecSlide: true, specData: spec, specIdx: i })) : [{ isSpecSlide: true }])].map((img, idx) => (
+                                    <div
+                                        key={idx}
+                                        className={`absolute inset-0 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 transition-all duration-700 ease-in-out ${idx === activeSlide
+                                            ? 'opacity-100 translate-y-0 z-10'
+                                            : 'opacity-0 translate-y-8 z-0 pointer-events-none'
+                                            }`}
+                                    >
+                                        {img.isSpecSlide ? (
+                                            <div className="w-full h-full flex flex-col items-center justify-center space-y-8 z-10">
+                                                <div className="text-center space-y-4">
+                                                    <h3 className="font-[font2] text-[#D3FD50] text-3xl lg:text-5xl uppercase tracking-widest drop-shadow-[0_0_10px_rgba(211,253,80,0.3)]">
+                                                        {img.specData?.category || common.technicalSpecs || 'Technical Data'}
+                                                    </h3>
+                                                    <p className="text-white/40 font-[font1] uppercase tracking-[0.3em] text-sm italic">
+                                                        {title} - Detailed Overview
+                                                    </p>
+                                                </div>
+                                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl">
+                                                    {(img.specData?.items || specs).slice(0, 8).map((spec, sidx) => (
+                                                        <div key={sidx} className="p-4 rounded-xl border border-[#D3FD50]/10 bg-[#D3FD50]/5 backdrop-blur-md">
+                                                            <div className="text-[#D3FD50] font-[font2] text-lg mb-1">{spec.value}</div>
+                                                            <div className="text-white/40 font-[font1] text-[9px] uppercase tracking-wider">{spec.label}</div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                                <button
+                                                    onClick={() => {
+                                                        if (img.specData) setActiveTab(img.specIdx)
+                                                        document.getElementById('detailed-specs-tabs')?.scrollIntoView({ behavior: 'smooth' })
+                                                    }}
+                                                    className="px-8 py-3 rounded-full border border-[#D3FD50]/30 text-[#D3FD50] font-[font2] text-xs uppercase tracking-widest hover:bg-[#D3FD50] hover:text-black transition-all duration-300"
+                                                >
+                                                    View All Parameters
+                                                </button>
+                                            </div>
+                                        ) : (
+                                            <>
+                                                {/* Background Number */}
+                                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/[0.03] font-[font2] text-[250px] lg:text-[450px] select-none leading-none z-0 pointer-events-none">
+                                                    {String(idx + 1).padStart(2, '0')}
+                                                </div>
 
-                                    {/* Text Description */}
-                                    <div className="flex-1 space-y-4">
-                                        <div className="flex items-center gap-3">
-                                            <span className="w-10 h-10 rounded-xl bg-[#D3FD50]/10 flex items-center justify-center text-[#D3FD50] font-[font2] text-lg">
-                                                {String(idx + 1).padStart(2, '0')}
-                                            </span>
-                                            <div className="h-px flex-1 bg-gradient-to-r from-[#D3FD50]/30 to-transparent" />
-                                        </div>
-                                        <h3 className="font-[font2] text-white text-xl lg:text-2xl">
-                                            {img.alt}
-                                        </h3>
-                                        {img.description && (
-                                            <p className="text-white/60 font-[font1] text-base leading-relaxed">
-                                                {img.description}
-                                            </p>
+                                                {/* Image Section */}
+                                                <div className="flex-1 w-full flex justify-center items-center z-10">
+                                                    <div className="relative group">
+                                                        <div className="absolute -inset-4 bg-[#D3FD50]/5 rounded-[40px] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                                        <div className="relative p-2 rounded-2xl border border-white/10 bg-zinc-900/40 backdrop-blur-sm shadow-2xl">
+                                                            <img
+                                                                src={img.src}
+                                                                alt={img.alt}
+                                                                className="max-w-full h-auto max-h-[350px] lg:max-h-[500px] object-contain rounded-xl"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                {/* Text Section */}
+                                                <div className="flex-1 w-full relative z-10">
+                                                    <div className="space-y-6">
+                                                        <h3 className="font-[font2] text-white text-3xl lg:text-6xl leading-tight border-b border-[#D3FD50]/20 pb-8 tracking-tight">
+                                                            {img.title || img.alt}
+                                                        </h3>
+                                                        {img.description && (
+                                                            <p className="text-white/60 font-[font1] text-lg lg:text-xl leading-relaxed border-l-4 border-[#D3FD50] pl-8 max-w-[600px]">
+                                                                {img.description}
+                                                            </p>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            </>
                                         )}
                                     </div>
+                                ))}
+                            </div>
+
+                            {/* Navigation Controls */}
+                            <div className="absolute -bottom-12 lg:bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-6 z-20">
+                                <button
+                                    onClick={() => handleManualChange((activeSlide - 1 + gallery.length + (detailedSpecs?.length || 1)) % (gallery.length + (detailedSpecs?.length || 1)))}
+                                    className="p-3 rounded-full border border-white/10 bg-black/50 hover:bg-[#D3FD50] hover:text-black hover:border-transparent text-white transition-all duration-300 backdrop-blur-sm"
+                                    aria-label="Previous slide"
+                                >
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin='round' strokeWidth={1.5} d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+
+                                <div className="flex gap-2">
+                                    {[...gallery, ...(detailedSpecs?.length > 0 ? detailedSpecs : [{}])].map((_, idx) => (
+                                        <button
+                                            key={idx}
+                                            onClick={() => handleManualChange(idx)}
+                                            className={`h-1.5 rounded-full transition-all duration-300 ${idx === activeSlide ? 'w-8 bg-[#D3FD50]' : 'w-2 bg-white/20 hover:bg-white/40'
+                                                }`}
+                                            aria-label={`Go to slide ${idx + 1}`}
+                                        />
+                                    ))}
                                 </div>
-                            ))}
+
+                                <button
+                                    onClick={() => handleManualChange((activeSlide + 1) % (gallery.length + (detailedSpecs?.length || 1)))}
+                                    className="p-3 rounded-full border border-white/10 bg-black/50 hover:bg-[#D3FD50] hover:text-black hover:border-transparent text-white transition-all duration-300 backdrop-blur-sm"
+                                    aria-label="Next slide"
+                                >
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin='round' strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
+
+                        {/* Detailed Specs Tabs - Below Slider */}
+                        {detailedSpecs && detailedSpecs.length > 0 && (
+                            <div id="detailed-specs-tabs" className="mt-40 pt-20 border-t border-white/5">
+                                <div className="text-center mb-16">
+                                    <h2 className="font-[font2] text-white text-2xl lg:text-4xl uppercase tracking-widest mb-4">
+                                        {common.technicalSpecs || 'Technical Parameters'}
+                                    </h2>
+                                    <div className="w-24 h-1 bg-[#D3FD50] mx-auto shadow-[0_0_10px_#D3FD50]" />
+                                </div>
+
+                                <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-16">
+                                    {detailedSpecs.map((cat, idx) => (
+                                        <button
+                                            key={idx}
+                                            onClick={() => setActiveTab(idx)}
+                                            className={`px-6 py-3 font-[font2] text-[10px] md:text-xs uppercase tracking-[0.2em] transition-all duration-500 relative rounded-xl border ${activeTab === idx
+                                                ? 'text-[#D3FD50] border-[#D3FD50] bg-[#D3FD50]/5 shadow-[0_0_20px_rgba(211,253,80,0.1)]'
+                                                : 'text-white/30 border-white/5 hover:border-white/20 hover:text-white/60'
+                                                }`}
+                                        >
+                                            {cat.category}
+                                            {activeTab === idx && (
+                                                <div className="absolute inset-0 rounded-xl bg-[#D3FD50]/5 animate-pulse" />
+                                            )}
+                                        </button>
+                                    ))}
+                                </div>
+
+                                <div className="grid md:grid-cols-2 gap-x-12 gap-y-4 max-w-6xl mx-auto">
+                                    {detailedSpecs[activeTab]?.items.map((item, idx) => (
+                                        <div
+                                            key={idx}
+                                            className="flex justify-between items-center py-4 border-b border-white/5 group hover:border-[#D3FD50]/30 transition-all duration-300 px-4 rounded-lg hover:bg-white/[0.01]"
+                                        >
+                                            <span className="text-white/40 font-[font1] text-[10px] uppercase tracking-widest group-hover:text-white/60 transition-colors">
+                                                {item.label}
+                                            </span>
+                                            <span className="text-white font-[font1] text-sm font-medium tracking-tight group-hover:text-[#D3FD50] transition-all duration-300">
+                                                {item.value}
+                                            </span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </section>
             )}
@@ -374,11 +518,10 @@ const SolutionTemplate = ({
                                     </ul>
                                     <Link
                                         to="/contact"
-                                        className={`w-full py-3 rounded-full font-[font2] text-sm uppercase tracking-wider text-center transition-colors duration-300 ${
-                                            plan.highlighted 
-                                                ? 'bg-[#D3FD50] text-black hover:bg-white' 
-                                                : 'border border-white/30 text-white hover:border-[#D3FD50] hover:text-[#D3FD50]'
-                                        }`}
+                                        className={`w-full py-3 rounded-full font-[font2] text-sm uppercase tracking-wider text-center transition-colors duration-300 ${plan.highlighted
+                                            ? 'bg-[#D3FD50] text-black hover:bg-white'
+                                            : 'border border-white/30 text-white hover:border-[#D3FD50] hover:text-[#D3FD50]'
+                                            }`}
                                     >
                                         {common.getStarted || 'Get Started'}
                                     </Link>
