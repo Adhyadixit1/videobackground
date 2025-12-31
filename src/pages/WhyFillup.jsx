@@ -38,40 +38,44 @@ const WhyFillup = () => {
 
     const portfolioProjects = useMemo(() => [
         {
-            id: 1,
-            title: t('solutionPages.lcdScreens.title'),
-            category: t('home.pinterest.categories.digitalDisplays'),
+            id: 9,
+            title: t('solutionPages.outdoorLCD43.title') || "Outdoor LCD 43inch",
+            category: t('home.pinterest.categories.outdoorScreens'),
             size: 'tall',
-            color: 'from-purple-600/20 to-pink-600/20',
-            video: 'https://video.gumlet.io/694cef8ab122cbf176482b8c/694e4270e086c47a823f4aa7/download.mp4',
-            link: '/solutions/lcd-screens'
+            color: 'from-green-900/80 to-emerald-900/80',
+            image: "https://sc04.alicdn.com/kf/Hbc4f05f302d444cb889ad42c3afc11f5X/229562533/Hbc4f05f302d444cb889ad42c3afc11f5X.jpeg",
+            link: '/projects/outdoor-lcd-43',
+            isSpecial: true
         },
         {
-            id: 4,
-            title: t('solutionPages.stationServiceDisplay.title'),
-            category: t('home.pinterest.categories.stationScreens'),
-            size: 'normal',
-            color: 'from-orange-600/20 to-red-600/20',
-            image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg',
-            link: '/solutions/station-service-display'
-        },
-        {
-            id: 6,
-            title: t('solutionPages.ledWalls.title'),
-            category: t('home.pinterest.categories.videoWalls'),
-            size: 'wide',
-            color: 'from-teal-600/20 to-emerald-600/20',
-            image: '/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg',
-            link: '/solutions/led-walls'
-        },
-        {
-            id: 2,
-            title: t('solutionPages.digitalPump.title'),
-            category: t('home.pinterest.categories.pumpDisplays'),
+            id: 10,
+            title: t('solutionPages.infraredTouch55.title') || "Infrared Touch 55inch",
+            category: t('home.pinterest.categories.touchDisplays'),
             size: 'tall',
-            color: 'from-blue-600/20 to-cyan-600/20',
-            image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (2).jpeg',
-            link: '/solutions/digital-pump'
+            color: 'from-cyan-900/80 to-blue-900/80',
+            image: "/Fiche technique ecran intérieur_files/image001.png",
+            link: '/projects/infrared-touch-55',
+            isSpecial: true
+        },
+        {
+            id: 11,
+            title: t('solutionPages.outdoorWaterproofDisplay.title') || "Outdoor Waterproof Display",
+            category: t('home.pinterest.categories.outdoorScreens'),
+            size: 'tall',
+            color: 'from-orange-900/80 to-red-900/80',
+            image: "/3rdproduct/image002.jpg",
+            link: '/projects/outdoor-waterproof-display',
+            isSpecial: true
+        },
+        {
+            id: 12,
+            title: t('solutionPages.digitalMarketingServices.title') || "Digital Marketing Services",
+            category: t('home.pinterest.categories.digitalServices'),
+            size: 'tall',
+            color: 'from-fuchsia-900/80 to-blue-900/80',
+            image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=900&q=80",
+            link: '/solutions/digital-marketing-services',
+            isSpecial: true
         }
     ], [t])
 
@@ -263,25 +267,93 @@ const WhyFillup = () => {
                         </Link>
                     </div>
 
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1'>
-                        {portfolioProjects.map((project) => (
+                    <div className='columns-1 sm:columns-2 lg:columns-4 gap-4 lg:gap-6 relative z-20'>
+                        {portfolioProjects.map((project, index) => (
                             <Link
-                                to={project.link}
+                                to={project.link || '/projects'}
                                 key={project.id}
-                                className={`group relative rounded-[40px] overflow-hidden block ${project.size === 'tall' ? 'aspect-[2/3]' : project.size === 'wide' ? 'aspect-[16/9]' : 'aspect-square'}`}
+                                className={`
+                                    break-inside-avoid mb-4 lg:mb-6 group cursor-pointer block
+                                    aspect-[2/3]
+                                `}
                             >
-                                <div className='absolute inset-0'>
-                                    {project.video ? (
-                                        <video src={project.video} autoPlay muted loop playsInline className='w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110 opacity-40' />
-                                    ) : (
-                                        <img src={project.image} alt={project.title} className='w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110 opacity-40' />
-                                    )}
-                                    <div className={`absolute inset-0 bg-gradient-to-br ${project.color} mix-blend-multiply opacity-60`} />
-                                    <div className='absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent' />
-                                </div>
-                                <div className='absolute bottom-0 left-0 p-10 w-full'>
-                                    <span className='text-[#D3FD50] text-[10px] font-[font2] uppercase tracking-[0.3em] mb-2 block'>{project.category}</span>
-                                    <h3 className='text-white font-[font2] text-2xl uppercase tracking-tight group-hover:text-[#D3FD50] transition-colors'>{project.title}</h3>
+                                <div className={`
+                                    relative h-full w-full rounded-2xl lg:rounded-3xl overflow-hidden
+                                    border border-white/10 group-hover:border-[#D3FD50]/50
+                                    transition-all duration-500 group-hover:scale-[1.02]
+                                    ring-2 ring-[#D3FD50]/30 ring-offset-2 ring-offset-black
+                                `}>
+                                    {/* Background image - subtle and overlayed */}
+                                    <div className='absolute inset-0'>
+                                        {project.video ? (
+                                            <video
+                                                src={project.video}
+                                                autoPlay
+                                                muted
+                                                loop
+                                                playsInline
+                                                className={`w-full h-full object-cover 
+                                                          group-hover:opacity-70 group-hover:scale-110
+                                                          transition-all duration-700
+                                                          opacity-80`}
+                                            />
+                                        ) : (
+                                            <img
+                                                src={project.image}
+                                                alt={project.title}
+                                                className={`w-full h-full object-cover 
+                                                          group-hover:opacity-70 group-hover:scale-110
+                                                          transition-all duration-700
+                                                          opacity-80`}
+                                            />
+                                        )}
+                                    </div>
+
+                                    {/* Color gradient overlay - sits on top of image */}
+                                    <div className={`absolute inset-0 bg-gradient-to-br ${project.color} 
+                                                   mix-blend-multiply opacity-70`}></div>
+
+                                    {/* Dark gradient overlay from bottom for text readability */}
+                                    <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent 
+                                                   opacity-60 group-hover:opacity-70 transition-opacity duration-500`}></div>
+
+                                    {/* Special badge */}
+                                    <div className='absolute top-4 right-4 px-4 py-2 bg-[#D3FD50] text-black text-xs font-[font1] font-bold rounded-full uppercase tracking-wider z-10 shadow-lg shadow-[#D3FD50]/50 animate-pulse'>
+                                        ⭐ {t('projects.featuredBadge')}
+                                    </div>
+
+                                    {/* Floating shapes decoration */}
+                                    <div className={`absolute top-8 right-8 border rounded-full 
+                                                   group-hover:border-[#D3FD50]/50 group-hover:scale-110 transition-all duration-500
+                                                   w-20 h-20 border-[#D3FD50]/40`}></div>
+                                    <div className={`absolute top-20 right-12 rounded-full 
+                                                   group-hover:bg-[#D3FD50]/30 transition-all duration-500
+                                                   w-10 h-10 bg-[#D3FD50]/20`}></div>
+
+                                    {/* Content */}
+                                    <div className='absolute bottom-0 left-0 right-0 p-6 lg:p-8'>
+                                        <span className={`inline-block px-3 py-1 backdrop-blur-md rounded-full 
+                                                       text-xs font-[font1] tracking-wider uppercase mb-3
+                                                       transition-all duration-300
+                                                       bg-[#D3FD50]/20 text-[#D3FD50] group-hover:bg-[#D3FD50]/30`}>
+                                            {project.category}
+                                        </span>
+                                        <h3 className={`font-[font2] leading-tight
+                                                      group-hover:text-[#D3FD50] transition-colors duration-300
+                                                      text-white text-2xl lg:text-3xl`}>
+                                            {project.title}
+                                        </h3>
+                                    </div>
+
+                                    {/* Hover arrow */}
+                                    <div className={`absolute top-6 left-6 rounded-full bg-[#D3FD50] 
+                                                   flex items-center justify-center opacity-0 scale-50
+                                                   group-hover:opacity-100 group-hover:scale-100 transition-all duration-300
+                                                   w-12 h-12`}>
+                                        <svg className={`text-black w-5 h-5`} fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M7 17L17 7M17 7H7M17 7v10' />
+                                        </svg>
+                                    </div>
                                 </div>
                             </Link>
                         ))}

@@ -50,22 +50,7 @@ const FooterSection = () => {
                         </p>
 
                         {/* Social links */}
-                        <div className='flex gap-4 pt-4'>
-                            {['I', 'L', 'T', 'B'].map((initial, index) => (
-                                <div
-                                    key={index}
-                                    className='w-10 h-10 rounded-full border border-gray-600 
-                                              flex items-center justify-center
-                                              hover:border-[#D3FD50] hover:bg-[#D3FD50]/10
-                                              transition-all duration-300'
-                                >
-                                    <span className='font-[font1] text-gray-400 text-xs 
-                                                   '>
-                                        {initial}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
+
                     </div>
 
                     {/* Navigation links */}

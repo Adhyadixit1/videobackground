@@ -3,6 +3,7 @@ import { Suspense, lazy } from 'react'
 import Navbar from './components/Navigation/Navbar'
 import FullScreenNav from './components/Navigation/FullScreenNav'
 import ScrollToTop from './components/common/ScrollToTop'
+import ScrollToHashElement from './components/common/ScrollToHashElement'
 import Chatbot from './components/Chatbot'
 
 // Lazy load pages
@@ -49,6 +50,7 @@ const App = () => {
       {!isAdminPage && <Navbar />}
       {!isAdminPage && <FullScreenNav />}
       <ScrollToTop />
+      <ScrollToHashElement />
       {!isAdminPage && <Chatbot />}
       <Suspense fallback={<div className="h-screen w-screen bg-black"></div>}>
         <Routes>

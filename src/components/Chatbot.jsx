@@ -14,6 +14,8 @@ const Chatbot = () => {
     const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef(null);
 
+    const whatsappLink = "https://wa.me/352661167725?text=Hi,%20I%20need%20help%20with%20details%20about%20your%20business";
+
     // Helper for local translations based on selected language
     const localT = (key) => {
         const langCode = userData.language ? userData.language.split('-')[0] : 'en';
@@ -108,6 +110,11 @@ const Chatbot = () => {
     };
 
     const handleOptionClick = (query) => {
+        if (query.toLowerCase().includes('whatsapp')) {
+            window.open(whatsappLink, '_blank', 'noopener,noreferrer');
+            return;
+        }
+
         setInput(query);
         // We can't easily dispatch, so we'll just call the send logic manually or trigger a state change that calls it.
         // But since handleSendMessage checks event, we can just create a synthetic event or extract logic.
@@ -141,7 +148,7 @@ const Chatbot = () => {
             const data = await response.json();
 
             if (data.response) {
-                setMessages(prev => [...prev, { role: 'bot', text: data.response, options: data.options }]);
+                setMessages(prev => [...prev, { role: 'bot', text: data.response, options: data.options, showWhatsapp: data.showWhatsapp }]);
             } else {
                 // Fallback to WhatsApp
                 setMessages(prev => [...prev, {
@@ -156,8 +163,6 @@ const Chatbot = () => {
             setIsLoading(false);
         }
     };
-
-    const whatsappLink = "https://wa.me/33123456789"; // Replace with actual number
 
     return (
         <div className="fixed bottom-6 right-6 z-50 font-[font1]">
@@ -256,12 +261,13 @@ const Chatbot = () => {
                                                 : 'bg-zinc-800 text-zinc-200 rounded-tl-none'
                                                 }`}>
                                                 {msg.text}
-                                                {msg.isFallback && (
+                                                {(msg.isFallback || msg.showWhatsapp) && (
                                                     <a
                                                         href={whatsappLink}
                                                         target="_blank"
-                                                        rel="noreferrer"
-                                                        className="mt-3 flex items-center gap-2 bg-[#25D366] text-white px-3 py-2 rounded-lg hover:bg-[#20bd5a] transition-colors font-bold text-xs no-underline"
+                                                        rel="noopener noreferrer"
+                                                        onClick={(e) => e.stopPropagation()}
+                                                        className="mt-3 flex items-center gap-2 bg-[#25D366] text-white px-3 py-2 rounded-lg hover:bg-[#20bd5a] transition-colors font-bold text-xs no-underline pointer-events-auto cursor-pointer"
                                                     >
                                                         <MessageCircle size={14} fill="white" />
                                                         {localT('chatbot.whatsapp')}

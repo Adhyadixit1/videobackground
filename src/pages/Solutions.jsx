@@ -18,6 +18,7 @@ const Solutions = () => {
 
     const services = [
         {
+            id: 'screen-diffusion',
             icon: '📺',
             title: t('solutions.screenDiff'),
             description: t('solutions.screenDiffDesc'),
@@ -25,6 +26,7 @@ const Solutions = () => {
             image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg'
         },
         {
+            id: 'digital-ads',
             icon: '📱',
             title: t('solutions.socialSynergy'),
             description: t('solutions.socialSynergyDesc'),
@@ -32,6 +34,7 @@ const Solutions = () => {
             image: '/WhatsApp Image 2025-12-25 at 10.13.17 AM.jpeg'
         },
         {
+            id: 'analytics',
             icon: '📊',
             title: t('solutions.analytics'),
             description: t('solutions.analyticsDesc'),
@@ -113,7 +116,7 @@ const Solutions = () => {
 
                     <div className='grid lg:grid-cols-3 gap-8'>
                         {services.map((service, index) => (
-                            <div key={index} className='group relative aspect-[4/5] rounded-[40px] overflow-hidden border border-white/10 hover:border-[#D3FD50]/50 transition-all duration-500'>
+                            <div key={index} id={service.id} className='group relative aspect-[4/5] rounded-[40px] overflow-hidden border border-white/10 hover:border-[#D3FD50]/50 transition-all duration-500'>
                                 <img src={service.image} className='absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700' alt='' />
                                 <div className='absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/90' />
                                 <div className='absolute inset-0 p-10 flex flex-col justify-end'>
@@ -142,7 +145,7 @@ const Solutions = () => {
             </section>
 
             {/* Campaign Architecture - Split Grid Design */}
-            <section className='relative py-12 lg:py-20 px-6 bg-[#080808]'>
+            <section id="screen-installation" className='relative py-12 lg:py-20 px-6 bg-[#080808]'>
                 <div className='absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/10 blur-[150px] rounded-full pointer-events-none' />
                 <div className='max-w-7xl mx-auto'>
                     <div className='grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-12lg:mb-16'>
@@ -216,7 +219,7 @@ const Solutions = () => {
             </section>
 
             {/* Activation Stack - Layered Design */}
-            <section className='relative py-12 lg:py-20 px-6 bg-[#080808]'>
+            <section id="video-production" className='relative py-12 lg:py-20 px-6 bg-[#080808]'>
                 <div className='max-w-5xl mx-auto'>
                     <div className='text-center mb-10 lg:mb-14'>
                         <h2 className='font-[font2] text-4xl lg:text-6xl uppercase mb-4'>{t('solutions.activationStackTitle')}</h2>

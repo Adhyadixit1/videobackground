@@ -11,13 +11,13 @@ const HomeHeroText = () => {
                 <div className='flex flex-row flex-wrap justify-center items-center gap-2 px-4'>
                     <Link
                         to='/contact'
-                        className='px-4 py-2 lg:px-10 lg:py-5 rounded-full bg-[#D3FD50] text-black font-[font2] text-[0.6rem] sm:text-xs lg:text-sm uppercase tracking-[0.3em] hover:bg-white transition-colors duration-300'
+                        className='px-6 py-3 lg:px-10 lg:py-5 rounded-full bg-[#D3FD50] text-black font-[font2] text-xs sm:text-sm lg:text-sm uppercase tracking-[0.3em] hover:bg-white transition-colors duration-300'
                     >
                         {t('home.heroBtn')}
                     </Link>
                     <a
                         href='#pinterest-grid'
-                        className='px-4 py-2 lg:px-10 lg:py-5 rounded-full border border-white/40 text-white font-[font2] text-[0.6rem] sm:text-xs lg:text-sm uppercase tracking-[0.3em] hover:border-[#D3FD50] hover:text-[#D3FD50] transition-colors duration-300'
+                        className='px-6 py-3 lg:px-10 lg:py-5 rounded-full border border-white/40 text-white font-[font2] text-xs sm:text-sm lg:text-sm uppercase tracking-[0.3em] hover:border-[#D3FD50] hover:text-[#D3FD50] transition-colors duration-300'
                     >
                         {t('home.heroBtnSecondary')}
                     </a>

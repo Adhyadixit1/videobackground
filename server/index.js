@@ -51,28 +51,48 @@ app.post('/api/chat', async (req, res) => {
 
         // Check DB for any matching keywords
         // Optimized to find the best match based on the number of matching keywords
-        const query = `
-      SELECT *, 
-             (SELECT count(*) FROM unnest(keywords) k WHERE k = ANY($1::text[])) as match_count
-      FROM chatbot_responses 
-      WHERE keywords && $1::text[]
-      ORDER BY match_count DESC
-      LIMIT 1;
-    `;
+        // Special handling for Price/Quote queries
+        const priceKeywords = ['price', 'pricing', 'cost', 'quote', 'quotation', 'rates', 'fee', // English
+            'prix', 'tarif', 'coût', 'devis', 'cotation', 'taux', // French
+            'preis', 'kosten', 'angebot', 'kostenvoranschlag', 'gebühr' // German
+        ];
 
-        const result = await pool.query(query, [words]);
+        const isPriceQuery = words.some(w => priceKeywords.includes(w));
+
         let responseText = null;
         let suggestedOptions = null;
+        let showWhatsapp = false;
 
-        if (result.rows.length > 0) {
-            const row = result.rows[0];
-            responseText = detectedLang === 'fr' ? row.response_fr : (detectedLang === 'de' ? row.response_de : row.response_en);
+        if (isPriceQuery) {
+            const priceResponses = {
+                en: "Our prices are available upon quotation. To get a personalized quote that matches your specific needs, please reach out to us directly via WhatsApp below.",
+                fr: "Nos tarifs sont disponibles sur devis. Pour obtenir un devis personnalisé correspondant à vos besoins spécifiques, veuillez nous contacter directement via WhatsApp ci-dessous.",
+                de: "Unsere Preise sind auf Anfrage erhältlich. Um ein auf Ihre Bedürfnisse zugeschnittenes Angebot zu erhalten, kontaktieren Sie uns bitte direkt über WhatsApp unten."
+            };
+            responseText = priceResponses[detectedLang] || priceResponses['en'];
+            showWhatsapp = true; // Flag to trigger WhatsApp CTA on frontend
+        } else {
+            const query = `
+          SELECT *, 
+                 (SELECT count(*) FROM unnest(keywords) k WHERE k = ANY($1::text[])) as match_count
+          FROM chatbot_responses 
+          WHERE keywords && $1::text[]
+          ORDER BY match_count DESC
+          LIMIT 1;
+        `;
 
-            if (row.suggested_options && Array.isArray(row.suggested_options)) {
-                suggestedOptions = row.suggested_options.map(opt => ({
-                    label: detectedLang === 'fr' ? opt.label_fr : (detectedLang === 'de' ? opt.label_de : opt.label_en),
-                    query: opt.query
-                }));
+            const result = await pool.query(query, [words]);
+
+            if (result.rows.length > 0) {
+                const row = result.rows[0];
+                responseText = detectedLang === 'fr' ? row.response_fr : (detectedLang === 'de' ? row.response_de : row.response_en);
+
+                if (row.suggested_options && Array.isArray(row.suggested_options)) {
+                    suggestedOptions = row.suggested_options.map(opt => ({
+                        label: detectedLang === 'fr' ? opt.label_fr : (detectedLang === 'de' ? opt.label_de : opt.label_en),
+                        query: opt.query
+                    }));
+                }
             }
         }
 
@@ -101,7 +121,7 @@ app.post('/api/chat', async (req, res) => {
             );
         }
 
-        res.json({ response: responseText, options: suggestedOptions });
+        res.json({ response: responseText, options: suggestedOptions, showWhatsapp });
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Internal Server Error' });

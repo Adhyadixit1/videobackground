@@ -216,9 +216,9 @@ const PinterestGrid = () => {
                                 <span className={`inline-block px-3 py-1 backdrop-blur-md rounded-full 
                                                text-xs font-[font1] tracking-wider uppercase mb-3
                                                transition-all duration-300
-                                               ${project.isSpecial 
-                                                 ? 'bg-[#D3FD50]/20 text-[#D3FD50] group-hover:bg-[#D3FD50]/30' 
-                                                 : 'bg-white/10 text-white/80 group-hover:bg-[#D3FD50]/20 group-hover:text-[#D3FD50]'}`}>
+                                               ${project.isSpecial
+                                        ? 'bg-[#D3FD50]/20 text-[#D3FD50] group-hover:bg-[#D3FD50]/30'
+                                        : 'bg-white/10 text-white/80 group-hover:bg-[#D3FD50]/20 group-hover:text-[#D3FD50]'}`}>
                                     {project.category}
                                 </span>
                                 <h3 className={`font-[font2] leading-tight
