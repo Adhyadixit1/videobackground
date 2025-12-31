@@ -409,7 +409,7 @@ const Contact = () => {
 
                         {/* Right Side - Premium Form */}
                         <div className='relative'>
-                            <div className='p-8 lg:p-16 rounded-[40px] border border-white/5 bg-white/[0.02] backdrop-blur-xl shadow-2xl relative overflow-hidden'>
+                            <div className='p-5 md:p-8 lg:p-16 rounded-[40px] border border-white/5 bg-white/[0.02] backdrop-blur-xl shadow-2xl relative overflow-hidden'>
                                 <div className='absolute -top-32 -right-32 w-64 h-64 bg-[#D3FD50]/5 rounded-full blur-[80px]' />
 
                                 <h3 className='font-[font2] text-2xl lg:text-3xl uppercase mb-10 tracking-tight'>
@@ -458,14 +458,14 @@ const Contact = () => {
 
                                     <div className='space-y-2'>
                                         <label className='text-white/20 text-[10px] font-[font2] uppercase tracking-[0.3em] ml-1'>{t('contact.formPhone')}</label>
-                                        <div className='flex gap-4 relative w-full'>
-                                            <div ref={dropdownRef} className='relative w-36 shrink-0'>
+                                        <div className='flex gap-2 lg:gap-4 relative w-full'>
+                                            <div ref={dropdownRef} className='relative w-28 lg:w-36 shrink-0'>
                                                 <button
                                                     type='button'
                                                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                                                    className='w-full h-full flex items-center justify-between px-4 py-4 bg-white/5 border border-white/10 rounded-2xl text-white hover:border-[#D3FD50]/50 transition-all'
+                                                    className='w-full h-full flex items-center justify-between px-3 lg:px-4 py-4 bg-white/5 border border-white/10 rounded-2xl text-white hover:border-[#D3FD50]/50 transition-all'
                                                 >
-                                                    <span className='flex items-center gap-3'>
+                                                    <span className='flex items-center gap-2 lg:gap-3'>
                                                         <img
                                                             src={`https://flagcdn.com/w40/${selectedCountry.country.toLowerCase()}.png`}
                                                             srcSet={`https://flagcdn.com/w80/${selectedCountry.country.toLowerCase()}.png 2x`}
@@ -510,7 +510,7 @@ const Contact = () => {
                                                 name='phone'
                                                 value={formData.phone}
                                                 onChange={handleChange}
-                                                className='flex-1 w-full min-w-0 px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-white/20 focus:border-[#D3FD50] focus:outline-none transition-all'
+                                                className='flex-1 w-full min-w-0 px-4 lg:px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-white/20 focus:border-[#D3FD50] focus:outline-none transition-all'
                                                 placeholder={t('contact.placeholders.phone')}
                                             />
                                         </div>

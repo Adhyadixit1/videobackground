@@ -26,13 +26,13 @@ const Navbar = () => {
                     src='/luxio-vector-logo.png'
                     alt='Luxio Media'
                     className='block lg:hidden cursor-pointer w-32 h-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]'
-                    style={{ marginTop: '-26px', marginLeft: '16px' }}
+                    style={{ marginTop: '-32px', marginLeft: '16px' }}
                     onClick={() => navigate('/')}
                 />
             </>
 
-            <div className='flex items-center gap-6 absolute right-0 top-0 lg:relative'>
-                <div className="mt-4 lg:mt-0 mr-4 lg:mr-0">
+            <div className='flex items-center gap-6 absolute right-0 -top-1 lg:relative'>
+                <div className="mt-3 lg:mt-0 mr-4 lg:mr-0">
                     <LanguageSelector />
                 </div>
 

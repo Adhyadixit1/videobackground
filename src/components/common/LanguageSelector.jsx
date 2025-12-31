@@ -9,9 +9,9 @@ const LanguageSelector = () => {
     const dropdownRef = useRef(null)
 
     const languages = [
-        { code: 'fr', label: 'Français', flag: '🇫🇷' },
-        { code: 'en', label: 'English', flag: '🇬🇧' },
-        { code: 'de', label: 'Deutsch', flag: '🇩🇪' }
+        { code: 'fr', label: 'Français', flagCode: 'fr' },
+        { code: 'en', label: 'English', flagCode: 'gb' },
+        { code: 'de', label: 'Deutsch', flagCode: 'de' }
     ]
 
     useGSAP(() => {
@@ -41,14 +41,19 @@ const LanguageSelector = () => {
             {/* Trigger Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="lang-trigger flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-black/50 backdrop-blur-sm hover:border-[#D3FD50]/50 transition-colors duration-300"
+                className="lang-trigger flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-black/50 backdrop-blur-sm hover:border-[#D3FD50]/50 transition-colors duration-300"
             >
-                <span className="text-lg">{activeLang?.flag}</span>
-                <span className="text-white font-[font1] uppercase text-xs tracking-wider hidden md:block">
+                <img
+                    src={`https://flagcdn.com/w40/${activeLang?.flagCode || 'gb'}.png`}
+                    srcSet={`https://flagcdn.com/w80/${activeLang?.flagCode || 'gb'}.png 2x`}
+                    alt={activeLang?.label}
+                    className="w-6 h-auto rounded-sm object-cover"
+                />
+                <span className="text-white font-[font1] uppercase text-sm tracking-wider hidden md:block">
                     {language}
                 </span>
                 <svg
-                    className={`w-3 h-3 text-white transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                    className={`w-4 h-4 text-white transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -73,7 +78,12 @@ const LanguageSelector = () => {
                                 }}
                                 className={`w-full px-6 py-3 flex items-center gap-4 hover:bg-white/5 transition-colors duration-200 group ${language === lang.code ? 'bg-white/5' : ''}`}
                             >
-                                <span className="text-xl">{lang.flag}</span>
+                                <img
+                                    src={`https://flagcdn.com/w40/${lang.flagCode}.png`}
+                                    srcSet={`https://flagcdn.com/w80/${lang.flagCode}.png 2x`}
+                                    alt={lang.label}
+                                    className="w-6 h-auto rounded-sm object-cover"
+                                />
                                 <div className="text-left">
                                     <span className={`block text-sm font-[font1] font-medium ${language === lang.code ? 'text-[#D3FD50]' : 'text-white'}`}>
                                         {lang.label}

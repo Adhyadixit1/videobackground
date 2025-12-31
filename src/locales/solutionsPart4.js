@@ -493,7 +493,7 @@ export const solutionsPart4 = {
             { src: "/3rdproduct/image003.png", alt: "High brightness screen - Technical detail", title: "High Brightness", description: "LCD screen 2000-5000 nits with intelligent brightness control." },
             { src: "/3rdproduct/image004.png", alt: "Intelligent brightness control", title: "Intelligent Control", description: "Automatic adjustment according to ambient light for energy saving." },
             { src: "/3rdproduct/image005.png", alt: "Industrial grade panel - Close up", title: "Industrial Panel", description: "Wide temperature LCD panel that does not blacken under direct sunlight." },
-            { src: "/3rdproduct/image006.png", alt: "QWP technology - Polarized sunglasses", title: "Polarized Sunglasses", description: "QWP technology allowing perfect visibility with polarized sunglasses." },
+
             { src: "/3rdproduct/image007.png", alt: "IP65 waterproof fan - Detail", title: "Waterproof Fan", description: "IP65 waterproof fan with full lamination process." },
             { src: "/3rdproduct/image008.png", alt: "Ultra-thin design - Side profile", title: "Ultra-Thin Design", description: "Narrow border ultra-thin design supporting horizontal/vertical screens." },
             { src: "/3rdproduct/image009.png", alt: "Interface and connectivity - Rear view", title: "Complete Interface", description: "Multiple interfaces with HDMI, USB, RJ45 and WiFi for full connectivity." },
