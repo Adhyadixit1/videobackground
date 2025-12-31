@@ -734,7 +734,22 @@ Luxio Media, c’est l’alliance de la technologie, de l’impact visuel et de 
             startChat: "Démarrer le chat",
             connecting: "Connexion...",
             placeholder: "Tapez votre message...",
-            welcomeBack: "Bonjour [name], comment puis-je vous aider ?"
+            welcomeBack: "Bonjour [name], comment puis-je vous aider ?",
+            title: "Assistant Luxio",
+            welcomeTitle: "Bienvenue",
+            detailsPrompt: "Veuillez fournir vos coordonnées pour commencer à discuter.",
+            namePlaceholder: "Nom",
+            emailPlaceholder: "Email",
+            phonePlaceholder: "Téléphone (Optionnel)",
+            languagePlaceholder: "Langue préférée",
+            error: "Désolé, je rencontre des problèmes de connexion. Veuillez réessayer plus tard.",
+            whatsapp: "Discuter sur WhatsApp",
+            options: {
+                services: "Nos Services",
+                pricing: "Tarifs",
+                contact: "Contact",
+                caseStudies: "Études de cas"
+            }
         }
     },
     en: {
@@ -1382,7 +1397,22 @@ Luxio Media is the alliance of technology, visual impact, and bespoke support to
             startChat: "Start Chat",
             connecting: "Connecting...",
             placeholder: "Type a message...",
-            welcomeBack: "Hello [name], how can I help you today?"
+            welcomeBack: "Hello [name], how can I help you today?",
+            title: "Luxio Assistant",
+            welcomeTitle: "Welcome",
+            detailsPrompt: "Please provide your details to start chatting.",
+            namePlaceholder: "Name",
+            emailPlaceholder: "Email",
+            phonePlaceholder: "Phone (Optional)",
+            languagePlaceholder: "Preferred Language",
+            error: "Sorry, I am having trouble connecting. Please try again later.",
+            whatsapp: "Chat on WhatsApp",
+            options: {
+                services: "Our Services",
+                pricing: "Pricing",
+                contact: "Contact",
+                caseStudies: "Case Studies"
+            }
         }
     },
     de: {
@@ -2014,7 +2044,22 @@ Luxio Media ist die Allianz aus Technologie, visueller Wirkung und maßgeschneid
             startChat: "Chat starten",
             connecting: "Verbinde...",
             placeholder: "Nachricht eingeben...",
-            welcomeBack: "Hallo [name], wie kann ich Ihnen heute helfen?"
+            welcomeBack: "Hallo [name], wie kann ich Ihnen heute helfen?",
+            title: "Luxio Assistent",
+            welcomeTitle: "Willkommen",
+            detailsPrompt: "Bitte geben Sie Ihre Daten ein, um den Chat zu starten.",
+            namePlaceholder: "Name",
+            emailPlaceholder: "E-Mail",
+            phonePlaceholder: "Telefon (Optional)",
+            languagePlaceholder: "Bevorzugte Sprache",
+            error: "Entschuldigung, ich habe Verbindungsprobleme. Bitte versuchen Sie es später erneut.",
+            whatsapp: "Auf WhatsApp chatten",
+            options: {
+                services: "Unsere Dienstleistungen",
+                pricing: "Preise",
+                contact: "Kontakt",
+                caseStudies: "Fallstudien"
+            }
         }
     }
 };

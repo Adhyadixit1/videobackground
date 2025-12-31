@@ -62,10 +62,18 @@ app.post('/api/chat', async (req, res) => {
 
         const result = await pool.query(query, [words]);
         let responseText = null;
+        let suggestedOptions = null;
 
         if (result.rows.length > 0) {
             const row = result.rows[0];
             responseText = detectedLang === 'fr' ? row.response_fr : (detectedLang === 'de' ? row.response_de : row.response_en);
+
+            if (row.suggested_options && Array.isArray(row.suggested_options)) {
+                suggestedOptions = row.suggested_options.map(opt => ({
+                    label: detectedLang === 'fr' ? opt.label_fr : (detectedLang === 'de' ? opt.label_de : opt.label_en),
+                    query: opt.query
+                }));
+            }
         }
 
         // Fallback if no specific response found or response is empty (generic fallback)
@@ -76,6 +84,13 @@ app.post('/api/chat', async (req, res) => {
                 de: "Ich bin mir nicht sicher, aber ich kann Ihnen von unseren Außenbildschirmen, Videowänden oder digitalen Marketingdiensten erzählen. Woran sind Sie interessiert?"
             };
             responseText = fallbackResponse[detectedLang] || fallbackResponse['en'];
+
+            // Default options for fallback
+            suggestedOptions = [
+                { label: detectedLang === 'fr' ? "Nos Services" : (detectedLang === 'de' ? "Unsere Dienstleistungen" : "Our Services"), query: "services" },
+                { label: detectedLang === 'fr' ? "Tarifs" : (detectedLang === 'de' ? "Preise" : "Pricing"), query: "pricing" },
+                { label: detectedLang === 'fr' ? "Contact" : (detectedLang === 'de' ? "Kontakt" : "Contact"), query: "contact" }
+            ];
         }
 
         // Log Bot Response if lead_id exists
@@ -86,7 +101,7 @@ app.post('/api/chat', async (req, res) => {
             );
         }
 
-        res.json({ response: responseText });
+        res.json({ response: responseText, options: suggestedOptions });
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Internal Server Error' });

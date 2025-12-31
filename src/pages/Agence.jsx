@@ -16,9 +16,13 @@ const Agence = () => {
                 visual={
                     <div className='relative w-full h-full min-h-[400px] lg:min-h-[600px] rounded-[40px] overflow-hidden border border-white/5 group shadow-2xl'>
                         <img
-                            src="/WhatsApp Image 2025-12-25 at 1.38.14 PM.jpeg"
+                            src="/luxio-vector-logo.png"
                             alt="Luxio Media Agency"
                             className='w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105'
+                            onError={(e) => {
+                                e.target.onerror = null;
+                                e.target.src = "/luxio-vector-logo.png";
+                            }}
                         />
                         <div className='absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent' />
                     </div>

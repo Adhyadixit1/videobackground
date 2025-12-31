@@ -45,14 +45,9 @@ app.post('/api/chat', async (req, res) => {
         const frCount = words.filter(w => frenchIndicators.includes(w)).length;
         const deCount = words.filter(w => germanIndicators.includes(w)).length;
 
-        console.log(`Debug: Msg="${message}", InitLang="${language}"`);
-        console.log(`Counts: EN=${enCount}, FR=${frCount}, DE=${deCount}`);
-
         if (enCount > frCount && enCount > deCount) detectedLang = 'en';
         else if (frCount > enCount && frCount > deCount) detectedLang = 'fr';
         else if (deCount > enCount && deCount > frCount) detectedLang = 'de';
-
-        console.log(`Final Detected Lang: ${detectedLang}`);
 
         // Check DB for any matching keywords
         // Optimized to find the best match based on the number of matching keywords
@@ -67,10 +62,18 @@ app.post('/api/chat', async (req, res) => {
 
         const result = await pool.query(query, [words]);
         let responseText = null;
+        let suggestedOptions = null;
 
         if (result.rows.length > 0) {
             const row = result.rows[0];
             responseText = detectedLang === 'fr' ? row.response_fr : (detectedLang === 'de' ? row.response_de : row.response_en);
+
+            if (row.suggested_options && Array.isArray(row.suggested_options)) {
+                suggestedOptions = row.suggested_options.map(opt => ({
+                    label: detectedLang === 'fr' ? opt.label_fr : (detectedLang === 'de' ? opt.label_de : opt.label_en),
+                    query: opt.query
+                }));
+            }
         }
 
         // Fallback if no specific response found or response is empty (generic fallback)
@@ -81,6 +84,13 @@ app.post('/api/chat', async (req, res) => {
                 de: "Ich bin mir nicht sicher, aber ich kann Ihnen von unseren Außenbildschirmen, Videowänden oder digitalen Marketingdiensten erzählen. Woran sind Sie interessiert?"
             };
             responseText = fallbackResponse[detectedLang] || fallbackResponse['en'];
+
+            // Default options for fallback
+            suggestedOptions = [
+                { label: detectedLang === 'fr' ? "Nos Services" : (detectedLang === 'de' ? "Unsere Dienstleistungen" : "Our Services"), query: "services" },
+                { label: detectedLang === 'fr' ? "Tarifs" : (detectedLang === 'de' ? "Preise" : "Pricing"), query: "pricing" },
+                { label: detectedLang === 'fr' ? "Contact" : (detectedLang === 'de' ? "Kontakt" : "Contact"), query: "contact" }
+            ];
         }
 
         // Log Bot Response if lead_id exists
@@ -91,7 +101,7 @@ app.post('/api/chat', async (req, res) => {
             );
         }
 
-        res.json({ response: responseText });
+        res.json({ response: responseText, options: suggestedOptions });
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Internal Server Error' });
