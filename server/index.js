@@ -99,18 +99,15 @@ app.post('/api/chat', async (req, res) => {
         // Fallback if no specific response found or response is empty (generic fallback)
         if (!responseText) {
             const fallbackResponse = {
-                en: "I'm not sure specifically, but I can tell you about our Outdoor Screens, Video Walls, or Digital Marketing services. What are you interested in?",
-                fr: "Je ne suis pas sûr spécifiquement, mais je peux vous parler de nos écrans extérieurs, murs vidéo ou services de marketing numérique. Qu'est-ce qui vous intéresse ?",
-                de: "Ich bin mir nicht sicher, aber ich kann Ihnen von unseren Außenbildschirmen, Videowänden oder digitalen Marketingdiensten erzählen. Woran sind Sie interessiert?"
+                en: "I'm not sure I understand your specific request. Could you please rephrase or contact our team directly below?",
+                fr: "Je ne suis pas sûr de comprendre votre demande spécifique. Pourriez-vous reformuler ou contacter notre équipe directement ci-dessous ?",
+                de: "Ich bin mir nicht sicher, ob ich Ihre Anfrage verstehe. Könnten Sie sie bitte umformulieren oder unser Team direkt kontaktieren?"
             };
             responseText = fallbackResponse[detectedLang] || fallbackResponse['en'];
 
-            // Default options for fallback
-            suggestedOptions = [
-                { label: detectedLang === 'fr' ? "Nos Services" : (detectedLang === 'de' ? "Unsere Dienstleistungen" : "Our Services"), query: "services" },
-                { label: detectedLang === 'fr' ? "Tarifs" : (detectedLang === 'de' ? "Preise" : "Pricing"), query: "pricing" },
-                { label: detectedLang === 'fr' ? "Contact" : (detectedLang === 'de' ? "Kontakt" : "Contact"), query: "contact" }
-            ];
+            // No specific options for fallback to avoid leading to empty/irrelevant pages
+            suggestedOptions = [];
+            showWhatsapp = true; // Encourage direct contact if bot fails
         }
 
         // Log Bot Response if lead_id exists

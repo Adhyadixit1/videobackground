@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { MessageCircle, X, Send, ExternalLink, User, Mail, Phone, Globe } from 'lucide-react';
 import { translations } from '../locales/translations';
@@ -6,6 +7,12 @@ import { translations } from '../locales/translations';
 const Chatbot = () => {
     const { language } = useLanguage(); // Only use language for default init
     const [isOpen, setIsOpen] = useState(false);
+
+    // Open chatbot automatically on load
+    useEffect(() => {
+        const timer = setTimeout(() => setIsOpen(true), 1000);
+        return () => clearTimeout(timer);
+    }, []);
     const [step, setStep] = useState('details'); // 'details' | 'chat'
     const [userData, setUserData] = useState({ name: '', email: '', phone: '', language: 'en' });
     const [currentLeadId, setCurrentLeadId] = useState(null);
@@ -109,15 +116,70 @@ const Chatbot = () => {
         }
     };
 
+    const handleCallbackSubmit = async (e) => {
+        e.preventDefault();
+        setIsLoading(true);
+        try {
+            // Re-create or update lead in DB with Urgent status
+            // We append stars to name to create visual importance in Admin without schema changes
+            const urgentName = `⭐⭐⭐ ${userData.name}`;
+            const response = await fetch('/api/leads', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    ...userData,
+                    name: urgentName,
+                    query: 'URGENT CALLBACK REQUEST',
+                    source: 'chatbot_priority'
+                })
+            });
+
+            if (response.ok) {
+                // Return to chat with confirmation
+                setStep('chat');
+                setMessages(prev => [...prev, {
+                    role: 'bot',
+                    text: `✅ REQUEST RECEIVED! \n\nWe have marked your request as PRIORITY ⭐⭐⭐. \nOur team will call you at ${userData.phone} very shortly.`
+                }]);
+            }
+        } catch (error) {
+            console.error('Error requesting callback:', error);
+            setMessages(prev => [...prev, { role: 'bot', text: localT('chatbot.error') }]);
+            setStep('chat');
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const navigate = useNavigate();
+
     const handleOptionClick = (query) => {
         if (query.toLowerCase().includes('whatsapp')) {
             window.open(whatsappLink, '_blank', 'noopener,noreferrer');
             return;
         }
 
+        // Handle Redirects based on special query keywords from DB
+        if (query === 'quote_redirect') {
+            navigate('/contact');
+            setIsOpen(false); // Close chat on redirect? Or keep open? Usually close or minimize.
+            return;
+        }
+        if (query === 'view_locations_redirect') {
+            navigate('/solutions');
+            return;
+        }
+        if (query === 'launch_campaign_redirect') {
+            navigate('/projects');
+            return;
+        }
+        if (query === 'callback_request') {
+            setStep('callback_form'); // New step for callback
+            return;
+        }
+
         setInput(query);
         // We can't easily dispatch, so we'll just call the send logic manually or trigger a state change that calls it.
-        // But since handleSendMessage checks event, we can just create a synthetic event or extract logic.
         // Easier: setInput then timeout to submit form button click
         setTimeout(() => {
             const submitBtn = document.querySelector('button[type="submit"].chat-send-btn');
@@ -248,6 +310,51 @@ const Chatbot = () => {
                                         className="w-full bg-[#D3FD50] text-black font-bold py-2.5 rounded-lg hover:bg-[#cbf446] transition-colors disabled:opacity-50"
                                     >
                                         {isLoading ? localT('chatbot.connecting') : localT('chatbot.startChat')}
+                                    </button>
+                                </form>
+                            </div>
+                        ) : step === 'callback_form' ? (
+                            <div className="h-full flex flex-col justify-center gap-6 animate-in fade-in zoom-in duration-300">
+                                <div className="text-center space-y-2">
+                                    <h4 className="text-xl font-[font2] uppercase text-white">📞 {localT('chatbot.requestCallback')}</h4>
+                                    <p className="text-zinc-400 text-sm">Please confirm your details for a priority callback.</p>
+                                </div>
+                                <form onSubmit={handleCallbackSubmit} className="space-y-4">
+                                    <div className="relative">
+                                        <User className="absolute left-3 top-3 text-zinc-500" size={16} />
+                                        <input
+                                            type="text"
+                                            placeholder="Name"
+                                            required
+                                            className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 pl-10 pr-4 text-base focus:border-[#D3FD50] focus:outline-none"
+                                            value={userData.name}
+                                            onChange={e => setUserData({ ...userData, name: e.target.value })}
+                                        />
+                                    </div>
+                                    <div className="relative">
+                                        <Phone className="absolute left-3 top-3 text-zinc-500" size={16} />
+                                        <input
+                                            type="tel"
+                                            placeholder="Phone Number"
+                                            required
+                                            className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 pl-10 pr-4 text-base focus:border-[#D3FD50] focus:outline-none"
+                                            value={userData.phone}
+                                            onChange={e => setUserData({ ...userData, phone: e.target.value })}
+                                        />
+                                    </div>
+                                    <button
+                                        type="submit"
+                                        disabled={isLoading}
+                                        className="w-full bg-[#D3FD50] text-black font-bold py-2.5 rounded-lg hover:bg-[#cbf446] transition-colors"
+                                    >
+                                        {isLoading ? 'Sending...' : 'Request Priority Callback'}
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={() => setStep('chat')}
+                                        className="w-full text-zinc-500 text-xs hover:text-white transition-colors"
+                                    >
+                                        Cancel
                                     </button>
                                 </form>
                             </div>

@@ -59,6 +59,13 @@ app.post('/api/chat', async (req, res) => {
 
         const isPriceQuery = words.some(w => priceKeywords.includes(w));
 
+        // Special handling for "Why DOOH" vs "What is DOOH"
+        const whyKeywords = ['why', 'benefits', 'advantage', 'reason', 'pourquoi', 'avantage', 'raison', 'warum', 'vorteil', 'grund'];
+        const defineKeywords = ['what', 'define', 'meaning', 'definition', 'explain', 'qu\'est-ce', 'que', 'signifie', 'was', 'definition', 'erklaeren'];
+
+        const isWhyDooh = words.includes('dooh') && words.some(w => whyKeywords.includes(w));
+        const isDefineDooh = words.includes('dooh') && (words.some(w => defineKeywords.includes(w)) || words.includes('marketing'));
+
         let responseText = null;
         let suggestedOptions = null;
         let showWhatsapp = false;
@@ -71,6 +78,28 @@ app.post('/api/chat', async (req, res) => {
             };
             responseText = priceResponses[detectedLang] || priceResponses['en'];
             showWhatsapp = true; // Flag to trigger WhatsApp CTA on frontend
+        } else if (isWhyDooh) {
+            const whyResponses = {
+                en: "DOOH offers a 100% captive audience, dynamic video content, and precise targeting. Unlike static ads, it allows for real-time updates, measuring engagement, and significantly higher brand recall.",
+                fr: "Le DOOH offre une audience 100% captive, un contenu vidéo dynamique et un ciblage précis. Contrairement à l'affichage statique, il permet des mises à jour en temps réel et génère une mémorisation de marque nettement supérieure.",
+                de: "DOOH bietet ein 100% fesselndes Publikum, dynamische Videoinhalte und präzises Targeting. Im Gegensatz zu statischer Werbung ermöglicht es Echtzeit-Updates und steigert die Markenerinnerung erheblich."
+            };
+            responseText = whyResponses[detectedLang] || whyResponses['en'];
+            suggestedOptions = [
+                { label: detectedLang === 'fr' ? "Nos Solutions" : "Our Solutions", query: "solutions" },
+                { label: detectedLang === 'fr' ? "Contact" : "Contact", query: "contact" }
+            ];
+        } else if (isDefineDooh) {
+            const defineResponses = {
+                en: "DOOH (Digital Out-Of-Home) refers to digital advertising screens found in public spaces like gas stations, malls, and streets. Unlike static billboards, DOOH allows for dynamic, video-based content that captures more attention and can be updated in real-time.",
+                fr: "Le DOOH (Digital Out-Of-Home) désigne les écrans publicitaires numériques dans les lieux publics. Contrairement à l'affichage statique, le DOOH permet un contenu dynamique et vidéo qui capte davantage l'attention et peut être mis à jour en temps réel.",
+                de: "DOOH (Digital Out-Of-Home) bezeichnet digitale Werbebildschirme im öffentlichen Raum. Im Gegensatz zu statischen Plakatwänden ermöglicht DOOH dynamische, videobasierte Inhalte, die mehr Aufmerksamkeit erregen und in Echtzeit aktualisiert werden können."
+            };
+            responseText = defineResponses[detectedLang] || defineResponses['en'];
+            suggestedOptions = [
+                { label: detectedLang === 'fr' ? "Pourquoi DOOH ?" : "Why DOOH?", query: "why dooh" },
+                { label: detectedLang === 'fr' ? "Nos Services" : "Our Services", query: "services" }
+            ];
         } else {
             const query = `
           SELECT *, 

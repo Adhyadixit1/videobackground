@@ -12,13 +12,13 @@ export const knowledgeBase = [
     },
     {
         id: 'services_scope',
-        triggers: ['what services', 'what do you offer', 'solutions do you have'],
+        triggers: ['what services', 'what do you offer', 'solutions do you have', 'what kind of ads', 'video production'],
         keywords: ['solutions', 'services', 'offer'],
         minMatches: 2,
         responses: {
-            en: 'We provide a full-stack DOOH solution: creative studio, 10-second motion spots with multilingual voice-over, deployment on more than 2,000 captive-station screens, social amplification (Meta, TikTok, Waze), analytics dashboards and continuous optimization.',
-            fr: 'Nous proposons une solution DOOH complète : studio créatif, spots animés de 10 secondes avec voix-off multilingue, diffusion sur plus de 2 000 écrans captifs en station-service, amplification sociale (Meta, TikTok, Waze), analytics en direct et optimisation continue.',
-            de: 'Wir liefern eine ganzheitliche DOOH-Lösung: Kreativstudio, 10-Sekunden-Motionspots mit mehrsprachigem Voice-over, Ausspielung auf über 2.000 Tankstellenbildschirmen, Social Amplification (Meta, TikTok, Waze), Live-Analytics und laufende Optimierung.'
+            en: 'We maximize brand visibility through our available network of service stations where we setup screens. Our full-stack services include custom video production for ads, creative studio work, 10-second motion spots with multilingual voice-over, broadcasting on over 2,000 displays, and social amplification (Meta, TikTok, Waze).',
+            fr: 'Nous maximisons la visibilité des marques grâce à notre réseau disponible de stations-service où nous installons des écrans. Nos services complets incluent la production vidéo pour des publicités percutantes, un studio créatif, des spots animés de 10 secondes avec voix-off multilingue, la diffusion sur plus de 2 000 écrans et l\'amplification sociale (Meta, TikTok, Waze).',
+            de: 'Wir maximieren die Markensichtbarkeit durch unser verfügbares Netzwerk von Tankstellen, wo wir Bildschirme installieren. Unsere Full-Stack-Services umfassen Videoproduktion für Anzeigen, Kreativstudio, 10-Sekunden-Motionspots mit mehrsprachigem Voice-over, Ausspielung auf über 2.000 Displays und soziale Amplifizierung (Meta, TikTok, Waze).'
         }
     },
     {
@@ -27,9 +27,9 @@ export const knowledgeBase = [
         keywords: ['why', 'luxio', 'better'],
         minMatches: 2,
         responses: {
-            en: 'Luxio Media controls a proprietary DOOH network inside European fuel and mobility hubs. Drivers spend over 4 minutes in front of our sound-enabled totems, so you get 100% captive attention, precise geotargeting, in-house creatives, and transparent ROI dashboards—advantages traditional suppliers can’t match.',
-            fr: 'Luxio Media possède un réseau DOOH propriétaire dans les stations-service et hubs de mobilité européens. Avec plus de 4 minutes d’attention captive devant nos totems sonores, vous bénéficiez d’un ciblage hyperlocal, d’un studio créatif intégré et d’un reporting ROI transparent—un avantage net face aux autres fournisseurs.',
-            de: 'Luxio Media betreibt ein eigenes DOOH-Netz in europäischen Tankstellen und Mobilitätshubs. Unsere soundfähigen Totems sichern über 4 Minuten captive Aufmerksamkeit, präzises Geotargeting, internes Kreativteam und transparente ROI-Dashboards—Vorteile, die Wettbewerber nicht bieten.'
+            en: 'We operate an available network of service stations where we setup screens for better brand visibility. Drivers spend over 4 minutes in front of our sound-enabled totems, ensuring 100% captive attention. We offer precise geotargeting, in-house video production for ads, and transparent ROI dashboards.',
+            fr: 'Nous opérons un réseau disponible de stations-service où nous installons des écrans pour une meilleure visibilité de la marque. Les conducteurs passent plus de 4 minutes devant nos totems sonores, assurant 100% d\'attention captive. Nous offrons un ciblage géographique précis, une production vidéo interne pour les publicités et des tableaux de bord ROI transparents.',
+            de: 'Wir betreiben ein verfügbares Netzwerk von Tankstellen, wo wir Bildschirme für bessere Markensichtbarkeit installieren. Fahrer verbringen über 4 Minuten vor unseren soundfähigen Totems, was 100% captive Aufmerksamkeit sichert. Wir bieten präzises Geotargeting, interne Videoproduktion für Anzeigen und transparente ROI-Dashboards.'
         }
     },
     {
