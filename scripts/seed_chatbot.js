@@ -12,6 +12,17 @@ const pool = new Pool({
 });
 
 const seedData = [
+    // 0. Greetings
+    {
+        keywords: ['hi', 'hello', 'bonjour', 'salut', 'hallo', 'guten tag', 'hey', 'greetings', 'yo', 'coucou', 'holla'],
+        response_en: "Hello! How can I help you today? Feel free to ask about our ad services, screens, or pricing.",
+        response_fr: "Bonjour ! Comment puis-je vous aider aujourd'hui ? N'hésitez pas à me poser des questions sur nos services publicitaires, nos écrans ou nos tarifs.",
+        response_de: "Hallo! Wie kann ich Ihnen heute helfen? Fragen Sie mich gerne nach unseren Werbedienstleistungen, Bildschirmen oder Preisen.",
+        suggested_options: [
+            { label_en: 'Our Services', label_fr: 'Nos Services', label_de: 'Unsere Dienstleistungen', query: 'services' },
+            { label_en: '📩 Request a Quote', label_fr: '📩 Demander un devis', label_de: '📩 Angebot anfordern', query: 'quote_redirect' }
+        ]
+    },
     // 1. About Us / Who are we
     {
         keywords: [
@@ -20,9 +31,9 @@ const seedData = [
             'über', 'wer', 'wir', 'firma', 'agentur', 'geschichte',
             'abot', 'compny', 'agenci', 'entrprise' // typos
         ],
-        response_en: "Luxio Media is your strategic partner in digital signage. We leverage our available network of service stations where we setup screens for better brand visibility. We manage over 2,000 screens across Europe, combining high-impact DOOH with data-driven social media amplification.",
-        response_fr: "Luxio Media est votre partenaire stratégique en affichage dynamique. Nous utilisons notre réseau disponible de stations-service où nous installons des écrans pour une meilleure visibilité de la marque. Nous gérons plus de 2 000 écrans en Europe, combinant DOOH et amplification sociale.",
-        response_de: "Luxio Media ist Ihr strategischer Partner für Digital Signage. Wir nutzen unser verfügbares Netzwerk von Tankstellen, wo wir Bildschirme für bessere Markensichtbarkeit installieren. Wir verwalten über 2.000 Bildschirme in Europa.",
+        response_en: "Luxio Media is your strategic partner in digital signage. We leverage our available network of high traffic locations like supermarkets, kiosks, and other busy areas where we setup screens for better brand visibility. We manage over 2,000 screens across Europe, combining high-impact DOOH with data-driven social media amplification.",
+        response_fr: "Luxio Media est votre partenaire stratégique en affichage dynamique. Nous utilisons notre réseau disponible de lieux à fort trafic comme les supermarchés, kiosques et autres zones de passage où nous installons des écrans pour une meilleure visibilité de la marque. Nous gérons plus de 2 000 écrans en Europe, combinant DOOH et amplification sociale.",
+        response_de: "Luxio Media ist Ihr strategischer Partner für Digital Signage. Wir nutzen unser verfügbares Netzwerk an hochfrequentierten Standorten wie Supermärkten, Kiosken und anderen belebten Bereichen, wo wir Bildschirme installieren. Wir verwalten über 2.000 Bildschirme in Europa.",
         suggested_options: [
             { label_en: 'Our Services', label_fr: 'Nos Services', label_de: 'Unsere Dienstleistungen', query: 'services' },
             { label_en: 'Contact Us', label_fr: 'Contactez-nous', label_de: 'Kontaktieren Sie uns', query: 'contact' }
@@ -70,9 +81,9 @@ const seedData = [
             'aussenwerbung', 'werbung', 'was', 'ist',
             'doh', 'markting', 'adver', 'signge' // typos
         ],
-        response_en: "DOOH (Digital Out-Of-Home) refers to digital advertising screens found in public spaces like gas stations, malls, and streets. Unlike static billboards, DOOH allows for dynamic, video-based content that captures more attention and can be updated in real-time.",
-        response_fr: "Le DOOH (Digital Out-Of-Home) désigne les écrans publicitaires numériques situés dans les espaces publics comme les stations-service, centres commerciaux et rues. Contrairement aux panneaux statiques, le DOOH permet des contenus vidéo dynamiques qui captent plus l'attention.",
-        response_de: "DOOH (Digital Out-Of-Home) bezeichnet digitale Werbebildschirme im öffentlichen Raum wie Tankstellen oder Einkaufszentren. Im Gegensatz zu statischen Plakaten ermöglicht DOOH dynamische Videoinhalte, die mehr Aufmerksamkeit erregen.",
+        response_en: "DOOH (Digital Out-Of-Home) refers to digital advertising screens found in public spaces like supermarkets, kiosks, malls, and streets. Unlike static billboards, DOOH allows for dynamic, video-based content that captures more attention and can be updated in real-time.",
+        response_fr: "Le DOOH (Digital Out-Of-Home) désigne les écrans publicitaires numériques situés dans les espaces publics comme les supermarchés, kiosques, centres commerciaux et rues. Contrairement aux panneaux statiques, le DOOH permet des contenus vidéo dynamiques qui captent plus l'attention.",
+        response_de: "DOOH (Digital Out-Of-Home) bezeichnet digitale Werbebildschirme im öffentlichen Raum wie Supermärkten, Kiosken oder Einkaufszentren. Im Gegensatz zu statischen Plakaten ermöglicht DOOH dynamische Videoinhalte, die mehr Aufmerksamkeit erregen.",
         suggested_options: [
             { label_en: 'Why DOOH?', label_fr: 'Pourquoi le DOOH ?', label_de: 'Warum DOOH?', query: 'why dooh' },
             { label_en: 'Our Screens', label_fr: 'Nos Écrans', label_de: 'Unsere Bildschirme', query: 'screens' }
@@ -87,9 +98,9 @@ const seedData = [
             'warum', 'vorteil', 'nutzen', 'verkehr', 'publikum',
             'benfit', 'advntage' // typos
         ],
-        response_en: "DOOH offers a 100% captive audience (e.g., while refueling), high engagement through motion, and precise geo-targeting. It bridges the gap between physical visibility and digital retargeting.",
-        response_fr: "Le DOOH offre une audience 100% captive (ex: pendant le plein), un fort engagement grâce au mouvement, et un ciblage géographique précis. Il fait le pont entre la visibilité physique et le retargeting digital.",
-        response_de: "DOOH bietet ein 100% gefangenes Publikum (z.B. beim Tanken), hohes Engagement durch Bewegung und präzises Geo-Targeting. Es schlägt eine Brücke zwischen physischer Sichtbarkeit und digitalem Retargeting.",
+        response_en: "DOOH offers a 100% captive audience (e.g., while shopping or waiting), high engagement through motion, and precise geo-targeting. It bridges the gap between physical visibility and digital retargeting.",
+        response_fr: "Le DOOH offre une audience 100% captive (ex: pendant les achats ou l'attente), un fort engagement grâce au mouvement, et un ciblage géographique précis. Il fait le pont entre la visibilité physique et le retargeting digital.",
+        response_de: "DOOH bietet ein 100% gefangenes Publikum (z.B. beim Einkaufen oder Warten), hohes Engagement durch Bewegung und präzises Geo-Targeting. Es schlägt eine Brücke zwischen physischer Sichtbarkeit und digitalem Retargeting.",
         suggested_options: [
             { label_en: 'Our Screens', label_fr: 'Nos Écrans', label_de: 'Unsere Bildschirme', query: 'screens' }
         ]
@@ -99,10 +110,10 @@ const seedData = [
     {
         // ... (omitted for brevity, just keeping structure)
         keywords: [
-            'contact', 'phone', 'email', 'address', 'location', 'reach', 'call',
-            'contacter', 'téléphone', 'mail', 'adresse', 'localisation', 'joindre', 'appeler',
-            'kontakt', 'telefon', 'standort', 'erreichen', 'anrufen',
-            'contct', 'phon', 'emil', 'adress' // typos
+            'contact', 'phone', 'email', 'reach', 'call',
+            'contacter', 'téléphone', 'mail', 'joindre', 'appeler',
+            'kontakt', 'telefon', 'erreichen', 'anrufen',
+            'contct', 'phon', 'emil' // typos
         ],
         response_en: "You can reach us at 26 Bd Royal Level 5, 2449 Ville-Haute Luxembourg. Email: contact@luxiomedia.lu, Phone: +352 661 16 77 25.",
         response_fr: "Vous pouvez nous joindre au 26 Bd Royal Level 5, 2449 Ville-Haute Luxembourg. Email : contact@luxiomedia.lu, Téléphone : +352 661 16 77 25.",
@@ -120,9 +131,9 @@ const seedData = [
             'dienstleistung', 'angebot', 'produkt', 'was machen sie',
             'servce', 'soluton' // typos
         ],
-        response_en: "We offer Digital Signage (2000+ screens), custom Video Production (high-impact ads & motion spots), Social Media Management, and Website Creation. We leverage our available network of service stations where we setup screens for better brand visibility.",
-        response_fr: "Nous proposons l'Affichage Dynamique (2000+ écrans), la Production Vidéo personnalisée (pubs & spots animés), la Gestion des Réseaux Sociaux et la Création de Sites Web. Nous utilisons notre réseau disponible de stations-service où nous installons des écrans pour une meilleure visibilité de la marque.",
-        response_de: "Wir bieten Digital Signage (2000+ Bildschirme), individuelle Videoproduktion (effektive Anzeigen & Motion Spots), Social Media Management und Website-Erstellung. Wir nutzen unser verfügbares Netzwerk von Tankstellen, wo wir Bildschirme für bessere Markensichtbarkeit installieren.",
+        response_en: "We offer Digital Signage (2000+ screens), custom Video Production (high-impact ads & motion spots), Social Media Management, and Website Creation. We leverage our available network of displays in supermarkets, kiosks, and other high traffic locations for better brand visibility.",
+        response_fr: "Nous proposons l'Affichage Dynamique (2000+ écrans), la Production Vidéo personnalisée (pubs & spots animés), la Gestion des Réseaux Sociaux et la Création de Sites Web. Nous utilisons notre réseau disponible d'écrans dans des supermarchés, kiosques et autres lieux à fort trafic pour une meilleure visibilité de la marque.",
+        response_de: "Wir bieten Digital Signage (2000+ Bildschirme), individuelle Videoproduktion (effektive Anzeigen & Motion Spots), Social Media Management und Website-Erstellung. Wir nutzen unser verfügbares Netzwerk von Bildschirmen in Supermärkten, Kiosken und anderen stark frequentierten Orten für eine bessere Markensichtbarkeit.",
         suggested_options: [
             { label_en: 'Video Production', label_fr: 'Production Vidéo', label_de: 'Videoproduktion', query: 'video production' },
             { label_en: 'Our Screens', label_fr: 'Nos Écrans', label_de: 'Unsere Bildschirme', query: 'screens' }
@@ -175,12 +186,28 @@ const seedData = [
         suggested_options: []
     },
 
-    // 11. Geography
+    // 11. Location Clarification (Office vs Ad Spots)
     {
         keywords: [
-            'where', 'location', 'operate', 'country', 'area', 'geography',
-            'où', 'localisation', 'opérer', 'pays', 'zone', 'géographie',
-            'wo', 'standort', 'tätig', 'land', 'gebiet', 'geografie'
+            'location', 'address', 'where', 'spot', 'place', 'office', 'located',
+            'localisation', 'adresse', 'où', 'place', 'bureau', 'situé',
+            'standort', 'adresse', 'wo', 'platz', 'büro'
+        ],
+        response_en: "Just to be sure which location you are asking for, I want to confirm: are you looking for our Business Location or the Locations of our Signage Boards?",
+        response_fr: "Pour être sûr de quelle localisation vous parlez, je souhaite confirmer : cherchez-vous nos Bureaux ou les Emplacements de nos Écrans ?",
+        response_de: "Um sicherzugehen, welchen Standort Sie meinen: Suchen Sie unseren Bürostandort oder die Standorte unserer Werbebildschirme?",
+        suggested_options: [
+            { label_en: '🏢 Business Location', label_fr: '🏢 Nos Bureaux', label_de: '🏢 Bürostandort', query: 'contact' },
+            { label_en: '📺 Signage Boards', label_fr: '📺 Écrans Pub', label_de: '📺 Werbebildschirme', query: 'view_locations_redirect' }
+        ]
+    },
+
+    // 12. Geography
+    {
+        keywords: [
+            'geography', 'operate', 'country', 'area',
+            'géographie', 'opérer', 'pays', 'zone',
+            'geografie', 'tätig', 'land', 'gebiet'
         ],
         response_en: "We operate primarily in Luxembourg, with the possibility of intervening in France and neighboring countries depending on the project.",
         response_fr: "Nous opérons principalement au Luxembourg, avec la possibilité d'intervenir en France et dans les pays limitrophes selon le projet.",
@@ -284,6 +311,20 @@ const seedData = [
         response_de: "Ganz einfach: Kontaktieren Sie uns über die Website oder den Chatbot > Definieren Sie Ihre Ziele > Bestätigen Sie Medien und Dauer > Starten Sie die Ausstrahlung.",
         suggested_options: [
             { label_en: '📊 Launch Campaign', label_fr: '📊 Lancer une campagne', label_de: '📊 Kampagne starten', query: 'launch_campaign_redirect' }
+        ]
+    },
+    // 19. Callback Request Intent
+    {
+        keywords: [
+            'callback', 'call me', 'phone me', 'speak to someone', 'talk to human',
+            'rappel', 'appeler', 'parler', 'téléphone', 'joindre',
+            'rückruf', 'anrufen', 'sprechen', 'telefonieren'
+        ],
+        response_en: "Certainly. If you'd like to speak with a specialist directly, please request a callback below.",
+        response_fr: "Certainement. Si vous souhaitez parler directement à un spécialiste, veuillez demander un rappel ci-dessous.",
+        response_de: "Gerne. Wenn Sie direkt mit einem Spezialisten sprechen möchten, fordern Sie bitte unten einen Rückruf an.",
+        suggested_options: [
+            { label_en: '📞 Request Callback', label_fr: '📞 Être rappelé', label_de: '📞 Rückruf anfordern', query: 'callback_request' }
         ]
     }
 ];

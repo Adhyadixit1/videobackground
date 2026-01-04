@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Loader2, CheckCircle, XCircle, Clock, MessageSquare, Users, FileText, LayoutDashboard, LogOut, Search } from 'lucide-react';
+import { Loader2, CheckCircle, XCircle, Clock, MessageSquare, Users, FileText, LayoutDashboard, LogOut, Search, Phone } from 'lucide-react';
 
 const Admin = () => {
     const [user, setUser] = useState(null);
@@ -30,6 +30,7 @@ const Admin = () => {
             let url = '';
             if (activeTab === 'chatbot') url = '/api/leads?source=chatbot';
             else if (activeTab === 'direct') url = '/api/leads?source=contact_form';
+            else if (activeTab === 'callbacks') url = '/api/leads?source=chatbot_priority';
             else if (activeTab === 'history') url = '/api/admin/chat-history';
 
             const res = await fetch(url);
@@ -145,7 +146,11 @@ const Admin = () => {
             }
             grouped[log.lead_id].messages.push(log);
         });
-        return Object.entries(grouped);
+        return Object.entries(grouped).sort(([, a], [, b]) => {
+            const lastMsgA = a.messages[a.messages.length - 1];
+            const lastMsgB = b.messages[b.messages.length - 1];
+            return new Date(lastMsgB.created_at) - new Date(lastMsgA.created_at);
+        });
     };
 
     // Render Dashboard
@@ -164,6 +169,13 @@ const Admin = () => {
                     >
                         <MessageSquare size={20} />
                         Chatbot Leads
+                    </button>
+                    <button
+                        onClick={() => setActiveTab('callbacks')}
+                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${activeTab === 'callbacks' ? 'bg-[#D3FD50] text-black font-bold' : 'text-zinc-400 hover:text-white hover:bg-zinc-800'}`}
+                    >
+                        <Phone size={20} />
+                        Callbacks
                     </button>
                     <button
                         onClick={() => setActiveTab('history')}
@@ -206,6 +218,7 @@ const Admin = () => {
                 <header className="bg-zinc-900 border-b border-zinc-800 p-6 flex justify-between items-center">
                     <h2 className="text-2xl text-white font-bold uppercase tracking-tight">
                         {activeTab === 'chatbot' && 'Chatbot Leads'}
+                        {activeTab === 'callbacks' && 'Callback Requests'}
                         {activeTab === 'history' && 'Conversation Logs'}
                         {activeTab === 'direct' && 'Direct Form Submissions'}
                     </h2>

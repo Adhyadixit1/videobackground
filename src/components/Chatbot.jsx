@@ -173,6 +173,7 @@ const Chatbot = () => {
             navigate('/projects');
             return;
         }
+
         if (query === 'callback_request') {
             setStep('callback_form'); // New step for callback
             return;
@@ -224,6 +225,36 @@ const Chatbot = () => {
         } finally {
             setIsLoading(false);
         }
+    };
+
+    const renderMessage = (text) => {
+        if (!text) return '';
+        const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+        const parts = [];
+        let lastIndex = 0;
+        let match;
+
+        while ((match = linkRegex.exec(text)) !== null) {
+            if (match.index > lastIndex) {
+                parts.push(text.substring(lastIndex, match.index));
+            }
+            const url = match[2];
+            const label = match[1];
+            parts.push(
+                <span
+                    key={match.index}
+                    onClick={(e) => { e.preventDefault(); navigate(url); }}
+                    className="text-[#D3FD50] underline cursor-pointer hover:text-white font-bold"
+                >
+                    {label}
+                </span>
+            );
+            lastIndex = linkRegex.lastIndex;
+        }
+        if (lastIndex < text.length) {
+            parts.push(text.substring(lastIndex));
+        }
+        return parts.length > 0 ? parts : text;
     };
 
     return (
@@ -367,7 +398,7 @@ const Chatbot = () => {
                                                 ? 'bg-[#D3FD50] text-black rounded-tr-none'
                                                 : 'bg-zinc-800 text-zinc-200 rounded-tl-none'
                                                 }`}>
-                                                {msg.text}
+                                                {renderMessage(msg.text)}
                                                 {(msg.isFallback || msg.showWhatsapp) && (
                                                     <a
                                                         href={whatsappLink}
@@ -410,6 +441,7 @@ const Chatbot = () => {
                             </div>
                         )}
                     </div>
+
 
                     {/* Footer */}
                     {step === 'chat' && (
