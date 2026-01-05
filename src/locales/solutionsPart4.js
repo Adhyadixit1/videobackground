@@ -918,5 +918,156 @@ export const solutionsPart4 = {
                 description: "Real-time performance dashboards and cross-channel optimization."
             }
         ]
+    },
+    websiteCreation: {
+        title: "Website Creation",
+        description: "A high-performance site for your business. Whether showcase or e-commerce, our web solutions maximize your online visibility and turn visitors into clients. We create all kinds of websites and platforms with 3D animations and SEO optimisation, utilizing modern technologies like Next.js and Node.js.",
+        features: [
+            "High-performance architecture",
+            "Showcase & E-commerce solutions",
+            "3D Animations & Interactivity",
+            "SEO Optimisation",
+            "Modern Tech Stack (Next.js, Node.js)",
+            "Shopify & WordPress Development"
+        ],
+        stats: [
+            { value: "Fast", label: "Performance" },
+            { value: "SEO", label: "Optimized" },
+            { value: "Modern", label: "Tech" },
+            { value: "3D", label: "Visuals" }
+        ],
+        benefits: [
+            { title: "Online Visibility", description: "Maximize your reach with SEO-optimized structures." },
+            { title: "Conversion Focus", description: "Turn visitors into clients with UX-driven designs." },
+            { title: "Cutting-Edge Tech", description: "Utilization of Next.js and Node.js for speed and scalability." },
+            { title: "Visual Impact", description: "3D animations that capture attention and retain visitors." },
+            { title: "Flexible Platforms", description: "From custom builds to Shopify and WordPress." },
+            { title: "Mobile First", description: "Perfectly responsive designs for all devices." }
+        ],
+        specs: [
+            { value: "Custom", label: "Design" },
+            { value: "Responsive", label: "Layout" },
+            { value: "Fast", label: "Loading" },
+            { value: "Secure", label: "Hosting" },
+            { value: "SEO", label: "Ready" },
+            { value: "CMS", label: "Options" }
+        ],
+        useCases: [
+            { title: "Corporate Showcase", description: "Professional presence for businesses." },
+            { title: "E-commerce Store", description: "Online sales platforms and shops." },
+            { title: "Landing Pages", description: "High-conversion pages for campaigns." },
+            { title: "Web Applications", description: "Custom functionality and interactive platforms." }
+        ],
+        faqs: [
+            { question: "What technologies do you use?", answer: "We use modern stacks like Next.js, Node.js, as well as Shopify and WordPress." },
+            { question: "Do you offer SEO?", answer: "Yes, all our sites are built with SEO best practices in mind." },
+            { question: "Can you do 3D animations?", answer: "Absolutely, we specialize in integrating 3D elements for immersive experiences." },
+            { question: "Is it mobile friendly?", answer: "Yes, all our websites are fully responsive and mobile-first." }
+        ],
+        relatedSolutions: [
+            { title: "Community Management", description: "Engage audience", link: "/solutions/community-management" },
+            { title: "Video Creation", description: "Visual content", link: "/solutions/video-creation" },
+            { title: "Digital Marketing", description: "Full service", link: "/solutions/digital-marketing-services" }
+        ]
+    },
+    communityManagement: {
+        title: "Community Management",
+        description: "Engage your audience. Boost your image on social networks with our original and engaging content. Our Community Managers create strategies that turn subscribers into loyal customers.",
+        features: [
+            "Original content creation",
+            "Audience engagement strategies",
+            "Social media monitoring",
+            "Brand image boosting",
+            "Subscriber to customer conversion"
+        ],
+        stats: [
+            { value: "Engage", label: "Audience" },
+            { value: "Boost", label: "Image" },
+            { value: "Loyal", label: "Customers" },
+            { value: "Original", label: "Content" }
+        ],
+        benefits: [
+            { title: "Loyal Community", description: "Turn casual followers into loyal brand advocates." },
+            { title: "Consistent Presence", description: "Maintain a steady and professional voice across platforms." },
+            { title: "Engagement Boost", description: "Strategies designed to increase likes, shares, and comments." },
+            { title: "Customer Insight", description: "Direct feedback loop from your audience." },
+            { title: "Brand Authority", description: "Establish your brand as a leader in your space." },
+            { title: "Crisis Management", description: "Professional handling of comments and reputation." }
+        ],
+        specs: [
+            { value: "Strategy", label: "Plan" },
+            { value: "Content", label: "Creation" },
+            { value: "Daily", label: "Monitoring" },
+            { value: "Monthly", label: "Report" },
+            { value: "Multi", label: "Platform" },
+            { value: "Growth", label: "Focus" }
+        ],
+        useCases: [
+            { title: "Brand Building", description: "Growing awareness and presence online." },
+            { title: "Customer Support", description: "Handling inquiries via social channels." },
+            { title: "Campaign Launch", description: "Supporting new products with social buzz." },
+            { title: "Event Coverage", description: "Live social media management during events." }
+        ],
+        faqs: [
+            { question: "Which platforms do you manage?", answer: "We manage Instagram, Facebook, LinkedIn, TikTok, and more." },
+            { question: "Do you create the content?", answer: "Yes, we create original text, image, and video content." },
+            { question: "How do you measure success?", answer: "We track engagement rates, follower growth, and conversion metrics." },
+            { question: "Can you handle comments?", answer: "Yes, we monitor and respond to comments and messages." }
+        ],
+        relatedSolutions: [
+            { title: "Video Creation", description: "Content production", link: "/solutions/video-creation" },
+            { title: "Digital Marketing", description: "Ads management", link: "/solutions/digital-marketing-services" },
+            { title: "Website Creation", description: "Online presence", link: "/solutions/website-creation" }
+        ]
+    },
+    videoCreation: {
+        title: "Video Creation",
+        description: "Sublimate your brand. From storytelling to promotional video, we create captivating content that highlights your brand across all channels (viral videos, conversion accrued). We create videos as per brand needs, custom social media management and DOOH advertising content to increase visibility.",
+        features: [
+            "Storytelling & Branding",
+            "Promotional Videos",
+            "Viral Content Creation",
+            "DOOH Ad Content",
+            "Social Media Formats"
+        ],
+        stats: [
+            { value: "Captivating", label: "Content" },
+            { value: "Viral", label: "Potential" },
+            { value: "High", label: "Conversion" },
+            { value: "Brand", label: "Highlight" }
+        ],
+        benefits: [
+            { title: "Brand Elevation", description: "High-quality video production that sublimates your brand image." },
+            { title: "Multi-Channel Ready", description: "Content optimized for Social, Web, and DOOH." },
+            { title: "Engagement focus", description: "Videos designed to capture attention and drive viral sharing." },
+            { title: "Storytelling", description: "Compelling narratives that connect with your audience." },
+            { title: "Conversion Accrued", description: "Promotional content built to drive sales and actions." },
+            { title: "Custom Fit", description: "Tailored exactly to your brand needs and guidelines." }
+        ],
+        specs: [
+            { value: "4K/HD", label: "Quality" },
+            { value: "Custom", label: "Script" },
+            { value: "Editing", label: "Post-Prod" },
+            { value: "Motion", label: "Graphics" },
+            { value: "Sound", label: "Design" },
+            { value: "Fast", label: "Delivery" }
+        ],
+        useCases: [
+            { title: "Commercial Ads", description: "TV and Online commercials." },
+            { title: "Social Reels", description: "Short-form content for TikTok and Instagram." },
+            { title: "Corporate Video", description: "Internal comms and brand manifestos." },
+            { title: "Product Demos", description: "Explainer videos and showcases." }
+        ],
+        faqs: [
+            { question: "What formats do you provide?", answer: "We deliver in all standard formats (16:9, 9:16, 1:1) for all platforms." },
+            { question: "Do you do animation?", answer: "Yes, we offer motion graphics and 3D animation services." },
+            { question: "Can you do drone shots?", answer: "We have capabilities for aerial footage if required." },
+            { question: "What is the turnaround time?", answer: "It depends on complexity, but we work efficiently to meet deadlines." }
+        ],
+        relatedSolutions: [
+            { title: "Community Management", description: "Social strategy", link: "/solutions/community-management" },
+            { title: "Digital Signage", description: "Display network", link: "/solutions/outdoor-display" },
+            { title: "Website Creation", description: "Web landing", link: "/solutions/website-creation" }
+        ]
     }
 }

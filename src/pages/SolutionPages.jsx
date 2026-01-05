@@ -145,4 +145,28 @@ export const DigitalMarketingServices = () => (
     />
 )
 
+// Website Creation
+export const WebsiteCreation = () => (
+    <SolutionTemplate
+        solutionKey="websiteCreation"
+        video="https://video.gumlet.io/694cef8ab122cbf176482b8c/695b9d36b8291f84b7438c7d/download.mp4"
+    />
+)
+
+// Community Management
+export const CommunityManagement = () => (
+    <SolutionTemplate
+        solutionKey="communityManagement"
+        image="https://www.ceupe.com/images/easyblog_articles/3541/b2ap3_large_como-convertirte-en-comunity-manager.jpg"
+    />
+)
+
+// Video Creation
+export const VideoCreation = () => (
+    <SolutionTemplate
+        solutionKey="videoCreation"
+        video="https://video.gumlet.io/694cef8ab122cbf176482b8c/695b992b8e6340b1bc38d2ef/download.mp4"
+    />
+)
+
 export default LCDScreens

@@ -718,6 +718,157 @@ export const solutionsDE = {
                 title: "Live Intelligence",
                 description: "Echtzeit-Performance-Dashboards und kanalübergreifende Optimierung."
             }
-        ]
+        ],
+        websiteCreation: {
+            title: "Webseite & Plattformen",
+            description: "Eine leistungsstarke Website für Ihr Unternehmen. Ob Showcase oder E-Commerce, unsere Web-Lösungen maximieren Ihre Online-Sichtbarkeit und verwandeln Besucher in Kunden. Wir erstellen alle Arten von Websites und Plattformen mit 3D-Animationen und SEO-Optimierung unter Verwendung modernster Technologien wie Next.js und Node.js.",
+            features: [
+                "Hochleistungs-Architektur",
+                "Showcase- & E-Commerce-Lösungen",
+                "3D-Animationen & Interaktivität",
+                "SEO-Optimierung",
+                "Moderner Tech-Stack (Next.js, Node.js)",
+                "Shopify- & WordPress-Entwicklung"
+            ],
+            stats: [
+                { value: "Schnell", label: "Leistung" },
+                { value: "SEO", label: "Optimiert" },
+                { value: "Modern", label: "Tech" },
+                { value: "3D", label: "Visuals" }
+            ],
+            benefits: [
+                { title: "Online-Sichtbarkeit", description: "Maximieren Sie Ihre Reichweite mit SEO-optimierten Strukturen." },
+                { title: "Conversion-Fokus", description: "Verwandeln Sie Besucher in Kunden mit UX-getriebenen Designs." },
+                { title: "Spitzentechnologie", description: "Nutzung von Next.js und Node.js für Geschwindigkeit und Skalierbarkeit." },
+                { title: "Visueller Eindruck", description: "3D-Animationen, die Aufmerksamkeit erregen und Besucher binden." },
+                { title: "Flexible Plattformen", description: "Von maßgeschneiderten Lösungen bis zu Shopify und WordPress." },
+                { title: "Mobile First", description: "Perfekt responsive Designs für alle Geräte." }
+            ],
+            specs: [
+                { value: "Individuell", label: "Design" },
+                { value: "Responsiv", label: "Layout" },
+                { value: "Schnell", label: "Laden" },
+                { value: "Sicher", label: "Hosting" },
+                { value: "SEO", label: "Bereit" },
+                { value: "CMS", label: "Optionen" }
+            ],
+            useCases: [
+                { title: "Unternehmens-Showcase", description: "Professionelle Präsenz für Unternehmen." },
+                { title: "E-Commerce-Shop", description: "Online-Verkaufsplattformen und Shops." },
+                { title: "Landing Pages", description: "Hochkonvertierende Seiten für Kampagnen." },
+                { title: "Web-Anwendungen", description: "Benutzerdefinierte Funktionen und interaktive Plattformen." }
+            ],
+            faqs: [
+                { question: "Welche Technologien verwenden Sie?", answer: "Wir nutzen moderne Stacks wie Next.js, Node.js sowie Shopify und WordPress." },
+                { question: "Bieten Sie SEO an?", answer: "Ja, alle unsere Seiten werden unter Berücksichtigung von SEO-Best-Practices erstellt." },
+                { question: "Können Sie 3D-Animationen erstellen?", answer: "Absolut, wir sind darauf spezialisiert, 3D-Elemente für immersive Erlebnisse zu integrieren." },
+                { question: "Ist es mobilfreundlich?", answer: "Ja, alle unsere Websites sind vollständig responsiv und Mobile-First." }
+            ],
+            relatedSolutions: [
+                { title: "Community Management", description: "Publikumsbindung", link: "/solutions/community-management" },
+                { title: "Video-Erstellung", description: "Visuelle Inhalte", link: "/solutions/video-creation" },
+                { title: "Digitales Marketing", description: "Full-Service", link: "/solutions/digital-marketing-services" }
+            ]
+        },
+        communityManagement: {
+            title: "Community Management",
+            description: "Binden Sie Ihr Publikum ein. Steigern Sie Ihr Image in sozialen Netzwerken mit unseren originellen und ansprechenden Inhalten. Unsere Community Manager entwickeln Strategien, die Abonnenten in treue Kunden verwandeln.",
+            features: [
+                "Erstellung origineller Inhalte",
+                "Strategien zur Publikumsbindung",
+                "Social-Media-Monitoring",
+                "Stärkung des Markenimages",
+                "Umwandlung von Abonnenten in Kunden"
+            ],
+            stats: [
+                { value: "Binden", label: "Publikum" },
+                { value: "Steigern", label: "Image" },
+                { value: "Treu", label: "Kunden" },
+                { value: "Original", label: "Inhalt" }
+            ],
+            benefits: [
+                { title: "Treue Community", description: "Verwandeln Sie gelegentliche Follower in treue Markenbotschafter." },
+                { title: "Konsistente Präsenz", description: "Behalten Sie eine stetige und professionelle Stimme auf allen Plattformen bei." },
+                { title: "Engagement-Boost", description: "Strategien zur Steigerung von Likes, Shares und Kommentaren." },
+                { title: "Kundeneinblick", description: "Direkte Feedbackschleife von Ihrem Publikum." },
+                { title: "Markenautorität", description: "Etablieren Sie Ihre Marke als Führer in Ihrem Bereich." },
+                { title: "Krisenmanagement", description: "Professioneller Umgang mit Kommentaren und Reputation." }
+            ],
+            specs: [
+                { value: "Strategie", label: "Plan" },
+                { value: "Inhalt", label: "Erstellung" },
+                { value: "Täglich", label: "Monitoring" },
+                { value: "Monatlich", label: "Bericht" },
+                { value: "Multi", label: "Plattform" },
+                { value: "Wachstum", label: "Fokus" }
+            ],
+            useCases: [
+                { title: "Markenaufbau", description: "Wachsendes Bewusstsein und Online-Präsenz." },
+                { title: "Kundensupport", description: "Bearbeitung von Anfragen über soziale Kanäle." },
+                { title: "Kampagnen-Launch", description: "Unterstützung neuer Produkte durch sozialen Buzz." },
+                { title: "Event-Berichterstattung", description: "Live-Social-Media-Management während Veranstaltungen." }
+            ],
+            faqs: [
+                { question: "Welche Plattformen verwalten Sie?", answer: "Wir verwalten Instagram, Facebook, LinkedIn, TikTok und mehr." },
+                { question: "Erstellen Sie die Inhalte?", answer: "Ja, wir erstellen originelle Text-, Bild- und Videoinhalte." },
+                { question: "Wie messen Sie den Erfolg?", answer: "Wir verfolgen Engagement-Raten, Follower-Wachstum und Konversionsmetriken." },
+                { question: "Können Sie Kommentare bearbeiten?", answer: "Ja, wir überwachen und beantworten Kommentare und Nachrichten." }
+            ],
+            relatedSolutions: [
+                { title: "Video-Erstellung", description: "Content-Produktion", link: "/solutions/video-creation" },
+                { title: "Digitales Marketing", description: "Anzeigenverwaltung", link: "/solutions/digital-marketing-services" },
+                { title: "Webseite & Plattformen", description: "Online-Präsenz", link: "/solutions/website-creation" }
+            ]
+        },
+        videoCreation: {
+            title: "Video-Erstellung",
+            description: "Veredeln Sie Ihre Marke. Vom Storytelling bis zum Werbevideo erstellen wir fesselnde Inhalte, die Ihre Marke auf allen Kanälen hervorheben (virale Videos, gesteigerte Konversion). Wir erstellen Videos nach Markenbedürfnissen, benutzerdefiniertes Social-Media-Management und DOOH-Werbeinhalte zur Steigerung der Sichtbarkeit.",
+            features: [
+                "Storytelling & Branding",
+                "Werbevideos",
+                "Erstellung viraler Inhalte",
+                "DOOH-Werbeinhalte",
+                "Social-Media-Formate"
+            ],
+            stats: [
+                { value: "Fesselnd", label: "Inhalt" },
+                { value: "Viral", label: "Potenzial" },
+                { value: "Hoch", label: "Konversion" },
+                { value: "Marke", label: "Highlight" }
+            ],
+            benefits: [
+                { title: "Markenaufwertung", description: "Hochwertige Videoproduktion, die Ihr Markenimage veredelt." },
+                { title: "Multi-Channel-Bereit", description: "Inhalte optimiert für Social, Web und DOOH." },
+                { title: "Engagement-Fokus", description: "Videos, die Aufmerksamkeit erregen und virales Teilen fördern." },
+                { title: "Storytelling", description: "Überzeugende Erzählungen, die sich mit Ihrem Publikum verbinden." },
+                { title: "Gesteigerte Konversion", description: "Werbeinhalte, die darauf ausgelegt sind, Verkäufe und Aktionen zu fördern." },
+                { title: "Maßgeschneidert", description: "Genau auf Ihre Markenbedürfnisse und Richtlinien zugeschnitten." }
+            ],
+            specs: [
+                { value: "4K/HD", label: "Qualität" },
+                { value: "Individuell", label: "Skript" },
+                { value: "Schnitt", label: "Post-Prod" },
+                { value: "Motion", label: "Grafik" },
+                { value: "Sound", label: "Design" },
+                { value: "Schnell", label: "Lieferung" }
+            ],
+            useCases: [
+                { title: "Werbespots", description: "TV- und Online-Werbespots." },
+                { title: "Social Reels", description: "Kurzform-Inhalte für TikTok und Instagram." },
+                { title: "Unternehmensvideo", description: "Interne Kommunikation und Markenmanifestos." },
+                { title: "Produktdemos", description: "Erklärvideos und Showcases." }
+            ],
+            faqs: [
+                { question: "Welche Formate liefern Sie?", answer: "Wir liefern alle Standardformate (16:9, 9:16, 1:1) für alle Plattformen." },
+                { question: "Machen Sie Animationen?", answer: "Ja, wir bieten Motion-Graphics- und 3D-Animationsdienste an." },
+                { question: "Können Sie Drohnenaufnahmen machen?", answer: "Wir haben die Möglichkeiten für Luftaufnahmen, falls erforderlich." },
+                { question: "Wie ist die Bearbeitungszeit?", answer: "Das hängt von der Komplexität ab, aber wir arbeiten effizient, um Fristen einzuhalten." }
+            ],
+            relatedSolutions: [
+                { title: "Community Management", description: "Soziale Strategie", link: "/solutions/community-management" },
+                { title: "Digitale Beschilderung", description: "Display-Netzwerk", link: "/solutions/outdoor-display" },
+                { title: "Webseite & Plattformen", description: "Web-Landing", link: "/solutions/website-creation" }
+            ]
+        }
     }
 }

@@ -12,7 +12,7 @@ const ServicesSection = () => {
             description: t('services.s1Desc'),
             icon: '◇',
             image: '/WhatsApp Image 2025-12-25 at 10.13.14 AM (1).jpeg',
-            link: '/solutions/lcd-screens'
+            link: '/solutions/website-creation'
         },
         {
             number: '02',
@@ -20,7 +20,7 @@ const ServicesSection = () => {
             description: t('services.s2Desc'),
             icon: '○',
             image: '/WhatsApp Image 2025-12-25 at 10.13.16 AM.jpeg',
-            link: '/solutions/digital-pump'
+            link: '/solutions/community-management'
         },
         {
             number: '03',
@@ -36,7 +36,7 @@ const ServicesSection = () => {
             description: t('services.s4Desc'),
             icon: '□',
             image: '/WhatsApp Image 2025-12-25 at 10.13.20 AM.jpeg',
-            link: '/solutions/station-network'
+            link: '/solutions/video-creation'
         }
     ]
 

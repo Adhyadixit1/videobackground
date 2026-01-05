@@ -77,14 +77,25 @@ export const knowledgeBase = [
         }
     },
     {
-        id: 'product_digital_marketing_services',
-        triggers: ['digital marketing services'],
-        keywords: ['digital', 'marketing', 'services'],
+        id: 'service_website_development',
+        triggers: ['website development', 'web design', 'shopify', 'wordpress', 'seo', '3d animation', 'next.js', 'node.js'],
+        keywords: ['website', 'development', 'web'],
         minMatches: 2,
         responses: {
-            en: 'Digital Marketing Services extend every screen campaign with Meta, TikTok, Waze, and programmatic retargeting. We reuse the same creative DNA, build lookalike audiences, and report reach + store uplift in a single dashboard.',
-            fr: 'Nos services de marketing digital prolongent chaque campagne écran via Meta, TikTok, Waze et du retargeting programmatique. Nous réutilisons la même création, activons des audiences similaires et regroupons reach + trafic magasin dans un seul dashboard.',
-            de: 'Die Digital Marketing Services verlängern jede Screen-Kampagne über Meta, TikTok, Waze und programmatisches Retargeting. Gleiches Kreativmaterial, Lookalike Audiences und ein gemeinsames Reporting für Reichweite und Store-Uplift.'
+            en: 'We create all kinds of websites and platforms with 3D animations and SEO optimisation, utilizing modern technologies like Next.js and Node.js. We also provide services like Shopify and WordPress development according to client needs.',
+            fr: 'Nous créons tous types de sites web et plateformes avec animations 3D et optimisation SEO, en utilisant des technologies modernes comme Next.js et Node.js. Nous proposons également des services de développement Shopify et WordPress selon les besoins du client.',
+            de: 'Wir erstellen alle Arten von Websites und Plattformen mit 3D-Animationen und SEO-Optimierung unter Verwendung moderner Technologien wie Next.js und Node.js. Zudem bieten wir Shopify- und WordPress-Entwicklung nach Kundenbedarf an.'
+        }
+    },
+    {
+        id: 'product_digital_marketing_services',
+        triggers: ['digital marketing', 'video production', 'social media', 'dooh advertising'],
+        keywords: ['digital', 'marketing', 'video', 'social'],
+        minMatches: 2,
+        responses: {
+            en: 'We create videos as per brand needs, provide custom social media management, and execute DOOH advertising to increase visibility.',
+            fr: 'Nous créons des vidéos selon les besoins de la marque, assurons une gestion personnalisée des réseaux sociaux et réalisons de la publicité DOOH pour augmenter la visibilité.',
+            de: 'Wir erstellen Videos nach Markenbedarf, bieten individuelles Social-Media-Management und führen DOOH-Werbung durch, um die Sichtbarkeit zu erhöhen.'
         }
     },
     {

@@ -1502,6 +1502,157 @@ export const solutionsFR = {
             }
         ]
     },
+    websiteCreation: {
+        title: "Création de Site Web",
+        description: "Un site performant pour votre entreprise. Qu'il s'agisse d'un site vitrine ou e-commerce, nos solutions web maximisent votre visibilité en ligne et transforment vos visiteurs en clients. Nous créons tous types de sites web et plateformes avec animations 3D et optimisation SEO, utilisant des technologies modernes comme Next.js et Node.js.",
+        features: [
+            "Architecture haute performance",
+            "Solutions Vitrine & E-commerce",
+            "Animations 3D & Interactivité",
+            "Optimisation SEO",
+            "Technologies Modernes (Next.js, Node.js)",
+            "Développement Shopify & WordPress"
+        ],
+        stats: [
+            { value: "Rapide", label: "Performance" },
+            { value: "SEO", label: "Optimisé" },
+            { value: "Moderne", label: "Tech" },
+            { value: "3D", label: "Visuels" }
+        ],
+        benefits: [
+            { title: "Visibilité En Ligne", description: "Maximisez votre portée avec des structures optimisées SEO." },
+            { title: "Focus Conversion", description: "Transformez les visiteurs en clients avec des designs UX." },
+            { title: "Tech de Pointe", description: "Utilisation de Next.js et Node.js pour vitesse et scalabilité." },
+            { title: "Impact Visuel", description: "Animations 3D qui captent l'attention et retiennent les visiteurs." },
+            { title: "Plateformes Flexibles", description: "Du sur-mesure à Shopify et WordPress." },
+            { title: "Mobile First", description: "Designs parfaitement responsives pour tous les appareils." }
+        ],
+        specs: [
+            { value: "Sur Mesure", label: "Design" },
+            { value: "Responsive", label: "Mise en page" },
+            { value: "Rapide", label: "Chargement" },
+            { value: "Sécurisé", label: "Hébergement" },
+            { value: "SEO", label: "Prêt" },
+            { value: "CMS", label: "Options" }
+        ],
+        useCases: [
+            { title: "Vitrine Corporate", description: "Présence professionnelle pour les entreprises." },
+            { title: "Boutique E-commerce", description: "Plateformes de vente en ligne et shops." },
+            { title: "Landing Pages", description: "Pages haute conversion pour campagnes." },
+            { title: "Applications Web", description: "Fonctionnalités sur mesure et plateformes interactives." }
+        ],
+        faqs: [
+            { question: "Quelles technologies utilisez-vous ?", answer: "Nous utilisons des stacks modernes comme Next.js, Node.js, ainsi que Shopify et WordPress." },
+            { question: "Proposez-vous du SEO ?", answer: "Oui, tous nos sites sont construits avec les meilleures pratiques SEO." },
+            { question: "Faites-vous des animations 3D ?", answer: "Absolument, nous sommes spécialisés dans l'intégration d'éléments 3D immersifs." },
+            { question: "Est-ce mobile friendly ?", answer: "Oui, tous nos sites sont entièrement responsives et mobile-first." }
+        ],
+        relatedSolutions: [
+            { title: "Community Management", description: "Engagement audience", link: "/solutions/community-management" },
+            { title: "Création Vidéo", description: "Contenu visuel", link: "/solutions/video-creation" },
+            { title: "Marketing Digital", description: "Service complet", link: "/solutions/digital-marketing-services" }
+        ]
+    },
+    communityManagement: {
+        title: "Community Management",
+        description: "Engagez votre audience. Boostez votre image sur les réseaux sociaux avec nos contenus originaux et engageants. Nos Community Managers créent des stratégies qui transforment vos abonnés en clients fidèles.",
+        features: [
+            "Création de contenu original",
+            "Stratégies d'engagement audience",
+            "Monitoring réseaux sociaux",
+            "Boost image de marque",
+            "Conversion abonnés en clients"
+        ],
+        stats: [
+            { value: "Engagement", label: "Audience" },
+            { value: "Boost", label: "Image" },
+            { value: "Fidèles", label: "Clients" },
+            { value: "Original", label: "Contenu" }
+        ],
+        benefits: [
+            { title: "Communauté Fidèle", description: "Transformez les followers occasionnels en ambassadeurs fidèles." },
+            { title: "Présence Cohérente", description: "Maintenez une voix stable et professionnelle sur les plateformes." },
+            { title: "Hausse Engagement", description: "Stratégies conçues pour augmenter likes, partages et commentaires." },
+            { title: "Insight Client", description: "Boucle de feedback direct depuis votre audience." },
+            { title: "Autorité de Marque", description: "Établissez votre marque comme leader dans votre espace." },
+            { title: "Gestion de Crise", description: "Gestion professionnelle des commentaires et de la réputation." }
+        ],
+        specs: [
+            { value: "Stratégie", label: "Plan" },
+            { value: "Contenu", label: "Création" },
+            { value: "Quotidien", label: "Suivi" },
+            { value: "Mensuel", label: "Rapport" },
+            { value: "Multi", label: "Plateforme" },
+            { value: "Croissance", label: "Focus" }
+        ],
+        useCases: [
+            { title: "Construction Marque", description: "Croissance notoriété et présence en ligne." },
+            { title: "Support Client", description: "Gestion des demandes via canaux sociaux." },
+            { title: "Lancement Campagne", description: "Soutien nouveaux produits avec buzz social." },
+            { title: "Couverture Événement", description: "Gestion live social media durant événements." }
+        ],
+        faqs: [
+            { question: "Quelles plateformes gérez-vous ?", answer: "Nous gérons Instagram, Facebook, LinkedIn, TikTok, et plus." },
+            { question: "Créez-vous le contenu ?", answer: "Oui, nous créons textes originaux, images et vidéos." },
+            { question: "Comment mesurez-vous le succès ?", answer: "Nous suivons taux d'engagement, croissance followers et métriques conversion." },
+            { question: "Gérez-vous les commentaires ?", answer: "Oui, nous surveillons et répondons aux commentaires et messages." }
+        ],
+        relatedSolutions: [
+            { title: "Création Vidéo", description: "Production contenu", link: "/solutions/video-creation" },
+            { title: "Marketing Digital", description: "Gestion pubs", link: "/solutions/digital-marketing-services" },
+            { title: "Création Site Web", description: "Présence web", link: "/solutions/website-creation" }
+        ]
+    },
+    videoCreation: {
+        title: "Création Vidéo",
+        description: "Sublimez votre marque. Du storytelling à la vidéo promotionnelle, nous créons des contenus captivants qui mettent votre marque en avant sur tous les canaux (vidéos virales, conversion accrue). Nous créons des vidéos selon vos besoins, et du contenu DOOH pour augmenter la visibilité.",
+        features: [
+            "Storytelling & Branding",
+            "Vidéos Promotionnelles",
+            "Création Contenu Viral",
+            "Contenu Pub DOOH",
+            "Formats Réseaux Sociaux"
+        ],
+        stats: [
+            { value: "Captivant", label: "Contenu" },
+            { value: "Viral", label: "Potentiel" },
+            { value: "Haute", label: "Conversion" },
+            { value: "Marque", label: "Mise en avant" }
+        ],
+        benefits: [
+            { title: "Élévation Marque", description: "Production vidéo haute qualité qui sublime votre image." },
+            { title: "Prêt Multi-Canal", description: "Contenu optimisé pour Social, Web, et DOOH." },
+            { title: "Focus Engagement", description: "Vidéos conçues pour capter l'attention et le partage viral." },
+            { title: "Storytelling", description: "Narrations convaincantes qui connectent avec votre audience." },
+            { title: "Conversion Accrue", description: "Contenu promo construit pour générer ventes et actions." },
+            { title: "Sur Mesure", description: "Taillé exactement pour vos besoins et guidelines de marque." }
+        ],
+        specs: [
+            { value: "4K/HD", label: "Qualité" },
+            { value: "Sur Mesure", label: "Scénario" },
+            { value: "Montage", label: "Post-Prod" },
+            { value: "Motion", label: "Graphisme" },
+            { value: "Son", label: "Design" },
+            { value: "Rapide", label: "Livraison" }
+        ],
+        useCases: [
+            { title: "Pubs Commerciales", description: "Spots TV et en ligne." },
+            { title: "Reels Sociaux", description: "Contenu court pour TikTok et Instagram." },
+            { title: "Vidéo Corporate", description: "Comms interne et manifestos marque." },
+            { title: "Démos Produit", description: "Vidéos explicatives et vitrines." }
+        ],
+        faqs: [
+            { question: "Quels formats fournissez-vous ?", answer: "Nous livrons tous les formats standards (16:9, 9:16, 1:1) pour toutes plateformes." },
+            { question: "Faites-vous de l'animation ?", answer: "Oui, nous offrons services motion design et animation 3D." },
+            { question: "Faites-vous des plans drone ?", answer: "Nous avons les capacités pour images aériennes si requis." },
+            { question: "Quel est le délai ?", answer: "Cela dépend de la complexité, mais nous travaillons efficacement pour respecter les délais." }
+        ],
+        relatedSolutions: [
+            { title: "Community Management", description: "Stratégie sociale", link: "/solutions/community-management" },
+            { title: "Affichage Extérieur", description: "Réseau écrans", link: "/solutions/outdoor-display" },
+            { title: "Création Site Web", description: "Landing web", link: "/solutions/website-creation" }
+        ]
+    },
     common: {
         backToSolutions: "← Retour aux Solutions",
         keyFeatures: "Fonctionnalités Clés",

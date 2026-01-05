@@ -143,18 +143,34 @@ const seedData = [
     // 8. Video Production & Ads
     {
         keywords: [
-            'video', 'production', 'ads', 'advertising', 'spot', 'motion', 'commercial',
-            'vidéo', 'production', 'publicité', 'pub', 'animé',
-            'video', 'produktion', 'werbung', 'anzeige', 'spot'
+            'digital marketing', 'video', 'production', 'social media', 'dooh', 'advertising', 'management',
+            'marketing digital', 'vidéo', 'réseaux sociaux', 'publicité',
+            'digitales marketing', 'video', 'soziale medien', 'werbung',
+            'commercial', 'ads', 'spot', 'motion'
         ],
-        response_en: "Luxio Media specializes in digital advertising (DOOH) via LED screens and dynamic signage. We help businesses deliver visible, targeted, and impactful ad campaigns to promote a brand, increase visibility, or communicate during events. Campaigns are customized by duration, format, location, and goals.\n\n👉 Would you like a quote, info on available screens, or to be contacted?",
-        response_fr: "Luxio Media est spécialisée dans la publicité digitale (DOOH) via des écrans LED et supports d’affichage dynamique. Nous accompagnons les entreprises dans la diffusion de campagnes publicitaires visibles, ciblées et impactantes. Les campagnes sont personnalisées selon la durée, le support, la localisation et les objectifs.\n\n👉 Souhaitez-vous un devis, des informations sur les supports disponibles ou être contacté par un conseiller ?",
-        response_de: "Luxio Media ist spezialisiert auf digitale Werbung (DOOH) über LED-Bildschirme und Digital Signage. Wir unterstützen Unternehmen bei sichtbaren, zielgerichteten und wirkungsvollen Werbekampagnen. Kampagnen sind nach Dauer, Format, Ort und Zielen personalisierbar.\n\n👉 Wünschen Sie ein Angebot, Infos zu verfügbaren Bildschirmen oder einen Rückruf?",
+        response_en: "We create videos as per brand needs, provide custom social media management, and execute DOOH advertising to increase visibility.",
+        response_fr: "Nous créons des vidéos selon les besoins de la marque, assurons une gestion personnalisée des réseaux sociaux et réalisons de la publicité DOOH pour augmenter la visibilité.",
+        response_de: "Wir erstellen Videos nach Markenbedarf, bieten individuelles Social-Media-Management und führen DOOH-Werbung durch, um die Sichtbarkeit zu erhöhen.",
         suggested_options: [
             { label_en: '📩 Request a Quote', label_fr: '📩 Demander un devis', label_de: '📩 Angebot anfordern', query: 'quote_redirect' },
-            { label_en: '📍 View Ad Locations', label_fr: '📍 Voir supports pub', label_de: '📍 Werbeflächen ansehen', query: 'view_locations_redirect' },
-            { label_en: '📞 Request Callback', label_fr: '📞 Être rappelé', label_de: '📞 Rückruf anfordern', query: 'callback_request' },
-            { label_en: '📊 Launch Campaign', label_fr: '📊 Lancer une campagne', label_de: '📊 Kampagne starten', query: 'launch_campaign_redirect' }
+            { label_en: '📊 Launch Campaign', label_fr: '📊 Lancer une campagne', label_de: '📊 Kampagne starten', query: 'launch_campaign_redirect' },
+            { label_en: '📞 Request Callback', label_fr: '📞 Être rappelé', label_de: '📞 Rückruf anfordern', query: 'callback_request' }
+        ]
+    },
+
+    // 9. Website Development
+    {
+        keywords: [
+            'website', 'web design', 'development', 'platform', 'seo', '3d', 'animation', 'shopify', 'wordpress', 'next.js', 'node.js',
+            'site web', 'développement', 'création site', 'seo', 'animation 3d',
+            'webseite', 'entwicklung', 'webdesign', 'plattform'
+        ],
+        response_en: "We create all kinds of websites and platforms, with 3D animations and SEO optimisation, using modern technologies like Next.js and Node.js. We also provide services like Shopify and WordPress development according to client needs.",
+        response_fr: "Nous créons tous types de sites web et plateformes, avec animations 3D et optimisation SEO, via des technologies modernes comme Next.js et Node.js. Nous proposons aussi du développement Shopify et WordPress selon vos besoins.",
+        response_de: "Wir erstellen alle Arten von Websites und Plattformen mit 3D-Animationen und SEO-Optimierung unter Verwendung moderner Technologien wie Next.js und Node.js. Nach Bedarf bieten wir auch Shopify- und WordPress-Entwicklung an.",
+        suggested_options: [
+            { label_en: 'Our Services', label_fr: 'Nos Services', label_de: 'Unsere Dienstleistungen', query: 'services' },
+            { label_en: 'Contact Us', label_fr: 'Contactez-nous', label_de: 'Kontaktieren Sie uns', query: 'contact' }
         ]
     },
 

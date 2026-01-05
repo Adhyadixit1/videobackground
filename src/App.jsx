@@ -29,7 +29,8 @@ import {
   StationServiceDisplay, DigitalPump, DigitalTotems, GasStationNetwork,
   OutdoorScreens, OutdoorDisplay, LEDWalls, PromotionalScreen, VideoWalls,
   StationNetwork, MenuBoards, FuelAdvertising, InfoDisplays, DigitalScreen,
-  InteractiveKiosk, OutdoorLCD43, InfraredTouch55, DigitalMarketingServices
+  InteractiveKiosk, OutdoorLCD43, InfraredTouch55, DigitalMarketingServices,
+  WebsiteCreation, CommunityManagement, VideoCreation
 } from './pages/SolutionPages'
 
 // Project Sub-pages
@@ -112,6 +113,9 @@ const App = () => {
           <Route path='/solutions/outdoor-lcd-43' element={<OutdoorLCD43 />} />
           <Route path='/solutions/infrared-touch-55' element={<InfraredTouch55 />} />
           <Route path='/solutions/digital-marketing-services' element={<DigitalMarketingServices />} />
+          <Route path='/solutions/website-creation' element={<WebsiteCreation />} />
+          <Route path='/solutions/community-management' element={<CommunityManagement />} />
+          <Route path='/solutions/video-creation' element={<VideoCreation />} />
 
           {/* Project Sub-pages */}
           <Route path='/projects/outdoor-lcd-43' element={<OutdoorLCD43Project />} />
