@@ -153,6 +153,7 @@ const seedData = [
         response_de: "Wir erstellen Videos nach Markenbedarf, bieten individuelles Social-Media-Management und führen DOOH-Werbung durch, um die Sichtbarkeit zu erhöhen.",
         suggested_options: [
             { label_en: '📩 Request a Quote', label_fr: '📩 Demander un devis', label_de: '📩 Angebot anfordern', query: 'quote_redirect' },
+            { label_en: '🎬 View Video Services', label_fr: '🎬 Voir Services Vidéo', label_de: '🎬 Video-Services ansehen', query: 'video_creation_redirect' },
             { label_en: '📊 Launch Campaign', label_fr: '📊 Lancer une campagne', label_de: '📊 Kampagne starten', query: 'launch_campaign_redirect' },
             { label_en: '📞 Request Callback', label_fr: '📞 Être rappelé', label_de: '📞 Rückruf anfordern', query: 'callback_request' }
         ]
@@ -169,6 +170,7 @@ const seedData = [
         response_fr: "Nous créons tous types de sites web et plateformes, avec animations 3D et optimisation SEO, via des technologies modernes comme Next.js et Node.js. Nous proposons aussi du développement Shopify et WordPress selon vos besoins.",
         response_de: "Wir erstellen alle Arten von Websites und Plattformen mit 3D-Animationen und SEO-Optimierung unter Verwendung moderner Technologien wie Next.js und Node.js. Nach Bedarf bieten wir auch Shopify- und WordPress-Entwicklung an.",
         suggested_options: [
+            { label_en: '🌐 View Web Services', label_fr: '🌐 Voir Services Web', label_de: '🌐 Web-Services ansehen', query: 'website_creation_redirect' },
             { label_en: 'Our Services', label_fr: 'Nos Services', label_de: 'Unsere Dienstleistungen', query: 'services' },
             { label_en: 'Contact Us', label_fr: 'Contactez-nous', label_de: 'Kontaktieren Sie uns', query: 'contact' }
         ]

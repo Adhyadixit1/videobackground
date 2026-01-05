@@ -153,7 +153,9 @@ const Chatbot = () => {
 
     const navigate = useNavigate();
 
-    const handleOptionClick = (query) => {
+    const handleOptionClick = (rawQuery) => {
+        const query = rawQuery.trim();
+
         if (query.toLowerCase().includes('whatsapp')) {
             window.open(whatsappLink, '_blank', 'noopener,noreferrer');
             return;
@@ -171,6 +173,14 @@ const Chatbot = () => {
         }
         if (query === 'launch_campaign_redirect') {
             navigate('/projects');
+            return;
+        }
+        if (query === 'website_creation_redirect') {
+            navigate('/solutions/website-creation');
+            return;
+        }
+        if (query === 'video_creation_redirect') {
+            navigate('/solutions/video-creation');
             return;
         }
 
