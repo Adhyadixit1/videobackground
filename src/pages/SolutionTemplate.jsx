@@ -594,10 +594,10 @@ const SolutionTemplate = ({
                             {common.contactUs || 'Contact Us'}
                         </Link>
                         <a
-                            href="tel:+352661167725"
+                            href="tel:0035227864487"
                             className="px-8 py-4 border border-white/30 text-white font-[font2] text-sm uppercase tracking-wider rounded-full hover:border-[#D3FD50] hover:text-[#D3FD50] transition-all duration-300"
                         >
-                            {common.callUs || 'Call'} +352 123 456 789
+                            {common.callUs || 'Call'} 00352 27 86 44 87
                         </a>
                     </div>
                 </div>

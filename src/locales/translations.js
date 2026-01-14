@@ -136,7 +136,8 @@ export const translations = {
             contactTitle: 'Contact',
             contactDetails: {
                 email: 'contact@luxiomedia.lu',
-                phone: '+352 661 16 77 25',
+                phone: '00352 27 86 44 87',
+                whatsapp: '+352 661 16 77 25',
                 addressLines: ['26 Bd Royal Level 5,', '2449 Ville-Haute Luxembourg']
             },
             legal: {
@@ -799,7 +800,8 @@ Luxio Media, c’est l’alliance de la technologie, de l’impact visuel et de 
             contactTitle: 'Contact',
             contactDetails: {
                 email: 'contact@luxiomedia.lu',
-                phone: '+352 661 16 77 25',
+                phone: '00352 27 86 44 87',
+                whatsapp: '+352 661 16 77 25',
                 addressLines: ['26 Bd Royal Level 5,', '2449 Ville-Haute Luxembourg']
             },
             legal: {
@@ -1461,7 +1463,8 @@ Luxio Media is the alliance of technology, visual impact, and bespoke support to
             contactTitle: 'Kontakt',
             contactDetails: {
                 email: 'contact@luxiomedia.lu',
-                phone: '+352 661 16 77 25',
+                phone: '00352 27 86 44 87',
+                whatsapp: '+352 661 16 77 25',
                 addressLines: ['26 Bd Royal Level 5,', '2449 Ville-Haute Luxembourg']
             },
             legal: {

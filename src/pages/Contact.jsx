@@ -332,8 +332,14 @@ const Contact = () => {
         {
             icon: '📞',
             label: t('contact.formPhone'),
+            value: '00352 27 86 44 87',
+            link: 'tel:0035227864487'
+        },
+        {
+            icon: '💬',
+            label: 'WhatsApp',
             value: '+352 661 16 77 25',
-            link: 'tel:+352661167725'
+            link: 'https://wa.me/352661167725'
         },
         {
             icon: '📍',

@@ -117,6 +117,17 @@ const FooterSection = () => {
                                     {contactDetails.phone}
                                 </a>
                             )}
+                            {contactDetails.whatsapp && (
+                                <a
+                                    href={`https://wa.me/${contactDetails.whatsapp.replace(/[^0-9]/g, '')}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className='block font-[font1] text-gray-400 text-sm hover:text-[#D3FD50] 
+                                              transition-colors duration-300'
+                                >
+                                    WhatsApp: {contactDetails.whatsapp}
+                                </a>
+                            )}
                             {contactDetails.addressLines && (
                                 <p className='font-[font1] text-gray-400 text-sm leading-relaxed'>
                                     {contactDetails.addressLines.map((line, idx) => (
