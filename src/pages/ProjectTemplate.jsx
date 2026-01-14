@@ -566,7 +566,7 @@ const ProjectTemplate = ({
                             {common.contactUs || 'Contact Us'}
                         </Link>
                         <a
-                            href="tel:+352123456789"
+                            href="tel:+352661167725"
                             className="px-8 py-4 border border-white/30 text-white font-[font2] text-sm uppercase tracking-wider rounded-full hover:border-[#D3FD50] hover:text-[#D3FD50] transition-all duration-300"
                         >
                             {common.callUs || 'Call'} +352 123 456 789

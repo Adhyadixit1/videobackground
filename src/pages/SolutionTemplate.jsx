@@ -481,56 +481,7 @@ const SolutionTemplate = ({
                 </section>
             )}
 
-            {/* Pricing Section */}
-            {pricing && pricing.length > 0 && (
-                <section className="py-20 px-4">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="text-center mb-16">
-                            <span className="text-[#D3FD50] font-[font1] text-sm tracking-[0.3em] uppercase mb-4 block">
-                                {common.pricing || 'Pricing'}
-                            </span>
-                            <h2 className="font-[font2] text-white text-3xl lg:text-5xl uppercase">
-                                {common.chooseYourPlan || 'Choose Your Plan'}
-                            </h2>
-                        </div>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {pricing.map((plan, idx) => (
-                                <div key={idx} className={`relative p-8 rounded-2xl border ${plan.highlighted ? 'border-[#D3FD50] bg-[#D3FD50]/5' : 'border-white/10 bg-white/5'} hover:border-[#D3FD50]/50 transition-all duration-300`}>
-                                    {plan.highlighted && (
-                                        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-2 bg-[#D3FD50] text-black text-xs font-[font1] font-bold rounded-full uppercase tracking-wider">
-                                            {common.recommended || 'Recommended'}
-                                        </div>
-                                    )}
-                                    <div className="text-center mb-8">
-                                        <h3 className="font-[font2] text-white text-2xl mb-2">{plan.tier}</h3>
-                                        <div className="text-4xl lg:text-5xl font-[font2] text-[#D3FD50] mb-2">{plan.price}</div>
-                                        <p className="text-white/60 font-[font1] text-sm">{plan.period}</p>
-                                    </div>
-                                    <ul className="space-y-3 mb-8">
-                                        {plan.features.map((feature, featureIdx) => (
-                                            <li key={featureIdx} className="flex items-start gap-3 text-white/70 font-[font1] text-sm">
-                                                <svg className="w-5 h-5 text-[#D3FD50] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                                </svg>
-                                                {feature}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <Link
-                                        to="/contact"
-                                        className={`w-full py-3 rounded-full font-[font2] text-sm uppercase tracking-wider text-center transition-colors duration-300 ${plan.highlighted
-                                            ? 'bg-[#D3FD50] text-black hover:bg-white'
-                                            : 'border border-white/30 text-white hover:border-[#D3FD50] hover:text-[#D3FD50]'
-                                            }`}
-                                    >
-                                        {common.getStarted || 'Get Started'}
-                                    </Link>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-            )}
+
 
             {/* Use Cases */}
             {useCases && useCases.length > 0 && (
@@ -643,7 +594,7 @@ const SolutionTemplate = ({
                             {common.contactUs || 'Contact Us'}
                         </Link>
                         <a
-                            href="tel:+352123456789"
+                            href="tel:+352661167725"
                             className="px-8 py-4 border border-white/30 text-white font-[font2] text-sm uppercase tracking-wider rounded-full hover:border-[#D3FD50] hover:text-[#D3FD50] transition-all duration-300"
                         >
                             {common.callUs || 'Call'} +352 123 456 789
