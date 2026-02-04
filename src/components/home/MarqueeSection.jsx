@@ -1,12 +1,14 @@
 import React from 'react'
 
 const companies = [
-    { name: 'Esso', logo: 'https://fillupmedia.fr/wp-content/uploads/2023/01/esso.png' },
-    { name: 'Intermarché', logo: 'https://fillupmedia.fr/wp-content/uploads/2022/12/intermarche.png' },
-    { name: 'Carrefour', logo: 'https://fillupmedia.fr/wp-content/uploads/2022/12/carrefour.png' },
-    { name: 'Total', logo: 'https://fillupmedia.fr/wp-content/uploads/2022/12/total.png' },
-    { name: 'Leclerc', logo: 'https://fillupmedia.fr/wp-content/uploads/2022/12/leclerc.png' },
-    { name: 'Magasins U', logo: 'https://fillupmedia.fr/wp-content/uploads/2023/01/magasins-u.png' }
+    { name: 'Fitness Park', logo: 'https://fillupmedia.fr/wp-content/uploads/2025/12/fum-logo-client-confiance-fitness-park-scaled.png' },
+    { name: 'Zoo Boissière', logo: 'https://fillupmedia.fr/wp-content/uploads/2025/12/fum-logo-client-confiance-zoo-de-la-boissiere.svg' },
+    { name: '123 Pare Brise', logo: 'https://fillupmedia.fr/wp-content/uploads/2025/12/fum-logo-client-confiance-123-pare-brise.svg' },
+    { name: 'Nexity', logo: 'https://fillupmedia.fr/wp-content/uploads/2025/12/fum-logo-client-confiance-nexity.svg' },
+    { name: 'ixina', logo: 'https://fillupmedia.fr/wp-content/uploads/2025/12/fum-logo-client-confiance-ixina.svg' },
+    { name: 'Peugeot', logo: 'https://fillupmedia.fr/wp-content/uploads/2025/12/fum-logo-client-confiance-peugeot.svg' },
+    { name: 'Burger King', logo: 'https://fillupmedia.fr/wp-content/uploads/2025/12/fum-logo-client-confiance-burger-king.svg' },
+    { name: 'Adecco', logo: 'https://fillupmedia.fr/wp-content/uploads/2025/12/fum-logo-client-confiance-adecco.svg' }
 ]
 
 const MarqueeSection = () => {
